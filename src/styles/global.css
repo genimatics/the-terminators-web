@@ -1,3 +1,63 @@
-@layer theme, base, clerk, components, utilities; /* Ensure Clerk is compatible with Tailwind CSS v4 */
-
 @import 'tailwindcss';
+
+@layer theme, base, clerk, components, utilities;
+
+@layer base {
+  :root {
+    --color-primary: #5a8fcf;
+    --color-text: #212529;
+    --color-muted: #000000b3;
+    --color-heading: #212440;
+    --font-sans: 'Raleway', sans-serif;
+  }
+
+  body {
+    font-family: var(--font-sans);
+  }
+}
+
+@layer utilities {
+  .bg-primary {
+    background-color: var(--color-primary);
+  }
+
+  .bg-heading {
+    background-color: var(--color-heading);
+  }
+
+  .section-alt {
+    background-color: var(--color-heading);
+    color: white;
+  }
+
+  .text-primary {
+    color: var(--color-primary);
+  }
+
+  hover\:text-primary:hover {
+    color: var(--color-primary);
+  }
+
+  .hover\:bg-primary:hover {
+    background-color: var(--color-primary);
+  }
+  .text-muted {
+    color: var(--color-muted);
+  }
+
+  .text-body {
+    color: var(--color-text);
+  }
+
+  .text-heading {
+    color: var(--color-heading);
+  }
+
+  .icon-primary {
+    color: var(--color-primary);
+  }
+
+  .border-primary {
+    border: 2px solid var(--color-primary);
+  }
+}

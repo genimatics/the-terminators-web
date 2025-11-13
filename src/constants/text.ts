@@ -1,0 +1,116 @@
+export const TEXTS = {
+  SECTION_TWO: {
+    SLIDES: [
+      {
+        img: '/assets/terminator-images/home/hero-section-bg/hero-slide1.jpg',
+        link: 'https://example.com/slide1',
+      },
+      {
+        img: '/assets/terminator-images/home/hero-section-bg/hero-slide2.jpg',
+        link: 'https://example.com/slide2',
+      },
+      {
+        img: '/assets/terminator-images/home/hero-section-bg/hero-slide3.jpg',
+        link: 'https://example.com/slide3',
+      },
+      {
+        img: '/assets/terminator-images/home/hero-section-bg/hero-slide4.jpg',
+        link: 'https://example.com/slide4',
+      },
+    ],
+
+    SERVICE_BOXES: [
+      {
+        icon: '/assets/terminator-images/home/section-one/section-icon1.gif',
+        title: '99.9% Uptime',
+        desc: 'Reliable hosting performance with near-perfect uptime.',
+      },
+      {
+        icon: '/assets/terminator-images/home/section-one/section-icon2.gif',
+        title: 'Instant Deployment',
+        desc: 'Your server goes live within seconds after setup.',
+      },
+      {
+        icon: '/assets/terminator-images/home/section-one/section-icon3.gif',
+        title: 'Full Root Access',
+        desc: 'Gain total control over your hosting environment.',
+      },
+      {
+        icon: '/assets/terminator-images/home/section-one/section-icon4.gif',
+        title: 'Global Data Centers',
+        desc: 'Low latency and fast access from multiple locations.',
+      },
+      {
+        icon: '/assets/terminator-images/home/section-one/section-icon5.gif',
+        title: '24/7 Expert Support',
+        desc: 'Our dedicated team is here whenever you need us.',
+      },
+      {
+        icon: '/assets/terminator-images/home/section-one/section-icon6.gif',
+        title: 'DDoS Protection',
+        desc: 'Strong security to keep your services online and safe.',
+      },
+    ],
+
+    HEADINGS: {
+      MAIN: 'Experience Power and Reliability',
+      SUB: 'High performance cloud servers designed for speed and uptime.',
+      TITLE: 'Experienced Electricians Services',
+      SUBTITLE: 'WE USE THE LATEST TOOLS & TECHNOLOGY',
+    },
+
+    PARAGRAPHS: [
+      'We provide reliable and quality electrical services to customers in the area. We specialize in all aspects of residential and commercial electrical work, from new installations and upgrades to repairs and maintenance.',
+      'We are a full-service electrical contractor dedicated to providing quality electrical services to both residential and commercial customers. Our team of experienced electricians are highly trained and certified.',
+    ],
+
+    CTA_BANNER: {
+      IMAGE: '/assets/terminator-images/home/section-one/section-CTA-Banner.jpg',
+      TITLE: 'Are you in need of an Electrician?',
+      DESC: 'Look no further! Our team is here to help.',
+      BUTTON_TEXT: 'Check All Services',
+    },
+  },
+
+  VALUED_CUSTOMERS: {
+    HEADINGS: {
+      SUBTITLE: 'Valued Customers',
+      TITLE: 'We Delivery',
+      HIGHLIGHT: 'Quality Results',
+      DESCRIPTION: 'Discover Why Our Clients Rave About Their Experience with Us',
+    },
+
+    TESTIMONIALS: [
+      {
+        name: 'Michael Williams',
+        location: 'Miami',
+        text: 'I’ve had the pleasure of working with this business, and I must say, their dedication to customer satisfaction is unmatched.',
+        avatar: '/assets/terminator-images/home/valued-customer/testinomial-avatar.jpg',
+      },
+      {
+        name: 'Sarah Johnson',
+        location: 'New York',
+        text: 'Absolutely amazing service. Quick, professional, and reliable — highly recommended!',
+        avatar: '/assets/terminator-images/home/valued-customer/testinomial-avatar.jpg',
+      },
+      {
+        name: 'Daniel Smith',
+        location: 'Chicago',
+        text: 'The best electricians I’ve worked with. Fast and top quality!',
+        avatar: '/assets/terminator-images/home/valued-customer/testinomial-avatar.jpg',
+      },
+    ],
+
+    LEFT_IMAGES: [
+      '/assets/terminator-images/home/valued-customer/testinomial-img1.jpg',
+      '/assets/terminator-images/home/valued-customer/testinomial-img2.jpg',
+    ],
+
+    BOTTOM_GRID: [
+      '/assets/terminator-images/home/valued-customer/testinomial-img1.jpg',
+      '/assets/terminator-images/home/valued-customer/testinomial-img1.jpg',
+      '/assets/terminator-images/home/valued-customer/testinomial-img1.jpg',
+      '/assets/terminator-images/home/valued-customer/testinomial-img1.jpg',
+    ],
+  },
+} as const;

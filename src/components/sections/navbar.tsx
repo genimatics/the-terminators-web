@@ -1,0 +1,215 @@
+'use client';
+
+import Image from 'next/image';
+import Link from 'next/link';
+import { useRef, useState } from 'react';
+import { IoIosArrowDown } from 'react-icons/io';
+import Button from '@/components/ui/button';
+import { IMAGES } from '@/constants/images';
+
+type DropdownItem = {
+  name: string;
+  href: string;
+};
+
+type NavItem = {
+  name: string;
+  href: string;
+  hasDropdown?: boolean;
+  dropdownItems?: DropdownItem[];
+};
+
+export default function Navbar() {
+  const [activeLink, setActiveLink] = useState<string>('home');
+  const [hoveredLink, setHoveredLink] = useState<string | null>(null);
+  const [menuOpen, setMenuOpen] = useState<boolean>(false);
+  const closeTimer = useRef<NodeJS.Timeout | null>(null);
+
+  const navLinks: NavItem[] = [
+    { name: 'Home', href: '/', hasDropdown: false },
+    { name: 'About', href: '/about', hasDropdown: false },
+    {
+      name: 'Pages',
+      href: '#',
+      hasDropdown: true,
+      dropdownItems: [
+        { name: 'Home', href: '/services' },
+        { name: 'About', href: '/pricing' },
+        { name: 'Services', href: '/faq' },
+        { name: 'Contact', href: '/testimonials' },
+        { name: '404', href: '/testimonials' },
+      ],
+    },
+    { name: 'Shop', href: '/shop', hasDropdown: false },
+    { name: 'Blog', href: '/blog', hasDropdown: false },
+    { name: 'Contact', href: '/contact', hasDropdown: false },
+  ];
+
+  const handleMouseEnter = (name: string) => {
+    if (closeTimer.current) {
+      clearTimeout(closeTimer.current);
+    }
+    setHoveredLink(name);
+  };
+
+  const handleMouseLeave = (name: string) => {
+    closeTimer.current = setTimeout(() => {
+      setHoveredLink(prev => (prev === name ? null : prev));
+    }, 500);
+  };
+
+  return (
+    <nav className="fixed top-0 left-0 z-50 w-full bg-black text-white shadow-md">
+      <div className="flex w-full flex-col items-center px-2 md:px-4">
+        <div className="relative hidden h-20 w-full items-center justify-between sm:flex">
+          <Link href="/" className="flex items-center">
+            <Image
+              src={IMAGES.NAVBAR.LOGO}
+              alt="Lighti Logo"
+              width={130}
+              height={50}
+              priority
+            />
+          </Link>
+
+          <ul className="hidden items-center space-x-8 lg:flex">
+            {navLinks.map(link => (
+              <li
+                key={link.name}
+                className="group relative"
+                onMouseEnter={() => handleMouseEnter(link.name)}
+                onMouseLeave={() => handleMouseLeave(link.name)}
+              >
+                {link.hasDropdown
+                  ? (
+                      <button
+                        type="button"
+                        className={`flex items-center gap-1 text-sm font-semibold tracking-wide uppercase transition-colors duration-300 ${activeLink === link.name.toLowerCase()
+                          ? 'text-primary'
+                          : 'hover:text-primary'
+                        }`}
+                      >
+                        {link.name}
+                        <IoIosArrowDown
+                          className={`transition-transform duration-300 ${hoveredLink === link.name ? 'rotate-180' : ''
+                          }`}
+                        />
+                      </button>
+                    )
+                  : (
+                      <Link
+                        href={link.href}
+                        onClick={() => setActiveLink(link.name.toLowerCase())}
+                        className={`text-sm font-semibold tracking-wide uppercase transition-colors duration-300 ${activeLink === link.name.toLowerCase()
+                          ? 'text-primary'
+                          : 'hover:text-primary'
+                        }`}
+                      >
+                        {link.name}
+                      </Link>
+                    )}
+
+                {link.hasDropdown && hoveredLink === link.name && (
+                  <ul
+                    className="animate-fadeIn absolute top-full left-0 mt-2 w-40 bg-black  text-white shadow-lg"
+                    onMouseEnter={() => handleMouseEnter(link.name)}
+                    onMouseLeave={() => handleMouseLeave(link.name)}
+                  >
+                    {link.dropdownItems?.map(item => (
+                      <li key={item.name}>
+                        <Link
+                          href={item.href}
+                          className={`block px-4 py-2 text-sm transition-colors duration-200 ${activeLink === item.name.toLowerCase()
+                            ? 'bg-primary text-white'
+                            : 'hover:bg-primary'
+                          }`}
+                          onClick={() =>
+                            setActiveLink(item.name.toLowerCase())}
+                        >
+                          {item.name}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </li>
+            ))}
+          </ul>
+
+          <div className="flex items-center gap-4 pr-2 md:pr-4">
+            <Link
+              href="/get-started"
+              className="hidden md:block"
+            >
+              <Button className="!bg-primary !px-5 !py-2.5 font-semibold !text-white transition-all duration-300 hover:opacity-90">
+                Get Started
+              </Button>
+            </Link>
+
+            <div
+              role="button"
+              tabIndex={0}
+              aria-label="Toggle menu"
+              onClick={() => setMenuOpen(!menuOpen)}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                  setMenuOpen(!menuOpen);
+                }
+              }}
+              className="absolute left-1/2 flex translate-x-1/2 cursor-pointer flex-col gap-1 lg:hidden"
+            >
+              <div className="h-[2px] w-6 bg-white" />
+              <div className="h-[2px] w-6 bg-white" />
+              <div className="h-[2px] w-6 bg-white" />
+            </div>
+          </div>
+
+          <div className="flex w-full flex-col items-center justify-center py-3 sm:hidden">
+            <Image
+              src={IMAGES.NAVBAR.LOGO}
+              alt="Lighti Logo"
+              width={120}
+              height={45}
+              priority
+            />
+
+            <div
+              role="button"
+              tabIndex={0}
+              aria-label="Toggle menu"
+              onClick={() => setMenuOpen(!menuOpen)}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter' || e.key === '') {
+                  setMenuOpen(!menuOpen);
+                }
+              }}
+              className="mt-3 flex cursor-pointer flex-col gap-1"
+            >
+              <div className="h-[2px] w-6 bg-white" />
+              <div className="h-[2px] w-6 bg-white" />
+              <div className="h-[2px] w-6 bg-white" />
+            </div>
+
+            {menuOpen && (
+              <div className="animate-fadeIn border-t border-white/20 bg-black py-4 text-center sm:hidden">
+                {navLinks.map(link => (
+                  <Link
+                    key={link.name}
+                    href={link.href}
+                    className="hover:text-primary block py-2 text-sm font-semibold tracking-wide uppercase transition-colors"
+                    onClick={() => {
+                      setActiveLink(link.name.toLowerCase());
+                      setMenuOpen(false);
+                    }}
+                  >
+                    {link.name}
+                  </Link>
+                ))}
+              </div>
+            )}
+          </div>
+        </div>
+      </div>
+    </nav>
+  );
+}
