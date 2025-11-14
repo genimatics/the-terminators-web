@@ -31,9 +31,9 @@ export default async function About(props: IAboutProps) {
   return (
     <>
       <AboutHero />
+      <AboutContactInfoSection />
       <OurExpertise />
       <AboutTeam />
-      <AboutContactInfoSection />
       <AboutFormSection />
       <QuoteSection />
     </>

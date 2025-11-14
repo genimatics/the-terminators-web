@@ -203,7 +203,7 @@ export default function QuoteSection(): JSX.Element {
             </textarea>
           </div>
 
-          <div className="item-center flex w-full justify-center">
+          <div className="flex w-full items-center justify-center">
             <Button
               type="submit"
               className="w-full py-3 text-base font-semibold text-black transition-all duration-300 sm:py-4 sm:text-lg"
@@ -211,6 +211,7 @@ export default function QuoteSection(): JSX.Element {
               Next
             </Button>
           </div>
+
         </form>
       </div>
     </section>

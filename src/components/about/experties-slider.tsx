@@ -17,39 +17,45 @@ export default function ExpertiseSlider() {
         src={IMAGES.ABOUT.SLIDE1}
         alt="slide"
         fill
-        className={`object-cover transition-opacity duration-500 ease-in-out ${
-          hovered ? 'opacity-0' : 'opacity-100'
-        }`}
+        className={`object-cover transition-all duration-700 ease-in-out
+          ${hovered ? 'opacity-0 blur-[2px]' : 'blur-0 opacity-100'}
+        `}
       />
 
       <Image
         src={IMAGES.ABOUT.SLIDE2}
         alt="slide"
         fill
-        className={`object-cover transition-opacity duration-500 ease-in-out ${
-          hovered ? 'opacity-100' : 'opacity-0'
-        }`}
+        className={`object-cover transition-all duration-700 ease-in-out
+          ${hovered ? 'blur-0 opacity-100' : 'opacity-0 blur-[2px]'}
+        `}
       />
 
       <div
-        className={`absolute inset-0 flex transform flex-col items-center justify-center bg-black/40 text-center text-white transition-all duration-500 ease-in-out ${
-          hovered ? '-translate-x-10 opacity-0' : 'translate-x-0 opacity-100'
-        }`}
+        className={`absolute inset-0 flex flex-col items-center justify-center
+        bg-black/40 text-center text-white transition-all duration-700 ease-in-out
+        ${hovered ? 'opacity-0 blur-[2px]' : 'blur-0 opacity-100'}
+        `}
       >
-        <h3 className="mb-4 text-4xl font-semibold">Lorem ipsum dolor</h3>
-        <p className="mb-6 max-w-md text-lg">
+        <h3 className="mb-4 px-4 text-2xl font-semibold sm:text-3xl md:text-4xl">
+          Lorem ipsum dolor
+        </h3>
+        <p className="mb-6 max-w-md px-4 text-sm sm:text-base md:text-lg">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit.
         </p>
         <Button size="lg">Read More</Button>
       </div>
 
       <div
-        className={`absolute inset-0 flex transform flex-col items-center justify-center bg-black/40 text-center text-white transition-all duration-500 ease-in-out ${
-          hovered ? 'translate-x-0 opacity-100' : 'translate-x-10 opacity-0'
-        }`}
+        className={`absolute inset-0 flex flex-col items-center justify-center
+        bg-black/40 text-center text-white transition-all duration-700 ease-in-out
+        ${hovered ? 'blur-0 opacity-100' : 'opacity-0 blur-[2px]'}
+        `}
       >
-        <h3 className="mb-4 text-4xl font-semibold">Always Improving</h3>
-        <p className="max-w-md text-lg">
+        <h3 className="mb-4 px-4 text-2xl font-semibold sm:text-3xl md:text-4xl">
+          Always Improving
+        </h3>
+        <p className="max-w-md px-4 text-sm sm:text-base md:text-lg">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit.
         </p>
       </div>

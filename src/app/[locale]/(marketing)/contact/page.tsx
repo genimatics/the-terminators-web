@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import Contact from '@/components/contact/contact';
-import QuoteSection from '@/components/sections/get-quote-section';
 
 type IContactProps = {
   params: Promise<{ locale: string }>;
@@ -27,7 +26,6 @@ export default async function ContactPage(props: IContactProps) {
   return (
     <>
       <Contact />
-      <QuoteSection />
     </>
   );
 };

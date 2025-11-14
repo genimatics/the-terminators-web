@@ -62,24 +62,24 @@ export default function ServicesPromo() {
   };
 
   return (
-    <section className="bg-secondary w-full py-16">
+    <section className="bg-secondary w-full py-12 sm:py-16 md:py-20">
       <div className="mx-auto max-w-[95%] text-center">
-        <p className="text-muted mb-1 text-sm tracking-[1.5px] uppercase">
+        <p className="text-muted mb-1 text-xs tracking-[1.5px] uppercase sm:text-sm">
           Also Request Customized Services
         </p>
-        <h2 className="mb-2 text-4xl  leading-tight font-extrabold text-black ">
+        <h2 className="mb-2 text-2xl leading-tight font-extrabold text-black sm:text-3xl md:text-4xl">
           Check Electrical
           <br />
           <span className="">Needs Now</span>
         </h2>
-        <p className="text-muted mx-auto mb-10 max-w-2xl text-sm md:text-base">
+        <p className="text-muted mx-auto mb-6 max-w-2xl text-xs sm:mb-10 sm:text-sm md:text-base">
           Success in business comes not just from what you do, but from the
           passion and dedication you put into it.
         </p>
 
         <div
           ref={sliderRef}
-          className="no-scrollbar flex cursor-grab gap-4 overflow-x-auto scroll-smooth px-2 active:cursor-grabbing"
+          className="no-scrollbar flex cursor-grab gap-2 overflow-x-auto scroll-smooth px-2 active:cursor-grabbing sm:gap-4"
           style={{
             scrollbarWidth: 'none',
             msOverflowStyle: 'none',
@@ -88,27 +88,27 @@ export default function ServicesPromo() {
           {slides.map((img, i) => (
             <div
               key={i}
-              className="w-[30%] flex-shrink-0 overflow-hidden  border border-black"
+              className="w-[80%] flex-shrink-0 overflow-hidden border border-black sm:w-[50%] md:w-[30%]"
             >
               <Image
-                src={img}
+                src={img || '/placeholder.svg'}
                 alt={`Slide ${i + 1}`}
                 width={380}
                 height={280}
-                className="h-[250px] w-full object-cover"
+                className="h-[200px] w-full object-cover sm:h-[250px]"
               />
             </div>
           ))}
         </div>
 
-        <div className="mt-6 flex justify-center space-x-3">
+        <div className="mt-4 flex justify-center space-x-2 sm:mt-6 sm:space-x-3">
           {slides.map((_, i) => (
             <button
               key={i}
               type="button"
               onClick={() => handleDotClick(i)}
               aria-label={`Go to slide ${i + 1}`}
-              className={`h-2.5 w-2.5 rounded-full transition-all duration-300 ${
+              className={`h-2 w-2 rounded-full transition-all duration-300 sm:h-2.5 sm:w-2.5 ${
                 activeIndex === i
                   ? 'scale-110 bg-yellow-500'
                   : 'bg-gray-300 hover:bg-gray-400'

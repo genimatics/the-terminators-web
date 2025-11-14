@@ -52,6 +52,39 @@ export const TEXTS = {
       },
     ],
 
+    SERVICES_BOXES: [
+      {
+        icon: '/assets/terminator-images/home/section-one/section-icon1.gif',
+        title: 'Usb Sockets',
+        desc: 'Electrical outlets with built-in USB ports that allow users to charge.',
+      },
+      {
+        icon: '/assets/terminator-images/home/section-one/section-icon2.gif',
+        title: 'Surge Protection',
+        desc: 'It helps protect electrical devices from damage due high voltage.',
+      },
+      {
+        icon: '/assets/terminator-images/home/section-one/section-icon3.gif',
+        title: 'Lighting Installation',
+        desc: 'Installed, maintained and repaired lighting fixtures for clients.',
+      },
+      {
+        icon: '/assets/terminator-images/home/section-one/section-icon4.gif',
+        title: 'Generators',
+        desc: 'Useful devices that convert mechanical into electrical energy..',
+      },
+      {
+        icon: '/assets/terminator-images/home/section-one/section-icon5.gif',
+        title: 'Circuit Breaker',
+        desc: 'They are a safety feature and can save lives by preventing fires..',
+      },
+      {
+        icon: '/assets/terminator-images/home/section-one/section-icon6.gif',
+        title: 'Circuit Breaker',
+        desc: 'Increasingly popular way to generate electricity from the sun.',
+      },
+    ],
+
     HEADINGS: {
       MAIN: 'Experience Power and Reliability',
       SUB: 'High performance cloud servers designed for speed and uptime.',
@@ -167,9 +200,81 @@ export const TEXTS = {
       },
     ],
 
-    FOOTER: {
+    FOOTER1: {
       TITLE: 'Write to us for a fast Feedback',
       PARAGRAPH: 'DIRECT COMMUNICATION',
     },
+  },
+
+  // NAVBAR moved to root level
+  NAVBAR: {
+    LOGO_ALT: 'Lighti Logo',
+    LINKS: [
+      { name: 'Home', href: '/' },
+      { name: 'About', href: '/about' },
+      { name: 'Services', href: '/services' },
+      { name: 'Contact', href: '/contact' },
+    ],
+    BUTTON_TEXT: 'Get Started',
+    BUTTON_LINK: '/get-started',
+    MENU_ALT: 'Toggle menu',
+  },
+
+  // FOOTER moved to root level
+  FOOTER: {
+    HEADING: 'Inspiring',
+    HIGHLIGHT: 'Success',
+    DESCRIPTION: 'Creating Connection, and Shaping Futures, where Every Experience Matters.',
+    PLACEHOLDER: 'Email',
+    BUTTON_TEXT: 'Send',
+
+    AGENCY: {
+      TITLE: 'Agency:',
+      DESCRIPTION: 'With a commitment to excellence, we thrive in delivering exceptional solutions and building lasting partnerships. Our journey is defined by a relentless pursuit of growth.',
+      CALL_US: 'Call Us',
+      PHONE: '+1 233 587 36',
+    },
+
+    INFO: {
+      TITLE: 'Info :',
+      ITEMS: [
+        'Shipping Times',
+        'See all products',
+        'Payment methods',
+        'Returns and refunds',
+        'Terms and conditions',
+      ],
+    },
+
+    CONTACTS: {
+      TITLE: 'Contacts :',
+      ITEMS: [
+        'Molly Mc Drive',
+        'info@email.com',
+        'Emily Burton',
+        'quote@email.com',
+        'U.S. of America',
+      ],
+    },
+
+    RECENT_POSTS: {
+      TITLE: 'Recent Posts :',
+      POSTS: [
+        {
+          TITLE: 'Light Poles & Prevention',
+          DESCRIPTION: 'With recent advances in technology, light poles...',
+        },
+        {
+          TITLE: 'Prevention & Support',
+          DESCRIPTION: 'Electricians are essential to safety and...',
+        },
+      ],
+    },
+
+    FOOTER_LINKS: [
+      'Partnerships',
+      'Customer Support',
+      'Privacy Policy',
+    ],
   },
 } as const;

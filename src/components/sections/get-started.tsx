@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+import { IoPlay } from 'react-icons/io5';
 import { IMAGES } from '@/constants/images';
 
 export default function GetStarted() {
@@ -8,11 +9,17 @@ export default function GetStarted() {
 
   return (
     <section className="bg-background text-foreground w-full px-3 py-5 md:px-5">
-      <div className="mx-auto flex max-w-7xl flex-col gap-8">
-        <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
-          <div className="bg-primary flex items-center justify-center  p-10 shadow-md">
-            <div className="flex items-center gap-8">
-              <div className="relative h-24 w-24 flex-shrink-0">
+      <div className="max-w-8xl mx-auto flex flex-col gap-8">
+
+        <div className="grid grid-cols-1 items-stretch gap-6 lg:grid-cols-2">
+
+          <div className="bg-primary flex h-80 items-center justify-center p-6 shadow-md sm:h-96
+                          sm:p-10 md:h-[420px] md:justify-start lg:h-[480px] xl:h-[550px]"
+          >
+
+            <div className="ml-24 flex w-full flex-col items-center gap-4 sm:flex-row sm:gap-8 md:items-center">
+
+              <div className="relative h-24 w-24 flex-shrink-0 sm:h-26 sm:w-26">
                 <Image
                   src={IMAGES.GET_STARTED.ICON}
                   alt="Electric Icon"
@@ -22,24 +29,32 @@ export default function GetStarted() {
                 />
               </div>
 
-              <div className="max-w-md">
-                <h2 className="mb-2 text-3xl leading-snug font-extrabold md:text-4xl">
-                  Don't wait! Contact us today
-                  {' '}
+              <div className="max-w-full text-center sm:max-w-md md:text-left">
+                <h2 className="mb-4 text-2xl leading-tight font-extrabold sm:text-3xl md:text-4xl">
+                  Don't wait !
                   <br />
-                  {' '}
-                  and let us help it's
-                  quick and easy.
+                  contact us
+                  <br />
+                  today and
+                  <br />
+                  let us help !
+                  <br />
+                  it's quick
+                  <br />
+                  and easy.
                 </h2>
-                <p className="text-muted-foreground text-sm tracking-widest uppercase">
+
+                <p className="mt-4 text-xs tracking-[0.25em] text-black/80 uppercase sm:text-sm md:text-sm">
                   Job done right away
                 </p>
               </div>
+
             </div>
           </div>
 
           <div
-            className="group relative h-64 cursor-pointer overflow-hidden  sm:h-72 md:h-80 lg:h-96"
+            className="group relative h-80 cursor-pointer
+                       overflow-hidden sm:h-96 md:h-[420px] lg:h-[480px] xl:h-[550px]"
             onClick={() => window.open(videoUrl, '_blank')}
             onKeyDown={(e) => {
               if (e.key === 'Enter' || e.key === ' ') {
@@ -57,8 +72,8 @@ export default function GetStarted() {
             />
 
             <div className="absolute inset-0 flex items-center justify-center">
-              <div className="bg-primary rounded-full p-4 text-white shadow-lg transition-all duration-300 group-hover:scale-110">
-                ▶
+              <div className="bg-primary rounded-full p-6 text-white shadow-lg transition-all duration-300 group-hover:scale-110">
+                <IoPlay size={32} color="black" />
               </div>
             </div>
           </div>
@@ -68,7 +83,7 @@ export default function GetStarted() {
           {IMAGES.GET_STARTED.GALLERY.map((src, idx) => (
             <div
               key={idx}
-              className="relative h-40 overflow-hidden  sm:h-48 md:h-56"
+              className="relative h-32 overflow-hidden sm:h-40 md:h-48 lg:h-56"
             >
               <Image
                 src={src}
@@ -79,6 +94,7 @@ export default function GetStarted() {
             </div>
           ))}
         </div>
+
       </div>
     </section>
   );
