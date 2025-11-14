@@ -71,5 +71,13 @@
     "dashboard_link": "Dashboard",
     "user_profile_link": "Manage your account",
     "sign_out": "Sign out"
+  },
+  "Contact": {
+    "meta_title": "Contact Us",
+    "meta_description": "Get in touch with us for professional electrical services"
+  },
+  "Services": {
+    "meta_title": "Our Services",
+    "meta_description": "Professional electrical services for your home and business"
   }
 }

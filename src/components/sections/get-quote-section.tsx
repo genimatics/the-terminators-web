@@ -26,7 +26,7 @@ export default function QuoteSection(): JSX.Element {
       </div>
 
       <div className="relative z-10 mx-auto max-w-5xl bg-white/95 p-8 shadow-xl backdrop-blur-sm md:p-10">
-        <div className="mb-10 flex items-center justify-center space-x-6">
+        <div className="mb-10 flex flex-col items-center justify-center space-y-6 sm:flex-row sm:space-y-0 sm:space-x-6">
           <div className="flex flex-col items-center">
             <div className="bg-primary flex h-12 w-12 items-center justify-center rounded-full border-2 border-black text-lg font-bold text-black">
               1
@@ -36,7 +36,7 @@ export default function QuoteSection(): JSX.Element {
             </p>
           </div>
 
-          <div className="h-[2px] w-30 bg-gray-300"></div>
+          <div className="hidden h-[2px] w-30 bg-gray-300 sm:block"></div>
 
           <div className="flex flex-col items-center">
             <div className="border-primary text-primary flex h-12 w-12 items-center justify-center rounded-full border-2 text-lg font-bold">
@@ -47,7 +47,7 @@ export default function QuoteSection(): JSX.Element {
             </p>
           </div>
 
-          <div className="h-[2px] w-30 bg-gray-300"></div>
+          <div className="hidden h-[2px] w-30 bg-gray-300 sm:block"></div>
 
           {/* Step 3 */}
           <div className="flex flex-col items-center">
@@ -61,7 +61,7 @@ export default function QuoteSection(): JSX.Element {
         </div>
 
         <form className="space-y-6">
-          <div className="grid gap-4 md:grid-cols-3">
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
             <div>
               <label
                 htmlFor="name"
@@ -114,7 +114,7 @@ export default function QuoteSection(): JSX.Element {
             </div>
           </div>
 
-          <div className="grid gap-4 md:grid-cols-2">
+          <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
             <div>
               <label
                 htmlFor="country"
@@ -152,7 +152,7 @@ export default function QuoteSection(): JSX.Element {
             </div>
           </div>
 
-          <div className="grid gap-4 md:grid-cols-2">
+          <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
             <div>
               <label
                 htmlFor="address"
@@ -206,7 +206,7 @@ export default function QuoteSection(): JSX.Element {
           <div className="item-center flex w-full justify-center">
             <Button
               type="submit"
-              className="bg-primary px-110 py-4 text-lg font-semibold text-black shadow-sm"
+              className="w-full py-3 text-base font-semibold text-black transition-all duration-300 sm:py-4 sm:text-lg"
             >
               Next
             </Button>

@@ -113,4 +113,63 @@ export const TEXTS = {
       '/assets/terminator-images/home/valued-customer/testinomial-img1.jpg',
     ],
   },
+
+  ABOUT_TEAM: {
+    HEADINGS: {
+      SMALL_TITLE: 'Collaborating for Excellence',
+      TITLE: 'Our Best Electricians',
+      PARAGRAPH: 'Meet Our Exceptional Team of Diverse Talents',
+    },
+
+    MEMBERS: [
+      {
+        IMAGE: '/assets/terminator-images/about/about-team1.jpg',
+        NAME: 'ROBERT GAGS',
+        ROLE: 'PROJECT MANAGER',
+      },
+      {
+        IMAGE: '/assets/terminator-images/about/about-team2.jpg',
+        NAME: 'CHARLE JONS',
+        ROLE: 'UI/UX DESIGNER',
+      },
+      {
+        IMAGE: '/assets/terminator-images/about/about-team3.jpg',
+        NAME: 'DELLA ROZ',
+        ROLE: 'FULL STACK DEVELOPER',
+      },
+    ],
+  },
+
+  CONTACT_BOX: {
+    CARDS: [
+      {
+        ICON: '/assets/terminator-images/contact/contact-icon1.gif',
+        HEADING: 'Free Consultation',
+        PARAGRAPH:
+          'Request the opinion of one of our experts to solve your problem.',
+        EMAIL: 'contact@email.com',
+        PHONE: '+1 583 454 846',
+      },
+      {
+        ICON: '/assets/terminator-images/contact/contact-icon2.gif',
+        HEADING: 'Expert Assistance',
+        PARAGRAPH: 'We’re ready to provide the help you need, anytime.',
+        EMAIL: 'helpdesk@email.com',
+        PHONE: '+1 999 444 222',
+      },
+      {
+        ICON: '/assets/terminator-images/contact/contact-icon3.gif',
+        HEADING: 'Customer Support',
+        PARAGRAPH:
+          'Our support staff ensures a smooth experience for all your requests.',
+        EMAIL: 'support@email.com',
+        PHONE: '+1 877 333 221',
+      },
+    ],
+
+    FOOTER: {
+      TITLE: 'Write to us for a fast Feedback',
+      PARAGRAPH: 'DIRECT COMMUNICATION',
+    },
+  },
 } as const;

@@ -34,6 +34,17 @@ export const IMAGES = {
     ICON6: '/assets/terminator-images/home/section-one/section-icon6.gif',
   },
 
+  ABOUT: {
+    BG: '/assets/terminator-images/about/about-bg.jpg',
+    ICON1: '/assets/terminator-images/about/about-icon1.gif',
+    ICON2: '/assets/terminator-images/about/about-icon2.gif',
+    ICON3: '/assets/terminator-images/about/about-icon3.gif',
+    SLIDE1: '/assets/terminator-images/about/about-slide1.jpg',
+    SLIDE2: '/assets/terminator-images/about/about-slide2.jpg',
+    EXPERTICON1: '/assets/terminator-images/about/about-expert-icon1.gif',
+    EXPERTICON2: '/assets/terminator-images/about/about-expert-icon2.gif',
+
+  },
   NAVBAR: {
     LOGO: '/assets/terminator-images/navbar/nav-logo.png',
   },

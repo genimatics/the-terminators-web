@@ -3,16 +3,8 @@ import { hasLocale, NextIntlClientProvider } from 'next-intl';
 import { setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { PostHogProvider } from '@/components/analytics/PostHogProvider';
-import { DemoBadge } from '@/components/DemoBadge';
 import Footer from '@/components/sections/footer';
-import QuoteSection from '@/components/sections/get-quote-section';
-import GetStarted from '@/components/sections/get-started';
-import Hero from '@/components/sections/hero';
 import Navbar from '@/components/sections/navbar';
-import SectionOne from '@/components/sections/section-1';
-import SectionTwo from '@/components/sections/section-2';
-import ValuedCustomers from '@/components/sections/valued-customer';
-
 import { routing } from '@/libs/I18nRouting';
 import '@/styles/global.css';
 
@@ -50,19 +42,14 @@ export default async function RootLayout({
         <NextIntlClientProvider>
           <PostHogProvider>
             <Navbar />
-            <Hero />
-            <GetStarted />
-            <SectionOne />
-            <SectionTwo />
-            <ValuedCustomers />
-            <QuoteSection />
-            <Footer />
 
             {/* Children content (for nested pages) */}
             <main>{children}</main>
 
+            <Footer />
+
             {/* Demo Badge for analytics/testing */}
-            <DemoBadge />
+            {/* <DemoBadge /> */}
           </PostHogProvider>
         </NextIntlClientProvider>
       </body>

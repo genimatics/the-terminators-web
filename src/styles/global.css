@@ -6,9 +6,10 @@
   :root {
     --color-primary: #5a8fcf;
     --color-text: #212529;
+    --color-secondary: #ebebeb;
     --color-muted: #000000b3;
     --color-heading: #212440;
-    --font-sans: 'Raleway', sans-serif;
+    --font-sans: 'Poppins', sans-serif;
   }
 
   body {
@@ -23,6 +24,10 @@
 
   .bg-heading {
     background-color: var(--color-heading);
+  }
+
+  .bg-secondary {
+    background-color: var(--color-secondary);
   }
 
   .section-alt {

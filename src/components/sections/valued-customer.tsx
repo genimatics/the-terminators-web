@@ -12,12 +12,21 @@ export default function ValuedCustomers(): JSX.Element {
     = TEXTS.VALUED_CUSTOMERS;
 
   const [index, setIndex] = useState(0);
+  const [fade, setFade] = useState(true);
+
+  const changeSlide = (newIndex: number): void => {
+    setFade(false);
+    setTimeout(() => {
+      setIndex(newIndex);
+      setFade(true);
+    }, 200);
+  };
 
   const prev = (): void =>
-    setIndex(prev => (prev === 0 ? TESTIMONIALS.length - 1 : prev - 1));
+    changeSlide(index === 0 ? TESTIMONIALS.length - 1 : index - 1);
 
   const next = (): void =>
-    setIndex(prev => (prev === TESTIMONIALS.length - 1 ? 0 : prev + 1));
+    changeSlide(index === TESTIMONIALS.length - 1 ? 0 : index + 1);
 
   const current: Testimonial = TESTIMONIALS[index] ?? TESTIMONIALS[0];
 
@@ -51,34 +60,41 @@ export default function ValuedCustomers(): JSX.Element {
           ))}
         </div>
 
-        <div className="flex h-[636px] flex-col items-center justify-between">
-          <div className="text-muted relative flex w-full flex-1 flex-col justify-center p-6 text-xl font-bold">
-            <p className="leading-relaxed text-gray-700">{current.text}</p>
-
-            <div className="mt-6 flex flex-col items-center justify-center">
-              <Image
-                src={current.avatar}
-                alt={current.name}
-                width={60}
-                height={60}
-                className="mb-2 rounded-full border border-gray-400 object-cover"
-              />
-              <h4 className="font-semibold text-black">{current.name}</h4>
-              <span className="text-sm text-gray-500">{current.location}</span>
-            </div>
-
+        <div className="relative flex h-[636px] flex-col items-center justify-between">
+          <div className="relative flex w-full flex-1 items-center justify-center">
             <button
               type="button"
               onClick={prev}
-              className="absolute top-1/2 left-3 -translate-y-1/2"
+              className="absolute top-1/2 left-3 z-10 -translate-y-1/2"
               aria-label="Previous testimonial"
             >
               <ChevronLeft className="h-7 w-7" />
             </button>
+
+            <div
+              className={`w-full transform px-6 text-xl font-bold transition-all duration-500 ease-in-out ${
+                fade ? 'translate-x-0 opacity-100' : 'translate-x-5 opacity-0'
+              }`}
+            >
+              <p className="leading-relaxed text-gray-700">{current.text}</p>
+
+              <div className="mt-6 flex flex-col items-center justify-center">
+                <Image
+                  src={current.avatar}
+                  alt={current.name}
+                  width={60}
+                  height={60}
+                  className="mb-2 rounded-full border border-gray-400 object-cover"
+                />
+                <h4 className="font-semibold text-black">{current.name}</h4>
+                <span className="text-sm text-gray-500">{current.location}</span>
+              </div>
+            </div>
+
             <button
               type="button"
               onClick={next}
-              className="absolute top-1/2 right-3 -translate-y-1/2"
+              className="absolute top-1/2 right-3 z-10 -translate-y-1/2"
               aria-label="Next testimonial"
             >
               <ChevronRight className="h-7 w-7" />

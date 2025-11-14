@@ -71,5 +71,13 @@
     "dashboard_link": "Tableau de bord",
     "user_profile_link": "Gérer votre compte",
     "sign_out": "Se déconnecter"
+  },
+  "Contact": {
+    "meta_title": "Contactez-nous",
+    "meta_description": "Contactez-nous pour des services électriques professionnels"
+  },
+  "Services": {
+    "meta_title": "Nos Services",
+    "meta_description": "Services électriques professionnels pour votre maison et votre entreprise"
   }
 }
