@@ -16,6 +16,7 @@ export default function NotFoundPage() {
   return (
     <html lang={routing.defaultLocale}>
       <body>
+
         <section className="flex min-h-screen w-full flex-col items-center justify-center bg-black px-4 text-center text-white">
           <h1 className="text-[100px] leading-none font-extrabold md:text-[140px]">
             404

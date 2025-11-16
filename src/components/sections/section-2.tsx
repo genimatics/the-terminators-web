@@ -4,6 +4,7 @@ import type { JSX } from 'react';
 import Image from 'next/image';
 import { useState } from 'react';
 import Button from '@/components/ui/button';
+import ScrollReveal from '@/components/ui/scroll-reveal';
 import { TEXTS } from '@/constants/text';
 
 type SectionTwoText = typeof TEXTS.SECTION_TWO;
@@ -75,44 +76,47 @@ export default function SectionTwo(): JSX.Element {
       </div>
 
       <div className="mx-auto mb-12 grid max-w-7xl grid-cols-1 gap-6 md:grid-cols-2">
-        <div className="text-center md:text-left">
-          <h3 className="mb-2 text-2xl font-bold sm:text-3xl md:text-4xl lg:text-5xl">
-            {headings.TITLE.split(' ')[0]}
-            {' '}
-            <span className="block">{headings.TITLE.split(' ').slice(1).join(' ')}</span>
-          </h3>
-          <h4 className="md:text-md mt-4 text-base font-medium text-gray-600 sm:text-lg">
-            {headings.SUBTITLE}
-          </h4>
-        </div>
+        <ScrollReveal>
+          <div className="text-center md:text-left">
+            <h3 className="mb-2 text-2xl font-bold sm:text-3xl md:text-4xl lg:text-5xl">
+              {headings.TITLE.split(' ')[0]}
+              {' '}
+              <span className="block">{headings.TITLE.split(' ').slice(1).join(' ')}</span>
+            </h3>
+            <h4 className="md:text-md mt-4 text-base font-medium text-gray-600 sm:text-lg">
+              {headings.SUBTITLE}
+            </h4>
+          </div>
+        </ScrollReveal>
 
-        <div className="space-y-3 text-sm text-gray-700 sm:text-base md:text-lg">
-          {paragraphs.map((paragraph, index) => (
-            <p key={index}>{paragraph}</p>
-          ))}
-        </div>
+        <ScrollReveal delay={0.1}>
+          <div className="space-y-3 text-sm text-gray-700 sm:text-base md:text-lg">
+            {paragraphs.map((paragraph, index) => (
+              <p key={index}>{paragraph}</p>
+            ))}
+          </div>
+        </ScrollReveal>
       </div>
 
       <div className="mx-auto grid max-w-7xl gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {serviceBoxes.map((box: ServiceBox, i) => (
-          <div
-            key={i}
-            className="flex flex-col items-start rounded-2xl p-4 transition-all duration-300 hover:bg-[#f8f8f8] sm:p-6"
-          >
-            <div className="mb-3 h-12 w-12 sm:h-16 sm:w-16">
-              <Image
-                src={box.icon}
-                alt={box.title}
-                width={64}
-                height={64}
-                className="h-full w-full object-contain"
-              />
+          <ScrollReveal key={i} delay={i * 0.1}>
+            <div className="flex flex-col items-start rounded-2xl p-4 transition-all duration-300 hover:bg-[#f8f8f8] sm:p-6">
+              <div className="mb-3 h-12 w-12 sm:h-16 sm:w-16">
+                <Image
+                  src={box.icon}
+                  alt={box.title}
+                  width={64}
+                  height={64}
+                  className="h-full w-full object-contain"
+                />
+              </div>
+              <h3 className="mb-1 text-lg font-semibold sm:text-xl md:text-2xl">
+                {box.title}
+              </h3>
+              <p className="text-xs text-gray-600 sm:text-sm md:text-base">{box.desc}</p>
             </div>
-            <h3 className="mb-1 text-lg font-semibold sm:text-xl md:text-2xl">
-              {box.title}
-            </h3>
-            <p className="text-xs text-gray-600 sm:text-sm md:text-base">{box.desc}</p>
-          </div>
+          </ScrollReveal>
         ))}
       </div>
 

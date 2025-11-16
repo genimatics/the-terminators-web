@@ -2,6 +2,7 @@
 
 import Image from 'next/image';
 import { IoPlay } from 'react-icons/io5';
+import ScrollReveal from '@/components/ui/scroll-reveal';
 import { IMAGES } from '@/constants/images';
 
 export default function GetStarted() {
@@ -18,37 +19,39 @@ export default function GetStarted() {
           >
 
             <div className="ml-24 flex w-full flex-col items-center gap-4 sm:flex-row sm:gap-8 md:items-center">
+              <ScrollReveal>
+                <div className="relative h-24 w-24 flex-shrink-0 sm:h-26 sm:w-26">
+                  <Image
+                    src={IMAGES.GET_STARTED.ICON}
+                    alt="Electric Icon"
+                    fill
+                    className="object-contain"
+                    priority
+                  />
+                </div>
+              </ScrollReveal>
 
-              <div className="relative h-24 w-24 flex-shrink-0 sm:h-26 sm:w-26">
-                <Image
-                  src={IMAGES.GET_STARTED.ICON}
-                  alt="Electric Icon"
-                  fill
-                  className="object-contain"
-                  priority
-                />
-              </div>
+              <ScrollReveal delay={0.1}>
+                <div className="max-w-full text-center sm:max-w-md md:text-left">
+                  <h2 className="mb-4 text-2xl leading-tight font-extrabold sm:text-3xl md:text-4xl">
+                    Don't wait !
+                    <br />
+                    contact us
+                    <br />
+                    today and
+                    <br />
+                    let us help !
+                    <br />
+                    it's quick
+                    <br />
+                    and easy.
+                  </h2>
 
-              <div className="max-w-full text-center sm:max-w-md md:text-left">
-                <h2 className="mb-4 text-2xl leading-tight font-extrabold sm:text-3xl md:text-4xl">
-                  Don't wait !
-                  <br />
-                  contact us
-                  <br />
-                  today and
-                  <br />
-                  let us help !
-                  <br />
-                  it's quick
-                  <br />
-                  and easy.
-                </h2>
-
-                <p className="mt-4 text-xs tracking-[0.25em] text-black/80 uppercase sm:text-sm md:text-sm">
-                  Job done right away
-                </p>
-              </div>
-
+                  <p className="mt-4 text-xs tracking-[0.25em] text-black/80 uppercase sm:text-sm md:text-sm">
+                    Job done right away
+                  </p>
+                </div>
+              </ScrollReveal>
             </div>
           </div>
 
@@ -81,17 +84,16 @@ export default function GetStarted() {
 
         <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
           {IMAGES.GET_STARTED.GALLERY.map((src, idx) => (
-            <div
-              key={idx}
-              className="relative h-32 overflow-hidden sm:h-40 md:h-48 lg:h-56"
-            >
-              <Image
-                src={src}
-                alt={`Worker ${idx + 1}`}
-                fill
-                className="object-cover transition-all duration-500 hover:brightness-90"
-              />
-            </div>
+            <ScrollReveal key={idx} delay={idx * 0.1}>
+              <div className="relative h-32 overflow-hidden sm:h-40 md:h-48 lg:h-56">
+                <Image
+                  src={src}
+                  alt={`Worker ${idx + 1}`}
+                  fill
+                  className="object-cover transition-all duration-500 hover:brightness-90"
+                />
+              </div>
+            </ScrollReveal>
           ))}
         </div>
 

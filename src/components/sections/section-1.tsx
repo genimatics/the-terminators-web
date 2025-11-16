@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import Button from '@/components/ui/button';
+import ScrollReveal from '@/components/ui/scroll-reveal';
 import { IMAGES } from '@/constants/images';
 
 export default function SectionOne() {
@@ -19,38 +20,40 @@ export default function SectionOne() {
       </div>
 
       <div className="relative z-10 grid grid-cols-1 items-center gap-10 lg:grid-cols-2">
-        <div className="space-y-6 text-center lg:text-left">
-          <p className="text-sm tracking-widest text-gray-500 uppercase">
-            WIDE RANGE OF ELECTRICAL SERVICES
-          </p>
+        <ScrollReveal>
+          <div className="space-y-6 text-center lg:text-left">
+            <p className="text-sm tracking-widest text-gray-500 uppercase">
+              WIDE RANGE OF ELECTRICAL SERVICES
+            </p>
 
-          <h2 className="text-foreground text-3xl leading-snug font-bold sm:text-4xl md:text-5xl">
-            Do you need an Electrician?
-            {' '}
-            <span className="">Look no further!</span>
-          </h2>
+            <h2 className="text-foreground text-3xl leading-snug font-bold sm:text-4xl md:text-5xl">
+              Do you need an Electrician?
+              {' '}
+              <span className="">Look no further!</span>
+            </h2>
 
-          <p className="mx-auto max-w-xl leading-relaxed text-gray-600 lg:mx-0">
-            Our team of experienced electricians is highly trained, certified, and insured,
-            providing you with the highest quality of service. Whether you need a new outlet
-            installed or a complete rewire, Electricians has you covered.
-          </p>
+            <p className="mx-auto max-w-xl leading-relaxed text-gray-600 lg:mx-0">
+              Our team of experienced electricians is highly trained, certified, and insured,
+              providing you with the highest quality of service. Whether you need a new outlet
+              installed or a complete rewire, Electricians has you covered.
+            </p>
 
-          <ul className="mx-auto max-w-md space-y-2 text-gray-700 lg:mx-0">
-            <li className="flex items-start gap-2">
-              <span className="text-primary font-bold">✔</span>
-              Navigating possibilities: your gateway to premium services
-            </li>
-            <li className="flex items-start gap-2">
-              <span className="text-primary font-bold">✔</span>
-              Transforming challenges into opportunities and ideas into reality
-            </li>
-          </ul>
+            <ul className="mx-auto max-w-md space-y-2 text-gray-700 lg:mx-0">
+              <li className="flex items-start gap-2">
+                <span className="text-primary font-bold">✔</span>
+                Navigating possibilities: your gateway to premium services
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-primary font-bold">✔</span>
+                Transforming challenges into opportunities and ideas into reality
+              </li>
+            </ul>
 
-          <Link href="#" className="inline-block">
-            <Button className="px-6 py-3">All Service</Button>
-          </Link>
-        </div>
+            <Link href="#" className="inline-block">
+              <Button className="px-6 py-3">All Service</Button>
+            </Link>
+          </div>
+        </ScrollReveal>
 
         <div className="relative flex flex-col items-center">
           <div className="grid w-full grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">

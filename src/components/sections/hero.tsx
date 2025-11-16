@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import Button from '@/components/ui/button';
+import ScrollReveal from '@/components/ui/scroll-reveal';
 import { IMAGES } from '@/constants/images';
 
 const images = [IMAGES.HERO.SLIDE1, IMAGES.HERO.SLIDE2, IMAGES.HERO.SLIDE3];
@@ -32,23 +33,27 @@ export default function Hero() {
       <div className="absolute inset-0 bg-black/50" />
 
       <div className="relative z-10 flex flex-1 flex-col items-center justify-start px-4 pt-24 sm:px-6 sm:pt-32 md:pt-36">
-        <h1 className="mb-4 flex flex-wrap justify-center gap-3 text-4xl leading-tight font-extrabold text-white sm:text-5xl md:text-6xl lg:text-7xl">
-          <span>Top</span>
-          <span
-            key={index}
-            className="animate-fadeIn inline-block text-white transition-all duration-1000"
-          >
-            {changingWords[index]}
-          </span>
-        </h1>
+        <ScrollReveal>
+          <h1 className="mb-4 flex flex-wrap justify-center gap-3 text-4xl leading-tight font-extrabold text-white sm:text-5xl md:text-6xl lg:text-7xl">
+            <span>Top</span>
+            <span
+              key={index}
+              className="animate-fadeIn inline-block text-white transition-all duration-1000"
+            >
+              {changingWords[index]}
+            </span>
+          </h1>
 
-        <p className="mx-auto mb-6 max-w-xl text-base text-white opacity-90 sm:text-lg md:text-xl lg:text-2xl">
-          Lighting Up Your Life – Professional Electricians!
-        </p>
+          <p className="mx-auto mb-6 max-w-xl text-base text-white opacity-90 sm:text-lg md:text-xl lg:text-2xl">
+            Lighting Up Your Life – Professional Electricians!
+          </p>
+        </ScrollReveal>
 
-        <Button className="px-8 py-3 text-base sm:text-lg md:text-xl">
-          More Info
-        </Button>
+        <ScrollReveal delay={0.2}>
+          <Button className="px-8 py-3 text-base sm:text-lg md:text-xl">
+            More Info
+          </Button>
+        </ScrollReveal>
       </div>
 
       <div className="relative mt-auto w-full px-6 pb-6 sm:pb-8">
