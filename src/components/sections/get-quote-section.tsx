@@ -15,7 +15,6 @@ export default function QuoteSection(): JSX.Element {
     >
       <div className="absolute inset-0 bg-black/60 backdrop-blur-md"></div>
 
-      {/* Heading Section */}
       <ScrollReveal>
         <div className="relative z-10 mb-12 text-center">
           <h2 className="text-3xl font-bold text-white md:text-4xl">
@@ -53,7 +52,6 @@ export default function QuoteSection(): JSX.Element {
 
             <div className="hidden h-[2px] w-30 bg-gray-300 sm:block"></div>
 
-            {/* Step 3 */}
             <div className="flex flex-col items-center">
               <div className="border-primary text-primary flex h-12 w-12 items-center justify-center rounded-full border-2 text-lg font-bold">
                 3

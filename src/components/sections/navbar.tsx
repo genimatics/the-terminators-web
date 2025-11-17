@@ -151,7 +151,6 @@ export default function Navbar() {
           </div>
         </div>
 
-        {/* Mobile Navbar */}
         <div className="flex w-full flex-col items-center justify-center py-3 sm:hidden">
           <Image
             src={IMAGES.NAVBAR.LOGO || '/placeholder.svg'}

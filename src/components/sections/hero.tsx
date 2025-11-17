@@ -57,22 +57,24 @@ export default function Hero() {
       </div>
 
       <div className="relative mt-auto w-full px-6 pb-6 sm:pb-8">
-        <div className="mx-auto grid max-w-5xl grid-cols-1 gap-6 text-center text-white sm:grid-cols-2 md:grid-cols-3">
-          <div className="flex flex-col items-center">
-            <div className="mb-2 w-full border-t border-white/40" />
-            <p className="text-sm font-semibold sm:text-base md:text-lg">quote@mail.com</p>
-          </div>
+        <ScrollReveal delay={0.2}>
+          <div className="mx-auto grid max-w-5xl grid-cols-1 gap-6 text-center text-white sm:grid-cols-2 md:grid-cols-3">
+            <div className="flex flex-col items-center">
+              <div className="mb-2 w-full border-t border-white/40" />
+              <p className="text-sm font-semibold sm:text-base md:text-lg">quote@mail.com</p>
+            </div>
 
-          <div className="flex flex-col items-center">
-            <div className="mb-2 w-full border-t border-white/40" />
-            <p className="text-sm font-semibold sm:text-base md:text-lg">+1 374 739 378</p>
-          </div>
+            <div className="flex flex-col items-center">
+              <div className="mb-2 w-full border-t border-white/40" />
+              <p className="text-sm font-semibold sm:text-base md:text-lg">+1 374 739 378</p>
+            </div>
 
-          <div className="flex flex-col items-center">
-            <div className="mb-2 w-full border-t border-white/40" />
-            <p className="text-sm font-semibold sm:text-base md:text-lg">42 Oak Street – Miami</p>
+            <div className="flex flex-col items-center">
+              <div className="mb-2 w-full border-t border-white/40" />
+              <p className="text-sm font-semibold sm:text-base md:text-lg">42 Oak Street – Miami</p>
+            </div>
           </div>
-        </div>
+        </ScrollReveal>
       </div>
     </section>
   );

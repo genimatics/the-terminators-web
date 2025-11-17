@@ -32,48 +32,50 @@ export default function SectionTwo(): JSX.Element {
 
   return (
     <section className="w-full bg-white px-4 py-10 text-black sm:px-6 md:px-10">
-      <div className="relative mx-auto mb-10 max-w-7xl">
-        <a
-          href={currentSlide.link}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="block"
-        >
-          <Image
-            src={currentSlide.img}
-            alt={`Slide ${current + 1}`}
-            width={1600}
-            height={800}
-            className="h-[300px] w-full  object-cover sm:h-[400px] md:h-[500px] lg:h-[650px]"
-          />
-        </a>
+      <ScrollReveal>
+        <div className="relative mx-auto mb-10 max-w-7xl">
+          <a
+            href={currentSlide.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block"
+          >
+            <Image
+              src={currentSlide.img}
+              alt={`Slide ${current + 1}`}
+              width={1600}
+              height={800}
+              className="h-[300px] w-full  object-cover sm:h-[400px] md:h-[500px] lg:h-[650px]"
+            />
+          </a>
 
-        <div className="absolute bottom-4 left-1/2 max-w-[90%] -translate-x-1/2 px-4 py-2 text-center text-white sm:max-w-2xl sm:px-6">
-          <h2 className="mb-2 text-2xl font-bold sm:text-3xl md:text-4xl lg:text-5xl">
-            {headings.MAIN}
-          </h2>
-          <p className="text-sm text-gray-200 sm:text-base md:text-lg">
-            {headings.SUB}
-          </p>
+          <div className="absolute bottom-4 left-1/2 max-w-[90%] -translate-x-1/2 px-4 py-2 text-center text-white sm:max-w-2xl sm:px-6">
+            <h2 className="mb-2 text-2xl font-bold sm:text-3xl md:text-4xl lg:text-5xl">
+              {headings.MAIN}
+            </h2>
+            <p className="text-sm text-gray-200 sm:text-base md:text-lg">
+              {headings.SUB}
+            </p>
+          </div>
+
+          <button
+            type="button"
+            onClick={prevSlide}
+            className="absolute top-1/2 left-2 -translate-y-1/2 rounded-full bg-black/30 p-2 text-white hover:bg-black/50 sm:left-4 sm:p-3"
+            aria-label="Previous Slide"
+          >
+            ❮
+          </button>
+          <button
+            type="button"
+            onClick={nextSlide}
+            className="absolute top-1/2 right-2 -translate-y-1/2 rounded-full bg-black/30 p-2 text-white hover:bg-black/50 sm:right-4 sm:p-3"
+            aria-label="Next Slide"
+          >
+            ❯
+          </button>
         </div>
-
-        <button
-          type="button"
-          onClick={prevSlide}
-          className="absolute top-1/2 left-2 -translate-y-1/2 rounded-full bg-black/30 p-2 text-white hover:bg-black/50 sm:left-4 sm:p-3"
-          aria-label="Previous Slide"
-        >
-          ❮
-        </button>
-        <button
-          type="button"
-          onClick={nextSlide}
-          className="absolute top-1/2 right-2 -translate-y-1/2 rounded-full bg-black/30 p-2 text-white hover:bg-black/50 sm:right-4 sm:p-3"
-          aria-label="Next Slide"
-        >
-          ❯
-        </button>
-      </div>
+      </ScrollReveal>
 
       <div className="mx-auto mb-12 grid max-w-7xl grid-cols-1 gap-6 md:grid-cols-2">
         <ScrollReveal>
