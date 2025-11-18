@@ -9,12 +9,12 @@ export default function GetStarted() {
   const videoUrl = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ';
 
   return (
-    <section className="bg-background text-foreground w-full px-3 py-5 md:px-5">
+    <section className="w-full bg-background px-3 py-5 text-foreground md:px-5">
       <div className="max-w-8xl mx-auto flex flex-col gap-8">
 
         <div className="grid grid-cols-1 items-stretch gap-6 lg:grid-cols-2">
 
-          <div className="bg-primary flex h-80 items-center justify-center p-6 shadow-md sm:h-96
+          <div className="flex h-80 items-center justify-center bg-primary p-6 shadow-md sm:h-96
                           sm:p-10 md:h-[420px] md:justify-start lg:h-[480px] xl:h-[550px]"
           >
 
@@ -54,7 +54,6 @@ export default function GetStarted() {
               </ScrollReveal>
             </div>
           </div>
-
           <div
             className="group relative h-80 cursor-pointer
                        overflow-hidden sm:h-96 md:h-[420px] lg:h-[480px] xl:h-[550px]"
@@ -66,6 +65,7 @@ export default function GetStarted() {
             }}
             role="button"
             tabIndex={0}
+
           >
             <Image
               src={IMAGES.GET_STARTED.MAIN}
@@ -75,9 +75,11 @@ export default function GetStarted() {
             />
 
             <div className="absolute inset-0 flex items-center justify-center">
-              <div className="bg-primary rounded-full p-6 text-white shadow-lg transition-all duration-300 group-hover:scale-110">
-                <IoPlay size={32} color="black" />
-              </div>
+              <ScrollReveal delay={0.1}>
+                <div className="rounded-full bg-primary p-6 text-white shadow-lg transition-all duration-300 group-hover:scale-110">
+                  <IoPlay size={32} color="black" />
+                </div>
+              </ScrollReveal>
             </div>
           </div>
         </div>

@@ -26,10 +26,13 @@ export default function SectionOne() {
               WIDE RANGE OF ELECTRICAL SERVICES
             </p>
 
-            <h2 className="text-foreground text-3xl leading-snug font-bold sm:text-4xl md:text-5xl">
+            <h2 className="text-3xl leading-snug font-bold text-foreground sm:text-4xl md:text-5xl">
               Do you need an Electrician?
               {' '}
-              <span className="">Look no further!</span>
+              <span className="block">
+                Look no further!
+
+              </span>
             </h2>
 
             <p className="mx-auto max-w-xl leading-relaxed text-gray-600 lg:mx-0">
@@ -40,11 +43,11 @@ export default function SectionOne() {
 
             <ul className="mx-auto max-w-md space-y-2 text-gray-700 lg:mx-0">
               <li className="flex items-start gap-2">
-                <span className="text-primary font-bold">✔</span>
+                <span className="font-bold text-primary">✔</span>
                 Navigating possibilities: your gateway to premium services
               </li>
               <li className="flex items-start gap-2">
-                <span className="text-primary font-bold">✔</span>
+                <span className="font-bold  text-primary">✔</span>
                 Transforming challenges into opportunities and ideas into reality
               </li>
             </ul>

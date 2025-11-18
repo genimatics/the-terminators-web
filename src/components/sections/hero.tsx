@@ -1,8 +1,10 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import RotatingText from '@/components/RotatingText';
 import Button from '@/components/ui/button';
 import ScrollReveal from '@/components/ui/scroll-reveal';
+
 import { IMAGES } from '@/constants/images';
 
 const images = [IMAGES.HERO.SLIDE1, IMAGES.HERO.SLIDE2, IMAGES.HERO.SLIDE3];
@@ -13,7 +15,7 @@ export default function Hero() {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setIndex(prev => (prev + 1) % changingWords.length);
+      setIndex(prev => (prev + 1) % images.length);
     }, 5000);
     return () => clearInterval(interval);
   }, []);
@@ -34,14 +36,21 @@ export default function Hero() {
 
       <div className="relative z-10 flex flex-1 flex-col items-center justify-start px-4 pt-24 sm:px-6 sm:pt-32 md:pt-36">
         <ScrollReveal>
-          <h1 className="mb-4 flex flex-wrap justify-center gap-3 text-4xl leading-tight font-extrabold text-white sm:text-5xl md:text-6xl lg:text-7xl">
+          <h1 className="mb-4 flex flex-wrap items-center justify-center gap-3 text-4xl leading-tight font-extrabold text-white sm:text-5xl md:text-6xl lg:text-7xl">
             <span>Top</span>
-            <span
-              key={index}
-              className="animate-fadeIn inline-block text-white transition-all duration-1000"
-            >
-              {changingWords[index]}
-            </span>
+
+            <RotatingText
+              texts={changingWords}
+              mainClassName="px-2  rounded-lg overflow-hidden"
+              staggerFrom="last"
+              initial={{ y: '100%', opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              exit={{ y: '-120%', opacity: 0 }}
+              staggerDuration={0.03}
+              splitLevelClassName="overflow-hidden pb-1"
+              transition={{ type: 'spring', damping: 30, stiffness: 400 }}
+              rotationInterval={3000}
+            />
           </h1>
 
           <p className="mx-auto mb-6 max-w-xl text-base text-white opacity-90 sm:text-lg md:text-xl lg:text-2xl">

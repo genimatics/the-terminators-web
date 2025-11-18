@@ -73,7 +73,7 @@ export default function ValuedCustomers(): JSX.Element {
               <button
                 type="button"
                 onClick={prev}
-                className="absolute top-1/2 left-3 z-10 -translate-y-1/2"
+                className="absolute top-1/2 left-3 z-10 -translate-y-1/2 cursor-pointer"
                 aria-label="Previous testimonial"
               >
                 <ChevronLeft className="h-7 w-7" />
@@ -102,7 +102,7 @@ export default function ValuedCustomers(): JSX.Element {
               <button
                 type="button"
                 onClick={next}
-                className="absolute top-1/2 right-3 z-10 -translate-y-1/2"
+                className="absolute top-1/2 right-3 z-10 -translate-y-1/2 cursor-pointer"
                 aria-label="Next testimonial"
               >
                 <ChevronRight className="h-7 w-7" />
