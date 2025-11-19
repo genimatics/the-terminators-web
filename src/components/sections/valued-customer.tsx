@@ -2,57 +2,75 @@
 import type { JSX } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import Image from 'next/image';
-import { useState } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import ScrollReveal from '@/components/ui/scroll-reveal';
 import { TEXTS } from '@/constants/text';
 
 type Testimonial = (typeof TEXTS)['VALUED_CUSTOMERS']['TESTIMONIALS'][number];
 
 export default function ValuedCustomers(): JSX.Element {
-  const { TESTIMONIALS, LEFT_IMAGES, BOTTOM_GRID, HEADINGS }
-    = TEXTS.VALUED_CUSTOMERS;
+  const { TESTIMONIALS, LEFT_IMAGES, BOTTOM_GRID, HEADINGS } = TEXTS.VALUED_CUSTOMERS;
 
+  const total = TESTIMONIALS.length;
   const [index, setIndex] = useState(0);
   const [fade, setFade] = useState(true);
 
-  const changeSlide = (newIndex: number): void => {
+  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
+
+  const changeSlide = useCallback((newIndex: number): void => {
     setFade(false);
-    setTimeout(() => {
+
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+    }
+
+    timeoutRef.current = setTimeout(() => {
       setIndex(newIndex);
       setFade(true);
     }, 200);
-  };
+  }, []);
 
-  const prev = (): void =>
-    changeSlide(index === 0 ? TESTIMONIALS.length - 1 : index - 1);
+  useEffect(() => {
+    return () => {
+      if (timeoutRef.current) {
+        clearTimeout(timeoutRef.current);
+      }
+    };
+  }, []);
 
-  const next = (): void =>
-    changeSlide(index === TESTIMONIALS.length - 1 ? 0 : index + 1);
+  const prev = useCallback(
+    (): void => changeSlide(index === 0 ? total - 1 : index - 1),
+    [index, total, changeSlide],
+  );
 
-  const current: Testimonial = TESTIMONIALS[index] ?? TESTIMONIALS[0];
+  const next = useCallback(
+    (): void => changeSlide(index === total - 1 ? 0 : index + 1),
+    [index, total, changeSlide],
+  );
+
+  const current: Testimonial = useMemo(
+    () => TESTIMONIALS[index] ?? TESTIMONIALS[0],
+    [index, TESTIMONIALS],
+  );
 
   return (
-    <section className="w-full bg-white px-4 py-16 text-center md:px-10">
+    <section className="w-full bg-white px-4 py-16 text-center md:px-10 lg:px-12 xl:px-16">
       <ScrollReveal>
         <div className="mb-10">
-          <p className="text-sm tracking-wide text-gray-500 uppercase">
-            {HEADINGS.SUBTITLE}
-          </p>
+          <p className="text-sm tracking-wide text-gray-500 uppercase">{HEADINGS.SUBTITLE}</p>
           <h2 className="mt-2 text-4xl font-bold text-black md:text-5xl">
             {HEADINGS.TITLE}
             <span className="block px-2 text-black">{HEADINGS.HIGHLIGHT}</span>
           </h2>
-          <p className="mt-4 text-sm text-gray-500 md:text-base">
-            {HEADINGS.DESCRIPTION}
-          </p>
+          <p className="mt-4 text-sm text-gray-500 md:text-base">{HEADINGS.DESCRIPTION}</p>
         </div>
       </ScrollReveal>
 
-      <div className="mx-auto grid max-w-7xl grid-cols-1 gap-10 md:grid-cols-2 md:items-start">
+      <div className="mx-auto grid w-full max-w-full grid-cols-1 gap-10 md:grid-cols-2 md:items-start">
         <ScrollReveal>
           <div className="flex flex-col gap-6">
             {LEFT_IMAGES.map((img, i) => (
-              <ScrollReveal key={i} delay={i * 0.1}>
+              <ScrollReveal key={img} delay={i * 0.1}>
                 <div className="border border-black">
                   <Image
                     src={img}
@@ -111,7 +129,7 @@ export default function ValuedCustomers(): JSX.Element {
 
             <div className="mt-6 grid w-full grid-cols-2 gap-4">
               {BOTTOM_GRID.map((img, i) => (
-                <ScrollReveal key={i} delay={i * 0.1}>
+                <ScrollReveal key={img} delay={i * 0.1}>
                   <div className="border border-black">
                     <Image
                       src={img}

@@ -23,8 +23,8 @@ export default function ElectricalServices() {
   ];
 
   return (
-    <section className="w-full bg-white py-20">
-      <div className="mx-auto max-w-6xl px-4 text-center">
+    <section className="w-full bg-white px-4 py-20 sm:px-6 md:px-10 lg:px-12 xl:px-16 2xl:px-24">
+      <div className="w-full text-center">
         <ScrollReveal>
           <h2 className="mb-2 text-4xl font-bold text-black md:text-5xl">
             Top-Notch Assistance
@@ -34,11 +34,11 @@ export default function ElectricalServices() {
           </p>
         </ScrollReveal>
 
-        <div className="mb-12 grid grid-cols-1 gap-10 sm:grid-cols-2 md:grid-cols-3">
+        <div className="mb-12 grid w-full grid-cols-1 gap-10 sm:grid-cols-2 md:grid-cols-3">
           {services.map((item, index) => (
             <ScrollReveal key={index} delay={index * 0.1}>
-              <div className="flex flex-col items-center rounded-md  bg-white  p-4 text-center  transition ">
-                <div className="mb-4 h-[150px] w-[150px] overflow-hidden border  border-black ">
+              <div className="flex flex-col items-center rounded-md bg-white p-4 text-center transition">
+                <div className="mb-4 h-[150px] w-[150px] overflow-hidden border border-black">
                   <Image
                     src={item.img}
                     alt={item.title}

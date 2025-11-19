@@ -7,8 +7,8 @@ import { IMAGES } from '@/constants/images';
 
 export default function AboutFormSection() {
   return (
-    <section className="w-full bg-gray-100 py-5">
-      <div className="mx-auto grid max-w-7xl items-stretch border border-gray-300 md:grid-cols-2">
+    <section className="w-full bg-gray-100 px-4 py-5 sm:px-6 md:px-10 lg:px-12 xl:px-16 2xl:px-24">
+      <div className="grid w-full grid-cols-1 items-stretch border border-gray-300 md:grid-cols-2">
         <ScrollReveal>
           <div className="relative h-[400px] w-full md:h-[450px]">
             <Image
@@ -23,23 +23,21 @@ export default function AboutFormSection() {
         </ScrollReveal>
 
         <ScrollReveal delay={0.2}>
-          <div className="flex min-h-[400px] flex-col justify-center bg-black px-10 py-12 text-white md:min-h-[450px]">
+          <div className="flex min-h-[400px] flex-col justify-center bg-black px-6 py-12 sm:px-8 md:min-h-[450px] md:px-10">
             <form className="mx-auto w-full max-w-lg">
               <div className="mb-8 grid grid-cols-1 gap-6 md:grid-cols-2">
                 <div className="flex flex-col">
-
                   <input
                     type="text"
                     placeholder="Name"
-                    className="border-b border-gray-500 bg-transparent  py-2 text-white placeholder-gray-400 outline-none"
+                    className="border-b border-gray-500 bg-transparent py-2 text-white placeholder-gray-400 outline-none"
                   />
                 </div>
                 <div className="flex flex-col">
-
                   <input
                     type="email"
                     placeholder="Email"
-                    className="border-b border-gray-500 bg-transparent  py-2 text-white placeholder-gray-400 outline-none"
+                    className="border-b border-gray-500 bg-transparent py-2 text-white placeholder-gray-400 outline-none"
                   />
                 </div>
               </div>
@@ -48,13 +46,13 @@ export default function AboutFormSection() {
                 <textarea
                   placeholder="Message"
                   rows={4}
-                  className="resize-none border-b border-gray-500  bg-transparent py-2 text-white placeholder-gray-400 outline-none"
+                  className="resize-none border-b border-gray-500 bg-transparent py-2 text-white placeholder-gray-400 outline-none"
                 />
               </div>
 
               <Button
                 type="submit"
-                className="bg-primary w-full px-56 py-3 align-middle  font-semibold  text-black  transition-all duration-300"
+                className="w-full bg-primary px-6 py-3 text-base font-semibold transition-all duration-300 sm:px-8 sm:py-3 sm:text-lg"
               >
                 Send
               </Button>

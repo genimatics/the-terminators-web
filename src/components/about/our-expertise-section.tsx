@@ -7,8 +7,8 @@ import { IMAGES } from '@/constants/images';
 
 export default function OurExpertise() {
   return (
-    <section className="w-full bg-white py-12 sm:py-16 md:py-24">
-      <div className="mx-auto grid max-w-7xl items-center gap-8 px-4 sm:gap-10 sm:px-6 md:grid-cols-2 md:gap-14">
+    <section className="w-full bg-white px-4 py-12 sm:px-6 sm:py-16 md:px-10 md:py-24 lg:px-12 xl:px-16 2xl:px-24">
+      <div className="grid w-full items-center gap-8 md:grid-cols-2 md:gap-14">
         <ScrollReveal>
           <div>
             <p className="mb-4 text-xs tracking-widest text-gray-600 uppercase sm:text-sm md:text-lg">
@@ -21,14 +21,14 @@ export default function OurExpertise() {
               {' '}
               Businesses Safe
             </h2>
-            <p className="mb-12 max-w-md text-base leading-relaxed text-gray-600 sm:text-lg">
+            <p className="mb-12 max-w-full text-base leading-relaxed text-gray-600 sm:text-lg">
               We are a full-service electrical contractor dedicated to providing
               quality electrical services to both residential and commercial
               customers. Our team of experienced electricians are highly trained
               and certified.
             </p>
 
-            <div className="mb-12 grid grid-cols-1 gap-8 sm:grid-cols-2 sm:gap-10">
+            <div className="mb-12 grid w-full grid-cols-1 gap-8 sm:grid-cols-2 sm:gap-10">
               <ScrollReveal delay={0.1}>
                 <div>
                   <Image

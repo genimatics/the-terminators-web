@@ -7,8 +7,8 @@ import { IMAGES } from '@/constants/images';
 
 export default function AboutContactInfoSection() {
   return (
-    <section className="relative w-full bg-white px-4 py-5 text-black sm:px-6 md:px-10">
-      <div className="mx-auto grid max-w-7xl grid-cols-1 gap-6 sm:gap-8 md:grid-cols-3 md:gap-10">
+    <section className="relative w-full bg-white px-4 py-5 text-black sm:px-6 md:px-10 lg:px-12 xl:px-16 2xl:px-24">
+      <div className="grid w-full grid-cols-1 gap-6 sm:gap-8 md:grid-cols-3 md:gap-10">
         <ScrollReveal>
           <div className="min-h-[360px] border bg-black p-6 sm:p-8">
             <div className="mb-6 flex flex-col items-start text-left">
@@ -25,7 +25,7 @@ export default function AboutContactInfoSection() {
                 knowledgeable and efficient.
               </p>
               <div className="flex items-center gap-3">
-                <Phone className="text-primary h-6 w-6 sm:h-7 sm:w-7" />
+                <Phone className="h-6 w-6 text-primary sm:h-7 sm:w-7" />
                 <p className="text-xl font-extrabold text-white sm:text-3xl">
                   +1 735 293 385
                 </p>
