@@ -20,7 +20,7 @@ export default function SectionOne(): JSX.Element {
           src={IMAGES.SECTION_ONE.BG}
           alt="Background"
           fill
-          className="object-cover opacity-10"
+          className="contain object-cover"
           priority
         />
       </div>

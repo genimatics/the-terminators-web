@@ -14,13 +14,21 @@ export default function GetStarted() {
 
         <div className="grid grid-cols-1 items-stretch gap-6 lg:grid-cols-2">
 
-          <div className="flex h-80 items-center justify-center bg-primary p-6 shadow-md sm:h-96
-                          sm:p-10 md:h-[420px] md:justify-start lg:h-[480px] xl:h-[550px]"
+          {/* LEFT BOX - ICON + TEXT */}
+          <div
+            className="flex h-80 items-center justify-center bg-primary p-6 shadow-md
+                       sm:h-96 sm:p-10 md:h-[420px] lg:h-[480px] xl:h-[550px]"
           >
-
-            <div className="ml-24 flex w-full flex-col items-center gap-4 sm:flex-row sm:gap-8 md:items-center">
+            <div
+              className="
+                flex w-full flex-col items-center justify-center gap-4
+                px-4 sm:flex-row
+                sm:gap-8
+              "
+            >
+              {/* ICON */}
               <ScrollReveal>
-                <div className="relative h-24 w-24 flex-shrink-0 sm:h-26 sm:w-26">
+                <div className="relative h-20 w-20 flex-shrink-0 sm:h-28 sm:w-28 md:h-36 md:w-36">
                   <Image
                     src={IMAGES.GET_STARTED.ICON}
                     alt="Electric Icon"
@@ -31,9 +39,10 @@ export default function GetStarted() {
                 </div>
               </ScrollReveal>
 
+              {/* TEXT */}
               <ScrollReveal delay={0.1}>
-                <div className="max-w-full text-center sm:max-w-md md:text-left">
-                  <h2 className="mb-4 text-2xl leading-tight font-extrabold sm:text-3xl md:text-4xl">
+                <div className="w-full max-w-full text-left sm:max-w-md md:max-w-lg">
+                  <h2 className="mb-4 text-xl leading-snug font-extrabold sm:text-2xl md:text-4xl">
                     Don't wait !
                     <br />
                     contact us
@@ -46,17 +55,18 @@ export default function GetStarted() {
                     <br />
                     and easy.
                   </h2>
-
-                  <p className="mt-4 text-xs tracking-[0.25em] text-black/80 uppercase sm:text-sm md:text-sm">
+                  <p className="mt-2 text-xs tracking-[0.25em] text-black/80 uppercase sm:text-sm md:text-sm">
                     Job done right away
                   </p>
                 </div>
               </ScrollReveal>
             </div>
           </div>
+
+          {/* RIGHT SIDE VIDEO BOX */}
           <div
-            className="group relative h-80 cursor-pointer
-                       overflow-hidden sm:h-96 md:h-[420px] lg:h-[480px] xl:h-[550px]"
+            className="group relative h-80 cursor-pointer overflow-hidden
+                       sm:h-96 md:h-[420px] lg:h-[480px] xl:h-[550px]"
             onClick={() => window.open(videoUrl, '_blank')}
             onKeyDown={(e) => {
               if (e.key === 'Enter' || e.key === ' ') {
@@ -65,7 +75,6 @@ export default function GetStarted() {
             }}
             role="button"
             tabIndex={0}
-
           >
             <Image
               src={IMAGES.GET_STARTED.MAIN}
@@ -73,7 +82,6 @@ export default function GetStarted() {
               fill
               className="object-cover transition-all duration-500 group-hover:brightness-90"
             />
-
             <div className="absolute inset-0 flex items-center justify-center">
               <ScrollReveal delay={0.1}>
                 <div className="rounded-full bg-primary p-6 text-white shadow-lg transition-all duration-300 group-hover:scale-110">
@@ -82,8 +90,10 @@ export default function GetStarted() {
               </ScrollReveal>
             </div>
           </div>
+
         </div>
 
+        {/* GALLERY */}
         <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
           {IMAGES.GET_STARTED.GALLERY.map((src, idx) => (
             <ScrollReveal key={idx} delay={idx * 0.1}>

@@ -145,9 +145,15 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav className="fixed top-0 left-0 z-50 w-full bg-black text-white shadow-md">
+    <nav
+      className="fixed top-0 left-0 z-50 w-full text-white shadow-md"
+      style={{
+        backgroundImage: `url(${IMAGES.NAVBAR.NAV_BG})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+      }}
+    >
       <div className="flex w-full flex-col items-center px-2 sm:px-4 md:px-6">
-
         <div className="hidden h-16 w-full items-center justify-between sm:flex sm:h-20">
           <Link href="/">
             <Image
@@ -217,7 +223,6 @@ export default function Navbar() {
             </div>
           )}
         </div>
-
       </div>
     </nav>
   );

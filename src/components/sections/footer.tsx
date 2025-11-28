@@ -66,7 +66,14 @@ export default function Footer() {
   ] as const;
 
   return (
-    <footer className="bg-black text-white">
+    <footer
+      className="bg-black text-white"
+      style={{
+        backgroundImage: `url(${IMAGES.FOOTER.FOOTER_BG})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+      }}
+    >
       <div className="w-full px-4 py-8 sm:px-6 sm:py-12 md:px-8 lg:px-12 xl:px-16">
         <div className="mx-auto w-full max-w-full space-y-12 sm:space-y-16">
 

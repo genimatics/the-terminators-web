@@ -3,14 +3,16 @@
 import type { JSX } from 'react';
 import Button from '@/components/ui/button';
 import ScrollReveal from '@/components/ui/scroll-reveal';
+import { IMAGES } from '@/constants/images';
 
 export default function QuoteSection(): JSX.Element {
   return (
     <section
       className="relative w-full bg-cover bg-center bg-no-repeat px-4 py-20"
       style={{
-        backgroundImage:
-          'url("/assets/terminator-images/home/hero-section-bg/hero-slide1.jpg")',
+        backgroundImage: `url(${IMAGES.QUOTE_SECTION.QUOTE_BG})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
       }}
     >
       <div className="absolute inset-0 bg-black/60 backdrop-blur-md"></div>
@@ -31,7 +33,7 @@ export default function QuoteSection(): JSX.Element {
         <ScrollReveal delay={0.2}>
           <div className="mb-10 flex flex-col items-center justify-center space-y-6 sm:flex-row sm:space-y-0 sm:space-x-6">
             <div className="flex flex-col items-center">
-              <div className="bg-primary flex h-12 w-12 items-center justify-center rounded-full border-2 border-black text-lg font-bold text-black">
+              <div className="flex h-12 w-12 items-center justify-center rounded-full border-2 border-black bg-primary text-lg font-bold text-black">
                 1
               </div>
               <p className="mt-2 text-base font-semibold text-gray-800">
@@ -42,7 +44,7 @@ export default function QuoteSection(): JSX.Element {
             <div className="hidden h-[2px] w-30 bg-gray-300 sm:block"></div>
 
             <div className="flex flex-col items-center">
-              <div className="border-primary text-primary flex h-12 w-12 items-center justify-center rounded-full border-2 text-lg font-bold">
+              <div className="flex h-12 w-12 items-center justify-center rounded-full border-2 border-primary text-lg font-bold text-primary">
                 2
               </div>
               <p className="mt-2 text-base font-semibold text-gray-800">
@@ -53,7 +55,7 @@ export default function QuoteSection(): JSX.Element {
             <div className="hidden h-[2px] w-30 bg-gray-300 sm:block"></div>
 
             <div className="flex flex-col items-center">
-              <div className="border-primary text-primary flex h-12 w-12 items-center justify-center rounded-full border-2 text-lg font-bold">
+              <div className="flex h-12 w-12 items-center justify-center rounded-full border-2 border-primary text-lg font-bold text-primary">
                 3
               </div>
               <p className="mt-2 text-base font-semibold text-gray-800">

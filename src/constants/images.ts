@@ -18,7 +18,7 @@ export const IMAGES = {
   },
 
   SECTION_ONE: {
-    BG: '/assets/terminator-images/home/section-one/section-one-bg.png',
+    BG: '/assets/terminator-images/home/section-one/section-one-bg.jpg',
     WORK1: '/assets/terminator-images/home/hero-section-bg/hero-slide1.jpg',
     WORK2: '/assets/terminator-images/home/hero-section-bg/hero-slide2.jpg',
     WORK3: '/assets/terminator-images/home/hero-section-bg/hero-slide3.jpg',
@@ -45,12 +45,21 @@ export const IMAGES = {
     EXPERTICON2: '/assets/terminator-images/about/about-expert-icon2.gif',
 
   },
+
+  QUOTE_SECTION: {
+    QUOTE_BG: '/assets/terminator-images/home/quote-section/quote-bg.jpg',
+    FORM_BG: '/assets/terminator-images/home/quote-section/quote-form-bg.jpg',
+  },
+
   NAVBAR: {
     LOGO: '/assets/terminator-images/navbar/nav-logo.png',
+    NAV_BG: '/assets/terminator-images/navbar/navbar-bg.jpg',
   },
 
   FOOTER: {
     LOGO: '/assets/terminator-images/footer/footer-logo-white-.png',
+    FOOTER_BG: '/assets/terminator-images/footer/footer-bg.jpg',
+
   },
 
   COMMON: {
