@@ -34,17 +34,16 @@ export default function Hero() {
 
       <div className="absolute inset-0 bg-black/50" />
 
-      <div className="relative z-10 flex flex-grow flex-col items-center justify-center px-4 py-6 sm:px-6 sm:py-0">
-
+      <div className="relative z-10 flex flex-1 flex-col items-center justify-center px-4 py-6 sm:px-6 sm:py-0">
         <ScrollReveal>
           <h1
-            className="mb-3 flex flex-wrap items-center justify-center gap-1
-            text-3xl leading-tight font-extrabold
-            text-white sm:text-4xl
-            md:text-5xl lg:text-6xl xl:text-7xl"
+            className="
+              mb-4 flex flex-wrap items-center justify-center gap-1
+              text-4xl leading-tight font-extrabold text-white
+              sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl
+            "
           >
             <span>Top</span>
-
             <RotatingText
               texts={changingWords}
               mainClassName="px-2 sm:px-3 md:px-4 rounded-lg overflow-hidden"
@@ -60,10 +59,10 @@ export default function Hero() {
           </h1>
 
           <p className="
-            mx-auto mb-4 max-w-xs px-2
-            text-xs leading-relaxed text-white
-            opacity-90 sm:text-sm
-            md:text-base lg:text-lg xl:text-xl"
+            mx-auto mb-6 max-w-2xl px-2
+            text-sm text-white opacity-90 sm:text-base md:text-lg
+            lg:text-xl xl:text-2xl
+          "
           >
             Lighting Up Your Life – Professional Electricians!
           </p>
@@ -81,54 +80,38 @@ export default function Hero() {
             More Info
           </Button>
         </ScrollReveal>
-
       </div>
 
       <div className="relative z-10 w-full px-4 pt-0 pb-6">
-
         <ScrollReveal delay={0.2}>
           <div className="
-            mx-auto grid max-w-5xl grid-cols-1
-            gap-3 text-center text-white
+            mx-auto grid max-w-5xl grid-cols-1 gap-3 text-center text-white
             sm:grid-cols-3 sm:gap-6
           "
           >
-
             <div className="flex flex-col items-center">
               <div className="mb-1 w-full border-t border-white/40" />
-              <p className="truncate
-                text-xs font-semibold sm:text-sm
-                md:text-base lg:text-lg xl:text-xl"
-              >
+              <p className="truncate text-xs font-semibold sm:text-sm md:text-base lg:text-lg xl:text-xl">
                 quote@mail.com
               </p>
             </div>
 
             <div className="flex flex-col items-center">
               <div className="mb-1 w-full border-t border-white/40" />
-              <p className="
-                text-xs font-semibold sm:text-sm
-                md:text-base lg:text-lg xl:text-xl"
-              >
+              <p className="text-xs font-semibold sm:text-sm md:text-base lg:text-lg xl:text-xl">
                 +1 374 739 378
               </p>
             </div>
 
             <div className="flex flex-col items-center">
               <div className="mb-1 w-full border-t border-white/40" />
-              <p className="truncate
-                text-xs font-semibold sm:text-sm
-                md:text-base lg:text-lg xl:text-xl"
-              >
+              <p className="truncate text-xs font-semibold sm:text-sm md:text-base lg:text-lg xl:text-xl">
                 42 Oak Street – Miami
               </p>
             </div>
-
           </div>
         </ScrollReveal>
-
       </div>
-
     </section>
   );
 }
