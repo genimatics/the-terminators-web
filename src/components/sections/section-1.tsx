@@ -9,8 +9,8 @@ import { IMAGES } from '@/constants/images';
 
 export default function SectionOne(): JSX.Element {
   const features = [
-    'Navigating possibilities: your gateway to premium services',
-    'Transforming challenges into opportunities and ideas into reality',
+    'Complete power & electrical solutions for industrial units and substations.',
+    '30+ years of trusted, quality-driven engineering and safety services',
   ] as const;
 
   return (
@@ -38,9 +38,7 @@ export default function SectionOne(): JSX.Element {
             </h2>
 
             <p className="mx-auto max-w-xl leading-relaxed text-gray-600 lg:mx-0">
-              Our team of experienced electricians is highly trained, certified, and insured,
-              providing you with the highest quality of service. Whether you need a new outlet
-              installed or a complete rewire, Electricians has you covered.
+              M/s The Terminators brings 30+ years of trusted expertise in power generation, electrical distribution, and energy management. We specialize in substations, power houses, and industrial units with complete solutions including MV/LV panels, generators, switchgear, cabling, terminations, earthing, illumination, lightning protection, and safety services. With proven quality and innovation, we deliver reliable engineering solutions that keep industries moving forward.
             </p>
 
             <ul className="mx-auto max-w-md space-y-2 text-gray-700 lg:mx-0">

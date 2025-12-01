@@ -79,5 +79,17 @@
   "Services": {
     "meta_title": "Our Services",
     "meta_description": "Professional electrical services for your home and business"
+  },
+  "Registration": {
+    "meta_title": "Registration",
+    "meta_description": "Professional electrical services for your home and business"
+  },
+  "Clients": {
+    "meta_title": "Our Clients",
+    "meta_description": "Professional electrical services for your home and business"
+  },
+  "Gallery": {
+    "meta_title": "Our Gallery",
+    "meta_description": "Professional electrical services for your home and business"
   }
 }
