@@ -86,8 +86,8 @@ export const TEXTS = {
     ],
 
     HEADINGS: {
-      MAIN: 'Experience Power and Reliability',
-      SUB: 'High performance cloud servers designed for speed and uptime.',
+      MAIN: 'Nature of Business',
+      SUB: '“Electrical Engineering, Installations and Associated Construction, Testing & Commissioning Services”',
       TITLE: 'Experienced Electricians Services',
       SUBTITLE: 'WE USE THE LATEST TOOLS & TECHNOLOGY',
     },
@@ -118,19 +118,19 @@ export const TEXTS = {
         name: 'Michael Williams',
         location: 'Miami',
         text: 'I’ve had the pleasure of working with this business, and I must say, their dedication to customer satisfaction is unmatched.',
-        avatar: '/assets/terminator-images/home/valued-customer/testinomial-avatar.jpg',
+        avatar: '/assets/terminator-images/home/valued-customer/testinomial-avatar1.jpg',
       },
       {
         name: 'Sarah Johnson',
         location: 'New York',
         text: 'Absolutely amazing service. Quick, professional, and reliable — highly recommended!',
-        avatar: '/assets/terminator-images/home/valued-customer/testinomial-avatar.jpg',
+        avatar: '/assets/terminator-images/home/valued-customer/testinomial-avatar2.jpg',
       },
       {
         name: 'Daniel Smith',
         location: 'Chicago',
         text: 'The best electricians I’ve worked with. Fast and top quality!',
-        avatar: '/assets/terminator-images/home/valued-customer/testinomial-avatar.jpg',
+        avatar: '/assets/terminator-images/home/valued-customer/testinomial-avatar3.jpg',
       },
     ],
 
@@ -206,12 +206,14 @@ export const TEXTS = {
     },
   },
 
-  // NAVBAR moved to root level
   NAVBAR: {
     LOGO_ALT: 'Lighti Logo',
     LINKS: [
       { name: 'Home', href: '/' },
       { name: 'About', href: '/about' },
+      { name: 'Registration', href: '/registration' },
+      { name: 'Clients', href: '/clients' },
+      { name: 'Gallery', href: '/gallery' },
       { name: 'Services', href: '/services' },
       { name: 'Contact', href: '/contact' },
     ],
