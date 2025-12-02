@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
-import RegistrationHero from '@/components/registration/registration-hero';
+import ClientHero from '@/components/clients/client-hero';
+import ClientLogo from '@/components/clients/client-logo';
 
 type IClientsProps = {
   params: Promise<{ locale: string }>;
@@ -25,7 +26,8 @@ export default async function About(props: IClientsProps) {
 
   return (
     <>
-      <RegistrationHero />
+      <ClientHero />
+      <ClientLogo />
     </>
   );
 };

@@ -177,7 +177,6 @@
   --sidebar-ring: oklch(0.556 0 0);
 }
 
-/* Premium LightGallery styling to match design system */
 .lg-container {
   @apply font-sans;
 }
@@ -190,7 +189,6 @@
   @apply rounded-xl;
 }
 
-/* Enhanced thumbnail and controls styling */
 .lg-thumb-item {
   @apply rounded-md border border-border/60 transition-all duration-300 hover:border-primary/80 hover:shadow-md;
 }
@@ -219,7 +217,6 @@
   @apply outline-none;
 }
 
-/* Added controls styling for preview mode */
 .lg-inner {
   @apply rounded-xl overflow-hidden;
 }

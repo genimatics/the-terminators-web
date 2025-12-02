@@ -1,6 +1,5 @@
 'use client';
 
-import { Award } from 'lucide-react';
 import Image from 'next/image';
 import { useRef } from 'react';
 import { CERTIFICATES } from '@/constants/certificates';
@@ -33,9 +32,6 @@ export default function RegistrationCertificates() {
     <section className="relative w-full bg-background py-16 sm:py-20 md:py-24 lg:py-32">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mb-12 flex flex-col items-center justify-center gap-4 text-center md:mb-16">
-          <div className="inline-flex items-center justify-center rounded-full bg-primary/10 p-3">
-            <Award className="h-8 w-8 text-primary" />
-          </div>
           <h2 className="text-heading text-3xl font-bold sm:text-4xl md:text-5xl">
             Professional Certifications
           </h2>
@@ -54,7 +50,7 @@ export default function RegistrationCertificates() {
               data-src={cert.image}
               data-sub-html={`<h4 class="text-lg font-semibold text-white">${cert.title}</h4><p class="text-sm text-gray-300">Issued by: ${cert.issuer}</p><p class="text-sm text-gray-400 mt-2">${cert.description}</p>`}
             >
-              <div className="relative h-72 w-full overflow-hidden rounded-xl border border-border bg-card shadow-sm transition-all duration-500 hover:border-primary/50 hover:shadow-2xl">
+              <div className="relative h-72 w-full overflow-hidden rounded-xl  border border-border bg-card shadow-sm transition-all duration-500 hover:border-primary/50 hover:shadow-2xl">
                 <Image
                   src={cert.image || '/placeholder.svg'}
                   alt={cert.title}

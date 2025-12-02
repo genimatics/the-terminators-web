@@ -87,7 +87,7 @@ export const TEXTS = {
 
     HEADINGS: {
       MAIN: 'Nature of Business',
-      SUB: '“Electrical Engineering, Installations and Associated Construction, Testing & Commissioning Services”',
+      SUB: 'Electrical Engineering, Installations and Associated Construction, Testing & Commissioning Services',
       TITLE: 'Experienced Electricians Services',
       SUBTITLE: 'WE USE THE LATEST TOOLS & TECHNOLOGY',
     },
