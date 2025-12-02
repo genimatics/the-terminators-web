@@ -1,28 +1,28 @@
 export const IMAGES = {
   HERO: {
-    SLIDE1: '/assets/terminator-images/home/hero-section-bg/hero-slide1.jpg',
-    SLIDE2: '/assets/terminator-images/home/hero-section-bg/hero-slide2.jpg',
-    SLIDE3: '/assets/terminator-images/home/hero-section-bg/hero-slide3.jpg',
-    SLIDE4: '/assets/terminator-images/home/hero-section-bg/hero-slide4.jpg',
+    SLIDE1: '/assets/terminator-images/home/hero-section-bg/hero-slide1.webp',
+    SLIDE2: '/assets/terminator-images/home/hero-section-bg/hero-slide2.webp',
+    SLIDE3: '/assets/terminator-images/home/hero-section-bg/hero-slide3.webp',
+    SLIDE4: '/assets/terminator-images/home/hero-section-bg/hero-slide4.webp',
   },
 
   GET_STARTED: {
     ICON: '/assets/terminator-images/home/get-started-img/get-icon.png',
-    MAIN: '/assets/terminator-images/home/hero-section-bg/hero-slide1.jpg',
+    MAIN: '/assets/terminator-images/home/get-started-img/get2.webp',
     GALLERY: [
-      '/assets/terminator-images/home/get-started-img/get-1.jpg',
-      '/assets/terminator-images/home/get-started-img/get-2.jpg',
-      '/assets/terminator-images/home/get-started-img/get-3.jpg',
-      '/assets/terminator-images/home/get-started-img/get-4.jpg',
+      '/assets/terminator-images/home/get-started-img/get1.webp',
+      '/assets/terminator-images/home/get-started-img/get3.webp',
+      '/assets/terminator-images/home/get-started-img/get5.webp',
+      '/assets/terminator-images/home/get-started-img/get4.webp',
     ],
   },
 
   SECTION_ONE: {
     BG: '/assets/terminator-images/home/section-one/section-one-bg.jpg',
-    WORK1: '/assets/terminator-images/home/hero-section-bg/hero-slide1.jpg',
-    WORK2: '/assets/terminator-images/home/hero-section-bg/hero-slide2.jpg',
-    WORK3: '/assets/terminator-images/home/hero-section-bg/hero-slide3.jpg',
-    WORK4: '/assets/terminator-images/home/hero-section-bg/hero-slide4.jpg',
+    WORK1: '/assets/terminator-images/home/section-one/sec-img1.webp',
+    WORK2: '/assets/terminator-images/home/section-one/sec-img4.webp',
+    WORK3: '/assets/terminator-images/home/section-one/sec-img3.webp',
+    WORK4: '/assets/terminator-images/home/section-one/sec-img2.webp',
   },
 
   SECTION_TWO: {
@@ -52,12 +52,12 @@ export const IMAGES = {
   },
 
   NAVBAR: {
-    LOGO: '/assets/terminator-images/navbar/nav-logo.png',
+    LOGO: '/assets/terminator-images/navbar/logo.png',
     NAV_BG: '/assets/terminator-images/navbar/navbar-bg.jpg',
   },
 
   FOOTER: {
-    LOGO: '/assets/terminator-images/footer/footer-logo-white-.png',
+    LOGO: '/assets/terminator-images/footer/footer-logo.png',
     FOOTER_BG: '/assets/terminator-images/footer/footer-bg.jpg',
 
   },

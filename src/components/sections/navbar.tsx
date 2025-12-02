@@ -153,15 +153,16 @@ export default function Navbar() {
         backgroundPosition: 'center',
       }}
     >
-      <div className="flex w-full flex-col items-center px-2 sm:px-4 md:px-6">
-        <div className="hidden h-16 w-full items-center justify-between sm:flex sm:h-20">
+      <div className="flex w-full flex-col items-center px-2 sm:px-4 md:px-10">
+        <div className="hidden h-16 w-full items-center  justify-between sm:flex sm:h-20">
           <Link href="/">
             <Image
               src={IMAGES.NAVBAR.LOGO}
               alt={TEXTS.NAVBAR.LOGO_ALT}
-              width={130}
-              height={50}
+              width={60}
+              height={10}
               priority
+              className="rounded-lg"
             />
           </Link>
 
@@ -199,6 +200,7 @@ export default function Navbar() {
             width={100}
             height={40}
             priority
+            className="rounded-lg"
           />
 
           <div className="mt-3">

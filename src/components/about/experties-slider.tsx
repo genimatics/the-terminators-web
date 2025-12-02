@@ -38,10 +38,10 @@ export default function ExpertiseSlider() {
         `}
       >
         <h3 className="mb-4 px-4 text-2xl font-semibold sm:text-3xl md:text-4xl">
-          Lorem ipsum dolor
+          Our Strengths
         </h3>
         <p className="mb-6 max-w-md px-4 text-sm sm:text-base md:text-lg">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Over 30 years of expertise in electrical and energy engineering
         </p>
         <Button size="lg">Read More</Button>
       </div>

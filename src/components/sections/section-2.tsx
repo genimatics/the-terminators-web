@@ -60,7 +60,7 @@ export default function SectionTwo(): JSX.Element {
               alt={`Slide ${current + 1}`}
               width={1600}
               height={800}
-              className="h-[300px] w-full object-cover sm:h-[400px] md:h-[500px] lg:h-[650px]"
+              className="h-[300px] w-full object-cover blur-[2px] sm:h-[400px] md:h-[500px] lg:h-[650px]"
             />
           </a>
 

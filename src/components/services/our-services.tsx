@@ -16,7 +16,7 @@ export default function OurServices(): JSX.Element {
       <ScrollReveal>
         <div className="mx-auto mb-12 w-full max-w-4xl text-center">
           <p className="text-sm font-semibold tracking-widest text-black uppercase">
-            ALL SERVICES
+            OUR SERVICES
           </p>
           <h2 className="mt-3 text-3xl font-bold md:text-5xl">
             Complete Services in a

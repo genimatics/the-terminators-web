@@ -22,10 +22,7 @@ export default function OurExpertise() {
               Businesses Safe
             </h2>
             <p className="mb-12 max-w-full text-base leading-relaxed text-gray-600 sm:text-lg">
-              We are a full-service electrical contractor dedicated to providing
-              quality electrical services to both residential and commercial
-              customers. Our team of experienced electricians are highly trained
-              and certified.
+              To be a trusted engineering partner, delivering cutting-edge, sustainable, and cost-effective energy solutions that drive industrial growth and national progress.
             </p>
 
             <div className="mb-12 grid w-full grid-cols-1 gap-8 sm:grid-cols-2 sm:gap-10">

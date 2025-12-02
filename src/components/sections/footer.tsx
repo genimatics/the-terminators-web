@@ -74,7 +74,7 @@ export default function Footer() {
         backgroundPosition: 'center',
       }}
     >
-      <div className="w-full px-4 py-8 sm:px-6 sm:py-12 md:px-8 lg:px-12 xl:px-16">
+      <div className="w-full px-4 py-4 sm:px-6 sm:py-6 md:px-8 lg:px-10 xl:px-12">
         <div className="mx-auto w-full max-w-full space-y-12 sm:space-y-16">
 
           <ScrollReveal>
@@ -162,9 +162,9 @@ export default function Footer() {
               <Image
                 src={IMAGES.FOOTER.LOGO}
                 alt="Footer Logo"
-                width={120}
-                height={50}
-                className="h-8 w-auto object-contain sm:h-10"
+                width={150}
+                height={80}
+                className="h-16 w-auto rounded-lg object-contain sm:h-24"
               />
 
               <ul className="flex flex-wrap items-center justify-center gap-4 text-center text-base text-gray-300 sm:gap-6 sm:text-lg md:gap-8">

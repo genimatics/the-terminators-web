@@ -27,7 +27,7 @@ export default function AboutContactInfoSection() {
               <div className="flex items-center gap-3">
                 <Phone className="h-6 w-6 text-primary sm:h-7 sm:w-7" />
                 <p className="text-xl font-extrabold text-white sm:text-3xl">
-                  +1 735 293 385
+                  +92 735 293 385
                 </p>
               </div>
             </div>
@@ -44,10 +44,9 @@ export default function AboutContactInfoSection() {
                 height={65}
                 className="mb-4 object-contain"
               />
-              <h3 className="mb-4 text-2xl font-bold text-white sm:text-3xl">Our Expert</h3>
+              <h3 className="mb-4 text-2xl font-bold text-white sm:text-3xl">Our Mission</h3>
               <p className="mb-6 text-base leading-relaxed text-gray-300 sm:text-lg">
-                We can handle any job, no matter how big or small. We look forward
-                to hearing from you!
+                To provide world-class engineering, contracting, and maintenance services, powered by innovation, integrity, and technical excellence
               </p>
               <Button className="px-6 py-2 text-sm sm:px-8 sm:py-3 sm:text-base">More Info</Button>
             </div>

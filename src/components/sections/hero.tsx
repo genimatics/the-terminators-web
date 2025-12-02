@@ -7,7 +7,7 @@ import { IMAGES } from '@/constants/images';
 import RotatingText from '../RotatingText';
 
 const images = [IMAGES.HERO.SLIDE1, IMAGES.HERO.SLIDE2, IMAGES.HERO.SLIDE3];
-const changingWords = ['Services', 'Quality'];
+const changingWords = ['Power', 'Innovation', 'Reliability', 'Expertise', 'Safety', 'Solutions'];
 
 export default function Hero() {
   const [index, setIndex] = useState(0);
@@ -64,7 +64,7 @@ export default function Hero() {
             lg:text-xl xl:text-2xl
           "
           >
-            Lighting Up Your Life – Professional Electricians!
+            Providing professional electrical, telecommunication, and mechanical solutions since 2003 for homes, industries, and complex installations
           </p>
         </ScrollReveal>
 
@@ -92,21 +92,24 @@ export default function Hero() {
             <div className="flex flex-col items-center">
               <div className="mb-1 w-full border-t border-white/40" />
               <p className="truncate text-xs font-semibold sm:text-sm md:text-base lg:text-lg xl:text-xl">
-                quote@mail.com
+                z_siddiki@hotmail.com
+
               </p>
             </div>
 
             <div className="flex flex-col items-center">
               <div className="mb-1 w-full border-t border-white/40" />
               <p className="text-xs font-semibold sm:text-sm md:text-base lg:text-lg xl:text-xl">
-                +1 374 739 378
+                +92 21 34830726-7
+
               </p>
             </div>
 
             <div className="flex flex-col items-center">
               <div className="mb-1 w-full border-t border-white/40" />
               <p className="truncate text-xs font-semibold sm:text-sm md:text-base lg:text-lg xl:text-xl">
-                42 Oak Street – Miami
+                Block 13-A, Main University Road
+
               </p>
             </div>
           </div>
