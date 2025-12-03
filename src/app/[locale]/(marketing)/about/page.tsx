@@ -3,10 +3,9 @@ import { getTranslations, setRequestLocale } from 'next-intl/server';
 import HeroSection from '@/common/hero-section';
 import AboutFormSection from '@/components/about/about-contact-form';
 import AboutTeam from '@/components/about/about-team';
-import AboutContactInfoSection from '@/components/about/contact-info-section';
 
+import AboutContactInfoSection from '@/components/about/contact-info-section';
 import OurExpertise from '@/components/about/our-expertise-section';
-import QuoteSection from '@/components/sections/get-quote-section';
 import { IMAGES } from '@/constants/images';
 
 type IAboutProps = {
@@ -37,11 +36,12 @@ export default async function About(props: IAboutProps) {
         subtitle="Passion Behind Our Work"
         background={IMAGES.HERO.SLIDE1}
       />
-      <AboutContactInfoSection />
+
       <OurExpertise />
       <AboutTeam />
+      <AboutContactInfoSection />
       <AboutFormSection />
-      <QuoteSection />
+
     </>
   );
 };

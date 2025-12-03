@@ -3,22 +3,24 @@
 import type { JSX } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { useCallback, useMemo, useState } from 'react';
 import Button from '@/components/ui/button';
 import ScrollReveal from '@/components/ui/scroll-reveal';
 import { TEXTS } from '@/constants/text';
+import { getFeaturedServices } from '@/types/services';
 
-type SectionTwoText = typeof TEXTS.SECTION_TWO;
-type Slide = SectionTwoText['SLIDES'][number];
+// type SectionTwoText = typeof TEXTS.SECTION_TWO;
 
 export default function SectionTwo(): JSX.Element {
   const {
     SLIDES: slides,
-    SERVICE_BOXES: serviceBoxes,
     HEADINGS: headings,
     PARAGRAPHS: paragraphs,
     CTA_BANNER: ctaBanner,
   } = TEXTS.SECTION_TWO;
+
+  const serviceBoxes = getFeaturedServices(6);
 
   const totalSlides = slides.length;
   const [current, setCurrent] = useState<number>(0);
@@ -33,7 +35,7 @@ export default function SectionTwo(): JSX.Element {
     [totalSlides],
   );
 
-  const currentSlide: Slide = useMemo(
+  const currentSlide = useMemo(
     () => slides[current] ?? slides[0],
     [current, slides],
   );
@@ -118,23 +120,39 @@ export default function SectionTwo(): JSX.Element {
 
       <div className="mb-10 grid w-full gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {serviceBoxes.map((box, i) => (
-          <ScrollReveal key={box.title} delay={i * 0.1}>
-            <div className="flex flex-col items-start rounded-2xl p-4 transition-all duration-300 hover:bg-[#f8f8f8] sm:p-6">
-              <div className="mb-3 h-12 w-12 sm:h-16 sm:w-16">
-                <Image
-                  src={box.icon}
-                  alt={box.title}
-                  width={64}
-                  height={64}
-                  className="h-full w-full object-contain"
-                />
+          <ScrollReveal key={box.id} delay={i * 0.1}>
+            <Link href={`/services/${box.slug}`}>
+              <div className="flex flex-col items-start rounded-2xl  p-4 transition-all duration-300  sm:p-6">
+                <div className="mb-3 h-12 w-12 sm:h-16 sm:w-16">
+                  <Image
+                    src={box.icon}
+                    alt={box.title}
+                    width={64}
+                    height={64}
+                    className="h-full w-full object-contain"
+                  />
+                </div>
+                <h3 className="mb-2 text-lg font-semibold hover:text-primary sm:text-xl md:text-2xl">
+                  {box.title}
+                </h3>
+                <p className="line-clamp-3 text-xs whitespace-pre-line text-gray-600 sm:text-sm md:text-base">
+                  {box.shortDesc}
+                </p>
               </div>
-              <h3 className="mb-1 text-lg font-semibold sm:text-xl md:text-2xl">{box.title}</h3>
-              <p className="text-xs text-gray-600 sm:text-sm md:text-base">{box.desc}</p>
-            </div>
+            </Link>
           </ScrollReveal>
         ))}
       </div>
+
+      <ScrollReveal>
+        <div className="mb-10 text-center">
+          <Link href="/services">
+            <Button className="hover:bg-primary-dark bg-primary px-8 py-3 text-lg font-semibold text-white">
+              View All Services
+            </Button>
+          </Link>
+        </div>
+      </ScrollReveal>
 
       <div className="flex w-full flex-col overflow-hidden border-2 border-black md:h-[170px] md:flex-row">
         <div className="relative w-full border-b-2 border-black md:w-[25%] md:border-r-4 md:border-b-0">
@@ -151,9 +169,11 @@ export default function SectionTwo(): JSX.Element {
           <h3 className="mb-2 text-2xl font-bold sm:text-3xl md:text-4xl">{ctaBanner.TITLE}</h3>
           <div className="flex flex-col items-start gap-4 sm:flex-row sm:items-center">
             <p className="flex-1 text-base text-gray-300 sm:text-lg md:text-xl">{ctaBanner.DESC}</p>
-            <Button className="px-6 py-2 text-base sm:px-8 sm:py-3 sm:text-lg">
-              {ctaBanner.BUTTON_TEXT}
-            </Button>
+            <Link href="/services">
+              <Button className="hover:bg-primary-dark bg-primary px-6 py-2 text-base sm:px-8 sm:py-3 sm:text-lg">
+                {ctaBanner.BUTTON_TEXT}
+              </Button>
+            </Link>
           </div>
         </div>
       </div>

@@ -29,7 +29,7 @@ const Button: React.FC<ButtonProps> = ({
   return (
     <div className={`group relative inline-block ${className.includes('w-full') ? 'w-full' : ''}`}>
       <div
-        className="absolute z-0  bg-black transition-transform duration-300 ease-out group-hover:scale-95 "
+        className="absolute z-0  cursor-pointer bg-black transition-transform duration-300 ease-out group-hover:scale-95 "
         style={{
           top: `${shadowOffset}px`,
           left: `${shadowOffset}px`,
@@ -42,7 +42,7 @@ const Button: React.FC<ButtonProps> = ({
       <button
         type={type}
         onClick={onClick}
-        className={`bg-primary relative z-10 font-semibold text-black transition-transform duration-300 ease-out ${padding} w-full group-hover:scale-95`}
+        className={`font-semibol relative z-10 cursor-pointer bg-primary text-black transition-transform duration-300 ease-out ${padding} w-full group-hover:scale-95`}
       >
         {children}
       </button>

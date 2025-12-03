@@ -181,7 +181,7 @@ export const TEXTS = {
   ABOUT_TEAM: {
     HEADINGS: {
       SMALL_TITLE: 'Collaborating for Excellence',
-      TITLE: 'Our Best Electricians',
+      TITLE: 'Our Leadership',
       PARAGRAPH: 'Meet Our Exceptional Team of Diverse Talents',
     },
 
@@ -332,7 +332,7 @@ export const TEXTS = {
         TITLE: 'Give us a call',
         DESC:
         'Full-service electrical company, our highly trained electricians are knowledgeable and efficient.',
-        PHONE: '+92 735 293 385',
+        PHONE: '+92 21 34830726-7',
         TYPE: 'CALL',
       },
       {
@@ -347,8 +347,8 @@ export const TEXTS = {
         ICON: '/assets/terminator-images/about/about-icon3.gif',
         TITLE: 'Working Hours',
         HOURS: [
-          { LABEL: 'Working days', VALUE: '09 am – 06 pm' },
-          { LABEL: 'Holiday days', VALUE: '09 am – 01 pm' },
+          { LABEL: 'Working days', VALUE: 'Mon 9 am – Fri 6 pm' },
+          { LABEL: 'Holiday days', VALUE: 'Sat  – San' },
         ],
         TYPE: 'HOURS',
       },

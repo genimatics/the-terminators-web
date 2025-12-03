@@ -1,12 +1,14 @@
 'use client';
 
 import Image from 'next/image';
-import { useCallback, useRef, useState } from 'react';
+import { useState } from 'react';
 import { IoIosArrowDown } from 'react-icons/io';
 import Button from '@/components/ui/button';
 import { IMAGES } from '@/constants/images';
 import { TEXTS } from '@/constants/text';
 import { Link } from '@/libs/I18nNavigation';
+import Modal from '../ui/modal';
+import QuoteSection from './get-quote-section';
 
 type DropdownItem = {
   name: string;
@@ -117,8 +119,7 @@ export default function Navbar() {
   const [activeLink, setActiveLink] = useState('home');
   const [hoveredLink, setHoveredLink] = useState<string | null>(null);
   const [menuOpen, setMenuOpen] = useState(false);
-
-  const closeTimer = useRef<NodeJS.Timeout | null>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const navLinks: NavItem[] = TEXTS.NAVBAR.LINKS.map(link => ({
     name: link.name,
@@ -127,105 +128,127 @@ export default function Navbar() {
     dropdownItems: [],
   }));
 
-  const handleMouseEnter = useCallback((name: string) => {
-    if (closeTimer.current) {
-      clearTimeout(closeTimer.current);
-    }
+  const handleMouseEnter = (name: string) => {
     setHoveredLink(name);
-  }, []);
+  };
 
-  const handleMouseLeave = useCallback((name: string) => {
-    closeTimer.current = setTimeout(() => {
+  const handleMouseLeave = (name: string) => {
+    setTimeout(() => {
       setHoveredLink(prev => (prev === name ? null : prev));
-    }, 500);
-  }, []);
+    }, 300);
+  };
 
-  const toggleMenu = useCallback(() => {
+  const toggleMenu = () => {
     setMenuOpen(prev => !prev);
-  }, []);
+  };
+
+  const handleQuoteClick = () => {
+    setIsModalOpen(true);
+    setMenuOpen(false);
+  };
 
   return (
-    <nav
-      className="fixed top-0 left-0 z-50 w-full text-white shadow-md"
-      style={{
-        backgroundImage: `url(${IMAGES.NAVBAR.NAV_BG})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-      }}
-    >
-      <div className="flex w-full flex-col items-center px-2 sm:px-4 md:px-10">
-        <div className="hidden h-16 w-full items-center  justify-between sm:flex sm:h-20">
-          <Link href="/">
+    <>
+      <nav
+        className="fixed top-0 left-0 z-50 w-full text-white shadow-md"
+        style={{
+          backgroundImage: `url(${IMAGES.NAVBAR.NAV_BG})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
+        <div className="flex w-full flex-col items-center px-2 sm:px-4 md:px-10">
+          <div className="hidden h-16 w-full items-center justify-between sm:flex sm:h-20">
+            <Link href="/">
+              <Image
+                src={IMAGES.NAVBAR.LOGO}
+                alt={TEXTS.NAVBAR.LOGO_ALT}
+                width={60}
+                height={10}
+                priority
+                className="rounded-lg"
+              />
+            </Link>
+
+            <ul className="hidden items-center space-x-8 md:space-x-10 lg:flex">
+              {navLinks.map(item => (
+                <NavLinkItem
+                  key={item.name}
+                  item={item}
+                  activeLink={activeLink}
+                  hoveredLink={hoveredLink}
+                  setActiveLink={setActiveLink}
+                  handleMouseEnter={handleMouseEnter}
+                  handleMouseLeave={handleMouseLeave}
+                />
+              ))}
+            </ul>
+
+            <div className="flex items-center gap-4">
+              <button
+                onClick={handleQuoteClick}
+                className="hidden  md:block"
+              >
+                <Button className="cursor-pointer !bg-primary !px-4 !py-2 text-xs font-semibold tracking-widest !text-white hover:opacity-90 sm:!px-5 sm:!py-2.5 sm:text-sm">
+                  {TEXTS.NAVBAR.BUTTON_TEXT}
+                </Button>
+              </button>
+
+              <div className="sm:hidden">
+                <MenuIcon onClick={toggleMenu} />
+              </div>
+            </div>
+          </div>
+
+          <div className="flex w-full flex-col items-center py-3 sm:hidden">
             <Image
               src={IMAGES.NAVBAR.LOGO}
               alt={TEXTS.NAVBAR.LOGO_ALT}
-              width={60}
-              height={10}
+              width={100}
+              height={40}
               priority
               className="rounded-lg"
             />
-          </Link>
 
-          <ul className="hidden items-center space-x-8 md:space-x-10 lg:flex">
-            {navLinks.map(item => (
-              <NavLinkItem
-                key={item.name}
-                item={item}
-                activeLink={activeLink}
-                hoveredLink={hoveredLink}
-                setActiveLink={setActiveLink}
-                handleMouseEnter={handleMouseEnter}
-                handleMouseLeave={handleMouseLeave}
-              />
-            ))}
-          </ul>
-
-          <div className="flex items-center gap-4">
-            <Link href={TEXTS.NAVBAR.BUTTON_LINK} className="hidden md:block">
-              <Button className="!bg-primary !px-4 !py-2 text-xs font-semibold tracking-widest !text-white hover:opacity-90 sm:!px-5 sm:!py-2.5 sm:text-sm">
-                {TEXTS.NAVBAR.BUTTON_TEXT}
-              </Button>
-            </Link>
-
-            <div className="sm:hidden">
+            <div className="mt-3">
               <MenuIcon onClick={toggleMenu} />
             </div>
-          </div>
-        </div>
 
-        <div className="flex w-full flex-col items-center py-3 sm:hidden">
-          <Image
-            src={IMAGES.NAVBAR.LOGO}
-            alt={TEXTS.NAVBAR.LOGO_ALT}
-            width={100}
-            height={40}
-            priority
-            className="rounded-lg"
-          />
-
-          <div className="mt-3">
-            <MenuIcon onClick={toggleMenu} />
-          </div>
-
-          {menuOpen && (
-            <div className="animate-fadeIn w-full border-t border-white/20 bg-black py-3 text-center">
-              {navLinks.map(item => (
-                <Link
-                  key={item.name}
-                  href={item.href}
-                  className="block py-2 text-xs font-semibold text-white uppercase transition-colors hover:text-[var(--color-primary)]"
-                  onClick={() => {
-                    setActiveLink(item.name.toLowerCase());
-                    setMenuOpen(false);
-                  }}
+            {menuOpen && (
+              <div className="animate-fadeIn w-full border-t border-white/20 bg-black py-3 text-center">
+                {navLinks.map(item => (
+                  <Link
+                    key={item.name}
+                    href={item.href}
+                    className="block py-2 text-xs font-semibold text-white uppercase transition-colors hover:text-[var(--color-primary)]"
+                    onClick={() => {
+                      setActiveLink(item.name.toLowerCase());
+                      setMenuOpen(false);
+                    }}
+                  >
+                    {item.name}
+                  </Link>
+                ))}
+                <button
+                  onClick={handleQuoteClick}
+                  className="mt-3 inline-block cursor-pointer rounded bg-primary px-4 py-2 text-xs font-semibold text-white"
                 >
-                  {item.name}
-                </Link>
-              ))}
-            </div>
-          )}
+                  {TEXTS.NAVBAR.BUTTON_TEXT}
+                </button>
+              </div>
+            )}
+          </div>
         </div>
-      </div>
-    </nav>
+      </nav>
+
+      <Modal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        title="Request a Quote"
+        size="lg"
+      >
+        <QuoteSection />
+      </Modal>
+    </>
   );
 }

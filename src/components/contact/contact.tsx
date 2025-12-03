@@ -21,7 +21,7 @@ export default function Contact() {
           <div className="mb-14 grid gap-8 sm:grid-cols-1 md:grid-cols-3">
             {CONTACT_BOX.CARDS.map((card, i) => (
               <ScrollReveal key={i} delay={i * 0.1}>
-                <div className="rounded-lg bg-white p-6 text-center transition-shadow  duration-300 sm:p-8">
+                <div className="cursor-pointer rounded-lg bg-white p-6 text-center transition-shadow  duration-300 sm:p-8">
                   <Image
                     src={card.ICON}
                     alt={card.HEADING}

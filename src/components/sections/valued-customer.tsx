@@ -1,57 +1,14 @@
 'use client';
 import type { JSX } from 'react';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
 import Image from 'next/image';
-import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { useMemo } from 'react';
 import ScrollReveal from '@/components/ui/scroll-reveal';
 import { TEXTS } from '@/constants/text';
 
-type Testimonial = (typeof TEXTS)['VALUED_CUSTOMERS']['TESTIMONIALS'][number];
-
 export default function ValuedCustomers(): JSX.Element {
-  const { TESTIMONIALS, LEFT_IMAGES, BOTTOM_GRID, HEADINGS } = TEXTS.VALUED_CUSTOMERS;
+  const { LEFT_IMAGES, BOTTOM_GRID, HEADINGS } = TEXTS.VALUED_CUSTOMERS;
 
-  const total = TESTIMONIALS.length;
-  const [index, setIndex] = useState(0);
-  const [fade, setFade] = useState(true);
-
-  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
-
-  const changeSlide = useCallback((newIndex: number): void => {
-    setFade(false);
-
-    if (timeoutRef.current) {
-      clearTimeout(timeoutRef.current);
-    }
-
-    timeoutRef.current = setTimeout(() => {
-      setIndex(newIndex);
-      setFade(true);
-    }, 200);
-  }, []);
-
-  useEffect(() => {
-    return () => {
-      if (timeoutRef.current) {
-        clearTimeout(timeoutRef.current);
-      }
-    };
-  }, []);
-
-  const prev = useCallback(
-    (): void => changeSlide(index === 0 ? total - 1 : index - 1),
-    [index, total, changeSlide],
-  );
-
-  const next = useCallback(
-    (): void => changeSlide(index === total - 1 ? 0 : index + 1),
-    [index, total, changeSlide],
-  );
-
-  const current: Testimonial = useMemo(
-    () => TESTIMONIALS[index] ?? TESTIMONIALS[0],
-    [index, TESTIMONIALS],
-  );
+  const mainImage = useMemo(() => LEFT_IMAGES[0], [LEFT_IMAGES]);
 
   return (
     <section className="w-full bg-white px-4 py-16 text-center md:px-10 lg:px-12 xl:px-16">
@@ -86,48 +43,19 @@ export default function ValuedCustomers(): JSX.Element {
         </ScrollReveal>
 
         <ScrollReveal delay={0.2}>
-          <div className="relative flex h-[636px] flex-col items-center justify-between">
-            <div className="relative flex w-full flex-1 items-center justify-center">
-              <button
-                type="button"
-                onClick={prev}
-                className="absolute top-1/2 left-3 z-10 -translate-y-1/2 cursor-pointer"
-                aria-label="Previous testimonial"
-              >
-                <ChevronLeft className="h-7 w-7" />
-              </button>
-
-              <div
-                className={`w-full transform px-6 text-xl font-bold transition-all duration-500 ease-in-out ${
-                  fade ? 'translate-x-0 opacity-100' : 'translate-x-5 opacity-0'
-                }`}
-              >
-                <p className="leading-relaxed text-gray-700">{current.text}</p>
-
-                <div className="mt-6 flex flex-col items-center justify-center">
-                  <Image
-                    src={current.avatar}
-                    alt={current.name}
-                    width={60}
-                    height={60}
-                    className="mb-2 rounded-full border border-gray-400 object-cover"
-                  />
-                  <h4 className="font-semibold text-black">{current.name}</h4>
-                  <span className="text-sm text-gray-500">{current.location}</span>
-                </div>
-              </div>
-
-              <button
-                type="button"
-                onClick={next}
-                className="absolute top-1/2 right-3 z-10 -translate-y-1/2 cursor-pointer"
-                aria-label="Next testimonial"
-              >
-                <ChevronRight className="h-7 w-7" />
-              </button>
+          <div className="flex h-full flex-col">
+            <div className="mb-5 border border-black">
+              <Image
+                src={mainImage}
+                alt="Major Electrical Project"
+                width={800}
+                height={600}
+                className="h-[300px] w-full object-cover"
+                priority
+              />
             </div>
 
-            <div className="mt-6 grid w-full grid-cols-2 gap-4">
+            <div className="grid grid-cols-2 gap-4">
               {BOTTOM_GRID.map((img, i) => (
                 <ScrollReveal key={img} delay={i * 0.1}>
                   <div className="border border-black">
