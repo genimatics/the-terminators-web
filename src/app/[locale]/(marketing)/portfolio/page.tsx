@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
-import RegistrationHero from '@/components/registration/registration-hero';
+import HeroSection from '@/common/hero-section';
+import { IMAGES } from '@/constants/images';
 
 type IPortfolioProps = {
   params: Promise<{ locale: string }>;
@@ -25,7 +26,11 @@ export default async function About(props: IPortfolioProps) {
 
   return (
     <>
-      <RegistrationHero />
+      <HeroSection
+        title="Our Portfolio"
+        subtitle="Showcase of Our Work"
+        background={IMAGES.HERO.SLIDE1}
+      />
 
     </>
   );

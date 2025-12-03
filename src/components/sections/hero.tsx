@@ -85,32 +85,46 @@ export default function Hero() {
       <div className="relative z-10 w-full px-4 pt-0 pb-6">
         <ScrollReveal delay={0.2}>
           <div className="
-            mx-auto grid max-w-5xl grid-cols-1 gap-3 text-center text-white
-            sm:grid-cols-3 sm:gap-6
-          "
+      mx-auto grid max-w-5xl grid-cols-1 gap-3 text-center text-white
+      sm:grid-cols-3 sm:gap-6
+    "
           >
             <div className="flex flex-col items-center">
               <div className="mb-1 w-full border-t border-white/40" />
-              <p className="truncate text-xs font-semibold sm:text-sm md:text-base lg:text-lg xl:text-xl">
+              <a
+                href="mailto:z_siddiki@hotmail.com"
+                target="blank"
+                rel="noopener noreferrer"
+                className="truncate text-xs font-semibold transition-colors sm:text-sm md:text-base lg:text-lg xl:text-xl"
+              >
                 z_siddiki@hotmail.com
-
-              </p>
+              </a>
             </div>
 
             <div className="flex flex-col items-center">
               <div className="mb-1 w-full border-t border-white/40" />
-              <p className="text-xs font-semibold sm:text-sm md:text-base lg:text-lg xl:text-xl">
-                +92 21 34830726-7
+              <div className="flex flex-col items-center">
+                <a
+                  href="https://wa.me/922134830726"
+                  target="blank"
+                  className="text-xs font-semibold transition-colors  sm:text-sm md:text-base lg:text-lg xl:text-xl"
+                >
+                  +92 21 34830726-7
+                </a>
 
-              </p>
+              </div>
             </div>
 
             <div className="flex flex-col items-center">
               <div className="mb-1 w-full border-t border-white/40" />
-              <p className="truncate text-xs font-semibold sm:text-sm md:text-base lg:text-lg xl:text-xl">
+              <a
+                href="https://maps.google.com?q=Block+13-A+Main+University+Road+Karachi"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="truncate text-xs font-semibold transition-colors  sm:text-sm md:text-base lg:text-lg xl:text-xl"
+              >
                 Block 13-A, Main University Road
-
-              </p>
+              </a>
             </div>
           </div>
         </ScrollReveal>

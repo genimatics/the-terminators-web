@@ -260,11 +260,11 @@ export const TEXTS = {
       { name: 'Registration', href: '/registration' },
       { name: 'Clients', href: '/clients' },
       { name: 'Gallery', href: '/gallery' },
-      { name: 'Portfolio', href: '/portflio' },
+      { name: 'Portfolio', href: '/portfolio' },
       { name: 'Services', href: '/services' },
       { name: 'Contact', href: '/contact' },
     ],
-    BUTTON_TEXT: 'Get Started',
+    BUTTON_TEXT: 'Request a quote',
     BUTTON_LINK: '/get-started',
     MENU_ALT: 'Toggle menu',
   },
@@ -324,4 +324,35 @@ export const TEXTS = {
       'Privacy Policy',
     ],
   },
+
+  ABOUT_CONTACT_INFO: {
+    CARDS: [
+      {
+        ICON: '/assets/terminator-images/about/about-icon1.gif',
+        TITLE: 'Give us a call',
+        DESC:
+        'Full-service electrical company, our highly trained electricians are knowledgeable and efficient.',
+        PHONE: '+92 735 293 385',
+        TYPE: 'CALL',
+      },
+      {
+        ICON: '/assets/terminator-images/about/about-icon2.gif',
+        TITLE: 'Our Mission',
+        DESC:
+        'To provide world-class engineering, contracting, and maintenance services, powered by innovation, integrity, and technical excellence.',
+        BUTTON_TEXT: 'More Info',
+        TYPE: 'MISSION',
+      },
+      {
+        ICON: '/assets/terminator-images/about/about-icon3.gif',
+        TITLE: 'Working Hours',
+        HOURS: [
+          { LABEL: 'Working days', VALUE: '09 am – 06 pm' },
+          { LABEL: 'Holiday days', VALUE: '09 am – 01 pm' },
+        ],
+        TYPE: 'HOURS',
+      },
+    ],
+  },
+
 } as const;

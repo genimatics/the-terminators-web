@@ -1,7 +1,8 @@
 import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
-import GalleryHero from '@/components/galley/gallery-hero';
-import OurGallery from '@/components/galley/our-gallery';
+import HeroSection from '@/common/hero-section';
+import OurGallery from '@/components/gallery/our-gallery';
+import { IMAGES } from '@/constants/images';
 
 type IGalleryProps = {
   params: Promise<{ locale: string }>;
@@ -26,7 +27,11 @@ export default async function About(props: IGalleryProps) {
 
   return (
     <>
-      <GalleryHero />
+      <HeroSection
+        title="Our Gallery"
+        subtitle="Collection of Visuals"
+        background={IMAGES.HERO.SLIDE1}
+      />
       <OurGallery />
     </>
   );

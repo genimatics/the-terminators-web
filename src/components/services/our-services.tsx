@@ -2,14 +2,12 @@
 
 import type { JSX } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import ScrollReveal from '@/components/ui/scroll-reveal';
-import { TEXTS } from '@/constants/text';
-
-type SectionTwoText = typeof TEXTS.SECTION_TWO;
-type ServicesBox = SectionTwoText['SERVICES_BOXES'][number];
+import { getAllServices } from '@/types/services';
 
 export default function OurServices(): JSX.Element {
-  const { SERVICES_BOXES: servicesBoxes } = TEXTS.SECTION_TWO;
+  const servicesToShow = getAllServices();
 
   return (
     <section className="w-full bg-white px-4 py-16 text-black sm:px-6 md:px-10 lg:px-12 xl:px-16 2xl:px-24">
@@ -32,24 +30,34 @@ export default function OurServices(): JSX.Element {
       </ScrollReveal>
 
       <div className="grid w-full gap-8 sm:grid-cols-2 lg:grid-cols-3">
-        {servicesBoxes.map((box: ServicesBox, i) => (
-          <ScrollReveal key={i} delay={i * 0.1}>
-            <div className="flex flex-col items-center rounded-2xl p-6 text-center transition-all duration-300">
-              <div className="mb-4 h-16 w-16">
-                <Image
-                  src={box.icon}
-                  alt={box.title}
-                  width={64}
-                  height={64}
-                  className="mx-auto h-full w-full object-contain"
-                />
+        {servicesToShow.map((service, i) => (
+          <Link
+            key={service.id}
+            href={`/services/${service.slug}`}
+            className="block transition-transform"
+          >
+            <ScrollReveal delay={i * 0.1}>
+              <div className="flex h-full flex-col items-center rounded-2xl  p-6 text-center transition-all duration-300">
+                <div className="mb-4 h-16 w-16">
+                  <Image
+                    src={service.icon}
+                    alt={service.title}
+                    width={64}
+                    height={64}
+                    className="mx-auto h-full w-full object-contain"
+                  />
+                </div>
+                <h3 className="mb-2 text-xl font-semibold md:text-2xl">{service.title}</h3>
+                <p className="text-sm whitespace-pre-line text-gray-600 md:text-base">
+                  {service.shortDesc}
+                </p>
+
               </div>
-              <h3 className="mb-2 text-xl font-semibold md:text-2xl">{box.title}</h3>
-              <p className="text-sm text-gray-600 md:text-base">{box.desc}</p>
-            </div>
-          </ScrollReveal>
+            </ScrollReveal>
+          </Link>
         ))}
       </div>
+
     </section>
   );
 }

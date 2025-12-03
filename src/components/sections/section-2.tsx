@@ -1,6 +1,7 @@
 'use client';
 
 import type { JSX } from 'react';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 import Image from 'next/image';
 import { useCallback, useMemo, useState } from 'react';
 import Button from '@/components/ui/button';
@@ -55,13 +56,16 @@ export default function SectionTwo(): JSX.Element {
             rel="noopener noreferrer"
             className="block w-full"
           >
-            <Image
-              src={currentSlide.img}
-              alt={`Slide ${current + 1}`}
-              width={1600}
-              height={800}
-              className="h-[300px] w-full object-cover blur-[2px] sm:h-[400px] md:h-[500px] lg:h-[650px]"
-            />
+            <div className="relative">
+              <Image
+                src={currentSlide.img}
+                alt={`Slide ${current + 1}`}
+                width={1600}
+                height={800}
+                className="h-[300px] w-full border border-black object-cover blur-[2px] sm:h-[400px] md:h-[500px] lg:h-[650px]"
+              />
+              <div className="absolute inset-0 bg-black/30"></div>
+            </div>
           </a>
 
           <div className="absolute bottom-4 left-1/2 w-[90%] -translate-x-1/2 px-4 py-2 text-center text-white sm:max-w-2xl sm:px-6">
@@ -77,7 +81,7 @@ export default function SectionTwo(): JSX.Element {
             className="absolute top-1/2 left-2 -translate-y-1/2 rounded-full bg-black/30 p-2 text-white hover:bg-black/50 sm:left-4 sm:p-3"
             aria-label="Previous Slide"
           >
-            ❮
+            <ChevronLeft className="h-6 w-6" />
           </button>
           <button
             type="button"
@@ -85,7 +89,7 @@ export default function SectionTwo(): JSX.Element {
             className="absolute top-1/2 right-2 -translate-y-1/2 rounded-full bg-black/30 p-2 text-white hover:bg-black/50 sm:right-4 sm:p-3"
             aria-label="Next Slide"
           >
-            ❯
+            <ChevronRight className="h-6 w-6" />
           </button>
         </div>
       </ScrollReveal>

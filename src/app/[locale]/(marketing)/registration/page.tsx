@@ -1,7 +1,8 @@
 import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
+import HeroSection from '@/common/hero-section';
 import RegistrationCertificates from '@/components/registration/reg-lisence';
-import RegistrationHero from '@/components/registration/registration-hero';
+import { IMAGES } from '@/constants/images';
 
 type IResgistrationProps = {
   params: Promise<{ locale: string }>;
@@ -26,7 +27,11 @@ export default async function About(props: IResgistrationProps) {
 
   return (
     <>
-      <RegistrationHero />
+      <HeroSection
+        title="Registration"
+        subtitle="Our Achievements & Credentials"
+        background={IMAGES.HERO.SLIDE1}
+      />
       <RegistrationCertificates />
     </>
   );

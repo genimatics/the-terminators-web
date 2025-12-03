@@ -175,7 +175,7 @@ export default function Footer() {
 
               <div className="flex justify-center gap-4 sm:gap-6">
                 {[Facebook, Twitter, Youtube].map((Icon, i) => (
-                  <Link key={i} href="#" className="text-primary transition hover:opacity-80">
+                  <Link key={i} target="blank" href="#" className="text-primary transition hover:opacity-80">
                     <Icon className="h-5 w-5 sm:h-6 sm:w-6" />
                   </Link>
                 ))}

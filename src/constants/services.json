@@ -1,0 +1,398 @@
+{
+  "services": [
+    {
+      "id": 1,
+      "slug": "power-generation",
+      "title": "Power Generation",
+      "shortDesc": "• Diesel Engines, Gas Engines, Solar PV Systems.\n• Sizing according to customer’s need\n• Technical & Financial Proposal.",
+      "icon": "/assets/terminator-images/home/section-one/section-icon1.gif",
+      "category": "core",
+      "details": {
+        "description": "Complete power generation solutions including diesel engines, gas engines, and solar PV systems.",
+        "activities": [
+          "Diesel Engines, Gas Engines, Solar PV Systems",
+          "Sizing according to customer's need",
+          "Technical & Financial Proposal",
+          "Procurement/resourcing all material",
+          "Installation, testing & Commissioning",
+          "Preparing As built drawings"
+        ],
+        "features": [
+          "Custom sizing based on requirements",
+          "End-to-end project management",
+          "Compliance with international standards"
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "slug": "earthing-lps-safeties",
+      "title": "Earthing, LPS & Safeties",
+      "shortDesc": "Protective earthing, Lightning protection, Technical & Financial Proposal, Installation, testing & Commissioning",
+      "icon": "/assets/terminator-images/home/section-one/section-icon2.gif",
+      "category": "safety",
+      "details": {
+        "description": "Comprehensive earthing and lightning protection systems for safety and compliance.",
+        "activities": [
+          "Protective earthing",
+          "Lightning protection",
+          "Explosion proof Electrical fittings for Hazardous/classified areas",
+          "Sizing according to customer's need",
+          "Technical & Financial Proposal",
+          "Procurement/resourcing all material",
+          "Installation, testing & Commissioning",
+          "Preparing As built drawings"
+        ],
+        "features": [
+          "Protection against electrical hazards",
+          "Lightning strike prevention",
+          "Hazardous area compliance"
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "slug": "industrial-electrification",
+      "title": "Industrial Electrification",
+      "shortDesc": "Calculation of Lighting level, Sizing according to customer’s need. Technical & Financial Proposal, Procurement/resourcing all material",
+      "icon": "/assets/terminator-images/home/section-one/section-icon3.gif",
+      "category": "industrial",
+      "details": {
+        "description": "Complete industrial electrification solutions with precise lighting calculations.",
+        "activities": [
+          "Calculation of Lighting level",
+          "Suggestions according to site requirements",
+          "Sizing according to customer's need",
+          "Technical & Financial Proposal",
+          "Procurement/resourcing all material",
+          "Installation, testing & Commissioning",
+          "Preparing As built drawings"
+        ],
+        "features": [
+          "Precise lighting calculations",
+          "Customized solutions",
+          "End-to-end project execution"
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "slug": "indoor-outdoor-lighting",
+      "title": "Indoor & Outdoor Lighting",
+      "shortDesc": "Security lights, watch and ward service lighting. Area lighting",
+      "icon": "/assets/terminator-images/home/section-one/section-icon4.gif",
+      "category": "lighting",
+      "details": {
+        "description": "Professional lighting solutions for indoor and outdoor applications.",
+        "activities": [
+          "Security lights installation",
+          "Watch and ward service lighting",
+          "Area lighting solutions",
+          "Energy-efficient lighting design"
+        ],
+        "features": [
+          "Energy efficient solutions",
+          "Enhanced security lighting",
+          "Aesthetic and functional designs"
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "slug": "transmission-lines-poles-towers",
+      "title": "Transmission Lines, Poles & Towers",
+      "shortDesc": "Street lights. Transmission lines, stringing services & Installation",
+      "icon": "/assets/terminator-images/home/section-one/section-icon5.gif",
+      "category": "infrastructure",
+      "details": {
+        "description": "Transmission infrastructure including poles, towers, and street lighting.",
+        "activities": [
+          "Street lights installation",
+          "Transmission lines installation",
+          "Stringing services",
+          "Structural installations"
+        ],
+        "features": [
+          "Durable infrastructure",
+          "Compliant with safety standards",
+          "Long-term reliability"
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "slug": "maintenance-services",
+      "title": "Maintenance Services",
+      "shortDesc": "Telecommunication Towers, Guy Mast towers, Lighting poles & Masts, Wall brackets, Fence brackets, Battery Stands",
+      "icon": "/assets/terminator-images/home/section-one/section-icon6.gif",
+      "category": "maintenance",
+      "details": {
+        "description": "Comprehensive maintenance services for various infrastructure components.",
+        "activities": [
+          "Telecommunication Towers maintenance",
+          "Guy Mast towers maintenance",
+          "Lighting poles & Masts maintenance",
+          "Wall brackets, Fence brackets maintenance",
+          "Battery Stands maintenance"
+        ],
+        "features": [
+          "Preventive maintenance",
+          "24/7 emergency services",
+          "Expert technical support"
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "slug": "cable-laying-jointing-termination",
+      "title": "HT & LT Cable Laying, Jointing & Termination",
+      "shortDesc": "Complete cable solutions including laying, jointing, and termination services",
+      "icon": "/assets/terminator-images/home/section-one/section-icon1.gif",
+      "category": "cable",
+      "details": {
+        "description": "Professional cable installation and termination services for HT & LT systems.",
+        "activities": [
+          "Sizing of Cable ladder/trays",
+          "Cable trench excavation and preparation",
+          "Cable Laying as per IEC standards",
+          "Jointing and termination services",
+          "Insulation testing (Meggaring)",
+          "Hi-Pot testing",
+          "Cable fault location and mapping"
+        ],
+        "features": [
+          "IEC standard compliance",
+          "Advanced testing equipment",
+          "Expert fault diagnosis"
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "slug": "lt-panels-motor-control",
+      "title": "LT Panels, PFI Panels, Motor Control Centers",
+      "shortDesc": "Custom control panels and motor control centers",
+      "icon": "/assets/terminator-images/home/section-one/section-icon2.gif",
+      "category": "control",
+      "details": {
+        "description": "Design and installation of LT panels, power factor improvement panels, and motor control centers.",
+        "activities": [
+          "Sizing of panels according to load",
+          "Technical & Financial Proposal",
+          "Procurement of materials",
+          "Installation, testing & Commissioning",
+          "As-built drawings preparation"
+        ],
+        "features": [
+          "Custom panel design",
+          "Power factor optimization",
+          "Efficient motor control"
+        ]
+      }
+    },
+    {
+      "id": 9,
+      "slug": "ht-switchgear-transformers",
+      "title": "H.T Switch Gear, Transformers, Sub-Stations",
+      "shortDesc": "High tension electrical infrastructure solutions",
+      "icon": "/assets/terminator-images/home/section-one/section-icon3.gif",
+      "category": "power",
+      "details": {
+        "description": "Complete solutions for HT switchgear, transformers, and substation construction.",
+        "activities": [
+          "Sizing of Equipment & safeties",
+          "Technical & Financial Proposal",
+          "Procurement of materials",
+          "Installation, testing & commissioning",
+          "Sub-station construction",
+          "Switchyards & Grids development"
+        ],
+        "features": [
+          "High voltage expertise",
+          "Turnkey solutions",
+          "Safety-first approach"
+        ]
+      }
+    },
+    {
+      "id": 10,
+      "slug": "fabrication-construction",
+      "title": "Fabrication & Construction / Maintenance",
+      "shortDesc": "Custom fabrication and construction services",
+      "icon": "/assets/terminator-images/home/section-one/section-icon4.gif",
+      "category": "fabrication",
+      "details": {
+        "description": "Custom fabrication and construction services for various electrical infrastructure.",
+        "activities": [
+          "Telecommunication Towers fabrication",
+          "Guy Mast towers fabrication",
+          "Lighting poles & Masts fabrication",
+          "Wall brackets, Fence brackets",
+          "Cable trays, Cable ladders & Support brackets",
+          "Battery Stands fabrication",
+          "Solar panels mounting structures",
+          "Civil foundations construction"
+        ],
+        "features": [
+          "Custom fabrication",
+          "Heavy-duty construction",
+          "Corrosion-resistant materials"
+        ]
+      }
+    },
+    {
+      "id": 11,
+      "slug": "data-switching-centers",
+      "title": "Radio/Base Transmission Stations, Data & Switching Centers",
+      "shortDesc": "Data center and transmission station solutions",
+      "icon": "/assets/terminator-images/home/section-one/section-icon5.gif",
+      "category": "telecom",
+      "details": {
+        "description": "Complete solutions for data centers and transmission stations.",
+        "activities": [
+          "Designing & sizing",
+          "Raised false flooring",
+          "False ceilings installation",
+          "Air conditioning systems",
+          "Fire Alarm and extinguishing systems",
+          "Dehumidification systems",
+          "Intrusion alarm/warning systems",
+          "Lighting & Controls",
+          "Un-interrupted power supply systems",
+          "Hybrid power systems"
+        ],
+        "features": [
+          "Mission-critical infrastructure",
+          "Redundant systems",
+          "High security standards"
+        ]
+      }
+    },
+    {
+      "id": 12,
+      "slug": "remodeling-relocation",
+      "title": "Remodeling, Relocation, Setting and Inspection",
+      "shortDesc": "Equipment relocation and inspection services",
+      "icon": "/assets/terminator-images/home/section-one/section-icon6.gif",
+      "category": "maintenance",
+      "details": {
+        "description": "Professional services for remodeling, relocation, and inspection of electrical systems.",
+        "activities": [
+          "Removal of existing electrical switchgear",
+          "Shifting of Electrical switchgear and cables",
+          "Addition of new equipment",
+          "Load Enhancement and resizing",
+          "Inspection & valuation of faulty equipment"
+        ],
+        "features": [
+          "Minimal downtime",
+          "Expert assessment",
+          "Safe relocation procedures"
+        ]
+      }
+    },
+    {
+      "id": 13,
+      "slug": "annual-maintenance-contracts",
+      "title": "Annual Maintenance Contracts",
+      "shortDesc": "Comprehensive maintenance contracts for various facilities",
+      "icon": "/assets/terminator-images/home/section-one/section-icon1.gif",
+      "category": "maintenance",
+      "details": {
+        "description": "Annual maintenance contracts for offices, factories, and remote locations.",
+        "activities": [
+          "One-time Maintenance visits",
+          "Testing and inspection services",
+          "Routine maintenance with deployed staff",
+          "Turnkey solutions with consumables provision"
+        ],
+        "features": [
+          "Regular maintenance schedules",
+          "Emergency response",
+          "Cost-effective packages"
+        ]
+      }
+    },
+    {
+      "id": 14,
+      "slug": "explosion-proof-systems",
+      "title": "Explosion-proof Wiring & Equipment",
+      "shortDesc": "Safety systems for hazardous areas",
+      "icon": "/assets/terminator-images/home/section-one/section-icon2.gif",
+      "category": "safety",
+      "details": {
+        "description": "Specialized explosion-proof electrical systems for hazardous environments.",
+        "activities": [
+          "Explosion-proof wiring installation",
+          "Hazardous area lighting",
+          "Explosion-proof power equipment",
+          "Compliance with safety codes"
+        ],
+        "features": [
+          "ATEX/IECEx compliance",
+          "Industrial safety standards",
+          "Hazardous area certification"
+        ]
+      }
+    },
+    {
+      "id": 15,
+      "slug": "test-benches-panels",
+      "title": "Customized Test Benches and Panels",
+      "shortDesc": "Custom test equipment solutions",
+      "icon": "/assets/terminator-images/home/section-one/section-icon3.gif",
+      "category": "testing",
+      "details": {
+        "description": "Custom designed test benches and panels for specific client needs.",
+        "activities": [
+          "Indigenous design and development",
+          "Factory-level testing equipment",
+          "Custom test solutions",
+          "Specialized panel fabrication"
+        ],
+        "features": [
+          "Custom solutions",
+          "Precision testing",
+          "Industry-specific designs"
+        ]
+      }
+    },
+    {
+      "id": 16,
+      "slug": "solar-power-systems",
+      "title": "Solar Power Systems",
+      "shortDesc": "Renewable energy solutions",
+      "icon": "/assets/terminator-images/home/section-one/section-icon4.gif",
+      "category": "renewable",
+      "details": {
+        "description": "Solar power generation systems for residential and commercial use.",
+        "activities": [
+          "Domestic Solar power generation units",
+          "Off-grid solutions up to 10 kW",
+          "Solar panel installation",
+          "System commissioning"
+        ],
+        "features": [
+          "Renewable energy solutions",
+          "Cost savings",
+          "Environment friendly"
+        ]
+      }
+    }
+  ],
+  "categories": [
+    "core",
+    "safety",
+    "industrial",
+    "lighting",
+    "infrastructure",
+    "maintenance",
+    "cable",
+    "control",
+    "power",
+    "fabrication",
+    "telecom",
+    "testing",
+    "renewable"
+  ]
+}
