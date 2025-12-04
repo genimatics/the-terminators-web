@@ -8,7 +8,7 @@ import { IMAGES } from '@/constants/images';
 import { TEXTS } from '@/constants/text';
 import { Link } from '@/libs/I18nNavigation';
 import Modal from '../ui/modal';
-import QuoteSection from './get-quote-section';
+import QuoteForm from '../ui/quote-form';
 
 type DropdownItem = {
   name: string;
@@ -244,10 +244,9 @@ export default function Navbar() {
       <Modal
         isOpen={isModalOpen}
         onClose={() => setIsModalOpen(false)}
-        title="Request a Quote"
         size="lg"
       >
-        <QuoteSection />
+        <QuoteForm />
       </Modal>
     </>
   );
