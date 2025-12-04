@@ -347,7 +347,7 @@ export const TEXTS = {
         ICON: '/assets/terminator-images/about/about-icon3.gif',
         TITLE: 'Working Hours',
         HOURS: [
-          { LABEL: 'Working days', VALUE: 'Mon 9 am – Fri 6 pm' },
+          { LABEL: 'Working days', VALUE: 'Mon – Fri' },
           { LABEL: 'Holiday days', VALUE: 'Sat  – San' },
         ],
         TYPE: 'HOURS',

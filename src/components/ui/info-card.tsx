@@ -2,7 +2,6 @@
 
 import { Phone } from 'lucide-react';
 import Image from 'next/image';
-import Button from '@/components/ui/button';
 
 type InfoCardProps = {
   data: {
@@ -44,17 +43,17 @@ export default function InfoCard({ data }: InfoCardProps) {
         {data.TYPE === 'CALL' && (
           <div className="flex items-center gap-3">
             <Phone className="h-6 w-6 text-primary sm:h-7 sm:w-7" />
-            <p className="text-xl font-extrabold text-white sm:text-3xl">
+            <p className="text-lg font-extrabold text-white sm:text-2xl">
               {data.PHONE}
             </p>
           </div>
         )}
 
-        {data.TYPE === 'MISSION' && (
+        {/* {data.TYPE === 'MISSION' && (
           <Button className="px-6 py-2  text-sm sm:px-8 sm:py-3 sm:text-base">
             {data.BUTTON_TEXT}
           </Button>
-        )}
+        )} */}
 
         {data.TYPE === 'HOURS' && (
           <div className="w-full space-y-4 text-gray-300">
