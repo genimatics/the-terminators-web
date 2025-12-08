@@ -18,8 +18,8 @@ export default function GetStarted() {
             <div
               className="
                 flex w-full flex-col items-center justify-center gap-4
-                px-4 sm:flex-row
-                sm:gap-8
+                text-center sm:flex-row
+                sm:gap-8 sm:text-left
               "
             >
               <ScrollReveal>
@@ -28,32 +28,28 @@ export default function GetStarted() {
                     src={IMAGES.GET_STARTED.ICON}
                     alt="Electric Icon"
                     fill
-                    className="object-contain"
+                    className="object-contain invert"
                     priority
                   />
                 </div>
               </ScrollReveal>
 
               <ScrollReveal delay={0.1}>
-                <div className="w-full max-w-full text-left sm:max-w-md md:max-w-lg">
+                <div className="flex w-full max-w-full flex-col items-center justify-center text-white sm:max-w-md sm:items-start md:max-w-lg">
                   <h2 className="mb-4 text-xl leading-snug font-extrabold sm:text-2xl md:text-4xl">
                     Need help ?
-
                     <br />
                     contact us
                     <br />
                     today with
                     <br />
                     The Terminators !
-
                     <br />
                     Fast, safe
-
                     <br />
                     and reliable.
-
                   </h2>
-                  <p className="mt-2 text-xs tracking-[0.25em] text-black/80 uppercase sm:text-sm md:text-sm">
+                  <p className="mt-2 text-xs tracking-[0.25em] text-white/80 uppercase sm:text-sm md:text-sm">
                     Job done right away
                   </p>
                 </div>
@@ -62,9 +58,8 @@ export default function GetStarted() {
           </div>
 
           <div
-            className="group relative h-80  overflow-hidden
+            className="group relative h-80 overflow-hidden
                        sm:h-96 md:h-[420px] lg:h-[480px] xl:h-[550px]"
-
             role="button"
             tabIndex={0}
           >
@@ -74,7 +69,6 @@ export default function GetStarted() {
               fill
               className="object-cover transition-all duration-500 group-hover:brightness-90"
             />
-
           </div>
 
         </div>

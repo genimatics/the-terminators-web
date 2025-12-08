@@ -42,7 +42,7 @@ const Button: React.FC<ButtonProps> = ({
       <button
         type={type}
         onClick={onClick}
-        className={`font-semibol relative z-10 cursor-pointer bg-primary text-black transition-transform duration-300 ease-out ${padding} w-full group-hover:scale-95`}
+        className={`font-semibol relative z-10 cursor-pointer bg-primary text-white transition-transform duration-300 ease-out ${padding} w-full group-hover:scale-95`}
       >
         {children}
       </button>

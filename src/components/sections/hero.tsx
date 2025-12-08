@@ -25,9 +25,7 @@ export default function Hero() {
       {images.map((img, i) => (
         <div
           key={i}
-          className={`absolute inset-0 bg-cover bg-center transition-opacity duration-[2000ms] ${
-            i === index ? 'opacity-100' : 'opacity-0'
-          }`}
+          className={`absolute inset-0 bg-cover bg-center transition-opacity duration-[2000ms] ${i === index ? 'opacity-100' : 'opacity-0'}`}
           style={{ backgroundImage: `url(${img})` }}
         />
       ))}
@@ -36,13 +34,7 @@ export default function Hero() {
 
       <div className="relative z-10 flex flex-1 flex-col items-center justify-center px-4 py-6 sm:px-6 sm:py-0">
         <ScrollReveal>
-          <h1
-            className="
-              mb-4 flex flex-wrap items-center justify-center gap-1
-              text-4xl leading-tight font-extrabold text-white
-              sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl
-            "
-          >
+          <h1 className="mb-4 flex flex-wrap items-center justify-center gap-1 text-4xl leading-tight font-extrabold text-white sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl">
             <span>Top</span>
             <RotatingText
               texts={changingWords}
@@ -58,25 +50,13 @@ export default function Hero() {
             />
           </h1>
 
-          <p className="
-            mx-auto mb-6 max-w-2xl px-2
-            text-sm text-white opacity-90 sm:text-base md:text-lg
-            lg:text-xl xl:text-2xl
-          "
-          >
+          <p className="hero-paragraph mx-auto mb-6 max-w-2xl px-2 text-xl text-white opacity-90 sm:text-base md:text-lg lg:text-xl xl:text-2xl">
             Providing professional electrical, telecommunication, and mechanical solutions since 2003 for homes, industries, and complex installations
           </p>
         </ScrollReveal>
 
         <ScrollReveal delay={0.2}>
-          <Button
-            className="
-              px-8 py-3 text-sm
-              sm:px-10 sm:py-4 sm:text-base
-              md:text-lg
-              lg:px-12 lg:py-5 lg:text-xl
-            "
-          >
+          <Button className="px-8 py-3  text-sm sm:px-10 sm:py-4 sm:text-base md:text-lg lg:px-12 lg:py-5 lg:text-xl">
             More Info
           </Button>
         </ScrollReveal>
@@ -84,45 +64,24 @@ export default function Hero() {
 
       <div className="relative z-10 w-full px-4 pt-0 pb-6">
         <ScrollReveal delay={0.2}>
-          <div className="
-      mx-auto grid max-w-5xl grid-cols-1 gap-3 text-center text-white
-      sm:grid-cols-3 sm:gap-6
-    "
-          >
+          <div className="mx-auto grid max-w-5xl grid-cols-1 gap-3 text-center text-white sm:grid-cols-3 sm:gap-6">
             <div className="flex flex-col items-center">
               <div className="mb-1 w-full border-t border-white/40" />
-              <a
-                href="mailto:z_siddiki@hotmail.com"
-                target="blank"
-                rel="noopener noreferrer"
-                className="truncate text-xs font-semibold transition-colors sm:text-sm md:text-base lg:text-lg xl:text-xl"
-              >
+              <a href="mailto:z_siddiki@hotmail.com" target="blank" rel="noopener noreferrer" className="hero-footer text-lg font-semibold transition-colors sm:text-sm md:text-base lg:text-lg xl:text-xl">
                 z_siddiki@hotmail.com
               </a>
             </div>
 
             <div className="flex flex-col items-center">
               <div className="mb-1 w-full border-t border-white/40" />
-              <div className="flex flex-col items-center">
-                <a
-                  href="https://wa.me/922134830726"
-                  target="blank"
-                  className="text-xs font-semibold transition-colors  sm:text-sm md:text-base lg:text-lg xl:text-xl"
-                >
-                  +92 21 34830726-7
-                </a>
-
-              </div>
+              <a href="https://wa.me/922134830726" target="blank" className="hero-footer text-lg font-semibold transition-colors sm:text-sm md:text-base lg:text-lg xl:text-xl">
+                +92 21 34830726-7
+              </a>
             </div>
 
             <div className="flex flex-col items-center">
               <div className="mb-1 w-full border-t border-white/40" />
-              <a
-                href="https://maps.google.com?q=Block+13-A+Main+University+Road+Karachi"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="truncate text-xs font-semibold transition-colors  sm:text-sm md:text-base lg:text-lg xl:text-xl"
-              >
+              <a href="https://maps.google.com?q=Block+13-A+Main+University+Road+Karachi" target="_blank" rel="noopener noreferrer" className="hero-footer text-lg font-semibold transition-colors sm:text-sm md:text-base lg:text-lg xl:text-xl">
                 Block 13-A, Main University Road
               </a>
             </div>

@@ -3,7 +3,6 @@
 import { ChevronRight, Facebook, Phone, Twitter, Youtube } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
-import Button from '@/components/ui/button';
 import ScrollReveal from '@/components/ui/scroll-reveal';
 import { IMAGES } from '@/constants/images';
 import { TEXTS } from '@/constants/text';
@@ -29,41 +28,8 @@ function FooterListBlock({ title, items }: FooterListProps) {
   );
 }
 
-function RecentPost({
-  post,
-  image,
-}: {
-  post: any;
-  image: string;
-}) {
-  return (
-    <div className="flex items-start gap-3 sm:gap-5">
-      <div className="h-16 w-16 flex-shrink-0 overflow-hidden sm:h-20 sm:w-20">
-        <Image
-          src={image}
-          alt="Post thumbnail"
-          width={80}
-          height={80}
-          className="h-full w-full object-cover"
-        />
-      </div>
-      <div>
-        <h4 className="cursor-pointer text-base font-semibold text-white transition hover:text-primary sm:text-lg">
-          {post.TITLE}
-        </h4>
-        <p className="text-sm text-gray-400 sm:text-base">{post.DESCRIPTION}</p>
-      </div>
-    </div>
-  );
-}
-
 export default function Footer() {
   const { FOOTER } = TEXTS;
-
-  const recentPostImages = [
-    IMAGES.SECTION_ONE.WORK2,
-    IMAGES.SECTION_ONE.WORK3,
-  ] as const;
 
   return (
     <footer
@@ -82,7 +48,7 @@ export default function Footer() {
               <div className="w-full text-center lg:w-auto lg:text-left">
                 <h2 className="text-3xl leading-tight font-bold sm:text-4xl lg:text-5xl">
                   {FOOTER.HEADING}
-                  <span className="ml-2 inline-block bg-primary p-2 text-black">
+                  <span className="ml-2 inline-block bg-primary p-2 text-white">
                     {FOOTER.HIGHLIGHT}
                   </span>
                 </h2>
@@ -91,20 +57,10 @@ export default function Footer() {
                 </p>
               </div>
 
-              <div className="flex w-full flex-col items-center gap-3 sm:flex-row sm:gap-4 lg:w-auto">
-                <input
-                  type="email"
-                  placeholder={FOOTER.PLACEHOLDER}
-                  className="w-full flex-1 border-b border-gray-500 bg-transparent py-3 text-base text-white placeholder-gray-400 focus:border-primary focus:outline-none sm:w-auto sm:text-lg lg:w-80"
-                />
-                <Button className="w-full bg-primary px-6 py-3 text-base font-semibold text-black transition hover:opacity-90 sm:w-auto sm:px-8 sm:text-lg">
-                  {FOOTER.BUTTON_TEXT}
-                </Button>
-              </div>
             </div>
           </ScrollReveal>
 
-          <div className="grid grid-cols-1 gap-10 sm:gap-12 md:grid-cols-2 lg:grid-cols-4">
+          <div className="grid grid-cols-1 gap-10 sm:gap-12 md:grid-cols-2 lg:grid-cols-3">
 
             <ScrollReveal delay={0.1}>
               <div className="space-y-4 sm:space-y-6">
@@ -115,7 +71,7 @@ export default function Footer() {
 
                 <div className="mt-5 flex items-center gap-3 sm:gap-4">
                   <div className="flex-shrink-0 rounded-full bg-primary p-3 sm:p-4">
-                    <Phone className="h-5 w-5 text-black sm:h-6 sm:w-6" />
+                    <Phone className="h-5 w-5 text-white sm:h-6 sm:w-6" />
                   </div>
                   <div>
                     <p className="text-sm text-gray-400 sm:text-base">{FOOTER.AGENCY.CALL_US}</p>
@@ -141,19 +97,6 @@ export default function Footer() {
               />
             </ScrollReveal>
 
-            <ScrollReveal delay={0.4}>
-              <div className="space-y-4 sm:space-y-6">
-                <h3 className="text-xl font-semibold sm:text-2xl">{FOOTER.RECENT_POSTS.TITLE}</h3>
-
-                {FOOTER.RECENT_POSTS.POSTS.slice(0, 2).map((post, index) => (
-                  <RecentPost
-                    key={index}
-                    post={post}
-                    image={recentPostImages[index] ?? '/placeholder.svg'}
-                  />
-                ))}
-              </div>
-            </ScrollReveal>
           </div>
 
           <ScrollReveal delay={0.5}>

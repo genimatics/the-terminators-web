@@ -36,7 +36,7 @@ const MenuIcon = ({ onClick }: { onClick: () => void }) => (
     className="flex cursor-pointer flex-col gap-1"
   >
     {[0, 1, 2].map(i => (
-      <div key={i} className="h-[2px] w-6 bg-white" />
+      <div key={i} className="h-[2px] w-6 bg-black" />
     ))}
   </div>
 );
@@ -85,7 +85,7 @@ const NavLinkItem = ({
               href={item.href}
               onClick={() => setActiveLink(item.name.toLowerCase())}
               className={`sm:text-md font-semibold tracking-wide transition-colors duration-300 ${
-                isActive ? 'text-primary' : 'text-white hover:text-[var(--color-primary)]'
+                isActive ? 'text-primary' : 'text-black hover:text-[var(--color-primary)]'
               }`}
             >
               {item.name}
@@ -94,7 +94,7 @@ const NavLinkItem = ({
 
       {item.hasDropdown && hoveredLink === item.name && (
         <ul
-          className="animate-fadeIn absolute top-full left-0 mt-2 w-40 bg-black text-white shadow-lg"
+          className="animate-fadeIn absolute top-full left-0 mt-2 w-40 bg-white text-black shadow-lg"
           onMouseEnter={() => handleMouseEnter(item.name)}
           onMouseLeave={() => handleMouseLeave(item.name)}
         >
@@ -150,14 +150,10 @@ export default function Navbar() {
   return (
     <>
       <nav
-        className="fixed top-0 left-0 z-50 w-full text-white shadow-md"
-        style={{
-          backgroundImage: `url(${IMAGES.NAVBAR.NAV_BG})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-        }}
+        className="fixed top-0 left-0 z-50 w-full bg-white text-black shadow-md"
       >
-        <div className="flex w-full flex-col items-center px-2 sm:px-4 md:px-10">
+        <div className="flex w-full flex-col px-2 sm:px-4 md:px-10">
+          {/* DESKTOP NAV */}
           <div className="hidden h-16 w-full items-center justify-between sm:flex sm:h-20">
             <Link href="/">
               <Image
@@ -200,44 +196,45 @@ export default function Navbar() {
             </div>
           </div>
 
-          <div className="flex w-full flex-col items-center py-3 sm:hidden">
-            <Image
-              src={IMAGES.NAVBAR.LOGO}
-              alt={TEXTS.NAVBAR.LOGO_ALT}
-              width={100}
-              height={40}
-              priority
-              className="rounded-lg"
-            />
+          {/* MOBILE NAVBAR */}
+          <div className="flex w-full items-center justify-between py-3 sm:hidden">
+            <Link href="/">
+              <Image
+                src={IMAGES.NAVBAR.LOGO}
+                alt={TEXTS.NAVBAR.LOGO_ALT}
+                width={50}
+                height={20}
+                priority
+                className="rounded-lg"
+              />
+            </Link>
 
-            <div className="mt-3">
-              <MenuIcon onClick={toggleMenu} />
-            </div>
-
-            {menuOpen && (
-              <div className="animate-fadeIn w-full border-t border-white/20 bg-black py-3 text-center">
-                {navLinks.map(item => (
-                  <Link
-                    key={item.name}
-                    href={item.href}
-                    className="block py-2 text-xs font-semibold text-white uppercase transition-colors hover:text-[var(--color-primary)]"
-                    onClick={() => {
-                      setActiveLink(item.name.toLowerCase());
-                      setMenuOpen(false);
-                    }}
-                  >
-                    {item.name}
-                  </Link>
-                ))}
-                <button
-                  onClick={handleQuoteClick}
-                  className="mt-3 inline-block cursor-pointer rounded bg-primary px-4 py-2 text-xs font-semibold text-white"
-                >
-                  {TEXTS.NAVBAR.BUTTON_TEXT}
-                </button>
-              </div>
-            )}
+            <MenuIcon onClick={toggleMenu} />
           </div>
+
+          {menuOpen && (
+            <div className="animate-fadeIn w-full border-t border-white/20 bg-white py-3 text-center sm:hidden">
+              {navLinks.map(item => (
+                <Link
+                  key={item.name}
+                  href={item.href}
+                  className="block py-2 text-xs font-semibold text-black uppercase transition-colors hover:text-[var(--color-primary)]"
+                  onClick={() => {
+                    setActiveLink(item.name.toLowerCase());
+                    setMenuOpen(false);
+                  }}
+                >
+                  {item.name}
+                </Link>
+              ))}
+              <button
+                onClick={handleQuoteClick}
+                className="mt-3 inline-block cursor-pointer rounded bg-primary px-4 py-2 text-xs font-semibold text-black"
+              >
+                {TEXTS.NAVBAR.BUTTON_TEXT}
+              </button>
+            </div>
+          )}
         </div>
       </nav>
 
