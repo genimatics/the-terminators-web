@@ -386,7 +386,7 @@ export const TEXTS = {
           desc: 'Proven track record of delivering innovative, reliable, and safe solutions',
         },
         {
-          icon: '/assets/terminator-images/about/commitment.jpg',
+          icon: '/assets/terminator-images/about/commitment.png',
           title: 'Client Commitment',
           desc: 'Strong dedication to client satisfaction, sustainability, and operational efficiency',
         },

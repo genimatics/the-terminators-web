@@ -52,7 +52,7 @@ export default function OurExpertise() {
                           <img
                             src={card.icon}
                             alt={card.title}
-                            className="h-8 w-8 object-contain"
+                            className="h-14 w-14 scale-120 object-contain"
                           />
                         )
                       : (
