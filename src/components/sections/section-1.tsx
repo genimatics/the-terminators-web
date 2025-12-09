@@ -62,38 +62,54 @@ export default function SectionOne(): JSX.Element {
           </div>
         </ScrollReveal>
 
-        <div className="relative flex flex-col items-center">
-          <div className="grid w-full grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-3">
-            {[IMAGES.SECTION_ONE.WORK1, IMAGES.SECTION_ONE.WORK2, IMAGES.SECTION_ONE.WORK3].map(
+        <div className="relative flex w-full flex-col items-center">
+          <div className="grid w-full grid-cols-2 gap-5 sm:hidden">
+            {[IMAGES.SECTION_ONE.WORK1, IMAGES.SECTION_ONE.WORK2, IMAGES.SECTION_ONE.WORK3, IMAGES.SECTION_ONE.WORK4].map(
               (imgSrc, idx) => (
-                <div
-                  key={idx}
-                  className={`
-                    group flex items-center justify-center overflow-hidden
-                    ${idx === 2 ? 'sm:col-span-2 md:col-auto' : ''}
-                  `}
-                >
+                <div key={idx} className="flex items-center justify-center overflow-hidden">
                   <Image
                     src={imgSrc}
                     alt={`Electrician work ${idx + 1}`}
                     width={460}
                     height={460}
-                    className={`border border-black object-cover transition-all duration-300 group-hover:opacity-90
-                      ${idx === 0 ? 'h-56 sm:h-64 md:h-72' : 'h-56 sm:h-72 md:h-80'} w-full`}
+                    className="h-56 w-full border border-black object-cover shadow-md transition-all duration-300 group-hover:opacity-90"
                   />
                 </div>
               ),
             )}
           </div>
 
-          <div className="group mt-6 w-full overflow-hidden sm:w-5/6 md:w-2/4">
-            <Image
-              src={IMAGES.SECTION_ONE.WORK4}
-              alt="Electrical service bottom"
-              width={460}
-              height={460}
-              className="h-56 w-full border border-black object-cover shadow-md transition-all duration-300 group-hover:opacity-90 sm:h-72 md:h-72"
-            />
+          <div className="hidden w-full flex-col items-center sm:flex">
+            <div className="grid w-full grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-3">
+              {[IMAGES.SECTION_ONE.WORK1, IMAGES.SECTION_ONE.WORK2, IMAGES.SECTION_ONE.WORK3].map(
+                (imgSrc, idx) => (
+                  <div
+                    key={idx}
+                    className={`group flex items-center justify-center overflow-hidden
+                      ${idx === 2 ? 'sm:col-span-2 md:col-auto' : ''}`}
+                  >
+                    <Image
+                      src={imgSrc}
+                      alt={`Electrician work ${idx + 1}`}
+                      width={460}
+                      height={460}
+                      className={`border border-black object-cover transition-all duration-300 group-hover:opacity-90
+                        ${idx === 0 ? 'h-56 sm:h-64 md:h-72' : 'h-56 sm:h-72 md:h-80'} w-full`}
+                    />
+                  </div>
+                ),
+              )}
+            </div>
+
+            <div className="group mt-6 w-full overflow-hidden sm:w-5/6 md:w-2/4">
+              <Image
+                src={IMAGES.SECTION_ONE.WORK4}
+                alt="Electrical service bottom"
+                width={460}
+                height={460}
+                className="h-56 w-full border border-black object-cover shadow-md transition-all duration-300 group-hover:opacity-90 sm:h-72 md:h-72"
+              />
+            </div>
           </div>
         </div>
       </div>

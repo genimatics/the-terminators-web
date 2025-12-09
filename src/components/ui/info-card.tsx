@@ -49,20 +49,18 @@ export default function InfoCard({ data }: InfoCardProps) {
           </div>
         )}
 
-        {data.TYPE === 'HOURS' && (
-          <div className="w-full space-y-4 text-gray-300">
-            {data.HOURS?.map((h, i) => (
-              <div
+        {data.TYPE === 'HOURS' && data.HOURS && (
+          <ul className="w-full space-y-2 text-sm text-gray-300 sm:text-xs">
+            {data.HOURS.map((h, i) => (
+              <li
                 key={i}
-                className={`flex justify-between border-b border-white/20 ${i === 0 ? 'pt-10' : ''} pb-4`}
+                className="flex justify-between border-b border-white/20 py-2"
               >
-                <span className="text-base sm:text-lg">{h.LABEL}</span>
-                <span className="text-base font-medium text-white sm:text-lg">
-                  {h.VALUE}
-                </span>
-              </div>
+                <span className="font-semibold text-white">{h.LABEL}</span>
+                <span className="font-medium text-white">{h.VALUE}</span>
+              </li>
             ))}
-          </div>
+          </ul>
         )}
 
       </div>

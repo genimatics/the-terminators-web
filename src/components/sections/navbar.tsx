@@ -197,7 +197,7 @@ export default function Navbar() {
           </div>
 
           {/* MOBILE NAVBAR */}
-          <div className="flex w-full items-center justify-between py-3 sm:hidden">
+          <div className="flex w-full items-center justify-between px-4 py-4 sm:hidden">
             <Link href="/">
               <Image
                 src={IMAGES.NAVBAR.LOGO}
@@ -229,7 +229,7 @@ export default function Navbar() {
               ))}
               <button
                 onClick={handleQuoteClick}
-                className="mt-3 inline-block cursor-pointer rounded bg-primary px-4 py-2 text-xs font-semibold text-black"
+                className="mt-3 inline-block cursor-pointer rounded bg-primary px-3 py-2 text-xs font-semibold text-white"
               >
                 {TEXTS.NAVBAR.BUTTON_TEXT}
               </button>

@@ -187,34 +187,34 @@ export const TEXTS = {
 
     MEMBERS: [
       {
-        IMAGE: '/assets/terminator-images/about/about-team1.jpg',
+        IMAGE: '/assets/terminator-images/about/man-avatar.jpg',
         NAME: 'Engr. Ahmed Zubair',
         ROLE: 'Chief Executive Officer',
       },
       {
-        IMAGE: '/assets/terminator-images/about/about-team2.jpg',
+        IMAGE: '/assets/terminator-images/about/man-avatar.jpg',
         NAME: 'Engr. Mohammad Shoaib',
         ROLE: 'Chief Finance Officer',
       },
       {
-        IMAGE: '/assets/terminator-images/about/about-team3.jpg',
+        IMAGE: '/assets/terminator-images/about/man-avatar.jpg',
         NAME: 'Engr. Anis Ahmed',
         ROLE: 'COO (Electrical)',
       },
       {
-        IMAGE: '/assets/terminator-images/about/about-team3.jpg',
+        IMAGE: '/assets/terminator-images/about/man-avatar.jpg',
         NAME: 'Engr. Syed Viqar Hussain ',
         ROLE: 'COO (Mechanical)',
       },
       {
-        IMAGE: '/assets/terminator-images/about/about-team3.jpg',
+        IMAGE: '/assets/terminator-images/about/man-avatar.jpg',
         NAME: 'Mr.  Khurram Illahi ',
         ROLE: 'Chief Strategy Officer',
       },
       {
-        IMAGE: '/assets/terminator-images/about/about-team3.jpg',
-        NAME: 'Admin/Accounts Executive',
-        ROLE: 'Ms.  Komal Anwaar',
+        IMAGE: '/assets/terminator-images/about/female-avatar.jpg',
+        NAME: 'Ms.Komal Anwaar',
+        ROLE: 'Admin/Accounts Executive',
       },
     ],
   },
@@ -345,14 +345,61 @@ export const TEXTS = {
       },
       {
         ICON: '/assets/terminator-images/about/about-icon3.gif',
-        TITLE: 'Working Hours',
+        TITLE: 'Working Days',
         HOURS: [
-          { LABEL: 'Working days', VALUE: 'Mon – Fri' },
-          { LABEL: 'Holiday days', VALUE: 'Sat  – San' },
+          { LABEL: 'Monday', VALUE: '9:00 AM - 6:00PM' },
+          { LABEL: 'Tuesday', VALUE: '9:00 AM – 6:00 PM' },
+          { LABEL: 'Wednesday', VALUE: '9:00 AM – 6:00 PM' },
+          { LABEL: 'Thursday', VALUE: '9:00 AM – 6:00 PM' },
+          { LABEL: 'Friday', VALUE: '9:00 AM – 6:00 PM' },
         ],
         TYPE: 'HOURS',
       },
     ],
+  },
+
+  OUR_EXPERTISE: {
+    VISION: {
+      SMALL: 'Our Vision',
+      TITLE: 'Leading Engineering Excellence',
+      DESC:
+        'To be a trusted engineering partner, delivering cutting-edge, sustainable, and cost-effective energy solutions that drive industrial growth and national progress.',
+    },
+
+    STRENGTHS: {
+      SMALL: 'Our Strengths',
+      TITLE: 'Why Choose Us',
+      CARDS: [
+        {
+          icon: '30+',
+          title: 'Years of Experience',
+          desc: 'Over three decades of expertise in electrical and energy engineering',
+        },
+        {
+          icon: '/assets/terminator-images/about/certified.png',
+          title: 'Certified Excellence',
+          desc: 'Registered with PEC, KCCI, and ISO 9001:2015, ISO 14001:2015, ISO 45001:2018',
+        },
+        {
+          icon: '/assets/terminator-images/about/anovation.png',
+          title: 'Innovative Solutions',
+          desc: 'Proven track record of delivering innovative, reliable, and safe solutions',
+        },
+        {
+          icon: '/assets/terminator-images/about/commitment.jpg',
+          title: 'Client Commitment',
+          desc: 'Strong dedication to client satisfaction, sustainability, and operational efficiency',
+        },
+      ],
+      BUTTON: 'View Our Services',
+    },
+
+    MISSION: {
+      SMALL: 'Our Mission',
+      TITLE: 'Our Commitment',
+      DESC:
+        'To provide world-class engineering, contracting, and maintenance services, powered by innovation, integrity, and technical excellence.',
+    },
   },
 
 } as const;

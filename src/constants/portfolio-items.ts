@@ -26,8 +26,8 @@ export const portfolioItems: PortfolioItem[] = [
   },
   {
     id: '2',
-    src: '/assets/terminator-images/portfolio/img3.jpeg',
-    thumb: '/assets/terminator-images/portfolio/img3.jpeg',
+    src: '/assets/terminator-images/portfolio/img2.jpg',
+    thumb: '/assets/terminator-images/portfolio/img2.jpg',
     alt: 'Industrial Electrification',
     category: 'industrial',
     title: 'Factory Electrification',
@@ -38,8 +38,8 @@ export const portfolioItems: PortfolioItem[] = [
   },
   {
     id: '3',
-    src: '/assets/terminator-images/portfolio/img4.jpg',
-    thumb: '/assets/terminator-images/portfolio/img4.jpg',
+    src: '/assets/terminator-images/portfolio/img3.jpg',
+    thumb: '/assets/terminator-images/portfolio/img3.jpg',
     alt: 'Control Panel Installation',
     category: 'industrial',
     title: 'Control Room Setup',
@@ -50,8 +50,8 @@ export const portfolioItems: PortfolioItem[] = [
   },
   {
     id: '4',
-    src: '/assets/terminator-images/portfolio/img5.jpg',
-    thumb: '/assets/terminator-images/portfolio/img5.jpg',
+    src: '/assets/terminator-images/portfolio/img4.jpg',
+    thumb: '/assets/terminator-images/portfolio/img4.jpg',
     alt: 'Industrial Lighting',
     category: 'industrial',
     title: 'Factory Lighting System',
@@ -76,8 +76,8 @@ export const portfolioItems: PortfolioItem[] = [
   },
   {
     id: '6',
-    src: '/assets/terminator-images/portfolio/img5.jpg',
-    thumb: '/assets/terminator-images/portfolio/img5.jpg',
+    src: '/assets/terminator-images/portfolio/img6.jpg',
+    thumb: '/assets/terminator-images/portfolio/img6.jpg',
     alt: 'Office Building Electrification',
     category: 'commercial',
     title: 'Corporate Office Setup',
@@ -88,8 +88,8 @@ export const portfolioItems: PortfolioItem[] = [
   },
   {
     id: '7',
-    src: '/assets/terminator-images/portfolio/commercial/project3.jpg',
-    thumb: '/assets/terminator-images/portfolio/commercial/project3.jpg',
+    src: '/assets/terminator-images/portfolio/img7.jpg',
+    thumb: '/assets/terminator-images/portfolio/img7.jpg',
     alt: 'Hotel Electrical Systems',
     category: 'commercial',
     title: '5-Star Hotel Wiring',
@@ -100,8 +100,8 @@ export const portfolioItems: PortfolioItem[] = [
   },
   {
     id: '8',
-    src: '/assets/terminator-images/portfolio/commercial/project4.jpg',
-    thumb: '/assets/terminator-images/portfolio/commercial/project4.jpg',
+    src: '/assets/terminator-images/portfolio/img8.jpg',
+    thumb: '/assets/terminator-images/portfolio/img8.jpg',
     alt: 'Hospital Electrical',
     category: 'commercial',
     title: 'Hospital Power Backup',
@@ -114,8 +114,8 @@ export const portfolioItems: PortfolioItem[] = [
   // Residential Projects
   {
     id: '9',
-    src: '/assets/terminator-images/portfolio/img5.jpg',
-    thumb: '/assets/terminator-images/portfolio/img5.jpg',
+    src: '/assets/terminator-images/portfolio/img9.jpg',
+    thumb: '/assets/terminator-images/portfolio/img9.jpg',
     alt: 'Residential Building Wiring',
     category: 'residential',
     title: 'Apartment Complex',
@@ -126,8 +126,8 @@ export const portfolioItems: PortfolioItem[] = [
   },
   {
     id: '10',
-    src: '/assets/terminator-images/portfolio/residential/project2.jpg',
-    thumb: '/assets/terminator-images/portfolio/residential/project2.jpg',
+    src: '/assets/terminator-images/portfolio/img10.jpg',
+    thumb: '/assets/terminator-images/portfolio/img10.jpg',
     alt: 'Villa Electrical Setup',
     category: 'residential',
     title: 'Luxury Villa Wiring',
@@ -138,8 +138,8 @@ export const portfolioItems: PortfolioItem[] = [
   },
   {
     id: '11',
-    src: '/assets/terminator-images/portfolio/residential/project3.jpg',
-    thumb: '/assets/terminator-images/portfolio/residential/project3.jpg',
+    src: '/assets/terminator-images/portfolio/img11.jpg',
+    thumb: '/assets/terminator-images/portfolio/img11.jpg',
     alt: 'House Renovation',
     category: 'residential',
     title: 'House Renovation',
@@ -150,8 +150,8 @@ export const portfolioItems: PortfolioItem[] = [
   },
   {
     id: '12',
-    src: '/assets/terminator-images/portfolio/residential/project4.jpg',
-    thumb: '/assets/terminator-images/portfolio/residential/project4.jpg',
+    src: '/assets/terminator-images/portfolio/img12.jpg',
+    thumb: '/assets/terminator-images/portfolio/img12.jpg',
     alt: 'Security Lighting',
     category: 'residential',
     title: 'Residential Security Lighting',
@@ -164,8 +164,8 @@ export const portfolioItems: PortfolioItem[] = [
   // Infrastructure Projects
   {
     id: '13',
-    src: '/assets/terminator-images/portfolio/img5.jpg',
-    thumb: '/assets/terminator-images/portfolio/img5.jpg',
+    src: '/assets/terminator-images/portfolio/img13.jpg',
+    thumb: '/assets/terminator-images/portfolio/img13.jpg',
     alt: 'Street Lighting',
     category: 'infrastructure',
     title: 'City Street Lighting',
@@ -176,8 +176,8 @@ export const portfolioItems: PortfolioItem[] = [
   },
   {
     id: '14',
-    src: '/assets/terminator-images/portfolio/infrastructure/project2.jpg',
-    thumb: '/assets/terminator-images/portfolio/infrastructure/project2.jpg',
+    src: '/assets/terminator-images/portfolio/img14.jpeg',
+    thumb: '/assets/terminator-images/portfolio/img14.jpeg',
     alt: 'Transmission Lines',
     category: 'infrastructure',
     title: 'Transmission Lines',
@@ -188,8 +188,8 @@ export const portfolioItems: PortfolioItem[] = [
   },
   {
     id: '15',
-    src: '/assets/terminator-images/portfolio/infrastructure/project3.jpg',
-    thumb: '/assets/terminator-images/portfolio/infrastructure/project3.jpg',
+    src: '/assets/terminator-images/portfolio/img15.jpeg',
+    thumb: '/assets/terminator-images/portfolio/img15.jpeg',
     alt: 'Telecom Tower',
     category: 'infrastructure',
     title: 'Telecom Tower Installation',
@@ -200,8 +200,8 @@ export const portfolioItems: PortfolioItem[] = [
   },
   {
     id: '16',
-    src: '/assets/terminator-images/portfolio/infrastructure/project4.jpg',
-    thumb: '/assets/terminator-images/portfolio/infrastructure/project4.jpg',
+    src: '/assets/terminator-images/portfolio/img16.jpeg',
+    thumb: '/assets/terminator-images/portfolio/img16.jpeg',
     alt: 'Substation Construction',
     category: 'infrastructure',
     title: 'Grid Substation',

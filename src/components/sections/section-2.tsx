@@ -182,24 +182,29 @@ export default function SectionTwo(): JSX.Element {
           />
         </div>
 
-        <div className="flex w-full flex-col justify-center bg-[#0a0a0a] px-6 py-6 text-white md:w-[75%]">
-          <h3 className="mb-2 text-2xl font-bold sm:text-3xl md:text-4xl">
-            {ctaBanner.TITLE}
-          </h3>
+        <div className="flex w-full flex-col bg-[#0a0a0a] text-white md:w-[75%] md:flex-row">
 
-          <div className="flex flex-col items-start gap-4 sm:flex-row sm:items-center">
-            <p className="flex-1 text-base text-gray-300 sm:text-lg md:text-xl">
+          <div className="flex w-full flex-col justify-center px-6 py-4 md:w-[70%]">
+            <h3 className="mb-2 text-2xl font-bold sm:text-3xl md:text-4xl">
+              {ctaBanner.TITLE}
+            </h3>
+
+            <p className="text-base text-gray-300 sm:text-lg md:text-xl">
               {ctaBanner.DESC}
             </p>
+          </div>
 
+          <div className="flex w-full items-center justify-center px-4 pb-4 md:w-[30%] md:pb-0">
             <Link href="/services">
-              <Button className=" hover:bg-primary-dark bg-primary px-6 py-2 text-base sm:px-8 sm:py-3  sm:text-lg ">
+              <Button className="hover:bg-primary-dark bg-primary px-8 py-3 text-lg font-semibold text-white">
                 {ctaBanner.BUTTON_TEXT}
               </Button>
             </Link>
           </div>
+
         </div>
       </div>
+
     </section>
   );
 }
