@@ -13,15 +13,15 @@ export default function OurServices(): JSX.Element {
     <section className="w-full bg-white px-4 py-16 text-black sm:px-6 md:px-10 lg:px-12 xl:px-16 2xl:px-24">
       <ScrollReveal>
         <div className="mx-auto mb-12 w-full max-w-4xl text-center">
-          <p className="text-sm font-semibold tracking-widest text-black uppercase">
+          <p className="text-sm tracking-wide text-gray-500 uppercase">
             OUR SERVICES
           </p>
-          <h2 className="mt-3 text-3xl font-bold md:text-5xl">
+          <h2 className="mt-3 text-4xl font-bold text-black md:text-5xl">
             Complete Services in a
             <br />
             No Time
           </h2>
-          <p className="mt-4 text-base text-muted md:text-lg">
+          <p className="mt-4 text-sm text-gray-500 md:text-base">
             Explore our comprehensive range of exceptional services and unwavering
             <br />
             commitment to excellence

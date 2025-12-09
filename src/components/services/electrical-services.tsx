@@ -14,7 +14,7 @@ export default function ElectricalServices() {
           <h2 className="mb-2 text-4xl font-bold text-black md:text-5xl">
             {HEADINGS.TITLE}
           </h2>
-          <p className="mb-12 text-sm tracking-[2px] text-black uppercase">
+          <p className="mb-12 text-sm tracking-wide text-gray-500 uppercase">
             {HEADINGS.SUBTITLE}
           </p>
         </ScrollReveal>
@@ -32,8 +32,8 @@ export default function ElectricalServices() {
                     className="h-full w-full object-cover"
                   />
                 </div>
-                <h3 className="mb-2 text-xl font-bold">{item.title}</h3>
-                <p className="text-md text-muted">{item.desc}</p>
+                <h3 className="mb-2 text-xl font-bold text-black md:text-2xl">{item.title}</h3>
+                <p className="text-sm text-gray-600 md:text-base">{item.desc}</p>
               </div>
             </ScrollReveal>
           ))}

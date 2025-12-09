@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { useMemo } from 'react';
 import ScrollReveal from '@/components/ui/scroll-reveal';
 import { TEXTS } from '@/constants/text';
+import AnimatedHighlightText from '../ui/animated-highlight-text';
 
 export default function ValuedCustomers(): JSX.Element {
   const { LEFT_IMAGES, BOTTOM_GRID, HEADINGS } = TEXTS.VALUED_CUSTOMERS;
@@ -17,8 +18,13 @@ export default function ValuedCustomers(): JSX.Element {
           <p className="text-sm tracking-wide text-gray-500 uppercase">{HEADINGS.SUBTITLE}</p>
           <h2 className="mt-2 text-4xl font-bold text-black md:text-5xl">
             {HEADINGS.TITLE}
-            <span className="block px-2 text-black">{HEADINGS.HIGHLIGHT}</span>
           </h2>
+
+          <AnimatedHighlightText
+            text={HEADINGS.HIGHLIGHT}
+            className="block  text-4xl font-bold text-black md:text-5xl"
+          />
+
           <p className="mt-4 text-sm text-gray-500 md:text-base">{HEADINGS.DESCRIPTION}</p>
         </div>
       </ScrollReveal>

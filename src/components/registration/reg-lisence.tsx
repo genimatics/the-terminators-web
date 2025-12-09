@@ -32,10 +32,10 @@ export default function RegistrationCertificates() {
     <section className="relative w-full bg-background py-16 sm:py-20 md:py-24 lg:py-32">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mb-12 flex flex-col items-center justify-center gap-4 text-center md:mb-16">
-          <h2 className="text-heading text-3xl font-bold sm:text-4xl md:text-5xl">
+          <h2 className="text-heading text-4xl font-bold md:text-5xl">
             Professional Certifications
           </h2>
-          <p className="max-w-2xl text-lg text-muted-foreground">
+          <p className="max-w-2xl text-sm text-muted-foreground md:text-base">
             Our team holds multiple industry-recognized certifications ensuring the highest standards of service and
             expertise.
           </p>
@@ -81,10 +81,10 @@ export default function RegistrationCertificates() {
         </div>
 
         <div className="mt-16 rounded-lg border border-border bg-card/50 p-8 text-center backdrop-blur-sm">
-          <h3 className="text-heading text-xl font-bold sm:text-2xl">
+          <h3 className="text-heading text-2xl font-bold sm:text-3xl">
             Verified & Certified Excellence
           </h3>
-          <p className="mt-2 text-muted-foreground">
+          <p className="mt-2 text-sm text-muted-foreground md:text-base">
             All certifications are current and verified with their respective issuing organizations.
           </p>
         </div>

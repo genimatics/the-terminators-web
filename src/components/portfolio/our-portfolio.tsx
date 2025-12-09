@@ -48,10 +48,10 @@ export default function OurPortfolio() {
       <section className="w-full bg-white py-16 md:py-24">
         <div className="mx-auto max-w-7xl px-4 md:px-6">
           <div className="mb-12 text-center">
-            <h2 className="mb-3 text-3xl font-bold text-gray-900 md:text-4xl">
+            <h2 className="mb-3 text-4xl font-bold text-gray-900 md:text-5xl">
               Our Portfolio
             </h2>
-            <p className="text-lg text-gray-600">
+            <p className="text-sm text-gray-600 md:text-base">
               Explore our completed projects and success stories
             </p>
           </div>
@@ -68,13 +68,13 @@ export default function OurPortfolio() {
       <div className="mx-auto max-w-7xl px-4 md:px-6">
         {/* Header Section */}
         <div className="mb-12 text-center">
-          <p className="mb-2 text-sm font-semibold tracking-widest text-primary uppercase">
+          <p className="mb-2 text-sm tracking-wide text-gray-500 uppercase">
             OUR WORK
           </p>
-          <h2 className="mb-3 text-3xl font-bold text-gray-900 md:text-4xl">
+          <h2 className="mb-3 text-4xl font-bold text-gray-900 md:text-5xl">
             Project Portfolio
           </h2>
-          <p className="text-lg text-gray-600">
+          <p className="text-sm text-gray-600 md:text-base">
             Showcasing our expertise through completed projects
           </p>
         </div>

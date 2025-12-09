@@ -29,16 +29,16 @@ export default function SectionOne(): JSX.Element {
       <div className="relative z-10 grid grid-cols-1 items-center gap-10 lg:grid-cols-2">
         <ScrollReveal>
           <div className="space-y-6 text-center lg:text-left">
-            <p className="text-sm tracking-widest text-gray-500 uppercase">
+            <p className="text-sm tracking-wide text-gray-500 uppercase">
               WIDE RANGE OF ELECTRICAL SERVICES
             </p>
 
-            <h2 className="text-3xl leading-snug font-bold text-foreground sm:text-4xl md:text-5xl">
+            <h2 className="text-4xl font-bold text-foreground md:text-5xl">
               Do you need an Electrician?
               <AnimatedHighlightText text="Look no further!" className="block" />
             </h2>
 
-            <p className="mx-auto max-w-xl leading-relaxed text-gray-600 lg:mx-0">
+            <p className="mx-auto max-w-xl text-sm leading-relaxed text-gray-600 md:text-base lg:mx-0">
               M/s The Terminators brings 30+ years of trusted expertise in power generation,
               electrical distribution, and energy management. We specialize in substations,
               power houses, and industrial units with complete solutions including MV/LV panels,

@@ -48,10 +48,10 @@ export default function OurGallery() {
       <section className="w-full bg-background py-16 md:py-24">
         <div className="mx-auto max-w-7xl px-4 md:px-6">
           <div className="mb-12 text-center">
-            <h2 className="mb-3 font-sans text-3xl font-bold tracking-tight text-foreground md:text-4xl">
+            <h2 className="mb-3 text-4xl font-bold text-foreground md:text-5xl">
               Our Gallery
             </h2>
-            <p className="text-lg text-muted-foreground">
+            <p className="text-sm text-muted-foreground md:text-base">
               Explore our collection of events, exhibitions, and special moments
             </p>
           </div>
@@ -67,10 +67,10 @@ export default function OurGallery() {
     <section className="w-full bg-background py-16 md:py-24">
       <div className="mx-auto max-w-7xl px-4 md:px-6">
         <div className="mb-12 text-center">
-          <h2 className="mb-3 font-sans text-3xl font-bold tracking-tight text-foreground md:text-4xl">
+          <h2 className="mb-3 text-4xl font-bold text-foreground md:text-5xl">
             Our Gallery
           </h2>
-          <p className="text-lg text-muted-foreground">
+          <p className="text-sm text-muted-foreground md:text-base">
             Explore our collection of events, exhibitions, and special moments
           </p>
         </div>

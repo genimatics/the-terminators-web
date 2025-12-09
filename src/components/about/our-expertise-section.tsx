@@ -13,16 +13,16 @@ export default function OurExpertise() {
 
         <ScrollReveal>
           <div className="mb-16 text-center md:mb-24">
-            <p className="mb-4 text-xs tracking-widest text-gray-600 uppercase sm:text-sm md:text-lg">
+            <p className="mb-3 text-sm tracking-wide text-gray-500 uppercase">
               {DATA.VISION.SMALL}
             </p>
 
-            <h2 className="mb-6 text-3xl leading-tight font-bold sm:text-4xl md:text-5xl">
+            <h2 className="mb-6 text-4xl font-bold text-black md:text-5xl">
               {DATA.VISION.TITLE}
             </h2>
 
             <div className="mx-auto max-w-3xl">
-              <p className="text-xl leading-relaxed text-gray-700 sm:text-2xl">
+              <p className="text-sm leading-relaxed text-gray-600 md:text-base">
                 {DATA.VISION.DESC}
               </p>
             </div>
@@ -32,11 +32,11 @@ export default function OurExpertise() {
         <ScrollReveal delay={0.2}>
           <div className="text-center md:mb-24">
 
-            <p className="mb-2 text-xs tracking-widest text-gray-600 uppercase sm:text-sm md:text-lg">
+            <p className="mb-3 text-sm tracking-wide text-gray-500 uppercase">
               {DATA.STRENGTHS.SMALL}
             </p>
 
-            <h2 className="mb-8 text-3xl leading-tight font-bold sm:text-4xl md:text-5xl">
+            <h2 className="mb-8 text-4xl font-bold text-black md:text-5xl">
               {DATA.STRENGTHS.TITLE}
             </h2>
 
@@ -64,7 +64,7 @@ export default function OurExpertise() {
                     {card.title}
                   </h4>
 
-                  <p className="text-[15px] text-gray-600">
+                  <p className="text-sm text-gray-600 md:text-base">
                     {card.desc}
                   </p>
                 </div>
@@ -80,16 +80,16 @@ export default function OurExpertise() {
         <ScrollReveal delay={0.4}>
           <div className="text-center">
 
-            <p className="mb-4 text-xs tracking-widest text-gray-600 uppercase sm:text-sm md:text-lg">
+            <p className="mb-3 text-sm tracking-wide text-gray-500 uppercase">
               {DATA.MISSION.SMALL}
             </p>
 
-            <h2 className="mb-6 text-3xl leading-tight font-bold sm:text-4xl md:text-5xl">
+            <h2 className="mb-6 text-4xl font-bold text-black md:text-5xl">
               {DATA.MISSION.TITLE}
             </h2>
 
             <div className="mx-auto max-w-3xl">
-              <p className="leaing-relaxed text-xl text-gray-700 sm:text-2xl">
+              <p className="text-sm leading-relaxed text-gray-600 md:text-base">
                 {DATA.MISSION.DESC}
               </p>
             </div>

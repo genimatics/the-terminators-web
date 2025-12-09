@@ -32,7 +32,7 @@ export default function Contact() {
                   <h3 className="mb-3 text-2xl font-bold text-black sm:text-3xl">
                     {card.HEADING}
                   </h3>
-                  <p className="mb-2 text-lg text-muted sm:mb-4 sm:text-xl">{card.PARAGRAPH}</p>
+                  <p className="mb-2 text-sm text-gray-600 sm:mb-4 sm:text-base">{card.PARAGRAPH}</p>
                   <p className="text-base font-bold text-black">{card.EMAIL}</p>
 
                 </div>
@@ -42,11 +42,11 @@ export default function Contact() {
 
           <ScrollReveal delay={0.3}>
             <div className="mb-10 px-4 sm:px-0">
-              <h2 className="mb-2 text-3xl leading-snug font-extrabold text-black sm:text-4xl">
+              <h2 className="mb-2 text-4xl font-bold text-black md:text-5xl">
                 Write to us for a fast
                 <span className="block">Feedback</span>
               </h2>
-              <p className="sm:text-md text-sm tracking-widest text-muted">
+              <p className="mt-3 text-sm text-gray-500 md:text-base">
                 {CONTACT_BOX.FOOTER1.PARAGRAPH}
               </p>
             </div>

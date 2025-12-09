@@ -26,13 +26,13 @@ export default function AboutTeam() {
 
       <div className="w-full text-center">
         <ScrollReveal>
-          <p className="mb-3 text-xs tracking-[4px] text-gray-500 uppercase sm:text-base">
+          <p className="mb-3 text-sm tracking-wide text-gray-500 uppercase">
             {ABOUT_TEAM.HEADINGS.SMALL_TITLE}
           </p>
-          <h2 className="mb-5 text-2xl font-bold text-gray-900 sm:text-3xl md:text-5xl">
+          <h2 className="mb-5 text-4xl font-bold text-gray-900 md:text-5xl">
             {ABOUT_TEAM.HEADINGS.TITLE}
           </h2>
-          <p className="mx-auto mb-8 w-full max-w-full text-sm leading-relaxed text-gray-600 sm:mb-12 sm:text-base md:mb-14 md:text-lg">
+          <p className="mx-auto mb-8 w-full max-w-full text-sm leading-relaxed text-gray-600 sm:mb-12 sm:text-base md:mb-14">
             {ABOUT_TEAM.HEADINGS.PARAGRAPH}
           </p>
         </ScrollReveal>
