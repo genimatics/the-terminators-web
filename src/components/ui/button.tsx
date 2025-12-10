@@ -7,6 +7,7 @@ type ButtonProps = {
   onClick?: () => void;
   type?: 'button' | 'submit' | 'reset';
   size?: 'sm' | 'md' | 'lg';
+  disabled: boolean;
 };
 
 const Button: React.FC<ButtonProps> = ({
@@ -15,6 +16,7 @@ const Button: React.FC<ButtonProps> = ({
   onClick,
   type = 'button',
   size = 'md',
+  disabled = false,
 }) => {
   const shadowOffset
     = size === 'sm' ? 2 : size === 'lg' ? 6 : 4;
@@ -41,6 +43,7 @@ const Button: React.FC<ButtonProps> = ({
 
       <button
         type={type}
+        disabled={disabled}
         onClick={onClick}
         className={`font-semibol relative z-10 cursor-pointer bg-primary text-white transition-transform duration-300 ease-out ${padding} w-full group-hover:scale-95`}
       >

@@ -58,7 +58,10 @@ export default function Hero() {
 
         <ScrollReveal delay={0.2}>
           <Link href="/about">
-            <Button className="px-8 py-3 text-sm sm:px-10 sm:py-4 sm:text-base md:text-lg lg:px-12 lg:py-5 lg:text-xl">
+            <Button
+              disabled={false}
+              className="px-8 py-3 text-sm sm:px-10 sm:py-4 sm:text-base md:text-lg lg:px-12 lg:py-5 lg:text-xl"
+            >
               More Info
             </Button>
           </Link>
@@ -88,7 +91,7 @@ export default function Hero() {
 
             <div className="flex flex-col items-center">
               <div className="mb-1 w-full border-t border-white/40" />
-              <a href="https://maps.app.goo.gl/UXCzTgurYwYFGrBX6" target="_blank" rel="noopener noreferrer" className="hero-footer text-lg font-semibold transition-colors sm:text-sm md:text-base lg:text-lg xl:text-xl">
+              <a href="https://maps.app.goo.gl/JVfVtrMVasWURRy97" target="_blank" rel="noopener noreferrer" className="hero-footer text-lg font-semibold transition-colors sm:text-sm md:text-base lg:text-lg xl:text-xl">
                 Block 13-A,Main University Road
               </a>
             </div>

@@ -63,6 +63,7 @@ export default function AboutFormSection() {
               </div>
 
               <Button
+                disabled={false}
                 type="submit"
                 className="w-full bg-primary px-6 py-3 text-base font-semibold transition-all duration-300 sm:px-8 sm:py-3 sm:text-lg"
               >

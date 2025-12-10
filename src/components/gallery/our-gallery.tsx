@@ -80,7 +80,7 @@ export default function OurGallery() {
             <button
               key={cat.id}
               onClick={() => handleCategoryChange(cat.value)}
-              className={`rounded-lg px-6 py-2.5 font-medium transition-all duration-300 ${selectedCategory === cat.value
+              className={`cursor-pointer rounded-lg px-6 py-2.5 font-medium transition-all duration-300 ${selectedCategory === cat.value
                 ? 'bg-primary text-primary-foreground shadow-md'
                 : 'border border-border bg-card text-foreground hover:border-primary hover:bg-primary hover:text-primary-foreground'
               }`}

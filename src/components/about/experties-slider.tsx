@@ -43,7 +43,7 @@ export default function ExpertiseSlider() {
         <p className="mb-6 max-w-md px-4 text-sm sm:text-base md:text-lg">
           Over 30 years of expertise in electrical and energy engineering
         </p>
-        <Button size="lg">Read More</Button>
+        <Button disabled={false} size="lg">Read More</Button>
       </div>
 
       <div

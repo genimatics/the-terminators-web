@@ -185,7 +185,10 @@ export default function Navbar() {
                 onClick={handleQuoteClick}
                 className="hidden  md:block"
               >
-                <Button className="cursor-pointer !bg-primary !px-4 !py-2 text-xs font-semibold tracking-widest !text-white hover:opacity-90 sm:!px-5 sm:!py-2.5 sm:text-sm">
+                <Button
+                  disabled={false}
+                  className="cursor-pointer !bg-primary !px-4 !py-2 text-xs font-semibold tracking-widest !text-white hover:opacity-90 sm:!px-5 sm:!py-2.5 sm:text-sm"
+                >
                   {TEXTS.NAVBAR.BUTTON_TEXT}
                 </Button>
               </button>

@@ -90,6 +90,7 @@ export default function Contact() {
                     className="w-full resize-none border-b border-gray-500 bg-transparent py-2 text-base text-white placeholder-gray-400 outline-none sm:py-3 sm:text-lg"
                   />
                   <Button
+                    disabled={false}
                     type="submit"
                     className="w-full px-4 py-3 text-lg font-semibold text-black transition-all duration-300 sm:px-6 sm:py-4"
                   >

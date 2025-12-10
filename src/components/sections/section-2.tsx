@@ -194,7 +194,7 @@ export default function SectionTwo(): JSX.Element {
       <ScrollReveal>
         <div className="mb-10 text-center">
           <Link href="/services">
-            <Button className="hover:bg-primary-dark bg-primary px-8 py-3 text-lg font-semibold text-white">
+            <Button disabled={false} className="hover:bg-primary-dark bg-primary px-8 py-3 text-lg font-semibold text-white">
               View All Services
             </Button>
           </Link>
@@ -221,7 +221,10 @@ export default function SectionTwo(): JSX.Element {
 
           <div className="flex w-full items-center justify-center px-4 pb-4 md:w-[30%] md:pb-0">
             <Link href="/services">
-              <Button className="hover:bg-primary-dark bg-primary px-8 py-3 text-lg font-semibold text-white">
+              <Button
+                disabled={false}
+                className="hover:bg-primary-dark bg-primary px-8 py-3 text-lg font-semibold text-white"
+              >
                 {ctaBanner.BUTTON_TEXT}
               </Button>
             </Link>

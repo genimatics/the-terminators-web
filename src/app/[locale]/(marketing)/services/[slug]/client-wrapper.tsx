@@ -26,6 +26,7 @@ export default function ClientWrapper({ service }: ClientWrapperProps) {
           Contact us for a free consultation and quote.
         </p>
         <Button
+          disabled={false}
           onClick={() => setIsModalOpen(true)}
           className="block w-full rounded-lg bg-white py-3 text-center font-semibold text-primary transition-colors hover:bg-gray-100"
         >

@@ -66,7 +66,6 @@ export default function OurPortfolio() {
   return (
     <section className="w-full bg-white py-16 md:py-24">
       <div className="mx-auto max-w-7xl px-4 md:px-6">
-        {/* Header Section */}
         <div className="mb-12 text-center">
           <p className="mb-2 text-sm tracking-wide text-gray-500 uppercase">
             OUR WORK
@@ -84,7 +83,7 @@ export default function OurPortfolio() {
             <button
               key={cat.id}
               onClick={() => handleCategoryChange(cat.value)}
-              className={`rounded-lg px-6 py-2.5 font-medium transition-all duration-300 ${
+              className={`cursor-pointer rounded-lg px-6 py-2.5 font-medium transition-all duration-300 ${
                 selectedCategory === cat.value
                   ? 'bg-primary text-white shadow-md'
                   : 'border border-gray-300 bg-white text-gray-700 hover:border-primary hover:bg-primary hover:text-white'

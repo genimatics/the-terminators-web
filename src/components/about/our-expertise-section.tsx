@@ -72,7 +72,7 @@ export default function OurExpertise() {
             </div>
 
             <div className="mt-4 mb-12">
-              <Button size="md">{DATA.STRENGTHS.BUTTON}</Button>
+              <Button disabled={false} size="md">{DATA.STRENGTHS.BUTTON}</Button>
             </div>
           </div>
         </ScrollReveal>

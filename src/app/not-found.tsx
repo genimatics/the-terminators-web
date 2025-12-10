@@ -36,7 +36,7 @@ export default function NotFoundPage() {
             />
             <button
               type="button"
-              className="bg-primary flex items-center justify-center px-5 text-black "
+              className="flex items-center justify-center bg-primary px-5 text-black "
             >
               <Search size={20} />
             </button>
@@ -44,7 +44,10 @@ export default function NotFoundPage() {
 
           <div className="mt-8">
             <Link href={homeUrl}>
-              <Button className="bg-primary px-8 py-3 text-base font-semibold text-black ">
+              <Button
+                disabled={false}
+                className="bg-primary px-8 py-3 text-base font-semibold text-black "
+              >
                 Back to Home
               </Button>
             </Link>

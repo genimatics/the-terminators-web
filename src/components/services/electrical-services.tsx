@@ -40,7 +40,7 @@ export default function ElectricalServices() {
         </div>
 
         <ScrollReveal delay={0.3}>
-          <Button className="bg-[#f7c02f] px-6 py-3 font-semibold text-black">
+          <Button disabled={false} className="bg-[#f7c02f] px-6 py-3 font-semibold text-black">
             {BUTTON_TEXT}
           </Button>
         </ScrollReveal>

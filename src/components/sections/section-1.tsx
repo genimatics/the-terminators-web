@@ -57,7 +57,7 @@ export default function SectionOne(): JSX.Element {
             </ul>
 
             <Link href="services" className="inline-block">
-              <Button className="px-6 py-3">All Services</Button>
+              <Button disabled={false} className="px-6 py-3">All Services</Button>
             </Link>
           </div>
         </ScrollReveal>

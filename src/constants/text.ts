@@ -312,11 +312,6 @@ export const TEXTS = {
           url: 'mailto:admin@theterminators.biz.pk',
           type: 'email',
         },
-        {
-          text: 'Pakistan, Karachi',
-          url: 'https://maps.google.com/maps?q=Karachi,Pakistan',
-          type: 'link',
-        },
       ],
     },
 
