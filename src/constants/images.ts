@@ -1,9 +1,9 @@
 export const IMAGES = {
   HERO: {
-    SLIDE1: '/assets/terminator-images/home/hero-section-bg/hero-slide1.webp',
-    SLIDE2: '/assets/terminator-images/home/hero-section-bg/hero-slide2.webp',
-    SLIDE3: '/assets/terminator-images/home/hero-section-bg/hero-slide3.webp',
-    SLIDE4: '/assets/terminator-images/home/hero-section-bg/hero-slide4.webp',
+    SLIDE1: '/assets/terminator-images/home/hero-section-bg/hero-slide1.jpg',
+    SLIDE2: '/assets/terminator-images/home/hero-section-bg/hero-slide2.jpg',
+    SLIDE3: '/assets/terminator-images/home/hero-section-bg/hero-bg3.jpg',
+    SLIDE4: '/assets/terminator-images/home/hero-section-bg/hero-bg4.jpg',
   },
 
   GET_STARTED: {
@@ -58,6 +58,7 @@ export const IMAGES = {
 
   FOOTER: {
     LOGO: '/assets/terminator-images/footer/footer-logo.png',
+    LOGO1: '/assets/terminator-images/footer/logo-bg.png',
     FOOTER_BG: '/assets/terminator-images/footer/footer-bg.jpg',
 
   },

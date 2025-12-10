@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import Button from '@/components/ui/button';
 import ScrollReveal from '@/components/ui/scroll-reveal';
@@ -56,9 +57,11 @@ export default function Hero() {
         </ScrollReveal>
 
         <ScrollReveal delay={0.2}>
-          <Button className="px-8 py-3  text-sm sm:px-10 sm:py-4 sm:text-base md:text-lg lg:px-12 lg:py-5 lg:text-xl">
-            More Info
-          </Button>
+          <Link href="/about">
+            <Button className="px-8 py-3 text-sm sm:px-10 sm:py-4 sm:text-base md:text-lg lg:px-12 lg:py-5 lg:text-xl">
+              More Info
+            </Button>
+          </Link>
         </ScrollReveal>
       </div>
 
@@ -74,15 +77,19 @@ export default function Hero() {
 
             <div className="flex flex-col items-center">
               <div className="mb-1 w-full border-t border-white/40" />
-              <a href="https://wa.me/922134830726" target="blank" className="hero-footer text-lg font-semibold transition-colors sm:text-sm md:text-base lg:text-lg xl:text-xl">
+              <a
+                href="tel:+922134830726"
+                className="hero-footer text-lg font-semibold transition-colors sm:text-sm md:text-base lg:text-lg xl:text-xl"
+              >
                 +92 21 34830726-7
               </a>
+
             </div>
 
             <div className="flex flex-col items-center">
               <div className="mb-1 w-full border-t border-white/40" />
-              <a href="https://maps.google.com?q=Block+13-A+Main+University+Road+Karachi" target="_blank" rel="noopener noreferrer" className="hero-footer text-lg font-semibold transition-colors sm:text-sm md:text-base lg:text-lg xl:text-xl">
-                Block 13-A, Main University Road
+              <a href="https://maps.app.goo.gl/UXCzTgurYwYFGrBX6" target="_blank" rel="noopener noreferrer" className="hero-footer text-lg font-semibold transition-colors sm:text-sm md:text-base lg:text-lg xl:text-xl">
+                Block 13-A,Main University Road
               </a>
             </div>
           </div>

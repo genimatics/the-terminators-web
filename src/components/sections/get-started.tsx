@@ -41,7 +41,7 @@ export default function GetStarted() {
                     <br />
                     contact us
                     <br />
-                    today with
+                    today at
                     <br />
                     The Terminators !
                     <br />

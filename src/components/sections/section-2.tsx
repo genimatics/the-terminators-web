@@ -7,12 +7,14 @@ import Link from 'next/link';
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import Button from '@/components/ui/button';
 import ScrollReveal from '@/components/ui/scroll-reveal';
+import { SLIDER_DATA } from '@/constants/slider';
 import { TEXTS } from '@/constants/text';
 import { getFeaturedServices } from '@/types/services';
 
 export default function SectionTwo(): JSX.Element {
+  const slides = SLIDER_DATA;
+
   const {
-    SLIDES: slides,
     HEADINGS: headings,
     PARAGRAPHS: paragraphs,
     CTA_BANNER: ctaBanner,
@@ -39,39 +41,39 @@ export default function SectionTwo(): JSX.Element {
   }, [totalSlides]);
 
   const currentSlide = useMemo(
-    () => slides[current] ?? slides[0],
+    () =>
+      (slides[current] ?? slides[0]) as NonNullable<(typeof slides)[number]>,
     [current, slides],
   );
-
-  const titleParts = useMemo(() => {
-    const parts = headings.TITLE.split(' ');
-    return { first: parts[0], rest: parts.slice(1).join(' ') };
-  }, [headings.TITLE]);
 
   const startX = useRef<number>(0);
   const endX = useRef<number>(0);
 
   const handleTouchStart = (e: React.TouchEvent) => {
-    const touch = e.touches?.[0];
-    if (touch) {
-      startX.current = touch.clientX;
+    const t = e.touches?.[0];
+    if (t) {
+      startX.current = t.clientX;
     }
   };
 
   const handleTouchMove = (e: React.TouchEvent) => {
-    const touch = e.touches?.[0];
-    if (touch) {
-      endX.current = touch.clientX;
+    const t = e.touches?.[0];
+    if (t) {
+      endX.current = t.clientX;
     }
   };
 
   const handleTouchEnd = () => {
     const diff = startX.current - endX.current;
-
     if (Math.abs(diff) > 50) {
       diff > 0 ? nextSlide() : prevSlide();
     }
   };
+
+  const titleParts = useMemo(() => {
+    const parts = headings.TITLE.split(' ');
+    return { first: parts[0], rest: parts.slice(1).join(' ') };
+  }, [headings.TITLE]);
 
   return (
     <section className="w-full bg-white px-4 text-black sm:px-6 md:px-10 lg:px-12 xl:px-16 2xl:px-24">
@@ -97,6 +99,7 @@ export default function SectionTwo(): JSX.Element {
                   sm:h-[400px] md:h-[500px] lg:h-[650px]
                 "
               />
+
               <div className="absolute inset-0 bg-black/30"></div>
             </div>
           </div>
@@ -109,8 +112,13 @@ export default function SectionTwo(): JSX.Element {
               sm:-translate-x-1/2 sm:-translate-y-0 sm:px-6
             "
           >
-            <h2 className="mb-2 text-3xl font-bold sm:text-4xl md:text-5xl">{headings.MAIN}</h2>
-            <p className="text-sm text-gray-200 md:text-base">{headings.SUB}</p>
+            <h2 className="mb-2 text-3xl font-bold sm:text-4xl md:text-5xl">
+              {currentSlide.title}
+            </h2>
+
+            <p className="text-sm text-gray-200 md:text-base">
+              {currentSlide.sub}
+            </p>
           </div>
 
           <button
@@ -140,14 +148,16 @@ export default function SectionTwo(): JSX.Element {
               {titleParts.first}
               <span className="block">{titleParts.rest}</span>
             </h3>
-            <h4 className="mt-3 text-sm font-medium text-gray-600 md:text-base">{headings.SUBTITLE}</h4>
+            <h4 className="mt-3 text-sm font-medium text-gray-600 md:text-base">
+              {headings.SUBTITLE}
+            </h4>
           </div>
         </ScrollReveal>
 
         <ScrollReveal delay={0.1}>
           <div className="space-y-3 text-sm text-gray-700 md:text-base">
-            {paragraphs.map((paragraph, index) => (
-              <p key={index}>{paragraph}</p>
+            {paragraphs.map((paragraph, i) => (
+              <p key={i}>{paragraph}</p>
             ))}
           </div>
         </ScrollReveal>

@@ -34,7 +34,7 @@ export default function SectionOne(): JSX.Element {
             </p>
 
             <h2 className="text-4xl font-bold text-foreground md:text-5xl">
-              Do you need an Electrician?
+              Do you need an Electrical Services?
               <AnimatedHighlightText text="Look no further!" className="block" />
             </h2>
 
@@ -56,8 +56,8 @@ export default function SectionOne(): JSX.Element {
               ))}
             </ul>
 
-            <Link href="#" className="inline-block">
-              <Button className="px-6 py-3">All Service</Button>
+            <Link href="services" className="inline-block">
+              <Button className="px-6 py-3">All Services</Button>
             </Link>
           </div>
         </ScrollReveal>

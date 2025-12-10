@@ -63,7 +63,7 @@ export default function QuoteForm(): JSX.Element {
               id="name"
               name="name"
               type="text"
-              placeholder="Insert your name"
+              placeholder="Enter your name"
               className="w-full border border-gray-300 px-3 py-2 focus:outline-none"
             />
           </div>
@@ -80,7 +80,7 @@ export default function QuoteForm(): JSX.Element {
               id="surname"
               name="surname"
               type="text"
-              placeholder="Insert your surname"
+              placeholder="Enter your surname"
               className="w-full border border-gray-300 px-3 py-2 focus:outline-none"
             />
           </div>
@@ -97,7 +97,7 @@ export default function QuoteForm(): JSX.Element {
               id="email"
               name="email"
               type="email"
-              placeholder="Insert your email"
+              placeholder="Enter your email"
               className="w-full border border-gray-300 px-3 py-2 focus:outline-none"
             />
           </div>
@@ -152,7 +152,7 @@ export default function QuoteForm(): JSX.Element {
               id="address"
               name="address"
               type="text"
-              placeholder="Insert your address"
+              placeholder="Enter your address"
               className="w-full border border-gray-300 px-3 py-2 focus:outline-none"
             />
           </div>
@@ -168,7 +168,7 @@ export default function QuoteForm(): JSX.Element {
               id="zipCode"
               name="zipCode"
               type="text"
-              placeholder="Type your Zip Code"
+              placeholder="Enter Zip Code"
               className="w-full border border-gray-300 px-3 py-2 focus:outline-none"
             />
           </div>

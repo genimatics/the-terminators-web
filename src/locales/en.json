@@ -92,5 +92,9 @@
   "Gallery": {
     "meta_title": "Our Gallery",
     "meta_description": "Explore our gallery showcasing professional electrical work."
+  },
+  "PrivacyPolicy": {
+    "meta_title": "Privacy Policy",
+    "meta_description": "Explore our gallery showcasing professional electrical work."
   }
 }

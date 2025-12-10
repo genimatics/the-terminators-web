@@ -119,7 +119,7 @@ export const TEXTS = {
     HEADINGS: {
       MAIN: 'Nature of Business',
       SUB: 'Electrical Engineering, Installations and Associated Construction, Testing & Commissioning Services',
-      TITLE: 'Experienced Electricians Services',
+      TITLE: 'Experienced Electricals Services',
       SUBTITLE: 'WE USE THE LATEST TOOLS & TECHNOLOGY',
     },
 
@@ -130,7 +130,7 @@ export const TEXTS = {
 
     CTA_BANNER: {
       IMAGE: '/assets/terminator-images/home/section-one/section-CTA-Banner.webp',
-      TITLE: 'Are you in need of an Electrician?',
+      TITLE: 'Are you in need of Electrical Services?',
       DESC: 'Look no further! Our team is here to help.',
       BUTTON_TEXT: 'Check All Services',
     },
@@ -297,10 +297,26 @@ export const TEXTS = {
     CONTACTS: {
       TITLE: 'Contacts :',
       ITEMS: [
-        'Engr. Ahmed Zubair Siddiqui',
-        'z_siddiki@hotmail.com',
-        'admin@theterminators.biz.pk',
-        'Pakistan, Karachi',
+        {
+          text: 'Engr. Ahmed Zubair Siddiqui',
+          url: 'https://www.linkedin.com/in/ahmed-zubair-siddiqui-70a24122',
+          type: 'link',
+        },
+        {
+          text: 'z_siddiki@hotmail.com',
+          url: 'mailto:z_siddiki@hotmail.com',
+          type: 'email',
+        },
+        {
+          text: 'admin@theterminators.biz.pk',
+          url: 'mailto:admin@theterminators.biz.pk',
+          type: 'email',
+        },
+        {
+          text: 'Pakistan, Karachi',
+          url: 'https://maps.google.com/maps?q=Karachi,Pakistan',
+          type: 'link',
+        },
       ],
     },
 
@@ -319,9 +335,7 @@ export const TEXTS = {
     },
 
     FOOTER_LINKS: [
-      'Partnerships',
-      'Customer Support',
-      'Privacy Policy',
+      { text: 'Privacy Policy', path: '/privacypolicy' },
     ],
   },
 
@@ -400,6 +414,68 @@ export const TEXTS = {
       DESC:
         'To provide world-class engineering, contracting, and maintenance services, powered by innovation, integrity, and technical excellence.',
     },
+  },
+
+  PRIVACYHEADER: {
+    TITLE: 'Privacy  Policy',
+    SUBTITLE: 'Our Commitment to Excellence',
+    DESCRIPTION:
+      'Established in 2003, M/S THE TERMINATORS maintains the highest standards in quality, safety, ethical business practices, and human rights.',
+  },
+
+  QHSE_POLICY: {
+    TITLE: 'Quality, Health, Safety & Environment (QHSE) Policy',
+    POINTS: [
+      'The Terminators is committed to set the challenging QHSE targets to reduce the relevant risks according to the scope of works and services rendered by the organization viz. "Electrical Engineering, Installations and Related Construction, Testing & Commissioning Services."',
+      'The Terminators operate an effective QHSE system to pursue continual improvement through internal audit, management review programs, prevention against nonconformities and SMART (specific, measurable, achievable, realistic and time bonded) objective planning for proper implementation of QHSE.',
+      'The Terminators Maintain a prominent level of awareness of sustainability amongst our employees through QHSE training and awareness.',
+      'The Terminators is committed to meet or exceed all legal and relevant legislation and regulatory requirements, agreements, and other requirements for QHSE.',
+      'The Terminators Promote employee satisfaction, development, and growth for all employees. Create a favorable climate within the company to promote quality and continuous improvement, the health & safety of our employees and reduce the environmental impact of our practices. Inform all our employees of our quality & environmental policies and gain their commitment by raising awareness and training in procedures.',
+      'The Terminators shall remain committed to keeping its clients satisfied by providing them with their required quality of product at reasonable rates and timely services in accordance with codes & specifications.',
+      'The Terminators Encourage QHSE commitment and its better application across the company.',
+      'The Terminators Monitor the progress against risk, targets and evaluate QHSE status through internal audits.',
+    ],
+  },
+
+  ETHICAL_POLICY: {
+    TITLE: 'Ethical Policy Statement',
+    CONTENT: 'We at M/s The Terminators, strongly believe in transparency on business ethics. We negate any under the table demands and never offer any gifts, money, or free services to fetch business.',
+    SUB_CONTENT: 'We strongly believe in fair dealings.',
+  },
+
+  HUMAN_RIGHTS_POLICY: {
+    TITLE: 'Policy Statement on Human Rights',
+    CONTENT: 'We at M/s The Terminators undertake to adhere to international human rights guidelines that are covered in the policy statement.',
+    POINTS: [
+      'That we support the cause and effect of Universal declaration of Human rights',
+      'That we support core labor standards of the international labor organization.',
+      'We fully understand protection of Children and do not permit to engage in labor services or jobs to people below 19 years of age.',
+      'We employ trained, qualified, and skilled workers on our Electrical Installations and construction projects.',
+      'The wages and salaries to our employees are disbursed in time on stipulated dates.',
+      'That we are an equal opportunity employer with no discrimination of gender, caste, or creed.',
+      'All workers are provided with appropriate safety gear and personal protective equipment.',
+      'All efforts are made to complete the jobs and projects in time.',
+      'We believe in safety first and maintaining an accident-free working environment.',
+    ],
+  },
+
+  META: {
+    TITLE: 'Privacy & Policy - The Terminators',
+    DESCRIPTION: 'Our Quality, Health, Safety & Environment (QHSE) Policy, Ethical Policy, and Human Rights Policy statements.',
+  },
+
+  HEADER: {
+    TITLE: 'Our Policies',
+    SUBTITLE: 'Committed to Excellence, Safety & Ethics',
+    DESCRIPTION: 'At The Terminators, we uphold the highest standards in quality, safety, environmental responsibility, and ethical business practices.',
+  },
+
+  CONTACT_INFO: {
+    TITLE: 'For Policy Inquiries',
+    DESCRIPTION: 'If you have any questions about our policies or would like more information, please contact us.',
+    EMAIL: 'admin@theterminators.biz.pk',
+    PHONE: '+92 21 34830726-7',
+    CONTACT_PERSON: 'Engr. Ahmed Zubair Siddiqui',
   },
 
 } as const;

@@ -42,8 +42,8 @@
     color: var(--color-primary);
   }
 
-  hover\:text-primary:hover {
-    color: var(--color-primary);
+  .hover\:text-primary:hover {
+    color: var(--color-primary) !important;
   }
 
   .hover\:bg-primary:hover {
@@ -245,7 +245,6 @@
   }
 }
 
-/* Updated to CSS Grid masonry layout with varying sizes */
 .gallery-grid-masonry {
   auto-rows: 280px;
 }
