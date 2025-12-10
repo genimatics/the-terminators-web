@@ -21,7 +21,7 @@ export default function Contact() {
           <div className="mb-14 grid gap-8 sm:grid-cols-1 md:grid-cols-3">
             {CONTACT_BOX.CARDS.map((card, i) => (
               <ScrollReveal key={i} delay={i * 0.1}>
-                <div className="cursor-pointer rounded-lg bg-white p-6 text-center transition-shadow  duration-300 sm:p-8">
+                <div className="cursor-pointer rounded-lg bg-white p-6 text-center transition-shadow duration-300 sm:p-8">
                   <Image
                     src={card.ICON}
                     alt={card.HEADING}
@@ -33,8 +33,12 @@ export default function Contact() {
                     {card.HEADING}
                   </h3>
                   <p className="mb-2 text-sm text-gray-600 sm:mb-4 sm:text-base">{card.PARAGRAPH}</p>
-                  <p className="text-base font-bold text-black">{card.EMAIL}</p>
-
+                  <a
+                    href={`mailto:${card.EMAIL}`}
+                    className="text-base font-bold text-black transition-colors hover:text-primary"
+                  >
+                    {card.EMAIL}
+                  </a>
                 </div>
               </ScrollReveal>
             ))}
@@ -63,6 +67,18 @@ export default function Contact() {
                   className="border border-black object-cover"
                   priority
                 />
+
+                <div className="absolute inset-0 border-1 border-black bg-black/60"></div>
+
+                <div className="absolute top-1/4 left-1/4 max-w-[90%] -translate-x-1/5 -translate-y-1/5 px-4 pt-12 text-center">
+                  <h2 className="text-3xl leading-tight font-bold text-white sm:text-4xl">
+                    Get in Touch With Our Experts
+                  </h2>
+                  <p className="mt-2 text-sm leading-snug text-white/80 sm:text-base">
+                    Have a project or question? Reach out and our skilled electricians
+                    will respond promptly.
+                  </p>
+                </div>
               </div>
             </ScrollReveal>
 
