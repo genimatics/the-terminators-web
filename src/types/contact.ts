@@ -7,12 +7,19 @@ export type ContactFormData = {
   address: string;
   zipCode: string;
   message: string;
-  serviceType?: string;
-  phone?: string;
+
+  service: string;
+  extraService: string;
+  additionalInfo?: string;
+
+  bestContact: string;
+  phone: string;
+  contactEmail: string;
 };
 
 export type ContactSubmission = ContactFormData & {
   id: string;
   submittedAt: Date;
   status: 'pending' | 'processed' | 'rejected';
+  currentStep?: 'personal' | 'service' | 'contact';
 };

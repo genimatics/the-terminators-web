@@ -1,6 +1,6 @@
 import type { NextRequest } from 'next/server';
 import { NextResponse } from 'next/server';
-import z from 'zod';
+import { z } from 'zod';
 import { contactFormSchema } from '@/validations/validations';
 
 const submissions: any[] = [];
@@ -34,7 +34,7 @@ export async function POST(request: NextRequest) {
         success: false,
         message: 'Validation failed',
         errors: error.issues.map(issue => ({
-          path: issue.path.join('.'),
+          path: issue.path,
           message: issue.message,
           code: issue.code,
         })),

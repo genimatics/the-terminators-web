@@ -1,11 +1,16 @@
+import { IMAGES } from '@/constants/images';
 import { TEXTS } from '@/constants/text';
 
 export default function PrivacyPolicy() {
   return (
     <div className="min-h-screen bg-background py-12 text-foreground">
-      {/* Hero Section */}
-      <div className="bg-primary px-4 py-12 text-primary-foreground sm:py-16 lg:py-20">
-        <div className="mx-auto max-w-4xl">
+      <div
+        className="bg-primary px-4 py-12 text-primary-foreground backdrop-blur-2xl sm:py-16 lg:py-20"
+        style={{ backgroundImage: `url(${IMAGES.HERO.SLIDE1})` }}
+      >
+        <div className="absolute inset-0 bg-black/40 backdrop-blur-sm"></div>
+
+        <div className="relative z-10 mx-auto max-w-4xl">
           <div className="space-y-4 text-center">
             <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">{TEXTS.PRIVACYHEADER.TITLE}</h1>
             <p className="text-lg font-medium opacity-90 sm:text-xl">{TEXTS.PRIVACYHEADER.SUBTITLE}</p>
@@ -14,10 +19,8 @@ export default function PrivacyPolicy() {
         </div>
       </div>
 
-      {/* Main Content */}
       <main className="px-4 py-12 sm:py-16 lg:py-20">
         <div className="mx-auto max-w-4xl">
-          {/* Introduction Section */}
           <section className="mb-12 sm:mb-16">
             <div className="rounded-lg border border-border bg-secondary/50 p-6 backdrop-blur-sm sm:p-8">
               <p className="text-base leading-relaxed text-foreground sm:text-lg">
@@ -29,7 +32,6 @@ export default function PrivacyPolicy() {
             </div>
           </section>
 
-          {/* QHSE Policy Section */}
           <section className="mb-12 sm:mb-16">
             <div className="mb-8">
               <div className="inline-block">
@@ -110,14 +112,12 @@ export default function PrivacyPolicy() {
             </div>
           </section>
 
-          {/* Company Contact Section */}
           <section className="overflow-hidden rounded-xl bg-primary text-primary-foreground shadow-lg">
             <div className="p-6 sm:p-8 lg:p-10">
               <h3 className="mb-3 text-2xl font-bold sm:text-3xl">{TEXTS.CONTACT_INFO.TITLE}</h3>
               <p className="mb-8 max-w-2xl text-base opacity-90 sm:text-lg">{TEXTS.CONTACT_INFO.DESCRIPTION}</p>
 
               <div className="space-y-4 sm:space-y-5">
-                {/* Email */}
                 <div className="group flex items-start gap-4">
                   <div className="mt-1 flex-shrink-0 rounded-lg bg-primary-foreground/20 p-2 transition-colors duration-200 group-hover:bg-primary-foreground/30">
                     <svg className="h-5 w-5 sm:h-6 sm:w-6" fill="currentColor" viewBox="0 0 20 20">
@@ -144,7 +144,6 @@ export default function PrivacyPolicy() {
                   </div>
                 </div>
 
-                {/* Contact Person */}
                 <div className="group flex items-start gap-4">
                   <div className="mt-1 flex-shrink-0 rounded-lg bg-primary-foreground/20 p-2 transition-colors duration-200 group-hover:bg-primary-foreground/30">
                     <svg className="h-5 w-5 sm:h-6 sm:w-6" fill="currentColor" viewBox="0 0 20 20">
@@ -164,7 +163,6 @@ export default function PrivacyPolicy() {
             </div>
           </section>
 
-          {/* Footer */}
           <div className="mt-12 space-y-2 border-t border-border pt-8 text-center sm:mt-16 sm:pt-10">
             <p className="text-sm text-muted-foreground">
               Last Updated:

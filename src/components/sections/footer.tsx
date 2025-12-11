@@ -1,6 +1,6 @@
 'use client';
 
-import { ChevronRight, Facebook, Phone, Twitter, Youtube } from 'lucide-react';
+import { ChevronRight, Facebook, Linkedin, Phone } from 'lucide-react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { IMAGES } from '@/constants/images';
@@ -189,11 +189,22 @@ export default function Footer() {
             </div>
 
             <div className="flex justify-center gap-4 sm:gap-6">
-              {[Facebook, Twitter, Youtube].map((Icon, i) => (
-                <Link key={i} href="#" className="text-white transition hover:text-primary">
-                  <Icon className="h-5 w-5 sm:h-6 sm:w-6" />
-                </Link>
-              ))}
+              <Link
+                href="https://www.facebook.com/theterminators.pak/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white transition hover:text-primary"
+              >
+                <Facebook className="h-5 w-5 sm:h-6 sm:w-6" />
+              </Link>
+              <Link
+                href="https://www.linkedin.com/company/theterminator/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white transition hover:text-primary"
+              >
+                <Linkedin className="h-5 w-5 sm:h-6 sm:w-6" />
+              </Link>
             </div>
           </div>
 
