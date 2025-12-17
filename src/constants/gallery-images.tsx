@@ -13,7 +13,7 @@ export const galleryImages: GalleryImage[] = [
     id: '1',
     src: '/assets/terminator-images/gallery/Events/event1.jpg',
     thumb: '/assets/terminator-images/gallery/Events/event1.jpg',
-    alt: 'Corporate Event Conference',
+    alt: '', // Empty alt
     category: 'event',
     title: 'Annual Conference 2024',
   },
@@ -21,7 +21,7 @@ export const galleryImages: GalleryImage[] = [
     id: '2',
     src: '/assets/terminator-images/gallery/Events/event2.jpg',
     thumb: '/assets/terminator-images/gallery/Events/event2.jpg',
-    alt: 'Networking Event',
+    alt: '', // Empty alt
     category: 'event',
     title: 'Networking Gala',
   },
@@ -29,7 +29,7 @@ export const galleryImages: GalleryImage[] = [
     id: '3',
     src: '/assets/terminator-images/gallery/Events/event3.jpg',
     thumb: '/assets/terminator-images/gallery/Events/event3.jpg',
-    alt: 'Workshop Session',
+    alt: '', // Empty alt
     category: 'event',
     title: 'Professional Workshop',
   },
@@ -37,7 +37,7 @@ export const galleryImages: GalleryImage[] = [
     id: '4',
     src: '/assets/terminator-images/gallery/Events/event4.jpg',
     thumb: '/assets/terminator-images/gallery/Events/event4.jpg',
-    alt: 'Team Building',
+    alt: '', // Empty alt
     category: 'event',
     title: 'Team Building Activity',
   },
@@ -45,7 +45,7 @@ export const galleryImages: GalleryImage[] = [
     id: '5',
     src: '/assets/terminator-images/gallery/Events/event5.jpg',
     thumb: '/assets/terminator-images/gallery/Events/event5.jpg',
-    alt: 'Team Building',
+    alt: '', // Empty alt
     category: 'event',
     title: 'Team Building Activity',
   },
@@ -53,7 +53,7 @@ export const galleryImages: GalleryImage[] = [
     id: '6',
     src: '/assets/terminator-images/gallery/Events/event6.jpg',
     thumb: '/assets/terminator-images/gallery/Events/event6.jpg',
-    alt: 'Team Building',
+    alt: '', // Empty alt
     category: 'event',
     title: 'Team Building Activity',
   },
@@ -62,7 +62,7 @@ export const galleryImages: GalleryImage[] = [
     id: '7',
     src: '/assets/terminator-images/gallery/Exhibition/1.jpg',
     thumb: '/assets/terminator-images/gallery/Exhibition/1.jpg',
-    alt: 'Art Exhibition',
+    alt: '', // Empty alt
     category: 'exhibition',
     title: 'Modern Art Exhibition',
   },
@@ -70,7 +70,7 @@ export const galleryImages: GalleryImage[] = [
     id: '8',
     src: '/assets/terminator-images/gallery/Exhibition/1.jpg',
     thumb: '/assets/terminator-images/gallery/Exhibition/1.jpg',
-    alt: 'Tech Expo',
+    alt: '', // Empty alt
     category: 'exhibition',
     title: 'Technology Expo',
   },
@@ -78,7 +78,7 @@ export const galleryImages: GalleryImage[] = [
     id: '9',
     src: '/assets/terminator-images/gallery/Exhibition/1.jpg',
     thumb: '/assets/terminator-images/gallery/Exhibition/1.jpg',
-    alt: 'Design Showcase',
+    alt: '', // Empty alt
     category: 'exhibition',
     title: 'Design Showcase',
   },
@@ -86,7 +86,7 @@ export const galleryImages: GalleryImage[] = [
     id: '10',
     src: '/assets/terminator-images/gallery/Exhibition/1.jpg',
     thumb: '/assets/terminator-images/gallery/Exhibition/1.jpg',
-    alt: 'Product Exhibition',
+    alt: '', // Empty alt
     category: 'exhibition',
     title: 'Product Launch',
   },
@@ -95,7 +95,7 @@ export const galleryImages: GalleryImage[] = [
     id: '11',
     src: '/assets/terminator-images/gallery/Exhibition/2.jpg',
     thumb: '/assets/terminator-images/gallery/Exhibition/2.jpg',
-    alt: 'Office Space',
+    alt: '', // Empty alt
     category: 'general',
     title: 'Modern Office',
   },
@@ -103,15 +103,15 @@ export const galleryImages: GalleryImage[] = [
     id: '12',
     src: '/assets/terminator-images/gallery/Exhibition/3.jpg',
     thumb: '/assets/terminator-images/gallery/Exhibition/3.jpg',
-    alt: 'Meeting Room',
+    alt: '', // Empty alt
     category: 'general',
     title: 'Conference Room',
   },
   {
     id: '13',
-    src: '/assets/terminator-images/gallery/Exhibitionnt/4.jpg',
+    src: '/assets/terminator-images/gallery/Exhibition/4.jpg', // Fixed typo
     thumb: '/assets/terminator-images/gallery/Exhibition/4.jpg',
-    alt: 'Collaboration Space',
+    alt: '', // Empty alt
     category: 'general',
     title: 'Creative Space',
   },
@@ -119,7 +119,7 @@ export const galleryImages: GalleryImage[] = [
     id: '14',
     src: '/assets/terminator-images/gallery/Exhibition/1.jpg',
     thumb: '/assets/terminator-images/gallery/Exhibition/1.jpg',
-    alt: 'Presentation Hall',
+    alt: '', // Empty alt
     category: 'general',
     title: 'Main Hall',
   },

@@ -2,9 +2,7 @@
 
 import Image from 'next/image';
 import Map from '@/components/contact/map';
-import Button from '@/components/ui/button';
 import ScrollReveal from '@/components/ui/scroll-reveal';
-import { IMAGES } from '@/constants/images';
 import { TEXTS } from '@/constants/text';
 
 export default function Contact() {
@@ -18,6 +16,7 @@ export default function Contact() {
 
       <section className="w-full bg-white py-12">
         <div className="mx-auto max-w-7xl px-4 text-center">
+
           <div className="mb-14 grid gap-8 sm:grid-cols-1 md:grid-cols-3">
             {CONTACT_BOX.CARDS.map((card, i) => (
               <ScrollReveal key={i} delay={i * 0.1}>
@@ -44,6 +43,7 @@ export default function Contact() {
             ))}
           </div>
 
+          {/*
           <ScrollReveal delay={0.3}>
             <div className="mb-10 px-4 sm:px-0">
               <h2 className="mb-2 text-4xl font-bold text-black md:text-5xl">
@@ -116,6 +116,7 @@ export default function Contact() {
               </div>
             </ScrollReveal>
           </div>
+          */}
         </div>
       </section>
     </>

@@ -4,13 +4,37 @@ import type { GalleryImage } from '@/constants/gallery-images';
 import Image from 'next/image';
 import { useCallback, useRef, useState } from 'react';
 import { categories, galleryImages } from '@/constants/gallery-images';
+import { useLightGallery } from '@/lib/lightgallery';
+import 'lightgallery/css/lightgallery.css';
+import 'lightgallery/css/lg-zoom.css';
+import 'lightgallery/css/lg-thumbnail.css';
+import 'lightgallery/css/lg-fullscreen.css';
 
 export default function OurGallery() {
-  const containerRef = useRef<HTMLDivElement>(null);
+  const galleryRef = useRef<HTMLDivElement>(null);
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [hoveredId, setHoveredId] = useState<string | null>(null);
-
   const [isClient] = useState(typeof window !== 'undefined');
+
+  useLightGallery(galleryRef, {
+    selector: 'a.gallery-item',
+    settings: {
+      speed: 500,
+      thumbnail: true,
+      thumbWidth: '80' as any,
+      thumbHeight: '80' as any,
+      animateThumb: true,
+      enableSwipe: true,
+      enableDrag: true,
+      counter: true,
+      controls: true,
+      share: false,
+      fullScreen: true,
+      zoom: true,
+      exThumbImage: 'data-thumb',
+      appendSubHtmlTo: '.lg-item',
+    },
+  });
 
   const filteredImages = useCallback(() => {
     return selectedCategory === 'all'
@@ -93,22 +117,22 @@ export default function OurGallery() {
         </div>
 
         <div
-          ref={containerRef}
-          className="gallery-grid-masonry grid auto-rows-[200px] grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
+          ref={galleryRef}
+          className="grid auto-rows-[200px] grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
           role="region"
           aria-label="Gallery images"
-          style={{
-            minHeight: '0',
-            overflow: 'hidden',
-          }}
         >
           {filteredImages().map((image: GalleryImage, index: number) => {
             const { size } = getImageDimensions(index);
 
             return (
-              <div
+              <a
                 key={image.id}
-                className={`gallery-card group relative overflow-hidden rounded-lg border border-border bg-card transition-all duration-300 ${size}`}
+                href={image.src}
+                className={`gallery-item group relative block overflow-hidden rounded-lg border border-border bg-card transition-all duration-300 ${size}`}
+                data-src={image.src}
+                data-thumb={image.thumb}
+                data-sub-html={`<h4>${image.title}</h4>`}
                 onMouseEnter={() => handleMouseEnter(image.id)}
                 onMouseLeave={handleMouseLeave}
                 aria-label={image.title}
@@ -122,7 +146,7 @@ export default function OurGallery() {
                   <div className="relative h-full w-full">
                     <Image
                       src={image.thumb}
-                      alt={image.alt}
+                      alt=""
                       fill
                       sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
                       className="object-cover transition-transform duration-500 group-hover:scale-110"
@@ -144,7 +168,7 @@ export default function OurGallery() {
                     <p className="mt-2 font-medium text-white">{image.title}</p>
                   </div>
                 </div>
-              </div>
+              </a>
             );
           })}
         </div>

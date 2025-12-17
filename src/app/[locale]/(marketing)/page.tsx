@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
-import QuoteSection from '@/components/sections/get-quote-section';
+// import QuoteSection from '@/components/sections/get-quote-section';
 import GetStarted from '@/components/sections/get-started';
 import Hero from '@/components/sections/hero';
 import SectionOne from '@/components/sections/section-1';
@@ -35,7 +35,7 @@ export default async function Index(props: IIndexProps) {
       <SectionOne />
       <SectionTwo />
       <ValuedCustomers />
-      <QuoteSection />
+      {/* <QuoteSection /> */}
     </>
   );
 };

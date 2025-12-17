@@ -115,7 +115,6 @@ export default function OurPortfolio() {
                 className={`group relative overflow-hidden rounded-lg border border-gray-200 bg-white shadow-sm transition-all duration-300 hover:shadow-xl ${size}`}
                 onMouseEnter={() => handleMouseEnter(item.id)}
                 onMouseLeave={handleMouseLeave}
-                aria-label={item.title}
                 style={{
                   minHeight: '200px',
                   maxHeight: '400px',
@@ -123,53 +122,25 @@ export default function OurPortfolio() {
                 }}
               >
                 <div className="relative h-full w-full">
-                  <div className="relative h-full w-full">
-                    <Image
-                      src={item.thumb}
-                      alt={item.alt}
-                      fill
-                      sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
-                      className="object-cover transition-transform duration-500 group-hover:scale-110"
-                      priority={index < 4}
-                      loading={index < 4 ? 'eager' : 'lazy'}
-                    />
-                  </div>
+                  <Image
+                    src={item.thumb}
+                    alt={item.alt}
+                    fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                    className="object-cover transition-transform duration-500 group-hover:scale-110"
+                    priority={index < 4}
+                    loading={index < 4 ? 'eager' : 'lazy'}
+                  />
 
+                  {/* Category Badge - shows on hover */}
                   <div
-                    className={`absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-black/90 via-black/50 to-transparent p-4 transition-all duration-300 ${
-                      hoveredId === item.id ? 'opacity-100' : 'opacity-0'
+                    className={`absolute top-3 left-3 transition-all duration-300 ${
+                      hoveredId === item.id ? 'translate-y-0 opacity-100' : '-translate-y-2 opacity-0'
                     }`}
-                    aria-hidden="true"
                   >
-                    <span className="mb-2 inline-block w-fit rounded-full bg-primary px-3 py-1 text-xs font-semibold text-white">
-                      {item.category === 'industrial' && 'Industrial'}
-                      {item.category === 'commercial' && 'Commercial'}
-                      {item.category === 'residential' && 'Residential'}
-                      {item.category === 'infrastructure' && 'Infrastructure'}
+                    <span className="inline-block rounded-full bg-primary px-3 py-1 text-xs font-semibold text-white">
+                      {item.category.charAt(0).toUpperCase() + item.category.slice(1)}
                     </span>
-
-                    <h3 className="mb-1 text-lg font-bold text-white">{item.title}</h3>
-
-                    {item.description && (
-                      <p className="mb-2 text-sm text-gray-200">{item.description}</p>
-                    )}
-
-                    <div className="mt-2 grid grid-cols-2 gap-2 border-t border-white/20 pt-2">
-                      {item.year && (
-                        <div className="text-xs text-gray-300">
-                          <span className="font-medium">Year:</span>
-                          {' '}
-                          {item.year}
-                        </div>
-                      )}
-                      {item.location && (
-                        <div className="text-xs text-gray-300">
-                          <span className="font-medium">Location:</span>
-                          {' '}
-                          {item.location}
-                        </div>
-                      )}
-                    </div>
                   </div>
                 </div>
               </div>
@@ -182,7 +153,6 @@ export default function OurPortfolio() {
             <p className="text-lg text-gray-500">No projects found in this category</p>
           </div>
         )}
-
       </div>
     </section>
   );

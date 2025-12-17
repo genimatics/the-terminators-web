@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import HeroSection from '@/common/hero-section';
-import AboutFormSection from '@/components/about/about-contact-form';
+// import AboutFormSection from '@/components/about/about-contact-form';
 import AboutTeam from '@/components/about/about-team';
 
 import AboutContactInfoSection from '@/components/about/contact-info-section';
@@ -40,7 +40,7 @@ export default async function About(props: IAboutProps) {
       <OurExpertise />
       <AboutTeam />
       <AboutContactInfoSection />
-      <AboutFormSection />
+      {/* <AboutFormSection /> */}
 
     </>
   );

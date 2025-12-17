@@ -7,7 +7,7 @@
 
 @layer base {
   :root {
-    --color-primary: #61709c;
+    --color-primary: #0096ff;
     --color-text: #212529;
     --color-secondary: #ebebeb;
     --color-muted: #000000b3;
@@ -437,6 +437,117 @@
 
 .form-error:focus {
   ring-color: #ef4444 !important;
+}
+
+/* ===== LIGHTGALLERY FIXES ===== */
+.lg-backdrop {
+  z-index: 9999 !important;
+  background-color: rgba(0, 0, 0, 0.98) !important;
+}
+
+.lg-outer {
+  z-index: 10000 !important;
+}
+
+.lg-container {
+  z-index: 10001 !important;
+}
+
+.lg-toolbar {
+  background-color: rgba(0, 0, 0, 0.7) !important;
+  backdrop-filter: blur(12px) !important;
+}
+
+/* Hide all captions completely */
+.lg-sub-html {
+  display: none !important;
+}
+
+/* Custom navigation buttons */
+.lg-actions .lg-next,
+.lg-actions .lg-prev {
+  background-color: rgba(255, 255, 255, 0.15) !important;
+  border-radius: 50% !important;
+  width: 48px !important;
+  height: 48px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  backdrop-filter: blur(8px) !important;
+}
+
+.lg-actions .lg-next:hover,
+.lg-actions .lg-prev:hover {
+  background-color: #3b82f6 !important; /* primary color */
+}
+
+/* Thumbnail active state */
+.lg-thumb-item.active {
+  border: 3px solid #3b82f6 !important;
+}
+
+/* ===== EVENTS GRID FIXES ===== */
+/* Remove duplicate content by hiding empty sections */
+section:empty {
+  display: none !important;
+}
+
+/* Ensure grid items have proper height */
+.grid.auto-rows-\[200px\] > div {
+  position: relative;
+}
+
+/* Fix for Next.js Image fill */
+.grid.auto-rows-\[200px\] > div > a > div {
+  position: relative !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/* Grid responsive fixes */
+@media (max-width: 640px) {
+  .col-span-2,
+  .col-span-1 {
+    grid-column: span 1 !important;
+  }
+
+  .row-span-2,
+  .row-span-1 {
+    grid-row: span 1 !important;
+  }
+}
+
+/* ===== HIDE DUPLICATE FOOTER CONTENT ===== */
+/* This prevents SSR content from showing up twice */
+#__next > section:nth-last-child(2):not(#our-events) {
+  display: none;
+}
+
+/* Ensure our-events section is unique */
+#our-events {
+  position: relative;
+  z-index: 10;
+}
+
+/* ===== PERFORMANCE OPTIMIZATION ===== */
+.gallery-item {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+/* ===== FIX FOR GALLERY OPENING ===== */
+/* Ensure gallery items are clickable */
+.gallery-item {
+  position: relative;
+  display: block;
+}
+
+/* Fix for iOS Safari */
+@supports (-webkit-touch-callout: none) {
+  .gallery-item {
+    cursor: pointer;
+  }
 }
 
 @layer base {

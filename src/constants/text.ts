@@ -257,16 +257,87 @@ export const TEXTS = {
     LINKS: [
       { name: 'Home', href: '/' },
       { name: 'About', href: '/about' },
-      { name: 'Registration', href: '/registration' },
-      { name: 'Clients', href: '/clients' },
-      { name: 'Gallery', href: '/gallery' },
-      { name: 'Portfolio', href: '/portfolio' },
+      { name: 'Registration/Certifications', href: '/registration' },
       { name: 'Services', href: '/services' },
-      { name: 'Contact', href: '/contact' },
+      { name: 'Gallery', href: '/gallery' },
+      { name: 'Events', href: '/events' },
+
+      { name: 'Clients', href: '/clients' },
+      { name: 'Portfolio', href: '/portfolio' },
+      { name: 'Contact us', href: '/contact' },
     ],
     BUTTON_TEXT: 'Request a quote',
     BUTTON_LINK: '/get-started',
     MENU_ALT: 'Toggle menu',
+
+    // SERVICES DROPDOWN ITEMS FROM THE DOCUMENT
+    SERVICES_DROPDOWN: [
+      {
+        name: 'Power Generation',
+        href: '/services/power-generation',
+      },
+      {
+        name: 'Earthing, LPS & Safeties',
+        href: '/services/earthing-lps-safeties',
+      },
+      {
+        name: 'Industrial Electrification',
+        href: '/services/industrial-electrification',
+      },
+      {
+        name: 'Indoor & Outdoor Lighting',
+        href: '/services/indoor-outdoor-lighting',
+      },
+      {
+        name: 'Transmission Lines, Poles & Towers',
+        href: '/services/transmission-lines-poles-towers',
+      },
+      {
+        name: 'Maintenance Services',
+        href: '/services/maintenance-services',
+      },
+      {
+        name: 'HT & LT Cable Laying, Jointing & Termination',
+        href: '/services/cable-laying-jointing-termination',
+      },
+      {
+        name: 'LT Panels, PFI Panels, Motor Control Centers',
+        href: '/services/lt-panels-motor-control',
+      },
+      {
+        name: 'H.T Switch Gear, Transformers, Sub-Stations',
+        href: '/services/ht-switchgear-transformers',
+      },
+      {
+        name: 'Fabrication & Construction / Maintenance',
+        href: '/services/fabrication-construction',
+      },
+      {
+        name: 'Radio/Base Transmission Stations, Data & Switching Centers',
+        href: '/services/data-switching-centers',
+      },
+      {
+        name: 'Remodeling, Relocation, Setting and Inspection',
+        href: '/services/remodeling-relocation',
+      },
+      {
+        name: 'Annual Maintenance Contracts',
+        href: '/services/annual-maintenance-contracts',
+      },
+      {
+        name: 'Explosion-proof Wiring & Equipment',
+        href: '/services/explosion-proof-systems',
+      },
+      {
+        name: 'Customized Test Benches and Panels',
+        href: '/services/test-benches-panels',
+      },
+      {
+        name: 'Solar Power Systems',
+        href: '/services/solar-power-systems',
+      },
+    ],
+
   },
 
   FOOTER: {
