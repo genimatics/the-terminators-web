@@ -177,21 +177,28 @@ export default function Navbar() {
 
   return (
     <nav className="fixed top-0 left-0 z-50 w-full bg-white text-black shadow-md">
-      <div className="flex w-full flex-col px-2 sm:px-4 md:px-10">
-        <div className="hidden h-16 w-full items-center justify-between sm:flex sm:h-20">
-          <Link href="/">
-            <Image
-              src={IMAGES.NAVBAR.LOGO || '/placeholder.svg'}
-              alt={TEXTS.NAVBAR.LOGO_ALT}
-              width={60}
-              height={10}
-              priority
-              className="rounded-lg"
-            />
-          </Link>
+      <div className="flex w-full flex-col">
+        <div className="hidden items-center justify-center border-b border-gray-200 px-4 py-2.5 sm:flex sm:px-6 md:px-10">
+          <div className="flex items-center gap-3">
+            <Link href="/" className="flex items-center gap-3 transition-opacity hover:opacity-90">
+              <Image
+                src={IMAGES.NAVBAR.LOGO || '/placeholder.svg'}
+                alt={TEXTS.NAVBAR.LOGO_ALT}
+                width={45}
+                height={45}
+                priority
+                className="rounded-lg"
+              />
+              <h1 className="text-lg font-semibold tracking-wide text-gray-900 sm:text-xl md:text-2xl">
+                The Terminators
+              </h1>
+            </Link>
+          </div>
+        </div>
 
-          <div className="flex items-center space-x-8">
-            <ul className="hidden items-center space-x-8 md:space-x-10 lg:flex">
+        <div className="w-full bg-white px-4 py-3 sm:px-6 md:px-10">
+          <div className="hidden items-center justify-between sm:flex">
+            <ul className="mx-auto flex items-center space-x-6 md:space-x-8 lg:space-x-10">
               {navLinks.map(item => (
                 <NavLinkItem
                   key={item.name}
@@ -205,49 +212,31 @@ export default function Navbar() {
                 />
               ))}
             </ul>
+          </div>
 
-            {/*
-            <Button
-              disabled={false}
-              className="cursor-pointer !bg-primary !px-4 !py-2 text-xs font-semibold tracking-widest !text-white hover:opacity-90 sm:!px-5 sm:!py-2.5 sm:text-sm"
-            >
-              {TEXTS.NAVBAR.BUTTON_TEXT}
-            </Button>
-            */}
+          <div className="flex items-center justify-between sm:hidden">
+            <Link href="/" className="flex items-center gap-3">
+              <Image
+                src={IMAGES.NAVBAR.LOGO || '/placeholder.svg'}
+                alt={TEXTS.NAVBAR.LOGO_ALT}
+                width={45}
+                height={45}
+                priority
+                className="rounded-lg"
+              />
+              <span className="text-lg font-semibold text-gray-900">
+                The Terminaotrs
+              </span>
+            </Link>
 
-            <div className="sm:hidden">
+            <div className="flex items-center gap-4">
               <MenuIcon onClick={toggleMenu} />
             </div>
           </div>
         </div>
 
-        <div className="flex w-full items-center justify-between px-4 py-4 sm:hidden">
-          <Link href="/">
-            <Image
-              src={IMAGES.NAVBAR.LOGO || '/placeholder.svg'}
-              alt={TEXTS.NAVBAR.LOGO_ALT}
-              width={50}
-              height={20}
-              priority
-              className="rounded-lg"
-            />
-          </Link>
-
-          <div className="flex items-center gap-4">
-            {/*
-            <Button
-              disabled={false}
-              className="cursor-pointer !bg-primary !px-3 !py-1.5 text-xs font-semibold tracking-widest !text-white hover:opacity-90"
-            >
-              {TEXTS.NAVBAR.BUTTON_TEXT}
-            </Button>
-            */}
-            <MenuIcon onClick={toggleMenu} />
-          </div>
-        </div>
-
         {menuOpen && (
-          <div className="animate-fadeIn w-full border-t border-gray-200 bg-white py-3 text-center sm:hidden">
+          <div className="animate-fadeIn w-full border-t border-gray-200 bg-white py-2 text-center sm:hidden">
             {navLinks.map(item => (
               <div key={item.name} className="border-b border-gray-100 last:border-b-0">
                 {item.hasDropdown
@@ -308,14 +297,6 @@ export default function Navbar() {
                     )}
               </div>
             ))}
-
-            {/*
-            <button
-              className="mt-3 inline-block cursor-pointer rounded bg-primary px-3 py-2 text-xs font-semibold text-white"
-            >
-              {TEXTS.NAVBAR.BUTTON_TEXT}
-            </button>
-            */}
           </div>
         )}
       </div>

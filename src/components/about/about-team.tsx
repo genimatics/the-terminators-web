@@ -36,7 +36,7 @@ const leadershipData: LeadershipMember[] = [
   },
   {
     title: 'COO (Electrical)',
-    name: 'Mr. Obaid-ur-Rehman',
+    name: 'Engr. Anis Ahmed',
     icon: 'settings',
   },
 ];

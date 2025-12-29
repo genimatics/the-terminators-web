@@ -271,16 +271,16 @@ export const TEXTS = {
       },
       {
         ICON: '/assets/terminator-images/contact/contact-icon2.gif',
-        HEADING: 'Expert Assistance',
+        HEADING: 'Contact Number ',
         PARAGRAPH: 'We’re ready to provide the help you need, anytime.',
-        EMAIL: 'admin@theterminators.biz.pk',
-        PHONE: '+92 21 34830726-7',
+        PHONE1: '+92 21 34830726-7',
+        PHONE2: '+92 333 2180818',
       },
       {
         ICON: '/assets/terminator-images/contact/contact-icon3.gif',
-        HEADING: 'Customer Support',
+        HEADING: 'Address',
         PARAGRAPH:
-          'Our support staff ensures a smooth experience for all your requests.',
+          'Office No.104, 1st Floor, Yasir Chambers, Gulshan-e-Iqbal, Block 13-A, Main University Road OPP. PIA Planetarium, Karachi-75300',
         EMAIL: 'admin@theterminators.biz.pk',
         WEBSITE: 'http://theterminators.biz.pk',
       },
