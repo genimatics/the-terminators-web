@@ -10,9 +10,6 @@ export default function Contact() {
 
   return (
     <>
-      <ScrollReveal>
-        <Map />
-      </ScrollReveal>
 
       <section className="w-full bg-white py-12">
         <div className="mx-auto max-w-7xl px-4 text-center">
@@ -118,6 +115,9 @@ export default function Contact() {
           </div>
           */}
         </div>
+        <ScrollReveal>
+          <Map />
+        </ScrollReveal>
       </section>
     </>
   );

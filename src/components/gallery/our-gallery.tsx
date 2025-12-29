@@ -3,7 +3,7 @@
 import type { GalleryImage } from '@/constants/gallery-images';
 import Image from 'next/image';
 import { useCallback, useRef, useState } from 'react';
-import { categories, galleryImages } from '@/constants/gallery-images';
+import { galleryImages } from '@/constants/gallery-images';
 import { useLightGallery } from '@/lib/lightgallery';
 import 'lightgallery/css/lightgallery.css';
 import 'lightgallery/css/lg-zoom.css';
@@ -12,7 +12,6 @@ import 'lightgallery/css/lg-fullscreen.css';
 
 export default function OurGallery() {
   const galleryRef = useRef<HTMLDivElement>(null);
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [hoveredId, setHoveredId] = useState<string | null>(null);
   const [isClient] = useState(typeof window !== 'undefined');
 
@@ -36,12 +35,6 @@ export default function OurGallery() {
     },
   });
 
-  const filteredImages = useCallback(() => {
-    return selectedCategory === 'all'
-      ? galleryImages
-      : galleryImages.filter(img => img.category === selectedCategory);
-  }, [selectedCategory]);
-
   const getImageDimensions = useCallback((index: number) => {
     if (index % 7 === 0) {
       return { size: 'col-span-2 row-span-2' };
@@ -53,10 +46,6 @@ export default function OurGallery() {
       return { size: 'col-span-1 row-span-2' };
     }
     return { size: 'col-span-1 row-span-1' };
-  }, []);
-
-  const handleCategoryChange = useCallback((value: string) => {
-    setSelectedCategory(value);
   }, []);
 
   const handleMouseEnter = useCallback((id: string) => {
@@ -99,30 +88,13 @@ export default function OurGallery() {
           </p>
         </div>
 
-        <div className="mb-12 flex flex-wrap justify-center gap-3">
-          {categories.map(cat => (
-            <button
-              key={cat.id}
-              onClick={() => handleCategoryChange(cat.value)}
-              className={`cursor-pointer rounded-lg px-6 py-2.5 font-medium transition-all duration-300 ${selectedCategory === cat.value
-                ? 'bg-primary text-primary-foreground shadow-md'
-                : 'border border-border bg-card text-foreground hover:border-primary hover:bg-primary hover:text-primary-foreground'
-              }`}
-              type="button"
-              aria-label={`Filter by ${cat.label}`}
-            >
-              {cat.label}
-            </button>
-          ))}
-        </div>
-
         <div
           ref={galleryRef}
           className="grid auto-rows-[200px] grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
           role="region"
           aria-label="Gallery images"
         >
-          {filteredImages().map((image: GalleryImage, index: number) => {
+          {galleryImages.map((image: GalleryImage, index: number) => {
             const { size } = getImageDimensions(index);
 
             return (
@@ -172,12 +144,6 @@ export default function OurGallery() {
             );
           })}
         </div>
-
-        {filteredImages().length === 0 && (
-          <div className="py-12 text-center">
-            <p className="text-lg text-muted-foreground">No images found in this category</p>
-          </div>
-        )}
       </div>
     </section>
   );

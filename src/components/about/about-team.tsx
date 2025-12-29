@@ -1,98 +1,106 @@
-'use client';
+import { Settings, User, Users } from 'lucide-react';
+import React from 'react';
+import { IMAGES } from '@/constants/images';
 
-import { ChevronLeft, ChevronRight } from 'lucide-react';
-import Image from 'next/image';
-import { useRef } from 'react';
-import ScrollReveal from '@/components/ui/scroll-reveal';
-import { TEXTS } from '@/constants/text';
+type LeadershipMember = {
+  title: string;
+  name: string;
+  icon: 'user' | 'users' | 'settings';
+};
 
-export default function AboutTeam() {
-  const { ABOUT_TEAM } = TEXTS;
-  const scrollRef = useRef<HTMLDivElement>(null);
-  const scrollLeft = () => {
-    if (scrollRef.current) {
-      scrollRef.current.scrollBy({ left: -330, behavior: 'smooth' });
-    }
-  };
+const leadershipData: LeadershipMember[] = [
+  {
+    title: 'Chief Executive Officer',
+    name: 'Engr. Ahmed Zubair',
+    icon: 'user',
+  },
+  {
+    title: 'Chief Finance Officer',
+    name: 'Engr. Mohammad Shoaib',
+    icon: 'users',
+  },
+  {
+    title: 'COO (Mechanical)',
+    name: 'Engr. Syed Viqar Hussain',
+    icon: 'settings',
+  },
+  {
+    title: 'Admin/Accounts Executive',
+    name: 'Ms. Komal Anwaar',
+    icon: 'user',
+  },
+  {
+    title: 'Chief Strategy Officer',
+    name: 'Mr. Khurram Illahi',
+    icon: 'users',
+  },
+  {
+    title: 'COO (Electrical)',
+    name: 'Mr. Obaid-ur-Rehman',
+    icon: 'settings',
+  },
+];
 
-  const scrollRight = () => {
-    if (scrollRef.current) {
-      scrollRef.current.scrollBy({ left: 330, behavior: 'smooth' });
+const AboutTeam: React.FC = () => {
+  const getIcon = (iconType: 'user' | 'users' | 'settings') => {
+    switch (iconType) {
+      case 'user':
+        return <User className="h-8 w-8 text-white" />;
+      case 'users':
+        return <Users className="h-8 w-8 text-white" />;
+      case 'settings':
+        return <Settings className="h-8 w-8 text-white" />;
     }
   };
 
   return (
-    <section className="w-full bg-secondary px-4 py-8 sm:px-6 sm:py-12 md:px-10 md:py-16 lg:px-12 xl:px-16 2xl:px-24">
+    <section className="relative min-h-screen w-full overflow-hidden">
+      <div
+        className="absolute inset-0 h-full w-full bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: `url('${IMAGES.ABOUT.BG}')`,
+          backgroundSize: 'cover',
+          backgroundAttachment: 'fixed',
+        }}
+      />
 
-      <div className="w-full text-center">
-        <ScrollReveal>
-          <p className="mb-3 text-sm tracking-wide text-gray-500 uppercase">
-            {ABOUT_TEAM.HEADINGS.SMALL_TITLE}
-          </p>
-          <h2 className="mb-5 text-4xl font-bold text-gray-900 md:text-5xl">
-            {ABOUT_TEAM.HEADINGS.TITLE}
-          </h2>
-          <p className="mx-auto mb-8 w-full max-w-full text-sm leading-relaxed text-gray-600 sm:mb-12 sm:text-base md:mb-14">
-            {ABOUT_TEAM.HEADINGS.PARAGRAPH}
-          </p>
-        </ScrollReveal>
-      </div>
+      <div className="absolute inset-0 bg-black/20" />
 
-      <div className="relative w-full">
+      <div className="relative z-10 container mx-auto px-6 py-16 lg:px-12 lg:py-24">
+        <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
+          <div>
+            <h1 className="mb-6 text-4xl leading-tight font-bold text-gray-800 lg:text-5xl">
+              About Us And Our Leadership
+            </h1>
+            <p className="mb-12 text-base leading-relaxed text-gray-700 lg:text-lg">
+              The management of The Terminators comprises of professional engineers and skilled
+              technicians with hands on experience of several years in all facets of Electrical systems
+              fabrication, installation, testing and commissioning
+            </p>
 
-        <div
-          ref={scrollRef}
-          className="no-scrollbar flex w-full gap-6 overflow-x-scroll scroll-smooth pr-6
-            sm:gap-8 md:gap-10 md:pr-10"
-          style={{
-            scrollbarWidth: 'none',
-            msOverflowStyle: 'none',
-          }}
-        >
+            <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+              {leadershipData.map((member, index) => (
+                <div key={index} className="flex items-start gap-4">
+                  <div className="flex h-14 w-14 flex-shrink-0 items-center justify-center rounded-sm bg-gray-800">
+                    {getIcon(member.icon)}
+                  </div>
 
-          {ABOUT_TEAM.MEMBERS.map((member, idx) => (
-            <ScrollReveal key={idx} delay={idx * 0.1}>
-              <div className="min-w-[280px] overflow-hidden border border-black shadow-md transition-all duration-500 hover:shadow-xl sm:min-w-[320px] md:min-w-[360px]">
-                <div className="relative h-[250px] w-full overflow-hidden border-b border-black sm:h-[320px] md:h-[420px]">
-                  <Image
-                    src={member.IMAGE || '/placeholder.svg'}
-                    alt={member.NAME}
-                    fill
-                    className="transform object-cover transition-transform duration-500 hover:scale-105"
-                  />
+                  <div>
+                    <h3 className="mb-1 text-sm font-semibold text-gray-800">
+                      {member.title}
+                    </h3>
+                    <p className="text-sm text-gray-700">
+                      {member.name}
+                    </p>
+                  </div>
                 </div>
-
-                <div className="bg-white py-4  text-center sm:py-6">
-                  <h3 className="mb-1 text-lg font-semibold text-gray-900 sm:text-xl md:text-2xl">
-                    {member.NAME}
-                  </h3>
-                  <p className="text-xs tracking-wide text-gray-600 uppercase sm:text-sm md:text-base">
-                    {member.ROLE}
-                  </p>
-                </div>
-              </div>
-            </ScrollReveal>
-          ))}
+              ))}
+            </div>
+          </div>
         </div>
-
-        <div className="mt-6 flex w-full items-center justify-center gap-6">
-          <button
-            onClick={scrollLeft}
-            className="cursor-pointer border border-black p-2 transition hover:bg-gray-200"
-          >
-            <ChevronLeft size={22} />
-          </button>
-
-          <button
-            onClick={scrollRight}
-            className="cursor-pointer border border-black p-2 transition hover:bg-gray-200"
-          >
-            <ChevronRight size={22} />
-          </button>
-        </div>
-
       </div>
-
     </section>
   );
-}
+};
+
+export default AboutTeam;

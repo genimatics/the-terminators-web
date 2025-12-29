@@ -35,7 +35,7 @@ export const IMAGES = {
   },
 
   ABOUT: {
-    BG: '/assets/terminator-images/about/about-bg.jpg',
+    BG: '/assets/terminator-images/about/about.jpg',
     ICON1: '/assets/terminator-images/about/about-icon1.gif',
     ICON2: '/assets/terminator-images/about/about-icon2.gif',
     ICON3: '/assets/terminator-images/about/about-icon3.gif',

@@ -178,43 +178,83 @@ export const TEXTS = {
     ],
   },
 
+  // ABOUT_TEAM: {
+  //   HEADINGS: {
+  //     SMALL_TITLE: 'Collaborating for Excellence',
+  //     TITLE: 'Our Leadership',
+  //     PARAGRAPH: 'Meet Our Exceptional Team of Diverse Talents',
+  //   },
+
+  //   MEMBERS: [
+  //     {
+  //       IMAGE: '/assets/terminator-images/about/man-avatar.jpg',
+  //       NAME: 'Engr. Ahmed Zubair',
+  //       ROLE: 'Chief Executive Officer',
+  //     },
+  //     {
+  //       IMAGE: '/assets/terminator-images/about/man-avatar.jpg',
+  //       NAME: 'Engr. Mohammad Shoaib',
+  //       ROLE: 'Chief Finance Officer',
+  //     },
+  //     {
+  //       IMAGE: '/assets/terminator-images/about/man-avatar.jpg',
+  //       NAME: 'Engr. Anis Ahmed',
+  //       ROLE: 'COO (Electrical)',
+  //     },
+  //     {
+  //       IMAGE: '/assets/terminator-images/about/man-avatar.jpg',
+  //       NAME: 'Engr. Syed Viqar Hussain ',
+  //       ROLE: 'COO (Mechanical)',
+  //     },
+  //     {
+  //       IMAGE: '/assets/terminator-images/about/man-avatar.jpg',
+  //       NAME: 'Mr.  Khurram Illahi ',
+  //       ROLE: 'Chief Strategy Officer',
+  //     },
+  //     {
+  //       IMAGE: '/assets/terminator-images/about/female-avatar.jpg',
+  //       NAME: 'Ms.Komal Anwaar',
+  //       ROLE: 'Admin/Accounts Executive',
+  //     },
+  //   ],
+  // },
+
+  // Add this to text.ts, after the existing sections:
   ABOUT_TEAM: {
     HEADINGS: {
-      SMALL_TITLE: 'Collaborating for Excellence',
-      TITLE: 'Our Leadership',
-      PARAGRAPH: 'Meet Our Exceptional Team of Diverse Talents',
+      MAIN: 'About Us And Our Leadership',
+      DESCRIPTION: 'The management of The Terminators comprises of professional engineers and skilled technicians with hands on experience of several years in all facets of Electrical systems fabrication, installation, testing and commissioning',
     },
-
-    MEMBERS: [
+    LEADERSHIP: [
       {
-        IMAGE: '/assets/terminator-images/about/man-avatar.jpg',
-        NAME: 'Engr. Ahmed Zubair',
-        ROLE: 'Chief Executive Officer',
+        title: 'Chief Executive Officer',
+        name: 'Engr. Ahmed Zubair',
+        icon: 'user',
       },
       {
-        IMAGE: '/assets/terminator-images/about/man-avatar.jpg',
-        NAME: 'Engr. Mohammad Shoaib',
-        ROLE: 'Chief Finance Officer',
+        title: 'Chief Finance Officer',
+        name: 'Engr. Mohammad Shoaib',
+        icon: 'users',
       },
       {
-        IMAGE: '/assets/terminator-images/about/man-avatar.jpg',
-        NAME: 'Engr. Anis Ahmed',
-        ROLE: 'COO (Electrical)',
+        title: 'COO (Mechanical)',
+        name: 'Engr. Syed Viqar Hussain',
+        icon: 'settings',
       },
       {
-        IMAGE: '/assets/terminator-images/about/man-avatar.jpg',
-        NAME: 'Engr. Syed Viqar Hussain ',
-        ROLE: 'COO (Mechanical)',
+        title: 'Admin/Accounts Executive',
+        name: 'Ms. Komal Anwaar',
+        icon: 'user',
       },
       {
-        IMAGE: '/assets/terminator-images/about/man-avatar.jpg',
-        NAME: 'Mr.  Khurram Illahi ',
-        ROLE: 'Chief Strategy Officer',
+        title: 'Chief Strategy Officer',
+        name: 'Mr. Khurram Illahi',
+        icon: 'users',
       },
       {
-        IMAGE: '/assets/terminator-images/about/female-avatar.jpg',
-        NAME: 'Ms.Komal Anwaar',
-        ROLE: 'Admin/Accounts Executive',
+        title: 'COO (Electrical)',
+        name: 'Mr. Obaid-ur-Rehman',
+        icon: 'settings',
       },
     ],
   },
@@ -257,13 +297,14 @@ export const TEXTS = {
     LINKS: [
       { name: 'Home', href: '/' },
       { name: 'About', href: '/about' },
-      { name: 'Registration/Certifications', href: '/registration' },
+      { name: 'Registration', href: '/registration' },
       { name: 'Services', href: '/services' },
       { name: 'Gallery', href: '/gallery' },
       { name: 'Events', href: '/events' },
 
       { name: 'Clients', href: '/clients' },
-      { name: 'Portfolio', href: '/portfolio' },
+      // { name: 'Portfolio', href: '/portfolio' },
+      { name: 'PrivacyPolicy', href: '/privacypolicy' },
       { name: 'Contact us', href: '/contact' },
     ],
     BUTTON_TEXT: 'Request a quote',
