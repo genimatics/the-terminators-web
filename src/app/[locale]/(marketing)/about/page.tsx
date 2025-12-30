@@ -4,7 +4,6 @@ import HeroSection from '@/common/hero-section';
 // import AboutFormSection from '@/components/about/about-contact-form';
 import AboutTeam from '@/components/about/about-team';
 
-import AboutContactInfoSection from '@/components/about/contact-info-section';
 import OurExpertise from '@/components/about/our-expertise-section';
 import { IMAGES } from '@/constants/images';
 
@@ -39,8 +38,8 @@ export default async function About(props: IAboutProps) {
 
       <OurExpertise />
       <AboutTeam />
-      <AboutContactInfoSection />
-      {/* <AboutFormSection /> */}
+      {/* <AboutContactInfoSection />
+      <AboutFormSection /> */}
 
     </>
   );

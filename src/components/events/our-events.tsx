@@ -17,18 +17,16 @@ export default function OurEvents() {
     settings: {
       speed: 500,
       thumbnail: true,
-      thumbWidth: '80' as any,
-      thumbHeight: '80' as any,
-      animateThumb: true,
+      thumbWidth: 80 as any,
+      thumbHeight: 80 as any,
+      animateThumb: false,
       enableSwipe: true,
       enableDrag: true,
-      counter: true,
+      counter: false,
       controls: true,
       share: false,
       fullScreen: true,
       zoom: true,
-      exThumbImage: 'data-thumb',
-      appendSubHtmlTo: '.lg-item',
     },
   });
 
@@ -49,12 +47,8 @@ export default function OurEvents() {
     <section className="w-full bg-background py-16 md:py-24">
       <div className="mx-auto max-w-7xl px-4 md:px-6">
         <div className="mb-12 text-center">
-          <h2 className="mb-3 text-4xl font-bold text-foreground md:text-5xl">
-            Our Events
-          </h2>
-          <p className="text-sm text-muted-foreground md:text-base">
-            Explore our collection of events and activities
-          </p>
+          <h2 className="mb-3 text-4xl font-bold text-foreground md:text-5xl">Our Events</h2>
+          <p className="text-sm text-muted-foreground md:text-base">Explore our collection of events and activities</p>
         </div>
 
         <div
@@ -71,7 +65,6 @@ export default function OurEvents() {
                 className={`gallery-item group relative block overflow-hidden rounded-lg border border-border bg-card transition-all duration-300 ${gridClass}`}
                 data-src={image.full}
                 data-thumb={image.thumb}
-                // No caption as requested
                 style={{
                   minHeight: '200px',
                   maxHeight: '400px',
@@ -79,7 +72,7 @@ export default function OurEvents() {
               >
                 <div className="relative h-full w-full">
                   <Image
-                    src={image.thumb}
+                    src={image.thumb || '/placeholder.svg'}
                     alt=""
                     fill
                     sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"

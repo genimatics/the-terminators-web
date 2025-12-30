@@ -20,18 +20,16 @@ export default function OurGallery() {
     settings: {
       speed: 500,
       thumbnail: true,
-      thumbWidth: '80' as any,
-      thumbHeight: '80' as any,
-      animateThumb: true,
+      thumbWidth: 80 as any,
+      thumbHeight: 80 as any,
+      animateThumb: false,
       enableSwipe: true,
       enableDrag: true,
-      counter: true,
+      counter: false,
       controls: true,
       share: false,
       fullScreen: true,
       zoom: true,
-      exThumbImage: 'data-thumb',
-      appendSubHtmlTo: '.lg-item',
     },
   });
 
@@ -61,9 +59,7 @@ export default function OurGallery() {
       <section className="w-full bg-background py-16 md:py-24">
         <div className="mx-auto max-w-7xl px-4 md:px-6">
           <div className="mb-12 text-center">
-            <h2 className="mb-3 text-4xl font-bold text-foreground md:text-5xl">
-              Our Gallery
-            </h2>
+            <h2 className="mb-3 text-4xl font-bold text-foreground md:text-5xl">Our Gallery</h2>
             <p className="text-sm text-muted-foreground md:text-base">
               Explore our collection of events, exhibitions, and special moments
             </p>
@@ -80,9 +76,7 @@ export default function OurGallery() {
     <section className="w-full bg-background py-16 md:py-24">
       <div className="mx-auto max-w-7xl px-4 md:px-6">
         <div className="mb-12 text-center">
-          <h2 className="mb-3 text-4xl font-bold text-foreground md:text-5xl">
-            Our Gallery
-          </h2>
+          <h2 className="mb-3 text-4xl font-bold text-foreground md:text-5xl">Our Gallery</h2>
           <p className="text-sm text-muted-foreground md:text-base">
             Explore our collection of events, exhibitions, and special moments
           </p>
@@ -117,7 +111,7 @@ export default function OurGallery() {
                 <div className="relative h-full w-full">
                   <div className="relative h-full w-full">
                     <Image
-                      src={image.thumb}
+                      src={image.thumb || '/placeholder.svg'}
                       alt=""
                       fill
                       sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
@@ -128,7 +122,8 @@ export default function OurGallery() {
                   </div>
 
                   <div
-                    className={`absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-black/80 via-black/30 to-transparent p-4 transition-all duration-300 ${hoveredId === image.id ? 'opacity-100' : 'opacity-0'
+                    className={`absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-black/80 via-black/30 to-transparent p-4 transition-all duration-300 ${
+                      hoveredId === image.id ? 'opacity-100' : 'opacity-0'
                     }`}
                     aria-hidden="true"
                   >

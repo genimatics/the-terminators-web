@@ -1,8 +1,18 @@
 'use client';
 
 import type { LightGallerySettings } from 'lightgallery/lg-settings';
+
 import type { LightGallery } from 'lightgallery/lightgallery';
+import type React from 'react';
 import { useEffect } from 'react';
+
+export const LIGHTGALLERY_CONFIG = {
+  THUMBNAIL_WIDTH: 80,
+  THUMBNAIL_HEIGHT: 80,
+  THUMBNAIL_MARGIN: 6,
+  THUMBNAIL_BORDER_RADIUS: '8px',
+  SPEED: 500,
+} as const;
 
 type LightGalleryOptions = {
   selector?: string;
@@ -32,31 +42,37 @@ export const useLightGallery = <T extends HTMLElement = HTMLElement>(
           lightGalleryInstance = lightgallery(containerRef.current, {
             selector: options.selector || 'a',
             plugins: [lgThumbnail, lgZoom, lgFullscreen],
-            speed: 500,
+            speed: LIGHTGALLERY_CONFIG.SPEED,
             thumbnail: true,
-            showThumbByDefault: true,
-            thumbWidth: '80',
-            thumbHeight: '80',
-            animateThumb: true,
-            enableSwipe: true,
-            enableDrag: true,
-            counter: true,
-            controls: true,
+            thumbWidth: LIGHTGALLERY_CONFIG.THUMBNAIL_WIDTH,
+            thumbHeight: LIGHTGALLERY_CONFIG.THUMBNAIL_HEIGHT,
+            animateThumb: false,
+            thumbMargin: LIGHTGALLERY_CONFIG.THUMBNAIL_MARGIN,
+            toggleThumb: true,
+            counter: false,
             share: false,
+            download: false,
             fullScreen: true,
             zoom: true,
+            enableSwipe: true,
+            enableDrag: true,
+            toolbar: true,
+            toolbarPosition: 'bottom',
+            controls: true,
+            showBarsAfter: 5000,
             ...options.settings,
-            ...(options.settings?.thumbWidth
-              ? {
-                  thumbWidth: String(options.settings.thumbWidth),
-                }
-              : {}),
-            ...(options.settings?.thumbHeight
-              ? {
-                  thumbHeight: String(options.settings.thumbHeight),
-                }
-              : {}),
           } as LightGallerySettings);
+
+          const style = document.createElement('style');
+          style.textContent = `
+            .lg-thumb-outer {
+              display: none !important;
+            }
+            .lg-thumbs {
+              display: none !important;
+            }
+          `;
+          document.head.appendChild(style);
         }
       } catch (error) {
         console.error('LightGallery initialization failed:', error);

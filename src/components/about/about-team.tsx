@@ -25,9 +25,9 @@ const leadershipData: LeadershipMember[] = [
     icon: 'settings',
   },
   {
-    title: 'Admin/Accounts Executive',
-    name: 'Ms. Komal Anwaar',
-    icon: 'user',
+    title: 'COO (Electrical)',
+    name: 'Engr. Anis Ahmed',
+    icon: 'settings',
   },
   {
     title: 'Chief Strategy Officer',
@@ -35,10 +35,11 @@ const leadershipData: LeadershipMember[] = [
     icon: 'users',
   },
   {
-    title: 'COO (Electrical)',
-    name: 'Engr. Anis Ahmed',
-    icon: 'settings',
+    title: 'Admin/Accounts Executive',
+    name: 'Ms. Komal Anwaar',
+    icon: 'user',
   },
+
 ];
 
 const AboutTeam: React.FC = () => {

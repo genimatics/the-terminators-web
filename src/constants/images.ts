@@ -56,6 +56,9 @@ export const IMAGES = {
     LOGO: '/assets/terminator-images/navbar/logo.png',
     NAV_BG: '/assets/terminator-images/navbar/navbar-bg.jpg',
   },
+  NATURE_BUSINESS: {
+    DIAGRAM: '/assets/terminator-images/home/section-one/img.png',
+  },
 
   FOOTER: {
     LOGO: '/assets/terminator-images/footer/footer-logo.png',
