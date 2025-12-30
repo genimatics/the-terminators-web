@@ -4,8 +4,6 @@ import { getTranslations, setRequestLocale } from 'next-intl/server';
 import GetStarted from '@/components/sections/get-started';
 import Hero from '@/components/sections/hero';
 import SectionOne from '@/components/sections/section-1';
-import SectionTwo from '@/components/sections/section-2';
-import ValuedCustomers from '@/components/sections/valued-customer';
 
 type IIndexProps = {
   params: Promise<{ locale: string }>;
@@ -33,8 +31,8 @@ export default async function Index(props: IIndexProps) {
       <Hero />
       <GetStarted />
       <SectionOne />
-      <SectionTwo />
-      <ValuedCustomers />
+      {/* <SectionTwo />
+      <ValuedCustomers /> */}
       {/* <QuoteSection /> */}
     </>
   );

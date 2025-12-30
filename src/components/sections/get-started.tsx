@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+import Link from 'next/link';
 import ScrollReveal from '@/components/ui/scroll-reveal';
 import { IMAGES } from '@/constants/images';
 
@@ -12,13 +13,20 @@ export default function GetStarted() {
         <div className="grid grid-cols-1 items-stretch gap-6 lg:grid-cols-2">
 
           <div
-            className="flex h-80 items-center justify-center bg-primary p-6 shadow-md
-                       sm:h-96 sm:p-10 md:h-[420px] lg:h-[480px] xl:h-[550px]"
+            className="
+              flex min-h-[420px] items-start justify-center
+              bg-primary p-6 shadow-md
+              sm:min-h-[480px] sm:items-center sm:p-10
+              md:h-[420px]
+              lg:h-[480px]
+              xl:h-[550px]
+            "
           >
             <div
               className="
-                flex w-full flex-col items-center justify-center gap-4
-                text-center sm:flex-row
+                flex w-full flex-col items-center justify-start gap-4
+                text-center
+                sm:flex-row sm:items-center
                 sm:gap-8 sm:text-left
               "
             >
@@ -36,12 +44,15 @@ export default function GetStarted() {
 
               <ScrollReveal delay={0.1}>
                 <div className="flex w-full max-w-full flex-col items-center justify-center text-white sm:max-w-md sm:items-start md:max-w-lg">
-                  <h2 className="mb-4 text-xl leading-snug font-extrabold sm:text-2xl md:text-4xl">
+                  <h2
+                    className="
+                      mb-4 text-lg leading-snug font-extrabold
+                      sm:text-2xl md:text-4xl
+                    "
+                  >
                     Need help ?
                     <br />
-                    contact us
-                    <br />
-                    today at
+                    contact
                     <br />
                     The Terminators !
                     <br />
@@ -49,9 +60,26 @@ export default function GetStarted() {
                     <br />
                     and reliable.
                   </h2>
-                  <p className="mt-2 text-xs tracking-[0.25em] text-white/80 uppercase sm:text-sm md:text-sm">
+
+                  <p className="mt-2 text-xs tracking-[0.25em] text-white/80 uppercase sm:text-sm">
                     Job done right away
                   </p>
+
+                  <Link href="/contact" className="mt-6 sm:mt-5">
+                    <button
+                      className="
+                        cursor-pointer rounded-sm bg-white
+                        px-6 py-3
+                        text-sm font-semibold
+                        text-primary
+                        transition-all
+                        hover:bg-white/90
+                        hover:shadow-md
+                      "
+                    >
+                      Contact Us
+                    </button>
+                  </Link>
                 </div>
               </ScrollReveal>
             </div>

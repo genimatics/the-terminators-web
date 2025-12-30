@@ -14,7 +14,7 @@ export default function PrivacyPolicy() {
           <div className="space-y-4 text-center">
             <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">{TEXTS.PRIVACYHEADER.TITLE}</h1>
             <p className="text-lg font-medium opacity-90 sm:text-xl">{TEXTS.PRIVACYHEADER.SUBTITLE}</p>
-            <p className="mx-auto max-w-2xl text-base opacity-85 sm:text-lg">{TEXTS.PRIVACYHEADER.DESCRIPTION}</p>
+            {/* <p className="mx-auto max-w-2xl text-base opacity-85 sm:text-lg">{TEXTS.PRIVACYHEADER.DESCRIPTION}</p> */}
           </div>
         </div>
       </div>

@@ -304,8 +304,8 @@ export const TEXTS = {
 
       { name: 'Clients', href: '/clients' },
       // { name: 'Portfolio', href: '/portfolio' },
-      { name: 'PrivacyPolicy', href: '/privacypolicy' },
-      { name: 'Contact us', href: '/contact' },
+      { name: 'Privacy Policy', href: '/privacypolicy' },
+      { name: 'Contact Us', href: '/contact' },
     ],
     BUTTON_TEXT: 'Request a quote',
     BUTTON_LINK: '/get-started',
@@ -382,8 +382,8 @@ export const TEXTS = {
   },
 
   FOOTER: {
-    HEADING: 'Inspiring',
-    HIGHLIGHT: 'Success',
+    HEADING: 'The',
+    HIGHLIGHT: 'The Terminators',
     DESCRIPTION: 'Creating Connection, and Shaping Futures, where Every Experience Matters.',
     PLACEHOLDER: 'Email',
     BUTTON_TEXT: 'Send',

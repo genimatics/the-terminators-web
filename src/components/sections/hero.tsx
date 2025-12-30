@@ -21,7 +21,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="relative flex min-h-screen w-full flex-col overflow-hidden text-center">
+    <section className="relative flex min-h-screen w-full flex-col overflow-hidden py-20 text-center">
 
       {images.map((img, i) => (
         <div
@@ -72,7 +72,7 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="relative z-10 w-full px-4 pt-6 pb-8">
+      {/* <div className="relative z-10 w-full px-4 pt-6 pb-8">
         <ScrollReveal delay={0.2}>
           <div className="mx-auto grid max-w-5xl grid-cols-1 gap-4 text-center text-white sm:grid-cols-3 sm:gap-6">
             <div className="flex flex-col items-center">
@@ -100,7 +100,7 @@ export default function Hero() {
             </div>
           </div>
         </ScrollReveal>
-      </div>
+      </div> */}
     </section>
   );
 }

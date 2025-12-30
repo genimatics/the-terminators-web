@@ -34,7 +34,7 @@ export default function SectionOne(): JSX.Element {
             </p>
 
             <h2 className="text-4xl font-bold text-foreground md:text-5xl">
-              Do you need an Electrical Services?
+              Do you need Electrical Services?
               <AnimatedHighlightText text="Look no further!" className="block" />
             </h2>
 
