@@ -225,7 +225,7 @@ export default function Navbar() {
                 className="rounded-lg"
               />
               <span className="text-lg font-semibold text-gray-900">
-                The Terminaotrs
+                The Terminators
               </span>
             </Link>
 
