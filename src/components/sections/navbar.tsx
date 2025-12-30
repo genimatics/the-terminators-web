@@ -70,8 +70,7 @@ const NavLinkItem = ({
               <Link
                 href={item.href}
                 onClick={() => setActiveLink(item.name.toLowerCase())}
-                className={`sm:text-md flex cursor-pointer items-center gap-1 text-base font-semibold tracking-wide transition-colors duration-300 ${
-                  isActive ? 'text-primary' : 'text-black group-hover:text-[var(--color-primary)]'
+                className={`sm:text-md flex cursor-pointer items-center gap-1 text-base font-semibold tracking-wide transition-colors duration-300 ${isActive ? 'text-primary' : 'text-black group-hover:text-[var(--color-primary)]'
                 }`}
               >
                 {item.name}
@@ -85,8 +84,7 @@ const NavLinkItem = ({
             <Link
               href={item.href}
               onClick={() => setActiveLink(item.name.toLowerCase())}
-              className={`sm:text-md font-semibold tracking-wide transition-colors duration-300 ${
-                isActive ? 'text-primary' : 'text-black hover:text-[var(--color-primary)]'
+              className={`sm:text-md font-semibold tracking-wide transition-colors duration-300 ${isActive ? 'text-primary' : 'text-black hover:text-[var(--color-primary)]'
               }`}
             >
               {item.name}
@@ -258,8 +256,7 @@ export default function Navbar() {
                         >
                           {item.name}
                           <IoIosArrowDown
-                            className={`transition-transform duration-300 ${
-                              mobileDropdownOpen === item.name ? 'rotate-180' : ''
+                            className={`transition-transform duration-300 ${mobileDropdownOpen === item.name ? 'rotate-180' : ''
                             }`}
                           />
                         </div>

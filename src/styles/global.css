@@ -504,7 +504,6 @@ section:empty {
   height: 100% !important;
 }
 
-/* Grid responsive fixes */
 @media (max-width: 640px) {
   .col-span-2,
   .col-span-1 {
@@ -517,37 +516,39 @@ section:empty {
   }
 }
 
-/* ===== HIDE DUPLICATE FOOTER CONTENT ===== */
-/* This prevents SSR content from showing up twice */
 #__next > section:nth-last-child(2):not(#our-events) {
   display: none;
 }
 
-/* Ensure our-events section is unique */
 #our-events {
   position: relative;
   z-index: 10;
 }
 
-/* ===== PERFORMANCE OPTIMIZATION ===== */
 .gallery-item {
   transform: translateZ(0);
   backface-visibility: hidden;
   perspective: 1000px;
 }
 
-/* ===== FIX FOR GALLERY OPENING ===== */
-/* Ensure gallery items are clickable */
 .gallery-item {
   position: relative;
   display: block;
 }
 
-/* Fix for iOS Safari */
 @supports (-webkit-touch-callout: none) {
   .gallery-item {
     cursor: pointer;
   }
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 @layer base {

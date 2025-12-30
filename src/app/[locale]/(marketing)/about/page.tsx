@@ -4,6 +4,7 @@ import HeroSection from '@/common/hero-section';
 // import AboutFormSection from '@/components/about/about-contact-form';
 import AboutTeam from '@/components/about/about-team';
 
+import CorporateInformation from '@/components/about/CorporateInformation';
 import OurExpertise from '@/components/about/our-expertise-section';
 import { IMAGES } from '@/constants/images';
 
@@ -35,9 +36,10 @@ export default async function About(props: IAboutProps) {
         subtitle="Passion Behind Our Work"
         background={IMAGES.HERO.SLIDE1}
       />
+      <AboutTeam />
 
       <OurExpertise />
-      <AboutTeam />
+      <CorporateInformation />
       {/* <AboutContactInfoSection />
       <AboutFormSection /> */}
 

@@ -123,12 +123,8 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
                   Overview
                 </h3>
                 <p className="leading-relaxed text-gray-700">
-                  {service.details.description}
+                  {service.details.overview}
                   {' '}
-                  Our team of experienced engineers
-                  and technicians ensures that all projects are completed to the
-                  highest standards of quality and safety, adhering to international
-                  regulations and best practices.
                 </p>
               </div>
             </div>

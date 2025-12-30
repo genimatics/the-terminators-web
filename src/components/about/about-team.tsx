@@ -39,8 +39,15 @@ const leadershipData: LeadershipMember[] = [
     name: 'Ms. Komal Anwaar',
     icon: 'user',
   },
-
 ];
+
+const ABOUT_DESCRIPTION = `
+M/s THE TERMINATORS is a leading engineering and contracting firm, serving its valued clients for over three decades in the fields of power generation, electrical distribution, and energy management. Established on the principles of technical excellence, innovation, and client trust, the company has built a reputation for delivering world-class engineering solutions across industries.
+
+With extensive expertise in substations, powerhouses, and industrial units, THE TERMINATORS offers end-to-end solutions ranging from design, installation, and commissioning to testing, maintenance, and safety assurance. Our services cover the entire electrical infrastructure including MV/LV panels, generators, switchgear, cabling and terminations, earthing systems, illumination, lightning protection, and customized safety solutions.
+
+Built on a legacy of trust, quality, and innovation, THE TERMINATORS continues to empower industries with reliable solutions that ensure long-term operational efficiency, safety, and sustainability.
+`;
 
 const AboutTeam: React.FC = () => {
   const getIcon = (iconType: 'user' | 'users' | 'settings') => {
@@ -56,6 +63,7 @@ const AboutTeam: React.FC = () => {
 
   return (
     <section className="relative min-h-screen w-full overflow-hidden">
+      {/* Background */}
       <div
         className="absolute inset-0 h-full w-full bg-cover bg-center bg-no-repeat"
         style={{
@@ -73,11 +81,22 @@ const AboutTeam: React.FC = () => {
             <h1 className="mb-6 text-4xl leading-tight font-bold text-gray-800 lg:text-5xl">
               About Us And Our Leadership
             </h1>
-            <p className="mb-12 text-base leading-relaxed text-gray-700 lg:text-lg">
-              The management of The Terminators comprises of professional engineers and skilled
-              technicians with hands on experience of several years in all facets of Electrical systems
-              fabrication, installation, testing and commissioning
-            </p>
+
+            <div
+              className="
+                scrollbar-hide
+                mb-12
+                h-52
+                max-w-xl
+                overflow-y-scroll
+                text-base
+                leading-relaxed
+                text-gray-700
+                lg:text-lg
+              "
+            >
+              {ABOUT_DESCRIPTION}
+            </div>
 
             <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
               {leadershipData.map((member, index) => (
@@ -97,6 +116,7 @@ const AboutTeam: React.FC = () => {
                 </div>
               ))}
             </div>
+
           </div>
         </div>
       </div>

@@ -4,11 +4,12 @@
       "id": 1,
       "slug": "power-generation",
       "title": "Power Generation",
-      "shortDesc": "• Diesel Engines, Gas Engines, Solar PV Systems.\n• Sizing according to customer’s need\n• Technical & Financial Proposal.",
+      "shortDesc": "• Diesel Engines, Gas Engines, Solar PV Systems.\n• Sizing according to customer's need\n• Technical & Financial Proposal.",
       "icon": "/assets/terminator-images/home/section-one/section-icon1.gif",
       "category": "core",
       "details": {
         "description": "Complete power generation solutions including diesel engines, gas engines, and solar PV systems.",
+        "overview": "The Terminators have installed and commissioned many Gas Engine and Diesel Engine generators & plants from a few kilo Watts to 5 Mega Watts. The jobs included all aspects of civil construction, Electrical & Mechanical installation, and commissioning.",
         "activities": [
           "Diesel Engines, Gas Engines, Solar PV Systems",
           "Sizing according to customer's need",
@@ -21,6 +22,11 @@
           "Custom sizing based on requirements",
           "End-to-end project management",
           "Compliance with international standards"
+        ],
+        "benefits": [
+          "Reliable power supply",
+          "Reduced operational costs",
+          "Scalable solutions for future expansion"
         ]
       }
     },
@@ -33,6 +39,7 @@
       "category": "safety",
       "details": {
         "description": "Comprehensive earthing and lightning protection systems for safety and compliance.",
+        "overview": "Earthing (also known as grounding) refers to making Electrical contact with the Earth's surface/mass. The Earth is always at Zero potential and is always willing to absorb any quantum of current impressed on it by nature (like Lightning bolts) or by manmade means like a live Electric conductor touching the ground. Through earthing, a conductive path is provided to absorb all electrical potential that either accidentally comes in contact with the mechanical frame of power equipment/housing or is intentionally connected to establish a zero-reference level in case of power generation/distribution. A lightning protection system diverts all incoming lightning strokes into the ground. The Terminators have designed and implemented several lightning protection systems and made several hundred earthing stations INCLUDING copper plate, rod, pipe, and Chemical Electrodes Earthing. Most of the world renowned brands like Furse, DEHN, Erico, Cooper etc. have been dealt with.",
         "activities": [
           "Protective earthing",
           "Lightning protection",
@@ -47,6 +54,11 @@
           "Protection against electrical hazards",
           "Lightning strike prevention",
           "Hazardous area compliance"
+        ],
+        "benefits": [
+          "Enhanced safety for personnel",
+          "Equipment protection",
+          "Regulatory compliance"
         ]
       }
     },
@@ -54,11 +66,12 @@
       "id": 3,
       "slug": "industrial-electrification",
       "title": "Industrial Electrification",
-      "shortDesc": "Calculation of Lighting level, Sizing according to customer’s need. Technical & Financial Proposal, Procurement/resourcing all material",
+      "shortDesc": "Calculation of Lighting level, Sizing according to customer's need. Technical & Financial Proposal, Procurement/resourcing all material",
       "icon": "/assets/terminator-images/home/section-one/section-icon3.gif",
       "category": "industrial",
       "details": {
         "description": "Complete industrial electrification solutions with precise lighting calculations.",
+        "overview": "Industrial units and office buildings rely on an efficient flow of electricity for production and management operations. The power supplied to different functionary units varies as per the power availability in the system. Certain units/facilities require uninterrupted power i.e., backed by UPS. We at The Terminators have completed the installation, testing, and commissioning of several power distribution systems in various Industries and buildings.",
         "activities": [
           "Calculation of Lighting level",
           "Suggestions according to site requirements",
@@ -72,6 +85,11 @@
           "Precise lighting calculations",
           "Customized solutions",
           "End-to-end project execution"
+        ],
+        "benefits": [
+          "Efficient power distribution",
+          "Reliable operations",
+          "Optimized energy consumption"
         ]
       }
     },
@@ -84,6 +102,7 @@
       "category": "lighting",
       "details": {
         "description": "Professional lighting solutions for indoor and outdoor applications.",
+        "overview": "The lighting needs of clients are customized according to the specific need of luminance level required at a particular location. Software-based designs are employed to assure optimum lighting while focusing on energy conservation, human need, and ambiance.",
         "activities": [
           "Security lights installation",
           "Watch and ward service lighting",
@@ -94,6 +113,11 @@
           "Energy efficient solutions",
           "Enhanced security lighting",
           "Aesthetic and functional designs"
+        ],
+        "benefits": [
+          "Optimal illumination",
+          "Energy savings",
+          "Enhanced safety and security"
         ]
       }
     },
@@ -106,6 +130,7 @@
       "category": "infrastructure",
       "details": {
         "description": "Transmission infrastructure including poles, towers, and street lighting.",
+        "overview": "A lighting pole or mast or bracket is a lamp post, mounted to provide a raised source of light on the edge of a road, wall or path, or any area / Arena. Usually, it is a fabricated metallic structure of desired size and shape protected and coated to withstand weather harshness. The Terminators have supplied and installed a number of such poles and masts.",
         "activities": [
           "Street lights installation",
           "Transmission lines installation",
@@ -116,6 +141,11 @@
           "Durable infrastructure",
           "Compliant with safety standards",
           "Long-term reliability"
+        ],
+        "benefits": [
+          "Reliable transmission network",
+          "Weather-resistant structures",
+          "Long service life"
         ]
       }
     },
@@ -128,6 +158,7 @@
       "category": "maintenance",
       "details": {
         "description": "Comprehensive maintenance services for various infrastructure components.",
+        "overview": "Professional maintenance services for telecommunication infrastructure, lighting systems, and structural components to ensure optimal performance and longevity.",
         "activities": [
           "Telecommunication Towers maintenance",
           "Guy Mast towers maintenance",
@@ -139,6 +170,11 @@
           "Preventive maintenance",
           "24/7 emergency services",
           "Expert technical support"
+        ],
+        "benefits": [
+          "Reduced downtime",
+          "Extended equipment life",
+          "Cost-effective maintenance"
         ]
       }
     },
@@ -151,6 +187,7 @@
       "category": "cable",
       "details": {
         "description": "Professional cable installation and termination services for HT & LT systems.",
+        "overview": "A cable is an electrical conductor used to carry electrical currents. Cables come in a host of varieties according to application and usage like Voltage levels, service requirements, protection, and safety requirements. Different types of cables employ different installation, laying, and connecting protocols. The Terminators excel in all such services, whether underground cable laying by excavation or by pulling in ducts, channels, pipes, or cable trays. Accordingly, cable jointing and terminations are made in highly professional ways. The Terminators also provide cable fault/ route location services for subsoil-buried vintage cables.",
         "activities": [
           "Sizing of Cable ladder/trays",
           "Cable trench excavation and preparation",
@@ -164,6 +201,11 @@
           "IEC standard compliance",
           "Advanced testing equipment",
           "Expert fault diagnosis"
+        ],
+        "benefits": [
+          "Reliable cable installation",
+          "Professional jointing and termination",
+          "Accurate fault detection"
         ]
       }
     },
@@ -176,6 +218,7 @@
       "category": "control",
       "details": {
         "description": "Design and installation of LT panels, power factor improvement panels, and motor control centers.",
+        "overview": "LT Panel is an electrical distribution board and the main component of the power distribution system in an industry or building. LT Panels and motor control centers are used with low-tension cables to obtain power from the generator or transformer and distribute electricity to various electrical devices like motors, pumps, plants, and other smaller distribution boards. These panels are designed and fabricated according to the needs/demands of any user entity. The Terminators have designed, fabricated, and installed several such units in large industries and commercial buildings.",
         "activities": [
           "Sizing of panels according to load",
           "Technical & Financial Proposal",
@@ -187,6 +230,11 @@
           "Custom panel design",
           "Power factor optimization",
           "Efficient motor control"
+        ],
+        "benefits": [
+          "Improved power factor",
+          "Efficient motor control",
+          "Customized solutions"
         ]
       }
     },
@@ -199,6 +247,7 @@
       "category": "power",
       "details": {
         "description": "Complete solutions for HT switchgear, transformers, and substation construction.",
+        "overview": "In an electric power system, switchgear is composed of electrical disconnect switches, fuses, or circuit breakers used to control, protect and isolate electrical equipment. Switchgear is used both to de-energize equipment to allow work to be done and to clear faults downstream. Besides being an integral part of any substation, Certain switchgear equipment is provided and installed as stand-alone units like power distribution boxes in houses, offices, and shops and feeder pillars in the street light system and residential complexes. Many such installations are on The Terminators credit.",
         "activities": [
           "Sizing of Equipment & safeties",
           "Technical & Financial Proposal",
@@ -211,6 +260,11 @@
           "High voltage expertise",
           "Turnkey solutions",
           "Safety-first approach"
+        ],
+        "benefits": [
+          "Reliable power transformation",
+          "Comprehensive substation solutions",
+          "Expert transformer maintenance"
         ]
       }
     },
@@ -223,6 +277,7 @@
       "category": "fabrication",
       "details": {
         "description": "Custom fabrication and construction services for various electrical infrastructure.",
+        "overview": "Telecommunications Towers, Masts, and poles are simply mechanical structures designed and fabricated to raise the antennae up high enough to send and receive radio signals. Several types of such structures have been designed, fabricate, assembled, and installed by The Terminators for Cellular mobile companies in Pakistan.",
         "activities": [
           "Telecommunication Towers fabrication",
           "Guy Mast towers fabrication",
@@ -237,6 +292,11 @@
           "Custom fabrication",
           "Heavy-duty construction",
           "Corrosion-resistant materials"
+        ],
+        "benefits": [
+          "Custom designed structures",
+          "Durable construction",
+          "Weather-resistant fabrication"
         ]
       }
     },
@@ -249,6 +309,7 @@
       "category": "telecom",
       "details": {
         "description": "Complete solutions for data centers and transmission stations.",
+        "overview": "A data Centre is a building, a dedicated space within a building, or a group of buildings used to house computer systems and associated components, such as telecommunications / transmission systems and data storage systems. It is essentially a facility that centralizes an organization's shared IT operations and equipment for the purposes of storing, processing, and disseminating data and applications. Because they house an organization's most critical and proprietary assets, data centers are vital to the continuity of daily operations. As such the area demands a high level utility provisions, safeties and securities. We have established data centers for many organizations and equipped these with Uninterrupted power supply, raised flooring, cable tray network, Air-conditioning, dehumidification, Automatic Fire detection & Extinguishing system, access control, EM Shielding, Earthing and Lightning protection systems...",
         "activities": [
           "Designing & sizing",
           "Raised false flooring",
@@ -265,6 +326,11 @@
           "Mission-critical infrastructure",
           "Redundant systems",
           "High security standards"
+        ],
+        "benefits": [
+          "Reliable data center operations",
+          "High level of security",
+          "Redundant power systems"
         ]
       }
     },
@@ -277,6 +343,7 @@
       "category": "maintenance",
       "details": {
         "description": "Professional services for remodeling, relocation, and inspection of electrical systems.",
+        "overview": "Professional services for the assessment, relocation, and enhancement of existing electrical systems to meet evolving operational needs.",
         "activities": [
           "Removal of existing electrical switchgear",
           "Shifting of Electrical switchgear and cables",
@@ -288,6 +355,11 @@
           "Minimal downtime",
           "Expert assessment",
           "Safe relocation procedures"
+        ],
+        "benefits": [
+          "Efficient system upgrades",
+          "Minimal operational disruption",
+          "Expert equipment assessment"
         ]
       }
     },
@@ -300,6 +372,7 @@
       "category": "maintenance",
       "details": {
         "description": "Annual maintenance contracts for offices, factories, and remote locations.",
+        "overview": "Comprehensive maintenance programs ensuring continuous operation and reliability of electrical systems across various facilities.",
         "activities": [
           "One-time Maintenance visits",
           "Testing and inspection services",
@@ -310,6 +383,11 @@
           "Regular maintenance schedules",
           "Emergency response",
           "Cost-effective packages"
+        ],
+        "benefits": [
+          "Proactive maintenance",
+          "Reduced breakdowns",
+          "Cost-effective operations"
         ]
       }
     },
@@ -322,6 +400,7 @@
       "category": "safety",
       "details": {
         "description": "Specialized explosion-proof electrical systems for hazardous environments.",
+        "overview": "At certain classified areas and zones where there is a danger of fire or explosion due to the heat generated by lamps or arching in contacts of a switching device, the Code determines and demands various safety measures and categorizes the areas to be protected against such risks by employing Explosion-proof wiring, fittings, power devices, and lights. The Terminators have supplied and installed many such systems for our valued clients in the Petrochemical industry.",
         "activities": [
           "Explosion-proof wiring installation",
           "Hazardous area lighting",
@@ -332,6 +411,11 @@
           "ATEX/IECEx compliance",
           "Industrial safety standards",
           "Hazardous area certification"
+        ],
+        "benefits": [
+          "Maximum safety in hazardous areas",
+          "Regulatory compliance",
+          "Reliable operation in extreme conditions"
         ]
       }
     },
@@ -344,6 +428,7 @@
       "category": "testing",
       "details": {
         "description": "Custom designed test benches and panels for specific client needs.",
+        "overview": "The Terminators have Indigenously designed several test benches and panels to meet the specific needs of its clients. A test bench was designed and developed to provide factory-level testing of transformers for K-Electric, once the burnt or damaged transformers are repaired and re-winded at the KE transformer repair factory. Besides we have completed some similar projects for our valued clients.",
         "activities": [
           "Indigenous design and development",
           "Factory-level testing equipment",
@@ -353,6 +438,11 @@
         "features": [
           "Custom solutions",
           "Precision testing",
+          "Industry-specific designs"
+        ],
+        "benefits": [
+          "Customized testing solutions",
+          "Accurate test results",
           "Industry-specific designs"
         ]
       }
@@ -366,6 +456,7 @@
       "category": "renewable",
       "details": {
         "description": "Solar power generation systems for residential and commercial use.",
+        "overview": "Domestic Solar power generation units (Off-grid) have been supplied and installed up to 10 kW.",
         "activities": [
           "Domestic Solar power generation units",
           "Off-grid solutions up to 10 kW",
@@ -376,6 +467,11 @@
           "Renewable energy solutions",
           "Cost savings",
           "Environment friendly"
+        ],
+        "benefits": [
+          "Clean energy generation",
+          "Reduced electricity costs",
+          "Environmentally friendly"
         ]
       }
     }

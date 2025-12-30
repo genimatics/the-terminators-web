@@ -38,14 +38,24 @@ export default function SectionOne(): JSX.Element {
               <AnimatedHighlightText text="Look no further!" className="block" />
             </h2>
 
-            <p className="mx-auto max-w-xl text-sm leading-relaxed text-gray-600 md:text-base lg:mx-0">
-              M/s The Terminators brings 30+ years of trusted expertise in power generation,
-              electrical distribution, and energy management. We specialize in substations,
-              power houses, and industrial units with complete solutions including MV/LV panels,
-              generators, switchgear, cabling, terminations, earthing, illumination, lightning
-              protection, and safety services. With proven quality and innovation, we deliver
-              reliable engineering solutions that keep industries moving forward.
+            <p className="scrollbar-hide
+                mx-auto
+                mb-12
+                h-52
+                max-w-xl
+                overflow-y-scroll
+                text-sm
+                leading-relaxed
+                 text-gray-600
+                md:text-base
+                lg:mx-0"
+            >
+              M/S THE TERMINATORS was established in January 2003 as a General Services Contractor. The firm now comprises a number of qualified and skilled Electrical, Telecommunication, and Mechanical Engineers and Technicians with several years of hand-on expertise in the entire spectrum of Equipment & Systems Installations, Repairs and Maintenance. The core specialty being Power Generation, Transmission, Automatic Load Transfer / Switching HT, LT Electrical & Telephone cable laying, Jointing (subsurface, Ducts pipes & Cable Trays), Testing & its connection and Termination on power & control panels, switch boards & utility Equipment is in residential & Commercial Buildings, Industries & Other Classified Areas.
+              All Efforts are made to undertake any job with utmost professional skills, meeting the standard procedure and codes framed by world’s renowned regulatory bodies and in discharging works classified and hazardous areas where most stringent rules must be followed for safe installation, testing and operation of Electrical and Instrumentation.
+
             </p>
+
+            {/* mx-auto max-w-xl text-sm leading-relaxed text-gray-600 md:text-base lg:mx-0 */}
 
             <ul className="mx-auto max-w-md space-y-2 text-gray-700 lg:mx-0">
               {features.map((feature, index) => (

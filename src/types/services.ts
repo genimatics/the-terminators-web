@@ -9,6 +9,8 @@ export type Service = {
   category: string;
   details: {
     description: string;
+    overview: string;
+
     activities: string[];
     features: string[];
   };
