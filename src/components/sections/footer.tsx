@@ -2,7 +2,6 @@
 
 import {
   Facebook,
-  Linkedin,
   Mail,
   Phone,
 } from 'lucide-react';
@@ -57,7 +56,7 @@ export default function Footer() {
               </h3>
 
               <a
-                href="tel:+923332180818"
+                href="tel:+922134830727"
                 className="flex items-center gap-2 text-sm transition hover:text-primary sm:text-base"
               >
                 <Phone className="h-4 w-4" />
@@ -66,7 +65,7 @@ export default function Footer() {
               </a>
 
               <a
-                href="tel:+9221348307267"
+                href="tel:+923332180818"
                 className="flex items-center gap-2 text-sm transition hover:text-primary sm:text-base"
               >
                 <Phone className="h-4 w-4" />
@@ -83,7 +82,7 @@ export default function Footer() {
               </a>
 
               <a
-                href="mailto:theterminators246@gmail.com"
+                href="mailto:admin@theterminators.biz.pk"
                 className="flex items-center gap-2 text-sm transition hover:text-primary sm:text-base"
               >
                 <Mail className="h-4 w-4" />
@@ -113,14 +112,14 @@ export default function Footer() {
               <Facebook className="h-6 w-6" />
             </Link>
 
-            <Link
+            {/* <Link
               href="https://www.linkedin.com/company/theterminator/"
               target="_blank"
               rel="noopener noreferrer"
               className="transition hover:text-primary"
             >
               <Linkedin className="h-6 w-6" />
-            </Link>
+            </Link> */}
           </div>
 
         </div>

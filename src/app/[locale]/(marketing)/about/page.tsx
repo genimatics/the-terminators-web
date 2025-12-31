@@ -1,13 +1,11 @@
 import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
-import HeroSection from '@/common/hero-section';
 // import AboutFormSection from '@/components/about/about-contact-form';
 import AboutTeam from '@/components/about/about-team';
 
 import AboutUs from '@/components/about/about-us';
 import CorporateInformation from '@/components/about/CorporateInformation';
 import OurExpertise from '@/components/about/our-expertise-section';
-import { IMAGES } from '@/constants/images';
 
 type IAboutProps = {
   params: Promise<{ locale: string }>;
@@ -32,11 +30,11 @@ export default async function About(props: IAboutProps) {
 
   return (
     <>
-      <HeroSection
+      {/* <HeroSection
         title="About"
         subtitle="Passion Behind Our Work"
         background={IMAGES.HERO.SLIDE1}
-      />
+      /> */}
       <AboutUs />
       <CorporateInformation />
 

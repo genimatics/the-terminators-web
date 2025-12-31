@@ -11,7 +11,7 @@ Built on a legacy of trust, quality, and innovation, THE TERMINATORS continues t
 
 const AboutUs: React.FC = () => {
   return (
-    <section className="relative flex min-h-screen w-full items-center justify-center overflow-hidden">
+    <section className="relative flex min-h-screen w-full items-start justify-center overflow-hidden pt-28">
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat blur-sm"
         style={{ backgroundImage: `url('${IMAGES.ABOUT.BG1}')` }}
@@ -19,7 +19,10 @@ const AboutUs: React.FC = () => {
 
       <div className="absolute inset-0 bg-black/50" />
 
-      <div className="relative z-10 mx-auto max-w-4xl px-6">
+      <div className="relative z-10 mx-auto max-w-4xl px-6 py-8">
+        <h1 className="mb-8 text-center text-4xl font-bold text-white lg:text-5xl">
+          About Us
+        </h1>
         <p className="text-justify text-left text-base leading-relaxed text-white lg:text-lg">
           {ABOUT_DESCRIPTION}
         </p>

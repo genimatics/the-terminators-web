@@ -326,13 +326,13 @@ export const galleryImages: GalleryImage[] = [
     alt: 'Motor Control Center',
     title: 'Motor Control Center',
   },
-  {
-    id: '45',
-    src: '/assets/terminator-images/gallery/Pictures/LT panels, Motor Control Centers/Substation,panel, transformers.jpg',
-    thumb: '/assets/terminator-images/gallery/Pictures/LT panels, Motor Control Centers/Substation,panel, transformers.jpg',
-    alt: 'Substation,panel, transformers',
-    title: 'Substation,panel, transformers',
-  },
+  // {
+  //   id: '45',
+  //   src: '/assets/terminator-images/gallery/Pictures/LT panels, Motor Control Centers/IMG-20200730-WA0027.jpg',
+  //   thumb: '/assets/terminator-images/gallery/Pictures/LT panels, Motor Control Centers/IMG-20200730-WA0027.jpg',
+  //   alt: 'LT panels, Motor Control Centers',
+  //   title: 'LT panels, Motor Control Centers',
+  // },
   // Mix and Selected
   {
     id: '46',
