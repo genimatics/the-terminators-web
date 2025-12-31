@@ -53,7 +53,7 @@ export default function Hero() {
                 />
               </h1>
 
-              <p className="hero-paragraph mx-auto mb-10 max-w-2xl px-2 text-base text-white opacity-90 sm:mb-12 sm:text-lg md:text-xl lg:text-2xl">
+              <p className="hero-paragraph mx-auto mb-10 max-w-2xl px-2 text-base  text-white opacity-90 sm:mb-12 sm:text-lg md:text-xl lg:text-2xl">
                 Providing Electrical Engineering, Installations and Associated Mechanical and Civil Services for Industries, Offices, Homes and Classified Installations.
               </p>
             </div>

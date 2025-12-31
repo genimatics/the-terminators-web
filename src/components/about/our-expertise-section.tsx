@@ -1,11 +1,13 @@
 'use client';
 
+import { useRouter } from 'next/navigation';
 import Button from '@/components/ui/button';
 import ScrollReveal from '@/components/ui/scroll-reveal';
 import { TEXTS } from '@/constants/text';
 
 export default function OurExpertise() {
   const DATA = TEXTS.OUR_EXPERTISE;
+  const router = useRouter();
 
   return (
     <section className="w-full bg-white px-4 py-6 sm:px-6 sm:py-10 md:px-8 md:py-16 lg:px-12 xl:px-16 2xl:px-24">
@@ -72,7 +74,7 @@ export default function OurExpertise() {
             </div>
 
             <div className="mt-4 mb-12">
-              <Button disabled={false} size="md">{DATA.STRENGTHS.BUTTON}</Button>
+              <Button onClick={() => router.push('/services')} disabled={false} size="md">{DATA.STRENGTHS.BUTTON}</Button>
             </div>
           </div>
         </ScrollReveal>
