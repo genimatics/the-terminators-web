@@ -98,7 +98,7 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
                 </ul>
               </div>
 
-              <div className="mb-10">
+              {/* <div className="mb-10">
                 <h3 className="mb-4 border-b pb-2 text-xl font-semibold text-gray-800">
                   Key Features
                 </h3>
@@ -116,11 +116,11 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
                     </div>
                   ))}
                 </div>
-              </div>
+              </div> */}
 
               <div>
                 <h3 className="mb-4 border-b pb-2 text-xl font-semibold text-gray-800">
-                  Overview
+                  Details
                 </h3>
                 <p className="leading-relaxed text-gray-700">
                   {service.details.overview}

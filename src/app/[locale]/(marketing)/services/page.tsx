@@ -3,7 +3,6 @@ import { getTranslations, setRequestLocale } from 'next-intl/server';
 import HeroSection from '@/common/hero-section';
 // import ElectricalServices from '@/components/services/electrical-services';
 import OurServices from '@/components/services/our-services';
-import ServicesPromo from '@/components/services/services-promo';
 import { IMAGES } from '@/constants/images';
 
 type IServicesProps = {
@@ -31,11 +30,11 @@ export default async function ServicesPage(props: IServicesProps) {
     <>
       <HeroSection
         title="Our Services"
-        subtitle="See Our  Services"
+        subtitle="Over the past 2 decades, the firm has excelled in following "
         background={IMAGES.HERO.SLIDE1}
       />
       {/* <ElectricalServices /> */}
-      <ServicesPromo />
+      {/* <ServicesPromo /> */}
       <OurServices />
     </>
   );

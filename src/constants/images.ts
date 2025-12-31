@@ -65,6 +65,7 @@ export const IMAGES = {
     LOGO: '/assets/terminator-images/footer/footer-logo.png',
     LOGO1: '/assets/terminator-images/footer/logo-bg.png',
     FOOTER_BG: '/assets/terminator-images/footer/footer-bg.jpg',
+    SERVICE_ICON: '/assets/terminator-images/navbar/electrician.png',
 
   },
 

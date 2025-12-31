@@ -3,18 +3,15 @@ export type GalleryImage = {
   src: string;
   thumb: string;
   alt: string;
-  category: 'event' | 'exhibition' | 'general';
   title: string;
 };
 
 export const galleryImages: GalleryImage[] = [
-  // Events (gallery 1-30)
   {
     id: '1',
     src: '/assets/terminator-images/gallery/gallery (1).jpg',
     thumb: '/assets/terminator-images/gallery/gallery (1).jpg',
     alt: 'Annual Conference 2024 keynote session',
-    category: 'event',
     title: 'Annual Conference 2024',
   },
   {
@@ -22,7 +19,7 @@ export const galleryImages: GalleryImage[] = [
     src: '/assets/terminator-images/gallery/gallery (2).jpg',
     thumb: '/assets/terminator-images/gallery/gallery (2).jpg',
     alt: 'Networking Gala evening event',
-    category: 'event',
+
     title: 'Networking Gala',
   },
   {
@@ -30,7 +27,7 @@ export const galleryImages: GalleryImage[] = [
     src: '/assets/terminator-images/gallery/gallery (3).jpg',
     thumb: '/assets/terminator-images/gallery/gallery (3).jpg',
     alt: 'Professional Workshop training session',
-    category: 'event',
+
     title: 'Professional Workshop',
   },
   {
@@ -38,7 +35,7 @@ export const galleryImages: GalleryImage[] = [
     src: '/assets/terminator-images/gallery/gallery (4).jpg',
     thumb: '/assets/terminator-images/gallery/gallery (4).jpg',
     alt: 'Team Building Activity outdoor games',
-    category: 'event',
+
     title: 'Team Building Activity',
   },
   {
@@ -46,7 +43,7 @@ export const galleryImages: GalleryImage[] = [
     src: '/assets/terminator-images/gallery/gallery (5).jpg',
     thumb: '/assets/terminator-images/gallery/gallery (5).jpg',
     alt: 'Award Ceremony 2024',
-    category: 'event',
+
     title: 'Award Ceremony',
   },
   {
@@ -54,7 +51,7 @@ export const galleryImages: GalleryImage[] = [
     src: '/assets/terminator-images/gallery/gallery (6).jpg',
     thumb: '/assets/terminator-images/gallery/gallery (6).jpg',
     alt: 'Industry Summit panel discussion',
-    category: 'event',
+
     title: 'Industry Summit',
   },
   {
@@ -62,7 +59,7 @@ export const galleryImages: GalleryImage[] = [
     src: '/assets/terminator-images/gallery/gallery (7).jpg',
     thumb: '/assets/terminator-images/gallery/gallery (7).jpg',
     alt: 'Leadership Conference speakers',
-    category: 'event',
+
     title: 'Leadership Conference',
   },
   {
@@ -70,7 +67,7 @@ export const galleryImages: GalleryImage[] = [
     src: '/assets/terminator-images/gallery/gallery (8).jpg',
     thumb: '/assets/terminator-images/gallery/gallery (8).jpg',
     alt: 'Charity Fundraiser event',
-    category: 'event',
+
     title: 'Charity Fundraiser',
   },
   {
@@ -78,7 +75,7 @@ export const galleryImages: GalleryImage[] = [
     src: '/assets/terminator-images/gallery/gallery (9).jpg',
     thumb: '/assets/terminator-images/gallery/gallery (9).jpg',
     alt: 'Startup Pitch Competition',
-    category: 'event',
+
     title: 'Startup Competition',
   },
   {
@@ -86,7 +83,7 @@ export const galleryImages: GalleryImage[] = [
     src: '/assets/terminator-images/gallery/gallery (10).jpg',
     thumb: '/assets/terminator-images/gallery/gallery (10).jpg',
     alt: 'Corporate Annual Party',
-    category: 'event',
+
     title: 'Annual Party',
   },
   {
@@ -94,7 +91,7 @@ export const galleryImages: GalleryImage[] = [
     src: '/assets/terminator-images/gallery/gallery (11).jpg',
     thumb: '/assets/terminator-images/gallery/gallery (11).jpg',
     alt: 'Technology Seminar presentation',
-    category: 'event',
+
     title: 'Technology Seminar',
   },
   {
@@ -102,7 +99,7 @@ export const galleryImages: GalleryImage[] = [
     src: '/assets/terminator-images/gallery/gallery (12).jpg',
     thumb: '/assets/terminator-images/gallery/gallery (12).jpg',
     alt: 'Business Networking Meet',
-    category: 'event',
+
     title: 'Business Networking',
   },
   {
@@ -110,7 +107,7 @@ export const galleryImages: GalleryImage[] = [
     src: '/assets/terminator-images/gallery/gallery (13).jpg',
     thumb: '/assets/terminator-images/gallery/gallery (13).jpg',
     alt: 'Product Launch Event',
-    category: 'event',
+
     title: 'Product Launch',
   },
   {
@@ -118,7 +115,7 @@ export const galleryImages: GalleryImage[] = [
     src: '/assets/terminator-images/gallery/gallery (14).jpg',
     thumb: '/assets/terminator-images/gallery/gallery (14).jpg',
     alt: 'Marketing Workshop',
-    category: 'event',
+
     title: 'Marketing Workshop',
   },
   {
@@ -126,7 +123,7 @@ export const galleryImages: GalleryImage[] = [
     src: '/assets/terminator-images/gallery/gallery (15).jpg',
     thumb: '/assets/terminator-images/gallery/gallery (15).jpg',
     alt: 'Finance Conference',
-    category: 'event',
+
     title: 'Finance Conference',
   },
   {
@@ -134,7 +131,7 @@ export const galleryImages: GalleryImage[] = [
     src: '/assets/terminator-images/gallery/gallery (16).jpg',
     thumb: '/assets/terminator-images/gallery/gallery (16).jpg',
     alt: 'HR Training Session',
-    category: 'event',
+
     title: 'HR Training',
   },
   {
@@ -142,7 +139,7 @@ export const galleryImages: GalleryImage[] = [
     src: '/assets/terminator-images/gallery/gallery (17).jpg',
     thumb: '/assets/terminator-images/gallery/gallery (17).jpg',
     alt: 'Sales Summit',
-    category: 'event',
+
     title: 'Sales Summit',
   },
   {
@@ -150,7 +147,7 @@ export const galleryImages: GalleryImage[] = [
     src: '/assets/terminator-images/gallery/gallery (18).jpg',
     thumb: '/assets/terminator-images/gallery/gallery (18).jpg',
     alt: 'Customer Meetup',
-    category: 'event',
+
     title: 'Customer Meetup',
   },
   {
@@ -158,7 +155,7 @@ export const galleryImages: GalleryImage[] = [
     src: '/assets/terminator-images/gallery/gallery (19).jpg',
     thumb: '/assets/terminator-images/gallery/gallery (19).jpg',
     alt: 'Innovation Conference',
-    category: 'event',
+
     title: 'Innovation Conference',
   },
   {
@@ -166,7 +163,7 @@ export const galleryImages: GalleryImage[] = [
     src: '/assets/terminator-images/gallery/gallery (20).jpg',
     thumb: '/assets/terminator-images/gallery/gallery (20).jpg',
     alt: 'Corporate Retreat',
-    category: 'event',
+
     title: 'Corporate Retreat',
   },
   {
@@ -174,7 +171,7 @@ export const galleryImages: GalleryImage[] = [
     src: '/assets/terminator-images/gallery/gallery (21).jpg',
     thumb: '/assets/terminator-images/gallery/gallery (21).jpg',
     alt: 'Tech Demo Day',
-    category: 'event',
+
     title: 'Tech Demo Day',
   },
   {
@@ -182,7 +179,7 @@ export const galleryImages: GalleryImage[] = [
     src: '/assets/terminator-images/gallery/gallery (22).jpg',
     thumb: '/assets/terminator-images/gallery/gallery (22).jpg',
     alt: 'Annual General Meeting',
-    category: 'event',
+
     title: 'AGM 2024',
   },
   {
@@ -190,7 +187,7 @@ export const galleryImages: GalleryImage[] = [
     src: '/assets/terminator-images/gallery/gallery (23).jpg',
     thumb: '/assets/terminator-images/gallery/gallery (23).jpg',
     alt: 'Leadership Training',
-    category: 'event',
+
     title: 'Leadership Training',
   },
   {
@@ -198,7 +195,7 @@ export const galleryImages: GalleryImage[] = [
     src: '/assets/terminator-images/gallery/gallery (24).jpg',
     thumb: '/assets/terminator-images/gallery/gallery (24).jpg',
     alt: 'Employee Recognition',
-    category: 'event',
+
     title: 'Employee Recognition',
   },
   {
@@ -206,7 +203,7 @@ export const galleryImages: GalleryImage[] = [
     src: '/assets/terminator-images/gallery/gallery (25).jpg',
     thumb: '/assets/terminator-images/gallery/gallery (25).jpg',
     alt: 'Industry Awards Night',
-    category: 'event',
+
     title: 'Industry Awards',
   },
   {
@@ -214,7 +211,7 @@ export const galleryImages: GalleryImage[] = [
     src: '/assets/terminator-images/gallery/gallery (26).jpg',
     thumb: '/assets/terminator-images/gallery/gallery (26).jpg',
     alt: 'Business Strategy Summit',
-    category: 'event',
+
     title: 'Strategy Summit',
   },
   {
@@ -222,7 +219,7 @@ export const galleryImages: GalleryImage[] = [
     src: '/assets/terminator-images/gallery/gallery (27).jpg',
     thumb: '/assets/terminator-images/gallery/gallery (27).jpg',
     alt: 'Digital Marketing Conference',
-    category: 'event',
+
     title: 'Digital Marketing Conference',
   },
   {
@@ -230,7 +227,7 @@ export const galleryImages: GalleryImage[] = [
     src: '/assets/terminator-images/gallery/gallery (28).jpg',
     thumb: '/assets/terminator-images/gallery/gallery (28).jpg',
     alt: 'Startup Investor Meet',
-    category: 'event',
+
     title: 'Investor Meet',
   },
   {
@@ -238,7 +235,7 @@ export const galleryImages: GalleryImage[] = [
     src: '/assets/terminator-images/gallery/gallery (29).jpg',
     thumb: '/assets/terminator-images/gallery/gallery (29).jpg',
     alt: 'Corporate Sports Day',
-    category: 'event',
+
     title: 'Sports Day',
   },
   {
@@ -246,17 +243,16 @@ export const galleryImages: GalleryImage[] = [
     src: '/assets/terminator-images/gallery/gallery (30).jpg',
     thumb: '/assets/terminator-images/gallery/gallery (30).jpg',
     alt: 'Year End Celebration',
-    category: 'event',
+
     title: 'Year End Party',
   },
 
-  // Exhibitions (31-60)
   {
     id: '31',
     src: '/assets/terminator-images/gallery/gallery (31).jpg',
     thumb: '/assets/terminator-images/gallery/gallery (31).jpg',
     alt: 'Modern Art Exhibition installation view',
-    category: 'exhibition',
+
     title: 'Modern Art Exhibition',
   },
   {
@@ -264,7 +260,7 @@ export const galleryImages: GalleryImage[] = [
     src: '/assets/terminator-images/gallery/gallery (32).jpg',
     thumb: '/assets/terminator-images/gallery/gallery (32).jpg',
     alt: 'Technology Expo interactive display',
-    category: 'exhibition',
+
     title: 'Technology Expo',
   },
   {
@@ -272,7 +268,7 @@ export const galleryImages: GalleryImage[] = [
     src: '/assets/terminator-images/gallery/gallery (33).jpg',
     thumb: '/assets/terminator-images/gallery/gallery (33).jpg',
     alt: 'Design Showcase exhibition area',
-    category: 'exhibition',
+
     title: 'Design Showcase',
   },
   {
@@ -280,7 +276,7 @@ export const galleryImages: GalleryImage[] = [
     src: '/assets/terminator-images/gallery/gallery (34).jpg',
     thumb: '/assets/terminator-images/gallery/gallery (34).jpg',
     alt: 'Product Launch exhibition booth',
-    category: 'exhibition',
+
     title: 'Product Launch Expo',
   },
   {
@@ -288,7 +284,7 @@ export const galleryImages: GalleryImage[] = [
     src: '/assets/terminator-images/gallery/gallery (35).jpg',
     thumb: '/assets/terminator-images/gallery/gallery (35).jpg',
     alt: 'Automobile Exhibition',
-    category: 'exhibition',
+
     title: 'Auto Expo 2024',
   },
   {
@@ -296,7 +292,7 @@ export const galleryImages: GalleryImage[] = [
     src: '/assets/terminator-images/gallery/gallery (36).jpg',
     thumb: '/assets/terminator-images/gallery/gallery (36).jpg',
     alt: 'Fashion Exhibition runway',
-    category: 'exhibition',
+
     title: 'Fashion Week',
   },
   {
@@ -304,7 +300,7 @@ export const galleryImages: GalleryImage[] = [
     src: '/assets/terminator-images/gallery/gallery (37).jpg',
     thumb: '/assets/terminator-images/gallery/gallery (37).jpg',
     alt: 'Photography Exhibition',
-    category: 'exhibition',
+
     title: 'Photography Exhibition',
   },
   {
@@ -312,7 +308,7 @@ export const galleryImages: GalleryImage[] = [
     src: '/assets/terminator-images/gallery/gallery (38).jpg',
     thumb: '/assets/terminator-images/gallery/gallery (38).jpg',
     alt: 'Architecture Exhibition models',
-    category: 'exhibition',
+
     title: 'Architecture Expo',
   },
   {
@@ -320,7 +316,7 @@ export const galleryImages: GalleryImage[] = [
     src: '/assets/terminator-images/gallery/gallery (39).jpg',
     thumb: '/assets/terminator-images/gallery/gallery (39).jpg',
     alt: 'Home Decor Exhibition',
-    category: 'exhibition',
+
     title: 'Home Decor Expo',
   },
   {
@@ -328,7 +324,7 @@ export const galleryImages: GalleryImage[] = [
     src: '/assets/terminator-images/gallery/gallery (40).jpg',
     thumb: '/assets/terminator-images/gallery/gallery (40).jpg',
     alt: 'Educational Exhibition',
-    category: 'exhibition',
+
     title: 'Education Fair',
   },
   {
@@ -336,7 +332,7 @@ export const galleryImages: GalleryImage[] = [
     src: '/assets/terminator-images/gallery/gallery (41).jpg',
     thumb: '/assets/terminator-images/gallery/gallery (41).jpg',
     alt: 'Healthcare Exhibition',
-    category: 'exhibition',
+
     title: 'Healthcare Expo',
   },
   {
@@ -344,7 +340,7 @@ export const galleryImages: GalleryImage[] = [
     src: '/assets/terminator-images/gallery/gallery (42).jpg',
     thumb: '/assets/terminator-images/gallery/gallery (42).jpg',
     alt: 'Green Energy Exhibition',
-    category: 'exhibition',
+
     title: 'Energy Expo',
   },
   {
@@ -352,7 +348,7 @@ export const galleryImages: GalleryImage[] = [
     src: '/assets/terminator-images/gallery/gallery (43).jpg',
     thumb: '/assets/terminator-images/gallery/gallery (43).jpg',
     alt: 'Food and Beverage Exhibition',
-    category: 'exhibition',
+
     title: 'Food Expo',
   },
   {
@@ -360,7 +356,7 @@ export const galleryImages: GalleryImage[] = [
     src: '/assets/terminator-images/gallery/gallery (44).jpg',
     thumb: '/assets/terminator-images/gallery/gallery (44).jpg',
     alt: 'Art and Craft Exhibition',
-    category: 'exhibition',
+
     title: 'Art & Craft Fair',
   },
   {
@@ -368,7 +364,7 @@ export const galleryImages: GalleryImage[] = [
     src: '/assets/terminator-images/gallery/gallery (45).jpg',
     thumb: '/assets/terminator-images/gallery/gallery (45).jpg',
     alt: 'Book Exhibition',
-    category: 'exhibition',
+
     title: 'Book Fair',
   },
   {
@@ -376,7 +372,7 @@ export const galleryImages: GalleryImage[] = [
     src: '/assets/terminator-images/gallery/gallery (46).jpg',
     thumb: '/assets/terminator-images/gallery/gallery (46).jpg',
     alt: 'Science Exhibition',
-    category: 'exhibition',
+
     title: 'Science Expo',
   },
   //   {
@@ -384,7 +380,7 @@ export const galleryImages: GalleryImage[] = [
   //     src: '/assets/terminator-images/gallery/gallery (47).jpg',
   //     thumb: '/assets/terminator-images/gallery/gallery (47).jpg',
   //     alt: 'Digital Art Exhibition',
-  //     category: 'exhibition',
+  //
   //     title: 'Digital Art Expo',
   //   },
   //   {
@@ -392,7 +388,7 @@ export const galleryImages: GalleryImage[] = [
   //     src: '/assets/terminator-images/gallery/gallery (48).jpg',
   //     thumb: '/assets/terminator-images/gallery/gallery (48).jpg',
   //     alt: 'Industrial Exhibition',
-  //     category: 'exhibition',
+  //
   //     title: 'Industrial Expo',
   //   },
   //   {
@@ -400,7 +396,7 @@ export const galleryImages: GalleryImage[] = [
   //     src: '/assets/terminator-images/gallery/gallery (49).jpg',
   //     thumb: '/assets/terminator-images/gallery/gallery (49).jpg',
   //     alt: 'Jewelry Exhibition',
-  //     category: 'exhibition',
+  //
   //     title: 'Jewelry Expo',
   //   },
   //   {
@@ -408,7 +404,7 @@ export const galleryImages: GalleryImage[] = [
   //     src: '/assets/terminator-images/gallery/gallery (50).jpg',
   //     thumb: '/assets/terminator-images/gallery/gallery (50).jpg',
   //     alt: 'Real Estate Exhibition',
-  //     category: 'exhibition',
+  //
   //     title: 'Property Expo',
   //   },
   //   {
@@ -416,7 +412,7 @@ export const galleryImages: GalleryImage[] = [
   //     src: '/assets/terminator-images/gallery/gallery (51).jpg',
   //     thumb: '/assets/terminator-images/gallery/gallery (51).jpg',
   //     alt: 'Travel and Tourism Exhibition',
-  //     category: 'exhibition',
+  //
   //     title: 'Travel Expo',
   //   },
   //   {
@@ -424,7 +420,7 @@ export const galleryImages: GalleryImage[] = [
   //     src: '/assets/terminator-images/gallery/gallery (52).jpg',
   //     thumb: '/assets/terminator-images/gallery/gallery (52).jpg',
   //     alt: 'Sports Equipment Exhibition',
-  //     category: 'exhibition',
+  //
   //     title: 'Sports Expo',
   //   },
   //   {
@@ -432,7 +428,7 @@ export const galleryImages: GalleryImage[] = [
   //     src: '/assets/terminator-images/gallery/gallery (53).jpg',
   //     thumb: '/assets/terminator-images/gallery/gallery (53).jpg',
   //     alt: 'Music Instruments Exhibition',
-  //     category: 'exhibition',
+  //
   //     title: 'Music Expo',
   //   },
   //   {
@@ -440,7 +436,7 @@ export const galleryImages: GalleryImage[] = [
   //     src: '/assets/terminator-images/gallery/gallery (54).jpg',
   //     thumb: '/assets/terminator-images/gallery/gallery (54).jpg',
   //     alt: 'Film and Media Exhibition',
-  //     category: 'exhibition',
+  //
   //     title: 'Media Expo',
   //   },
   //   {
@@ -448,7 +444,7 @@ export const galleryImages: GalleryImage[] = [
   //     src: '/assets/terminator-images/gallery/gallery (55).jpg',
   //     thumb: '/assets/terminator-images/gallery/gallery (55).jpg',
   //     alt: 'Agriculture Exhibition',
-  //     category: 'exhibition',
+  //
   //     title: 'Agriculture Expo',
   //   },
   //   {
@@ -456,7 +452,7 @@ export const galleryImages: GalleryImage[] = [
   //     src: '/assets/terminator-images/gallery/gallery (56).jpg',
   //     thumb: '/assets/terminator-images/gallery/gallery (56).jpg',
   //     alt: 'Textile Exhibition',
-  //     category: 'exhibition',
+  //
   //     title: 'Textile Expo',
   //   },
   //   {
@@ -464,7 +460,7 @@ export const galleryImages: GalleryImage[] = [
   //     src: '/assets/terminator-images/gallery/gallery (57).jpg',
   //     thumb: '/assets/terminator-images/gallery/gallery (57).jpg',
   //     alt: 'Renewable Energy Exhibition',
-  //     category: 'exhibition',
+  //
   //     title: 'Renewable Energy Expo',
   //   },
   //   {
@@ -472,7 +468,7 @@ export const galleryImages: GalleryImage[] = [
   //     src: '/assets/terminator-images/gallery/gallery (58).jpg',
   //     thumb: '/assets/terminator-images/gallery/gallery (58).jpg',
   //     alt: 'Handicrafts Exhibition',
-  //     category: 'exhibition',
+  //
   //     title: 'Handicrafts Fair',
   //   },
   //   {
@@ -480,7 +476,7 @@ export const galleryImages: GalleryImage[] = [
   //     src: '/assets/terminator-images/gallery/gallery (59).jpg',
   //     thumb: '/assets/terminator-images/gallery/gallery (59).jpg',
   //     alt: 'Corporate Exhibition',
-  //     category: 'exhibition',
+  //
   //     title: 'Corporate Expo',
   //   },
   //   {
@@ -488,7 +484,7 @@ export const galleryImages: GalleryImage[] = [
   //     src: '/assets/terminator-images/gallery/gallery (60).jpg',
   //     thumb: '/assets/terminator-images/gallery/gallery (60).jpg',
   //     alt: 'Innovation Exhibition',
-  //     category: 'exhibition',
+  //
   //     title: 'Innovation Expo',
   //   },
 

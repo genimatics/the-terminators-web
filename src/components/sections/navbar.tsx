@@ -5,7 +5,6 @@ import { useRef, useState } from 'react';
 import { IoIosArrowDown } from 'react-icons/io';
 import { IMAGES } from '@/constants/images';
 import { TEXTS } from '@/constants/text';
-// import Button from '@/components/ui/button';
 import { Link } from '@/libs/I18nNavigation';
 
 type DropdownItem = {
@@ -93,16 +92,16 @@ const NavLinkItem = ({
 
       {item.hasDropdown && hoveredLink === item.name && (
         <div
-          className="animate-fadeIn absolute top-full left-1/2 z-50 mt-2 w-[600px] -translate-x-1/2 transform border-t-4 border-[var(--color-primary)] bg-white text-black shadow-2xl"
+          className="animate-fadeIn absolute top-full left-1/2 z-50 mt-2 w-[90vw] max-w-[800px] -translate-x-1/2 transform border-t-4 border-[var(--color-primary)] bg-white text-black shadow-2xl"
           onMouseEnter={() => handleMouseEnter(item.name)}
           onMouseLeave={() => handleMouseLeave(item.name)}
         >
-          <ul className="grid grid-cols-2 divide-x divide-gray-200">
+          <ul className="grid grid-cols-2 divide-x divide-gray-200 md:grid-cols-3 lg:grid-cols-4">
             {item.dropdownItems?.map(sub => (
-              <li key={sub.name} className="border-b border-gray-200 last:border-b-0">
+              <li key={sub.name} className="group/item border-b border-gray-200 last:border-b-0 hover:bg-[var(--color-primary)]">
                 <Link
                   href={sub.href}
-                  className="block cursor-pointer px-6 py-4 text-sm font-medium transition-all duration-200 hover:bg-[var(--color-primary)] hover:text-white"
+                  className="block cursor-pointer px-4 py-3 text-sm font-medium transition-all duration-200 group-hover/item:text-white"
                   onClick={() => {
                     setActiveLink(sub.name.toLowerCase());
                     closeDropdown();
@@ -261,21 +260,24 @@ export default function Navbar() {
                           />
                         </div>
                         {mobileDropdownOpen === item.name && (
-                          <div className="animate-fadeIn space-y-1 bg-gray-50 py-2">
-                            {item.dropdownItems?.map(sub => (
-                              <Link
-                                key={sub.name}
-                                href={sub.href}
-                                className="block cursor-pointer px-4 py-2 text-xs font-normal text-gray-600 transition-colors hover:bg-gray-100 hover:text-[var(--color-primary)]"
-                                onClick={() => {
-                                  setActiveLink(sub.name.toLowerCase());
-                                  setMenuOpen(false);
-                                  setMobileDropdownOpen(null);
-                                }}
-                              >
-                                {sub.name}
-                              </Link>
-                            ))}
+                          <div className="animate-fadeIn max-h-[80vh] overflow-y-auto bg-gray-50 py-2">
+                            <div className="grid grid-cols-1 gap-1 px-2">
+                              {item.dropdownItems?.map(sub => (
+                                <div key={sub.name} className="rounded transition-colors hover:bg-gray-100">
+                                  <Link
+                                    href={sub.href}
+                                    className="block cursor-pointer px-3 py-2.5 text-xs font-normal text-gray-600 hover:text-[var(--color-primary)]"
+                                    onClick={() => {
+                                      setActiveLink(sub.name.toLowerCase());
+                                      setMenuOpen(false);
+                                      setMobileDropdownOpen(null);
+                                    }}
+                                  >
+                                    {sub.name}
+                                  </Link>
+                                </div>
+                              ))}
+                            </div>
                           </div>
                         )}
                       </div>

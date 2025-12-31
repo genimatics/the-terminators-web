@@ -318,64 +318,68 @@ export const TEXTS = {
         href: '/services/power-generation',
       },
       {
-        name: 'Earthing, LPS & Safeties',
-        href: '/services/earthing-lps-safeties',
+        name: 'Earthing (Grounding) & Lightning Protection Systems',
+        href: '/services/earthing-grounding-lightning-protection-systems',
       },
       {
-        name: 'Industrial Electrification',
-        href: '/services/industrial-electrification',
+        name: 'Industrial Electrifications',
+        href: '/services/industrial-electrifications',
+      },
+      {
+        name: 'HT & LT Cable Laying, Jointing & Termination',
+        href: '/services/ht-lt-cable-laying-jointing-termination',
+      },
+      {
+        name: 'LT panels, PFI Panels, Motor Control Centers',
+        href: '/services/lt-panels-pfi-panels-motor-control-centers',
+      },
+      {
+        name: 'H.T & L.T Switchgear',
+        href: '/services/ht-lt-switchgear',
+      },
+      {
+        name: 'Power/ Distribution Transformers',
+        href: '/services/power-distribution-transformers',
+      },
+      {
+        name: 'Construction of Sub-Stations, Switchyards & Grids',
+        href: '/services/construction-sub-stations-switchyards-grids',
       },
       {
         name: 'Indoor & Outdoor Lighting',
         href: '/services/indoor-outdoor-lighting',
       },
       {
+        name: 'Telecommunications Towers, Masts, and Poles',
+        href: '/services/telecommunications-towers-masts-poles',
+      },
+      {
         name: 'Transmission Lines, Poles & Towers',
         href: '/services/transmission-lines-poles-towers',
       },
       {
-        name: 'Maintenance Services',
-        href: '/services/maintenance-services',
+        name: 'Radio/Base transmission Stations, Data & Switching centers',
+        href: '/services/radio-base-transmission-stations-data-switching-centers',
       },
       {
-        name: 'HT & LT Cable Laying, Jointing & Termination',
-        href: '/services/cable-laying-jointing-termination',
-      },
-      {
-        name: 'LT Panels, PFI Panels, Motor Control Centers',
-        href: '/services/lt-panels-motor-control',
-      },
-      {
-        name: 'H.T Switch Gear, Transformers, Sub-Stations',
-        href: '/services/ht-switchgear-transformers',
-      },
-      {
-        name: 'Fabrication & Construction / Maintenance',
-        href: '/services/fabrication-construction',
-      },
-      {
-        name: 'Radio/Base Transmission Stations, Data & Switching Centers',
-        href: '/services/data-switching-centers',
-      },
-      {
-        name: 'Remodeling, Relocation, Setting and Inspection',
-        href: '/services/remodeling-relocation',
-      },
-      {
-        name: 'Annual Maintenance Contracts',
-        href: '/services/annual-maintenance-contracts',
-      },
-      {
-        name: 'Explosion-proof Wiring & Equipment',
-        href: '/services/explosion-proof-systems',
-      },
-      {
-        name: 'Customized Test Benches and Panels',
-        href: '/services/test-benches-panels',
+        name: 'Safety and Security',
+        href: '/services/safety-and-security',
       },
       {
         name: 'Solar Power Systems',
         href: '/services/solar-power-systems',
+      },
+      {
+        name: 'Customized Test Benches and Panels',
+        href: '/services/customized-test-benches-panels',
+      },
+      {
+        name: 'Remodeling, Relocation, Setting and Inspection services',
+        href: '/services/remodeling-relocation-setting-inspection-services',
+      },
+      {
+        name: 'Annual maintenance Contracts (Office buildings/factories/remote locations)',
+        href: '/services/annual-maintenance-contracts',
       },
     ],
 

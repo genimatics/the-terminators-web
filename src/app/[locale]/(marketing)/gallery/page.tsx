@@ -29,7 +29,7 @@ export default async function About(props: IGalleryProps) {
     <>
       <HeroSection
         title="Our Gallery"
-        subtitle="Collection of Visuals"
+        subtitle="Glimpses of Our Projects"
         background={IMAGES.HERO.SLIDE1}
       />
       <OurGallery />

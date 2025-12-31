@@ -75,12 +75,12 @@ export default function OurGallery() {
   return (
     <section className="w-full bg-background py-16 md:py-24">
       <div className="mx-auto max-w-7xl px-4 md:px-6">
-        <div className="mb-12 text-center">
+        {/* <div className="mb-12 text-center">
           <h2 className="mb-3 text-4xl font-bold text-foreground md:text-5xl">Our Gallery</h2>
           <p className="text-sm text-muted-foreground md:text-base">
             Explore our collection of events, exhibitions, and special moments
           </p>
-        </div>
+        </div> */}
 
         <div
           ref={galleryRef}
@@ -127,12 +127,12 @@ export default function OurGallery() {
                     }`}
                     aria-hidden="true"
                   >
-                    <span className="inline-block w-fit rounded-full bg-primary px-3 py-1 text-sm font-semibold text-primary-foreground">
+                    {/* <span className="inline-block w-fit rounded-full bg-primary px-3 py-1 text-sm font-semibold text-primary-foreground">
                       {image.category === 'event' && 'Event'}
                       {image.category === 'exhibition' && 'Exhibition'}
                       {image.category === 'general' && 'Gallery'}
-                    </span>
-                    <p className="mt-2 font-medium text-white">{image.title}</p>
+                    </span> */}
+                    {/* <p className="mt-2 font-medium text-white">{image.title}</p> */}
                   </div>
                 </div>
               </a>
