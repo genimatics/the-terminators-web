@@ -24,8 +24,8 @@ export default function PrivacyPolicy() {
           <section className="mb-12 sm:mb-16">
             <div className="rounded-lg border border-border bg-secondary/50 p-6 backdrop-blur-sm sm:p-8">
               <p className="text-base leading-relaxed text-foreground sm:text-lg">
-                <span className="font-semibold text-primary">M/S THE TERMINATORS</span>
-                , established in 2003, is
+                <span className="font-semibold text-primary">M/S THE TERMINATORS </span>
+
                 committed to maintaining the highest standards in all our operations. Our policies reflect our
                 dedication to quality, safety, ethical business practices, and respect for human rights.
               </p>

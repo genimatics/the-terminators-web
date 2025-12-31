@@ -273,7 +273,7 @@ export const TEXTS = {
         ICON: '/assets/terminator-images/contact/contact-icon2.gif',
         HEADING: 'Contact Number ',
         PARAGRAPH: 'We’re ready to provide the help you need, anytime.',
-        PHONE1: '+92 21 34830726-7',
+        PHONE1: '+92 21 34830727',
         PHONE2: '+92 333 2180818',
       },
       {
@@ -576,12 +576,12 @@ export const TEXTS = {
     SUBTITLE: 'Committed to Excellence, Safety & Ethics',
     DESCRIPTION: 'At The Terminators, we uphold the highest standards in quality, safety, environmental responsibility, and ethical business practices.',
   },
-
+  // 1063 < 1024  mai just resposive issue arha ha
   CONTACT_INFO: {
     TITLE: 'For Policy Inquiries',
     DESCRIPTION: 'If you have any questions about our policies or would like more information, please contact us.',
     EMAIL: 'admin@theterminators.biz.pk',
-    PHONE: '+92 21 34830726-7',
+    PHONE: '+92 21 34830727',
     CONTACT_PERSON: 'Engr. Ahmed Zubair Siddiqui',
   },
 

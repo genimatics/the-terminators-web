@@ -10,28 +10,26 @@ export default function GetStarted() {
     <section className="w-full bg-background px-3 py-5 text-foreground md:px-5">
       <div className="max-w-8xl mx-auto flex flex-col gap-8">
 
-        <div className="grid grid-cols-1 items-stretch gap-6 lg:grid-cols-2">
+        <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
 
           <div
             className="
-              flex min-h-[420px] items-start justify-center
+              flex min-h-[420px] items-center justify-center
               bg-primary p-6 shadow-md
-              sm:min-h-[480px] sm:items-center sm:p-10
-              md:h-[420px]
-              lg:h-[480px]
-              xl:h-[550px]
+              sm:min-h-[480px] sm:p-10
+              lg:min-h-[480px]
+              xl:min-h-[550px]
             "
           >
             <div
               className="
-                flex w-full flex-col items-center justify-start gap-4
-                text-center
-                sm:flex-row sm:items-center
-                sm:gap-8 sm:text-left
+                mx-auto flex w-full max-w-2xl
+                flex-row items-center gap-8
+                text-left
               "
             >
               <ScrollReveal>
-                <div className="relative h-20 w-20 flex-shrink-0 sm:h-28 sm:w-28 md:h-36 md:w-36">
+                <div className="relative h-20 w-20 flex-shrink-0 sm:h-28 sm:w-28 md:h-32 md:w-32">
                   <Image
                     src={IMAGES.GET_STARTED.ICON}
                     alt="Electric Icon"
@@ -43,38 +41,40 @@ export default function GetStarted() {
               </ScrollReveal>
 
               <ScrollReveal delay={0.1}>
-                <div className="flex w-full max-w-full flex-col items-center justify-center text-white sm:max-w-md sm:items-start md:max-w-lg">
+                <div className="flex flex-col text-white">
                   <h2
                     className="
-                      mb-4 text-lg leading-snug font-extrabold
-                      sm:text-2xl md:text-4xl
+                      mb-4 text-lg leading-tight
+                      font-extrabold
+                      sm:text-2xl
+                      md:text-3xl
+                      lg:text-4xl
                     "
                   >
-                    Need help ?
+                    Need help?
                     <br />
-                    contact
+                    Contact
                     <br />
-                    The Terminators !
+                    The Terminators!
                     <br />
                     Fast, safe
                     <br />
                     and reliable.
                   </h2>
 
-                  <p className="mt-2 text-xs tracking-[0.25em] text-white/80 uppercase sm:text-sm">
+                  <p className="mt-1 text-xs tracking-[0.25em] text-white/80 uppercase sm:text-sm">
                     Job done right away
                   </p>
 
-                  <Link href="/contact" className="mt-6 sm:mt-5">
+                  <Link href="/contact" className="mt-6">
                     <button
                       className="
-                        cursor-pointer rounded-sm bg-white
+                        w-fit cursor-pointer rounded-sm bg-white
                         px-6 py-3
                         text-sm font-semibold
                         text-primary
                         transition-all
-                        hover:bg-white/90
-                        hover:shadow-md
+                        hover:bg-white/90 hover:shadow-md
                       "
                     >
                       Contact Us
@@ -86,8 +86,11 @@ export default function GetStarted() {
           </div>
 
           <div
-            className="group relative h-80 overflow-hidden
-                       sm:h-96 md:h-[420px] lg:h-[480px] xl:h-[550px]"
+            className="
+              group relative h-80 overflow-hidden
+              sm:h-96 md:h-[420px]
+              lg:h-[480px] xl:h-[550px]
+            "
             role="button"
             tabIndex={0}
           >
@@ -98,7 +101,6 @@ export default function GetStarted() {
               className="object-cover transition-all duration-500 group-hover:brightness-90"
             />
           </div>
-
         </div>
 
         <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">

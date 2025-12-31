@@ -41,13 +41,13 @@ const leadershipData: LeadershipMember[] = [
   },
 ];
 
-const ABOUT_DESCRIPTION = `
-M/s THE TERMINATORS is a leading engineering and contracting firm, serving its valued clients for over three decades in the fields of power generation, electrical distribution, and energy management. Established on the principles of technical excellence, innovation, and client trust, the company has built a reputation for delivering world-class engineering solutions across industries.
+// const ABOUT_DESCRIPTION = `
+// M/s THE TERMINATORS is a leading engineering and contracting firm, serving its valued clients for over three decades in the fields of power generation, electrical distribution, and energy management. Established on the principles of technical excellence, innovation, and client trust, the company has built a reputation for delivering world-class engineering solutions across industries.
 
-With extensive expertise in substations, powerhouses, and industrial units, THE TERMINATORS offers end-to-end solutions ranging from design, installation, and commissioning to testing, maintenance, and safety assurance. Our services cover the entire electrical infrastructure including MV/LV panels, generators, switchgear, cabling and terminations, earthing systems, illumination, lightning protection, and customized safety solutions.
+// With extensive expertise in substations, powerhouses, and industrial units, THE TERMINATORS offers end-to-end solutions ranging from design, installation, and commissioning to testing, maintenance, and safety assurance. Our services cover the entire electrical infrastructure including MV/LV panels, generators, switchgear, cabling and terminations, earthing systems, illumination, lightning protection, and customized safety solutions.
 
-Built on a legacy of trust, quality, and innovation, THE TERMINATORS continues to empower industries with reliable solutions that ensure long-term operational efficiency, safety, and sustainability.
-`;
+// Built on a legacy of trust, quality, and innovation, THE TERMINATORS continues to empower industries with reliable solutions that ensure long-term operational efficiency, safety, and sustainability.
+// `;
 
 const AboutTeam: React.FC = () => {
   const getIcon = (iconType: 'user' | 'users' | 'settings') => {
@@ -79,10 +79,10 @@ const AboutTeam: React.FC = () => {
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
           <div>
             <h1 className="mb-6 text-4xl leading-tight font-bold text-gray-800 lg:text-5xl">
-              About Us And Our Leadership
+              Our Leadership
             </h1>
 
-            <div
+            {/* <div
               className="
                 scrollbar-hide
                 mb-12
@@ -96,7 +96,7 @@ const AboutTeam: React.FC = () => {
               "
             >
               {ABOUT_DESCRIPTION}
-            </div>
+            </div> */}
 
             <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
               {leadershipData.map((member, index) => (

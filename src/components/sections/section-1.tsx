@@ -21,43 +21,41 @@ export default function SectionOne(): JSX.Element {
           src={IMAGES.SECTION_ONE.BG}
           alt="Background"
           fill
-          className="contain object-cover"
+          className="object-cover"
           priority
         />
       </div>
 
       <div className="relative z-10 grid grid-cols-1 items-center gap-10 lg:grid-cols-2">
         <ScrollReveal>
-          <div className="space-y-6 text-center lg:text-left">
+          <div className="mx-auto max-w-xl space-y-6 text-left">
             <p className="text-sm tracking-wide text-gray-500 uppercase">
               WIDE RANGE OF ELECTRICAL SERVICES
             </p>
 
             <h2 className="text-4xl font-bold text-foreground md:text-5xl">
               Do you need Electrical Services?
-              <AnimatedHighlightText text="Look no further!" className="block" />
+              <AnimatedHighlightText
+                text="Look no further!"
+                className="block"
+              />
             </h2>
 
-            <p className="scrollbar-hide
-                mx-auto
-                mb-12
-                h-52
-                max-w-xl
-                overflow-y-scroll
+            <p
+              className="
                 text-sm
                 leading-relaxed
-                 text-gray-600
+                text-gray-600
                 md:text-base
-                lg:mx-0"
+              "
             >
               M/S THE TERMINATORS was established in January 2003 as a General Services Contractor. The firm now comprises a number of qualified and skilled Electrical, Telecommunication, and Mechanical Engineers and Technicians with several years of hand-on expertise in the entire spectrum of Equipment & Systems Installations, Repairs and Maintenance. The core specialty being Power Generation, Transmission, Automatic Load Transfer / Switching HT, LT Electrical & Telephone cable laying, Jointing (subsurface, Ducts pipes & Cable Trays), Testing & its connection and Termination on power & control panels, switch boards & utility Equipment is in residential & Commercial Buildings, Industries & Other Classified Areas.
-              All Efforts are made to undertake any job with utmost professional skills, meeting the standard procedure and codes framed by world’s renowned regulatory bodies and in discharging works classified and hazardous areas where most stringent rules must be followed for safe installation, testing and operation of Electrical and Instrumentation.
-
+              <br />
+              <br />
+              All efforts are made to undertake any job with utmost professional skills, meeting standard procedures and codes framed by the world’s renowned regulatory bodies, especially in classified and hazardous areas where strict safety rules must be followed for installation, testing, and operation of electrical and instrumentation systems.
             </p>
 
-            {/* mx-auto max-w-xl text-sm leading-relaxed text-gray-600 md:text-base lg:mx-0 */}
-
-            <ul className="mx-auto max-w-md space-y-2 text-gray-700 lg:mx-0">
+            <ul className="space-y-2 text-gray-700">
               {features.map((feature, index) => (
                 <li key={index} className="flex items-start gap-2">
                   <span className="font-bold text-primary">✔</span>
@@ -66,58 +64,69 @@ export default function SectionOne(): JSX.Element {
               ))}
             </ul>
 
-            <Link href="services" className="inline-block">
-              <Button disabled={false} className="px-6 py-3">All Services</Button>
-            </Link>
+            <div className="w-fit">
+              <Link href="services">
+                <Button className="px-6 py-3">All Services</Button>
+              </Link>
+            </div>
           </div>
         </ScrollReveal>
 
         <div className="relative flex w-full flex-col items-center">
           <div className="grid w-full grid-cols-2 gap-5 sm:hidden">
-            {[IMAGES.SECTION_ONE.WORK1, IMAGES.SECTION_ONE.WORK2, IMAGES.SECTION_ONE.WORK3, IMAGES.SECTION_ONE.WORK4].map(
-              (imgSrc, idx) => (
-                <div key={idx} className="flex items-center justify-center overflow-hidden">
+            {[
+              IMAGES.SECTION_ONE.WORK1,
+              IMAGES.SECTION_ONE.WORK2,
+              IMAGES.SECTION_ONE.WORK3,
+              IMAGES.SECTION_ONE.WORK4,
+            ].map((imgSrc, idx) => (
+              <div key={idx} className="overflow-hidden">
+                <Image
+                  src={imgSrc}
+                  alt={`Electrician work ${idx + 1}`}
+                  width={460}
+                  height={460}
+                  className="h-56 w-full border border-black object-cover shadow-md"
+                />
+              </div>
+            ))}
+          </div>
+
+          <div className="hidden w-full flex-col items-center sm:flex">
+            <div className="grid w-full grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-3">
+              {[
+                IMAGES.SECTION_ONE.WORK1,
+                IMAGES.SECTION_ONE.WORK2,
+                IMAGES.SECTION_ONE.WORK3,
+              ].map((imgSrc, idx) => (
+                <div
+                  key={idx}
+                  className={`overflow-hidden ${
+                    idx === 2 ? 'sm:col-span-2 md:col-auto' : ''
+                  }`}
+                >
                   <Image
                     src={imgSrc}
                     alt={`Electrician work ${idx + 1}`}
                     width={460}
                     height={460}
-                    className="h-56 w-full border border-black object-cover shadow-md transition-all duration-300 group-hover:opacity-90"
+                    className={`w-full border border-black object-cover shadow-md ${
+                      idx === 0
+                        ? 'h-56 sm:h-64 md:h-72'
+                        : 'h-56 sm:h-72 md:h-80'
+                    }`}
                   />
                 </div>
-              ),
-            )}
-          </div>
-
-          <div className="hidden w-full flex-col items-center sm:flex">
-            <div className="grid w-full grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-3">
-              {[IMAGES.SECTION_ONE.WORK1, IMAGES.SECTION_ONE.WORK2, IMAGES.SECTION_ONE.WORK3].map(
-                (imgSrc, idx) => (
-                  <div
-                    key={idx}
-                    className={`group flex items-center justify-center overflow-hidden
-                      ${idx === 2 ? 'sm:col-span-2 md:col-auto' : ''}`}
-                  >
-                    <Image
-                      src={imgSrc}
-                      alt={`Electrician work ${idx + 1}`}
-                      width={460}
-                      height={460}
-                      className={`border border-black object-cover transition-all duration-300 group-hover:opacity-90
-                        ${idx === 0 ? 'h-56 sm:h-64 md:h-72' : 'h-56 sm:h-72 md:h-80'} w-full`}
-                    />
-                  </div>
-                ),
-              )}
+              ))}
             </div>
 
-            <div className="group mt-6 w-full overflow-hidden sm:w-5/6 md:w-2/4">
+            <div className="mt-6 w-full overflow-hidden sm:w-5/6 md:w-2/4">
               <Image
                 src={IMAGES.SECTION_ONE.WORK4}
                 alt="Electrical service bottom"
                 width={460}
                 height={460}
-                className="h-56 w-full border border-black object-cover shadow-md transition-all duration-300 group-hover:opacity-90 sm:h-72 md:h-72"
+                className="h-56 w-full border border-black object-cover shadow-md sm:h-72"
               />
             </div>
           </div>
