@@ -46,10 +46,10 @@ export default function OurEvents() {
   return (
     <section className="w-full bg-background py-16 md:py-24">
       <div className="mx-auto max-w-7xl px-4 md:px-6">
-        <div className="mb-12 text-center">
+        {/* <div className="mb-12 text-center">
           <h2 className="mb-3 text-4xl font-bold text-foreground md:text-5xl">Our Events</h2>
           <p className="text-sm text-muted-foreground md:text-base">Explore our collection of events and activities</p>
-        </div>
+        </div> */}
 
         <div
           ref={galleryRef}

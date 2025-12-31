@@ -132,7 +132,7 @@ export default function OurGallery() {
                       {image.category === 'exhibition' && 'Exhibition'}
                       {image.category === 'general' && 'Gallery'}
                     </span> */}
-                    {/* <p className="mt-2 font-medium text-white">{image.title}</p> */}
+                    <p className="mt-2 font-medium text-white">{image.title}</p>
                   </div>
                 </div>
               </a>
