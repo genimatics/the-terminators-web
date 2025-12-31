@@ -122,7 +122,7 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
                 <h3 className="mb-4 border-b pb-2 text-xl font-semibold text-gray-800">
                   Details
                 </h3>
-                <p className="leading-relaxed text-gray-700">
+                <p className="text-justify leading-relaxed text-gray-700">
                   {service.details.overview}
                   {' '}
                 </p>
