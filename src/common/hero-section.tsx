@@ -8,29 +8,43 @@ type HeroSectionProps = {
   background: string;
 };
 
-export default function HeroSection({ title, subtitle, background }: HeroSectionProps) {
+export default function HeroSection({
+  title,
+  subtitle,
+  background,
+}: HeroSectionProps) {
   return (
     <section
-      className="relative flex h-[50vh] w-full items-center justify-center bg-cover bg-center sm:h-[60vh] md:h-[70vh]"
+      className="
+        relative
+        h-[40vh]
+        w-full
+        bg-cover
+        bg-center
+        pt-16
+        sm:h-[45vh]
+        md:h-[55vh]
+        md:pt-24
+        lg:h-[60vh]
+        lg:pt-28
+      "
       style={{ backgroundImage: `url(${background})` }}
     >
       <div className="absolute inset-0 bg-black/60 backdrop-blur-xs" />
 
-      <div className="relative z-10 flex w-full flex-col items-center justify-center gap-4 px-4 text-white sm:px-8">
-
+      <div className="relative z-10 flex h-full flex-col items-center justify-center px-4 text-white">
         <ScrollReveal>
-          <h1 className="text-center text-3xl font-extrabold sm:text-4xl md:text-6xl lg:text-7xl">
+          <h1 className="text-center text-2xl font-extrabold sm:text-3xl md:text-5xl lg:text-6xl">
             {title}
           </h1>
         </ScrollReveal>
 
         <ScrollReveal delay={0.2}>
-          <div className="flex items-center gap-2 text-sm sm:gap-3 sm:text-lg md:text-xl">
+          <div className="mt-3 flex items-center gap-2 text-xs sm:text-base md:text-lg">
             <ChevronRight className="h-4 w-4 sm:h-5 sm:w-5" />
-            <span className="font-semibold text-white">{subtitle}</span>
+            <span className="font-semibold">{subtitle}</span>
           </div>
         </ScrollReveal>
-
       </div>
     </section>
   );

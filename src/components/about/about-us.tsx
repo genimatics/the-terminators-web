@@ -19,12 +19,8 @@ const AboutUs: React.FC = () => {
 
       <div className="absolute inset-0 bg-black/50" />
 
-      <div className="relative z-10 mx-auto max-w-4xl px-6 text-center">
-        {/* <h1 className="mb-6 text-4xl font-bold text-white lg:text-5xl">
-          About Us
-        </h1> */}
-
-        <p className="text-base leading-relaxed text-white lg:text-lg">
+      <div className="relative z-10 mx-auto max-w-4xl px-6">
+        <p className="text-justify text-left text-base leading-relaxed text-white lg:text-lg">
           {ABOUT_DESCRIPTION}
         </p>
       </div>

@@ -43,6 +43,8 @@ export default function SectionOne(): JSX.Element {
 
             <p
               className="
+                text-justify
+                text-left
                 text-sm
                 leading-relaxed
                 text-gray-600
