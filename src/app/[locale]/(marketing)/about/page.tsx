@@ -33,7 +33,7 @@ export default async function About(props: IAboutProps) {
   return (
     <>
       <HeroSection
-        title="About Us"
+        title="About"
         subtitle="Passion Behind Our Work"
         background={IMAGES.HERO.SLIDE1}
       />

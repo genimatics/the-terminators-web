@@ -5,7 +5,7 @@ export default function PrivacyPolicy() {
   return (
     <div className="min-h-screen bg-background py-12 text-foreground">
       <div
-        className="bg-primary px-4 py-12 text-primary-foreground backdrop-blur-2xl sm:py-16 lg:py-20"
+        className="bg-primary px-4 py-14 text-primary-foreground backdrop-blur-2xl sm:py-18 lg:py-22"
         style={{ backgroundImage: `url(${IMAGES.HERO.SLIDE1})` }}
       >
         <div className="absolute inset-0 bg-black/40 backdrop-blur-sm"></div>
@@ -26,7 +26,7 @@ export default function PrivacyPolicy() {
               <p className="text-base leading-relaxed text-foreground sm:text-lg">
                 <span className="font-semibold text-primary">M/S THE TERMINATORS </span>
 
-                committed to maintaining the highest standards in all our operations. Our policies reflect our
+                is committed to maintaining the highest standards in all our operations. Our policies reflect our
                 dedication to quality, safety, ethical business practices, and respect for human rights.
               </p>
             </div>
@@ -127,7 +127,14 @@ export default function PrivacyPolicy() {
                   </div>
                   <div>
                     <p className="text-xs font-medium opacity-75 sm:text-sm">Email</p>
-                    <p className="text-base font-medium sm:text-lg">{TEXTS.CONTACT_INFO.EMAIL}</p>
+                    <p className="text-base font-medium sm:text-lg">
+                      {' '}
+                      <a
+                        href={`mailto:${TEXTS.CONTACT_INFO.EMAIL}`}
+                      >
+                        {TEXTS.CONTACT_INFO.EMAIL}
+                      </a>
+                    </p>
                   </div>
                 </div>
 
@@ -140,7 +147,14 @@ export default function PrivacyPolicy() {
                   </div>
                   <div>
                     <p className="text-xs font-medium opacity-75 sm:text-sm">Phone</p>
-                    <p className="text-base font-medium sm:text-lg">{TEXTS.CONTACT_INFO.PHONE}</p>
+                    <p className="text-base font-medium sm:text-lg">
+                      {' '}
+                      <a
+                        href={`tel:${TEXTS.CONTACT_INFO.PHONE}`}
+                      >
+                        {TEXTS.CONTACT_INFO.PHONE}
+                      </a>
+                    </p>
                   </div>
                 </div>
 
