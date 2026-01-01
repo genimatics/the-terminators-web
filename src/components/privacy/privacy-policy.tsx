@@ -5,7 +5,6 @@ import { TEXTS } from '@/constants/text';
 export default function PrivacyPolicy() {
   return (
     <div className="min-h-screen bg-background py-12 text-foreground">
-      {/* HERO */}
       <div
         className="relative bg-primary px-4 py-14 text-primary-foreground backdrop-blur-2xl sm:py-18 lg:py-22"
         style={{ backgroundImage: `url(${IMAGES.HERO.SLIDE1})` }}
@@ -30,7 +29,7 @@ export default function PrivacyPolicy() {
           {/* INTRO */}
           <section className="mb-12 sm:mb-16">
             <div className="rounded-lg border border-border bg-secondary/50 p-6 backdrop-blur-sm sm:p-8">
-              <p className="text-justify text-left text-base leading-relaxed text-foreground sm:text-lg">
+              <p className="text-justify text-base leading-relaxed text-foreground sm:text-lg">
                 <span className="font-semibold text-primary">
                   M/S THE TERMINATORS
                 </span>
@@ -42,7 +41,6 @@ export default function PrivacyPolicy() {
             </div>
           </section>
 
-          {/* QHSE POLICY */}
           <section className="mb-12 sm:mb-16">
             <div className="mb-8">
               <h2 className="relative inline-block pb-3 text-3xl font-bold sm:text-4xl">
@@ -57,7 +55,7 @@ export default function PrivacyPolicy() {
                   <div className="mt-1 h-6 w-6 flex-shrink-0 rounded-full bg-primary/20">
                     <div className="m-auto mt-1.5 h-3 w-3 rounded-full bg-primary"></div>
                   </div>
-                  <p className="text-justify text-left text-base leading-relaxed sm:text-lg">
+                  <p className="text-justify text-base leading-relaxed sm:text-lg">
                     {point}
                   </p>
                 </div>
@@ -74,10 +72,10 @@ export default function PrivacyPolicy() {
             </div>
 
             <div className="space-y-4 rounded-lg border border-border bg-card p-6 sm:p-8">
-              <p className="text-justify text-left text-base leading-relaxed font-medium sm:text-lg">
+              <p className="text-justify text-base leading-relaxed font-medium sm:text-lg">
                 {TEXTS.ETHICAL_POLICY.CONTENT}
               </p>
-              <p className="text-justify text-left text-base leading-relaxed sm:text-lg">
+              <p className="text-justify text-base leading-relaxed sm:text-lg">
                 {TEXTS.ETHICAL_POLICY.SUB_CONTENT}
               </p>
             </div>
@@ -91,7 +89,7 @@ export default function PrivacyPolicy() {
               </h2>
             </div>
 
-            <p className="mb-6 text-justify text-left text-base leading-relaxed sm:text-lg">
+            <p className="mb-6 text-justify text-base leading-relaxed sm:text-lg">
               {TEXTS.HUMAN_RIGHTS_POLICY.CONTENT}
             </p>
 
@@ -109,7 +107,7 @@ export default function PrivacyPolicy() {
                       clipRule="evenodd"
                     />
                   </svg>
-                  <p className="text-justify text-left text-base leading-relaxed sm:text-lg">
+                  <p className="text-justify text-base leading-relaxed sm:text-lg">
                     {point}
                   </p>
                 </div>
@@ -120,7 +118,7 @@ export default function PrivacyPolicy() {
           <section className="overflow-hidden rounded-xl bg-primary text-primary-foreground shadow-lg">
             <div className="p-6 sm:p-8 lg:p-10">
               <h3 className="mb-3 text-2xl font-bold sm:text-3xl">{TEXTS.CONTACT_INFO.TITLE}</h3>
-              <p className="mb-8 max-w-2xl text-justify text-left text-base opacity-90 sm:text-lg">
+              <p className="mb-8 max-w-2xl text-justify text-base opacity-90 sm:text-lg">
                 {TEXTS.CONTACT_INFO.DESCRIPTION}
               </p>
 
@@ -134,7 +132,7 @@ export default function PrivacyPolicy() {
                   </div>
                   <div>
                     <p className="text-xs font-medium opacity-75 sm:text-sm">Email</p>
-                    <p className="text-left text-base font-medium sm:text-lg">
+                    <p className="text-base font-medium sm:text-lg">
                       <a href={`mailto:${TEXTS.CONTACT_INFO.EMAIL}`}>{TEXTS.CONTACT_INFO.EMAIL}</a>
                     </p>
                   </div>
@@ -148,7 +146,7 @@ export default function PrivacyPolicy() {
                   </div>
                   <div>
                     <p className="text-xs font-medium opacity-75 sm:text-sm">Phone</p>
-                    <p className="text-left text-base font-medium sm:text-lg">
+                    <p className="text-base font-medium sm:text-lg">
                       <a href={`tel:${TEXTS.CONTACT_INFO.PHONE}`}>{TEXTS.CONTACT_INFO.PHONE}</a>
                     </p>
                   </div>
@@ -166,7 +164,7 @@ export default function PrivacyPolicy() {
                   </div>
                   <div>
                     <p className="text-xs font-medium opacity-75 sm:text-sm">Contact Person</p>
-                    <p className="text-left text-base font-medium sm:text-lg">
+                    <p className="text-base font-medium sm:text-lg">
                       {TEXTS.CONTACT_INFO.CONTACT_PERSON}
                     </p>
                   </div>
