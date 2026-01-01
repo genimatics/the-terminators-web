@@ -2,6 +2,7 @@
 
 import {
   Facebook,
+  Linkedin,
   Mail,
   Phone,
 } from 'lucide-react';
@@ -112,14 +113,14 @@ export default function Footer() {
               <Facebook className="h-6 w-6" />
             </Link>
 
-            {/* <Link
-              href="https://www.linkedin.com/company/theterminator/"
+            <Link
+              href="http://www.linkedin.com/in/ahmed-zubair-siddiqui-70a24122"
               target="_blank"
               rel="noopener noreferrer"
               className="transition hover:text-primary"
             >
               <Linkedin className="h-6 w-6" />
-            </Link> */}
+            </Link>
           </div>
 
         </div>
