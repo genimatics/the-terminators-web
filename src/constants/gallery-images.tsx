@@ -460,42 +460,24 @@ export const galleryImages: GalleryImage[] = [
     alt: 'Power Distribution Transformers',
     title: 'Power Distribution Transformers',
   },
-  // {
-  //   id: '64',
-  //   src: '/assets/terminator-images/gallery/Pictures/Power , Distibution Transformers/20210309_234051.jpg',
-  //   thumb: '/assets/terminator-images/gallery/Pictures/Power , Distibution Transformers/20210309_234051.jpg',
-  //   alt: 'Power Distribution Transformers',
-  //   title: 'Power Distribution Transformers',
-  // },
+
   // PPEs, staff
+  //
   // {
-  //   id: '65',
-  //   src: '/assets/terminator-images/gallery/Pictures/PPEs , staff/20210309_234007.jpg',
-  //   thumb: '/assets/terminator-images/gallery/Pictures/PPEs , staff/20210309_234007.jpg',
+  //   id: '66',
+  //   src: '/assets/terminator-images/gallery/Pictures/PPEs , staff/20210309_234051.jpg',
+  //   thumb: '/assets/terminator-images/gallery/Pictures/PPEs , staff/20210309_234051.jpg',
   //   alt: 'PPEs, staff',
   //   title: 'PPEs, staff',
   // },
-  {
-    id: '66',
-    src: '/assets/terminator-images/gallery/Pictures/PPEs , staff/20210309_234051.jpg',
-    thumb: '/assets/terminator-images/gallery/Pictures/PPEs , staff/20210309_234051.jpg',
-    alt: 'PPEs, staff',
-    title: 'PPEs, staff',
-  },
-  {
-    id: '67',
-    src: '/assets/terminator-images/gallery/Pictures/PPEs , staff/20210309_234155.jpg',
-    thumb: '/assets/terminator-images/gallery/Pictures/PPEs , staff/20210309_234155.jpg',
-    alt: 'PPEs, staff',
-    title: 'PPEs, staff',
-  },
   // {
-  //   id: '68',
-  //   src: '/assets/terminator-images/gallery/Pictures/PPEs , staff/20210309_234329.jpg',
-  //   thumb: '/assets/terminator-images/gallery/Pictures/PPEs , staff/20210309_234329.jpg',
+  //   id: '67',
+  //   src: '/assets/terminator-images/gallery/Pictures/PPEs , staff/20210309_234155.jpg',
+  //   thumb: '/assets/terminator-images/gallery/Pictures/PPEs , staff/20210309_234155.jpg',
   //   alt: 'PPEs, staff',
   //   title: 'PPEs, staff',
   // },
+
   // {
   //   id: '69',
   //   src: '/assets/terminator-images/gallery/Pictures/PPEs , staff/20210309_234410.jpg',
@@ -526,20 +508,20 @@ export const galleryImages: GalleryImage[] = [
     title: 'Mob Radio station',
   },
   // Safety Equipmentimages (14).jpg
-  {
-    id: '73',
-    src: '/assets/terminator-images/gallery/Pictures/Safety Equipment/20210309_234007.jpg',
-    thumb: '/assets/terminator-images/gallery/Pictures/Safety Equipment/20210309_234007.jpg',
-    alt: 'Safety Equipment',
-    title: 'Safety Equipment',
-  },
-  {
-    id: '74',
-    src: '/assets/terminator-images/gallery/Pictures/Safety Equipment/20210309_234329.jpg',
-    thumb: '/assets/terminator-images/gallery/Pictures/Safety Equipment/20210309_234329.jpg',
-    alt: 'Safety Equipment',
-    title: 'Safety Equipment',
-  },
+  // {
+  //   id: '73',
+  //   src: '/assets/terminator-images/gallery/Pictures/Safety Equipment/20210309_234007.jpg',
+  //   thumb: '/assets/terminator-images/gallery/Pictures/Safety Equipment/20210309_234007.jpg',
+  //   alt: 'Safety Equipment',
+  //   title: 'Safety Equipment',
+  // },
+  // {
+  //   id: '74',
+  //   src: '/assets/terminator-images/gallery/Pictures/Safety Equipment/20210309_234329.jpg',
+  //   thumb: '/assets/terminator-images/gallery/Pictures/Safety Equipment/20210309_234329.jpg',
+  //   alt: 'Safety Equipment',
+  //   title: 'Safety Equipment',
+  // },
   // {
   //   id: '75',
   //   src: '/assets/terminator-images/gallery/Pictures/Safety Equipment/20210311_152721.jpg',
@@ -728,21 +710,21 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: '101',
-    src: '/assets/terminator-images/gallery/Pictures/Electrical installations.jpeg',
+    src: '/assets/terminator-images/gallery/Pictures/Electrical installations1.jpeg',
     thumb: '/assets/terminator-images/gallery/Pictures/Electrical installations1.jpeg',
     alt: 'Electrical installations',
     title: 'Electrical installations',
   },
   {
     id: '102',
-    src: '/assets/terminator-images/gallery/Pictures/Electrical installations.jpeg',
+    src: '/assets/terminator-images/gallery/Pictures/Electrical installations2.jpeg',
     thumb: '/assets/terminator-images/gallery/Pictures/Electrical installations2.jpeg',
     alt: 'Electrical installations',
     title: 'Electrical installations',
   },
   {
     id: '103',
-    src: '/assets/terminator-images/gallery/Pictures/Electrical installations.jpeg',
+    src: '/assets/terminator-images/gallery/Pictures/Electrical installations3.jpeg',
     thumb: '/assets/terminator-images/gallery/Pictures/Electrical installations3.jpeg',
     alt: 'Electrical installations',
     title: 'Electrical installations',
