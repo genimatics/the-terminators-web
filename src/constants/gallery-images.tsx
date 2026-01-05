@@ -713,20 +713,20 @@ export const galleryImages: GalleryImage[] = [
     src: '/assets/terminator-images/gallery/Pictures/Electrical installations1.jpeg',
     thumb: '/assets/terminator-images/gallery/Pictures/Electrical installations1.jpeg',
     alt: 'Electrical installations',
-    title: 'Electrical installations',
+    title: 'Electrical Installations',
   },
   {
     id: '102',
     src: '/assets/terminator-images/gallery/Pictures/Electrical installations2.jpeg',
     thumb: '/assets/terminator-images/gallery/Pictures/Electrical installations2.jpeg',
     alt: 'Electrical installations',
-    title: 'Electrical installations',
+    title: 'Electrical Installations',
   },
   {
     id: '103',
     src: '/assets/terminator-images/gallery/Pictures/Electrical installations3.jpeg',
     thumb: '/assets/terminator-images/gallery/Pictures/Electrical installations3.jpeg',
     alt: 'Electrical installations',
-    title: 'Electrical installations',
+    title: 'Electrical Installations',
   },
 ];
