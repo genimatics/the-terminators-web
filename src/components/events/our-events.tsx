@@ -30,66 +30,44 @@ export default function OurEvents() {
     },
   });
 
-  const getImageClass = (index: number) => {
-    if (index % 7 === 0) {
-      return 'col-span-2 row-span-2';
-    }
-    if (index % 5 === 0) {
-      return 'col-span-2 row-span-1';
-    }
-    if (index % 3 === 0) {
-      return 'col-span-1 row-span-2';
-    }
-    return 'col-span-1 row-span-1';
-  };
-
   return (
     <section className="w-full bg-background py-16 md:py-24">
       <div className="mx-auto max-w-7xl px-4 md:px-6">
-        {/* <div className="mb-12 text-center">
-          <h2 className="mb-3 text-4xl font-bold text-foreground md:text-5xl">Our Events</h2>
-          <p className="text-sm text-muted-foreground md:text-base">Explore our collection of events and activities</p>
-        </div> */}
-
         <div
           ref={galleryRef}
-          className="grid auto-rows-[200px] grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
+          className="flex flex-wrap justify-center gap-6"
         >
-          {eventsImages.map((image, index) => {
-            const gridClass = getImageClass(index);
-
-            return (
+          {eventsImages.map((image, index) => (
+            <div
+              key={image.id}
+              className="w-full sm:w-[calc(33.333%-1rem)] md:w-[calc(33.333%-1.5rem)] lg:w-[calc(33.333%-2rem)]"
+            >
               <a
-                key={image.id}
                 href={image.full}
-                className={`gallery-item group relative block overflow-hidden rounded-lg border border-border bg-card transition-all duration-300 ${gridClass}`}
+                className="gallery-item group relative block overflow-hidden rounded-lg border border-border bg-card transition-all duration-300"
                 data-src={image.full}
                 data-thumb={image.thumb}
-                style={{
-                  minHeight: '200px',
-                  maxHeight: '400px',
-                }}
               >
-                <div className="relative h-full w-full">
+                <div className="relative aspect-square w-full">
                   <Image
                     src={image.thumb || '/placeholder.svg'}
                     alt=""
                     fill
-                    sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                    sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"
                     className="object-cover transition-transform duration-500 group-hover:scale-110"
-                    priority={index < 4}
-                    loading={index < 4 ? 'eager' : 'lazy'}
+                    priority={index < 3}
+                    loading={index < 3 ? 'eager' : 'lazy'}
                   />
 
-                  <div className="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-black/80 via-black/30 to-transparent p-4 opacity-0 transition-all duration-300 group-hover:opacity-100">
+                  {/* <div className="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-black/80 via-black/30 to-transparent p-4 opacity-0 transition-all duration-300 group-hover:opacity-100">
                     <span className="inline-block w-fit rounded-full bg-primary px-3 py-1 text-sm font-semibold text-primary-foreground">
                       Event
                     </span>
-                  </div>
+                  </div> */}
                 </div>
               </a>
-            );
-          })}
+            </div>
+          ))}
         </div>
 
         {eventsImages.length === 0 && (

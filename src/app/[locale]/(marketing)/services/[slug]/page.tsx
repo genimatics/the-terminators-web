@@ -4,7 +4,6 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { IMAGES } from '@/constants/images';
 import { getAllServices, getServiceBySlug } from '@/types/services';
-import ClientWrapper from './client-wrapper';
 
 type ServicePageProps = {
   params: Promise<{
@@ -131,7 +130,7 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
           </div>
 
           <div className="space-y-8">
-            <ClientWrapper service={service} />
+            {/* <ClientWrapper service={service} /> */}
 
             <div className="rounded-2xl bg-white p-6 shadow-lg">
               <h3 className="mb-4 text-lg font-semibold text-gray-900">
