@@ -116,12 +116,12 @@ export const eventsImages: EventImage[] = [
     full: '/assets/terminator-images/events/Exhibition/IDEAS 2024/IMG-20251125-WA0003.jpg',
     alt: '',
   },
-  {
-    id: 'event-19',
-    thumb: '/assets/terminator-images/events/Exhibition/IDEAS 2024/IMG-20251125-WA0007.jpg',
-    full: '/assets/terminator-images/events/Exhibition/IDEAS 2024/IMG-20251125-WA0007.jpg',
-    alt: '',
-  },
+  // {
+  //   id: 'event-19',
+  //   thumb: '/assets/terminator-images/events/Exhibition/IDEAS 2024/IMG-20251125-WA0007.jpg',
+  //   full: '/assets/terminator-images/events/Exhibition/IDEAS 2024/IMG-20251125-WA0007.jpg',
+  //   alt: '',
+  // },
   {
     id: 'event-20',
     thumb: '/assets/terminator-images/events/Exhibition/IDEAS 2024/IMG-20251125-WA0019.jpg',

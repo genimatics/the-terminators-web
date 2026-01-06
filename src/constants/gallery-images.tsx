@@ -142,13 +142,13 @@ export const galleryImages: GalleryImage[] = [
     alt: 'Earthing & LPS',
     title: 'Earthing & LPS',
   },
-  {
-    id: '20',
-    src: '/assets/terminator-images/gallery/Pictures/Earthing & LPS/Earthing.jpg',
-    thumb: '/assets/terminator-images/gallery/Pictures/Earthing & LPS/Earthing.jpg',
-    alt: 'Earthing',
-    title: 'Earthing',
-  },
+  // {
+  //   id: '20',
+  //   src: '/assets/terminator-images/gallery/Pictures/Earthing & LPS/Earthing.jpg',
+  //   thumb: '/assets/terminator-images/gallery/Pictures/Earthing & LPS/Earthing.jpg',
+  //   alt: 'Earthing',
+  //   title: 'Earthing',
+  // },
   {
     id: '21',
     src: '/assets/terminator-images/gallery/Pictures/Earthing & LPS/lightning-protection-system-testing-commissioning.gif',
@@ -163,13 +163,13 @@ export const galleryImages: GalleryImage[] = [
     alt: 'Earthing & LPS',
     title: 'Earthing & LPS',
   },
-  {
-    id: '23',
-    src: '/assets/terminator-images/gallery/Pictures/Earthing & LPS/Faradays Cage.png',
-    thumb: '/assets/terminator-images/gallery/Pictures/Earthing & LPS/Faradays Cage.png',
-    alt: 'Faradays Cage',
-    title: 'Faradays Cage',
-  },
+  // {
+  //   id: '23',
+  //   src: '/assets/terminator-images/gallery/Pictures/Earthing & LPS/Faradays Cage.png',
+  //   thumb: '/assets/terminator-images/gallery/Pictures/Earthing & LPS/Faradays Cage.png',
+  //   alt: 'Faradays Cage',
+  //   title: 'Faradays Cage',
+  // },
   // Dangerous
   {
     id: '24',
@@ -280,13 +280,13 @@ export const galleryImages: GalleryImage[] = [
   //   alt: 'Indoor and Outdoor Lighting',
   //   title: 'Indoor and Outdoor Lighting',
   // },
-  {
-    id: '39',
-    src: '/assets/terminator-images/gallery/Pictures/Indoor and Outdoor Lighting/20210311_133127.jpg',
-    thumb: '/assets/terminator-images/gallery/Pictures/Indoor and Outdoor Lighting/20210311_133127.jpg',
-    alt: 'Indoor and Outdoor Lighting',
-    title: 'Indoor and Outdoor Lighting',
-  },
+  // {
+  //   id: '39',
+  //   src: '/assets/terminator-images/gallery/Pictures/Indoor and Outdoor Lighting/20210311_133127.jpg',
+  //   thumb: '/assets/terminator-images/gallery/Pictures/Indoor and Outdoor Lighting/20210311_133127.jpg',
+  //   alt: 'Indoor and Outdoor Lighting',
+  //   title: 'Indoor and Outdoor Lighting',
+  // },
   {
     id: '40',
     src: '/assets/terminator-images/gallery/Pictures/Indoor and Outdoor Lighting/20210311_133216.jpg',
@@ -324,13 +324,13 @@ export const galleryImages: GalleryImage[] = [
     title: 'Industrial Commercial Power Distribution',
   },
   // Lighting
-  {
-    id: '45',
-    src: '/assets/terminator-images/gallery/Pictures/Lighting/20210311_132919.jpg',
-    thumb: '/assets/terminator-images/gallery/Pictures/Lighting/20210311_132919.jpg',
-    alt: 'Lighting',
-    title: 'Lighting',
-  },
+  // {
+  //   id: '45',
+  //   src: '/assets/terminator-images/gallery/Pictures/Lighting/20210311_132919.jpg',
+  //   thumb: '/assets/terminator-images/gallery/Pictures/Lighting/20210311_132919.jpg',
+  //   alt: 'Lighting',
+  //   title: 'Lighting',
+  // },
   // {
   //   id: '46',
   //   src: '/assets/terminator-images/gallery/Pictures/Lighting/20210311_132919_1.jpg',
