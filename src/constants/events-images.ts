@@ -55,18 +55,18 @@ export const eventsImages: EventImage[] = [
   //   full: '/assets/terminator-images/events/Exhibition/IEEEP 2025/IMG-20251125-WA0009.jpg',
   //   alt: '',
   // },
-  {
-    id: 'event-9',
-    thumb: '/assets/terminator-images/events/Exhibition/IEEEP 2025/IMG-20251125-WA0010.jpg',
-    full: '/assets/terminator-images/events/Exhibition/IEEEP 2025/IMG-20251125-WA0010.jpg',
-    alt: '',
-  },
-  {
-    id: 'event-10',
-    thumb: '/assets/terminator-images/events/Exhibition/IEEEP 2025/IMG-20251125-WA0014.jpg',
-    full: '/assets/terminator-images/events/Exhibition/IEEEP 2025/IMG-20251125-WA0014.jpg',
-    alt: '',
-  },
+  // {
+  //   id: 'event-9',
+  //   thumb: '/assets/terminator-images/events/Exhibition/IEEEP 2025/IMG-20251125-WA0010.jpg',
+  //   full: '/assets/terminator-images/events/Exhibition/IEEEP 2025/IMG-20251125-WA0010.jpg',
+  //   alt: '',
+  // },
+  // {
+  //   id: 'event-10',
+  //   thumb: '/assets/terminator-images/events/Exhibition/IEEEP 2025/IMG-20251125-WA0014.jpg',
+  //   full: '/assets/terminator-images/events/Exhibition/IEEEP 2025/IMG-20251125-WA0014.jpg',
+  //   alt: '',
+  // },
   // {
   //   id: 'event-11',
   //   thumb: '/assets/terminator-images/events/Exhibition/IEEEP 2025/IMG-20251125-WA0015.jpg',
@@ -79,12 +79,12 @@ export const eventsImages: EventImage[] = [
   //   full: '/assets/terminator-images/events/Exhibition/IEEEP 2025/IMG-20251125-WA0016.jpg',
   //   alt: '',
   // },
-  {
-    id: 'event-13',
-    thumb: '/assets/terminator-images/events/Exhibition/IEEEP 2025/IMG-20251125-WA0023.jpg',
-    full: '/assets/terminator-images/events/Exhibition/IEEEP 2025/IMG-20251125-WA0023.jpg',
-    alt: '',
-  },
+  // {
+  //   id: 'event-13',
+  //   thumb: '/assets/terminator-images/events/Exhibition/IEEEP 2025/IMG-20251125-WA0023.jpg',
+  //   full: '/assets/terminator-images/events/Exhibition/IEEEP 2025/IMG-20251125-WA0023.jpg',
+  //   alt: '',
+  // },
   // IDEAS 2024
   {
     id: 'event-14',

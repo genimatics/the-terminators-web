@@ -544,13 +544,13 @@ export const galleryImages: GalleryImage[] = [
     alt: 'Solar Power Systems',
     title: 'Solar Power Systems',
   },
-  {
-    id: '78',
-    src: '/assets/terminator-images/gallery/Pictures/Solar Power Systems/download (5).jpeg',
-    thumb: '/assets/terminator-images/gallery/Pictures/Solar Power Systems/download (5).jpeg',
-    alt: 'Solar Power Systems',
-    title: 'Solar Power Systems',
-  },
+  // {
+  //   id: '78',
+  //   src: '/assets/terminator-images/gallery/Pictures/Solar Power Systems/download (5).jpeg',
+  //   thumb: '/assets/terminator-images/gallery/Pictures/Solar Power Systems/download (5).jpeg',
+  //   alt: 'Solar Power Systems',
+  //   title: 'Solar Power Systems',
+  // },
   {
     id: '79',
     src: '/assets/terminator-images/gallery/Pictures/Solar Power Systems/idx36.jpg',
