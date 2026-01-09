@@ -1,11 +1,11 @@
 'use client';
 
 import Image from 'next/image';
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { IoIosArrowDown } from 'react-icons/io';
 import { IMAGES } from '@/constants/images';
 import { TEXTS } from '@/constants/text';
-import { Link } from '@/libs/I18nNavigation';
+import { Link, usePathname } from '@/libs/I18nNavigation';
 
 type DropdownItem = {
   name: string;
@@ -119,11 +119,12 @@ const NavLinkItem = ({
 };
 
 export default function Navbar() {
-  const [activeLink, setActiveLink] = useState('home');
+  const [activeLink, setActiveLink] = useState('');
   const [hoveredLink, setHoveredLink] = useState<string | null>(null);
   const [menuOpen, setMenuOpen] = useState(false);
   const [mobileDropdownOpen, setMobileDropdownOpen] = useState<string | null>(null);
   const hoverTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const pathname = usePathname();
 
   const navLinks: NavItem[] = TEXTS.NAVBAR.LINKS.map((link) => {
     if (link.name === 'Services') {
@@ -140,6 +141,40 @@ export default function Navbar() {
       hasDropdown: false,
     };
   });
+
+  useEffect(() => {
+    if (!pathname) {
+      return;
+    }
+
+    const segments = pathname.split('/').filter(Boolean);
+    const basePath = segments.length === 0 ? '/' : `/${segments[0]}`;
+
+    const matchingItem = navLinks.find((link) => {
+      if (basePath === '/') {
+        return link.href === '/';
+      }
+
+      // Exact match for simple pages: /about, /contact, /gallery, etc.
+      if (link.href === basePath) {
+        return true;
+      }
+
+      // Make all nested services pages (/services/slug) keep "Services" active
+      if (basePath.startsWith('/services') && link.href === '/services') {
+        return true;
+      }
+
+      return false;
+    });
+
+    if (matchingItem) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
+      setActiveLink(matchingItem.name.toLowerCase());
+    } else {
+      setActiveLink('');
+    }
+  }, [pathname]);
 
   const handleMouseEnter = (name: string) => {
     if (hoverTimeoutRef.current) {
