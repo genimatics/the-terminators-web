@@ -188,8 +188,8 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     id: '26',
-    src: '/assets/terminator-images/gallery/Pictures/Explosion-proof wiring, lights, and power equipment/Lighting-768x384.jpg',
-    thumb: '/assets/terminator-images/gallery/Pictures/Explosion-proof wiring, lights, and power equipment/Lighting-768x384.jpg',
+    src: '/assets/terminator-images/gallery/Pictures/Explosion-proof wiring, lights, and power equipment/250fbe2e-4d4c-43e5-b69a-2f20ea8eba5c.jpg',
+    thumb: '/assets/terminator-images/gallery/Pictures/Explosion-proof wiring, lights, and power equipment/250fbe2e-4d4c-43e5-b69a-2f20ea8eba5c.jpg',
     alt: 'Lighting',
     title: 'Lighting',
   },
@@ -292,7 +292,7 @@ export const galleryImages: GalleryImage[] = [
     src: '/assets/terminator-images/gallery/Pictures/Indoor and Outdoor Lighting/20210311_133216.jpg',
     thumb: '/assets/terminator-images/gallery/Pictures/Indoor and Outdoor Lighting/20210311_133216.jpg',
     alt: 'Inspection Lighting',
-    title: 'IInspection Lighting',
+    title: 'Inspection Lighting',
   },
   // {
   //   id: '41',

@@ -20,7 +20,7 @@ export default function SocialFollow() {
           <span className="font-medium">Facebook</span>
         </a>
         <a
-          href="linkedin.com/in/ahmed-zubair-siddiqui-70a24122"
+          href="https://www.linkedin.com/in/ahmed-zubair-siddiqui-70a24122/"
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center gap-2 rounded-lg bg-primary px-4 py-2 text-white transition-colors hover:bg-blue-800"
