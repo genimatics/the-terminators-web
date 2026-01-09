@@ -6,6 +6,7 @@ import { useEffect, useRef, useState } from 'react';
 import { galleryImages } from '@/constants/gallery-images';
 import { preloadImages } from '@/lib/image-optimization';
 import { useLightGallery } from '@/lib/lightgallery';
+import SocialFollow from '../ui/social-follow';
 import 'lightgallery/css/lightgallery.css';
 import 'lightgallery/css/lg-zoom.css';
 import 'lightgallery/css/lg-thumbnail.css';
@@ -105,6 +106,9 @@ export default function OurGallery() {
             </div>
           ))}
         </div>
+
+        <SocialFollow />
+
       </div>
     </section>
   );

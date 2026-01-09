@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { useRef } from 'react';
 import { eventsImages } from '@/constants/events-images';
 import { useLightGallery } from '@/lib/lightgallery';
+import SocialFollow from '../ui/social-follow';
 import 'lightgallery/css/lightgallery.css';
 import 'lightgallery/css/lg-zoom.css';
 import 'lightgallery/css/lg-thumbnail.css';
@@ -75,6 +76,9 @@ export default function OurEvents() {
             <p className="text-lg text-muted-foreground">No events found</p>
           </div>
         )}
+
+        <SocialFollow />
+
       </div>
     </section>
   );

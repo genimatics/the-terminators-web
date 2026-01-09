@@ -46,8 +46,8 @@ export const galleryImages: GalleryImage[] = [
     id: '6',
     src: '/assets/terminator-images/gallery/Pictures/EMC works.jpeg',
     thumb: '/assets/terminator-images/gallery/Pictures/EMC works.jpeg',
-    alt: 'EMC works',
-    title: 'EMC works',
+    alt: 'EMC works at Test Lab',
+    title: 'EMC works at Test Lab',
   },
   {
     id: '7',
@@ -88,8 +88,8 @@ export const galleryImages: GalleryImage[] = [
     id: '12',
     src: '/assets/terminator-images/gallery/Pictures/Cable tray and Cables/prj-06-04-bg.jpg',
     thumb: '/assets/terminator-images/gallery/Pictures/Cable tray and Cables/prj-06-04-bg.jpg',
-    alt: 'Cable tray and Cables',
-    title: 'Cable tray and Cables',
+    alt: 'Isolated Earthing for Lab',
+    title: 'Isolated Earthing for Lab',
   },
   {
     id: '13',
@@ -175,8 +175,8 @@ export const galleryImages: GalleryImage[] = [
     id: '24',
     src: '/assets/terminator-images/gallery/Pictures/Dangerous/5.jpg',
     thumb: '/assets/terminator-images/gallery/Pictures/Dangerous/5.jpg',
-    alt: 'Dangerous',
-    title: 'Dangerous',
+    alt: 'Explosive Storage (Danger Buildings)',
+    title: 'Explosive Storage (Danger Buildings)',
   },
   // Explosion-proof wiring, lights, and power equipment
   {
@@ -221,14 +221,14 @@ export const galleryImages: GalleryImage[] = [
     src: '/assets/terminator-images/gallery/Pictures/HT LT Panels, Sub stations, SwitchGear/20210309_233904.jpg',
     thumb: '/assets/terminator-images/gallery/Pictures/HT LT Panels, Sub stations, SwitchGear/20210309_233904.jpg',
     alt: 'HT LT Panels, Sub stations, SwitchGear',
-    title: 'HT LT Panels, Sub stations, SwitchGear',
+    title: ' LT Panels, Sub stations, SwitchGear',
   },
   {
     id: '31',
     src: '/assets/terminator-images/gallery/Pictures/HT LT Panels, Sub stations, SwitchGear/20210309_233937.jpg',
     thumb: '/assets/terminator-images/gallery/Pictures/HT LT Panels, Sub stations, SwitchGear/20210309_233937.jpg',
     alt: 'HT LT Panels, Sub stations, SwitchGear',
-    title: 'HT LT Panels, Sub stations, SwitchGear',
+    title: ' LT Panels, Sub stations, SwitchGear',
   },
   // {
   //   id: '32',
@@ -242,21 +242,21 @@ export const galleryImages: GalleryImage[] = [
     src: '/assets/terminator-images/gallery/Pictures/HT LT Panels, Sub stations, SwitchGear/20210311_133934.jpg',
     thumb: '/assets/terminator-images/gallery/Pictures/HT LT Panels, Sub stations, SwitchGear/20210311_133934.jpg',
     alt: 'HT LT Panels, Sub stations, SwitchGear',
-    title: 'HT LT Panels, Sub stations, SwitchGear',
+    title: 'LT Panels, Sub stations, SwitchGear',
   },
   {
     id: '34',
     src: '/assets/terminator-images/gallery/Pictures/HT LT Panels, Sub stations, SwitchGear/20210311_133945.jpg',
     thumb: '/assets/terminator-images/gallery/Pictures/HT LT Panels, Sub stations, SwitchGear/20210311_133945.jpg',
     alt: 'HT LT Panels, Sub stations, SwitchGear',
-    title: 'HT LT Panels, Sub stations, SwitchGear',
+    title: ' LT Panels, Sub stations, SwitchGear',
   },
   {
     id: '35',
     src: '/assets/terminator-images/gallery/Pictures/HT LT Panels, Sub stations, SwitchGear/20210311_133957.jpg',
     thumb: '/assets/terminator-images/gallery/Pictures/HT LT Panels, Sub stations, SwitchGear/20210311_133957.jpg',
     alt: 'HT LT Panels, Sub stations, SwitchGear',
-    title: 'HT LT Panels, Sub stations, SwitchGear',
+    title: 'LT Panels, Sub stations, SwitchGear',
   },
   // Indoor and Outdoor Lighting
   // {
@@ -291,8 +291,8 @@ export const galleryImages: GalleryImage[] = [
     id: '40',
     src: '/assets/terminator-images/gallery/Pictures/Indoor and Outdoor Lighting/20210311_133216.jpg',
     thumb: '/assets/terminator-images/gallery/Pictures/Indoor and Outdoor Lighting/20210311_133216.jpg',
-    alt: 'Indoor and Outdoor Lighting',
-    title: 'Indoor and Outdoor Lighting',
+    alt: 'Inspection Lighting',
+    title: 'IInspection Lighting',
   },
   // {
   //   id: '41',
@@ -349,8 +349,8 @@ export const galleryImages: GalleryImage[] = [
     id: '48',
     src: '/assets/terminator-images/gallery/Pictures/Lighting/IMG-20180622-WA0236.jpg',
     thumb: '/assets/terminator-images/gallery/Pictures/Lighting/IMG-20180622-WA0236.jpg',
-    alt: 'Lighting',
-    title: 'Lighting',
+    alt: 'Grid Station Electrical works',
+    title: 'Grid Station Electrical works',
   },
   {
     id: '49',
@@ -386,8 +386,8 @@ export const galleryImages: GalleryImage[] = [
     id: '53',
     src: '/assets/terminator-images/gallery/Pictures/Mix and Selected/100120081534.jpg',
     thumb: '/assets/terminator-images/gallery/Pictures/Mix and Selected/100120081534.jpg',
-    alt: 'Mix and Selected',
-    title: 'Mix and Selected',
+    alt: 'Transformers installation',
+    title: 'Transformers installation',
   },
   // {
   //   id: '54',
@@ -407,8 +407,8 @@ export const galleryImages: GalleryImage[] = [
     id: '56',
     src: '/assets/terminator-images/gallery/Pictures/Mix and Selected/20210311_133102.jpg',
     thumb: '/assets/terminator-images/gallery/Pictures/Mix and Selected/20210311_133102.jpg',
-    alt: 'Mix and Selected',
-    title: 'Mix and Selected',
+    alt: 'Inspection Lighting',
+    title: 'Inspection Lighting',
   },
   // {
   //   id: '57',
@@ -421,8 +421,8 @@ export const galleryImages: GalleryImage[] = [
     id: '58',
     src: '/assets/terminator-images/gallery/Pictures/Mix and Selected/20210311_133758.jpg',
     thumb: '/assets/terminator-images/gallery/Pictures/Mix and Selected/20210311_133758.jpg',
-    alt: 'Mix and Selected',
-    title: 'Mix and Selected',
+    alt: 'Generators under maintenance',
+    title: 'Generators under maintenance',
   },
   // Power, Distribution Transformers
   {
@@ -446,13 +446,13 @@ export const galleryImages: GalleryImage[] = [
     alt: 'Power Distribution Transformers',
     title: 'Power Distribution Transformers',
   },
-  {
-    id: '62',
-    src: '/assets/terminator-images/gallery/Pictures/Power , Distibution Transformers/100120081534.jpg',
-    thumb: '/assets/terminator-images/gallery/Pictures/Power , Distibution Transformers/100120081534.jpg',
-    alt: 'Power Distribution Transformers',
-    title: 'Power Distribution Transformers',
-  },
+  // {
+  //   id: '62',
+  //   src: '/assets/terminator-images/gallery/Pictures/Power , Distibution Transformers/100120081534.jpg',
+  //   thumb: '/assets/terminator-images/gallery/Pictures/Power , Distibution Transformers/100120081534.jpg',
+  //   alt: 'Power Distribution Transformers',
+  //   title: 'Power Distribution Transformers',
+  // },
   {
     id: '63',
     src: '/assets/terminator-images/gallery/Pictures/Power , Distibution Transformers/20210309_233801.jpg',
@@ -497,15 +497,15 @@ export const galleryImages: GalleryImage[] = [
     id: '71',
     src: '/assets/terminator-images/gallery/Pictures/Radio base Station/pp-01-Radiobase-Station.jpg',
     thumb: '/assets/terminator-images/gallery/Pictures/Radio base Station/pp-01-Radiobase-Station.jpg',
-    alt: 'Radiobase Station',
-    title: 'Radiobase Station',
+    alt: 'Mobile Communication Towers',
+    title: 'Mobile Communication Towers',
   },
   {
     id: '72',
     src: '/assets/terminator-images/gallery/Pictures/Radio base Station/pp-02-Mob-Radio-station.jpg',
     thumb: '/assets/terminator-images/gallery/Pictures/Radio base Station/pp-02-Mob-Radio-station.jpg',
-    alt: 'Mob Radio station',
-    title: 'Mob Radio station',
+    alt: 'Mobile Communication Towers',
+    title: 'Mobile Communication Towers',
   },
   // Safety Equipmentimages (14).jpg
   // {
@@ -576,8 +576,8 @@ export const galleryImages: GalleryImage[] = [
     id: '82',
     src: '/assets/terminator-images/gallery/Pictures/Solar Power Systems/images (24).jpeg',
     thumb: '/assets/terminator-images/gallery/Pictures/Solar Power Systems/images (24).jpeg',
-    alt: 'Solar Power Systems',
-    title: 'Solar Power Systems',
+    alt: 'Street Light Poles, Masts and Brackets',
+    title: 'Street Light Poles, Masts and Brackets',
   },
   // Street light poles, Masts, and Brackets
   {
@@ -680,19 +680,19 @@ export const galleryImages: GalleryImage[] = [
   //   alt: 'Transformers and generators',
   //   title: 'Transformers and generators',
   // },
-  {
-    id: '97',
-    src: '/assets/terminator-images/gallery/Pictures/Transformers and generators/20210311_133758.jpg',
-    thumb: '/assets/terminator-images/gallery/Pictures/Transformers and generators/20210311_133758.jpg',
-    alt: 'Transformers and generators',
-    title: 'Transformers and generators',
-  },
+  // {
+  //   id: '97',
+  //   src: '/assets/terminator-images/gallery/Pictures/Transformers and generators/20210311_133758.jpg',
+  //   thumb: '/assets/terminator-images/gallery/Pictures/Transformers and generators/20210311_133758.jpg',
+  //   alt: 'Transformers and generators',
+  //   title: 'Transformers and generators',
+  // },
   {
     id: '98',
     src: '/assets/terminator-images/gallery/Pictures/Transformers and generators/generator cat.webp',
     thumb: '/assets/terminator-images/gallery/Pictures/Transformers and generators/generator cat.webp',
-    alt: 'generator cat',
-    title: 'generator cat',
+    alt: 'GENERATORS',
+    title: 'GENERATORS',
   },
   {
     id: '99',
@@ -705,8 +705,8 @@ export const galleryImages: GalleryImage[] = [
     id: '100',
     src: '/assets/terminator-images/gallery/Pictures/Transformers and generators/IMG-20180621-WA0070.jpg',
     thumb: '/assets/terminator-images/gallery/Pictures/Transformers and generators/IMG-20180621-WA0070.jpg',
-    alt: 'Transformers and generators',
-    title: 'Transformers and generators',
+    alt: 'Chillers Installation',
+    title: 'Chillers Installation',
   },
   {
     id: '101',
@@ -719,8 +719,8 @@ export const galleryImages: GalleryImage[] = [
     id: '102',
     src: '/assets/terminator-images/gallery/Pictures/Electrical Installations2.jpeg',
     thumb: '/assets/terminator-images/gallery/Pictures/Electrical Installations2.jpeg',
-    alt: 'Electrical installations',
-    title: 'Electrical Installations',
+    alt: 'Removal, Relocation and Re-installation',
+    title: 'Removal, Relocation and Re-installation',
   },
   {
     id: '103',
