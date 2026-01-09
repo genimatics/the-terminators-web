@@ -15,8 +15,8 @@ export const eventsImages: EventImage[] = [
   },
   {
     id: 'event-2',
-    thumb: '/assets/terminator-images/events/Exhibition/IDEAS 2024/474090327_7769054386552862_6075110378603402625_n.jpg',
-    full: '/assets/terminator-images/events/Exhibition/IDEAS 2024/474090327_7769054386552862_6075110378603402625_n.jpg',
+    thumb: '/assets/terminator-images/events/Exhibition/IEEEP 2025/518345974_1159148876257707_5708489231515170415_n.jpg',
+    full: '/assets/terminator-images/events/Exhibition/IEEEP 2025/518345974_1159148876257707_5708489231515170415_n.jpg',
     alt: '',
   },
   {
@@ -27,8 +27,8 @@ export const eventsImages: EventImage[] = [
   },
   {
     id: 'event-4',
-    thumb: '/assets/terminator-images/events/Exhibition/IEEEP 2025/518345974_1159148876257707_5708489231515170415_n.jpg',
-    full: '/assets/terminator-images/events/Exhibition/IEEEP 2025/518345974_1159148876257707_5708489231515170415_n.jpg',
+    thumb: '/assets/terminator-images/events/Exhibition/IDEAS 2024/474090327_7769054386552862_6075110378603402625_n.jpg',
+    full: '/assets/terminator-images/events/Exhibition/IDEAS 2024/474090327_7769054386552862_6075110378603402625_n.jpg',
     alt: '',
   },
   {
