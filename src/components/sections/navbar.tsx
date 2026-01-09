@@ -216,12 +216,12 @@ export default function Navbar() {
               <Image
                 src={IMAGES.NAVBAR.LOGO || '/placeholder.svg'}
                 alt={TEXTS.NAVBAR.LOGO_ALT}
-                width={45}
-                height={45}
+                width={60}
+                height={60}
                 priority
                 className="rounded-lg"
               />
-              <h1 className="text-lg font-semibold tracking-wide text-gray-900 sm:text-xl md:text-2xl">
+              <h1 className="text-xl font-semibold tracking-wide text-gray-900 sm:text-2xl md:text-3xl">
                 The Terminators
               </h1>
             </Link>
