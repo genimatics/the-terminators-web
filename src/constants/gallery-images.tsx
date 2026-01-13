@@ -139,8 +139,8 @@ export const galleryImages: GalleryImage[] = [
     id: '19',
     src: '/assets/terminator-images/gallery/Pictures/Earthing & LPS/20221116_115324.jpg',
     thumb: '/assets/terminator-images/gallery/Pictures/Earthing & LPS/20221116_115324.jpg',
-    alt: 'Earthing & LPS',
-    title: 'Earthing & LPS',
+    alt: 'Explosion Proof System',
+    title: 'Explosion Proof System',
   },
   // {
   //   id: '20',
