@@ -1,12 +1,11 @@
 'use client';
 
 import Image from 'next/image';
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { IoIosArrowDown } from 'react-icons/io';
-import Button from '@/components/ui/button';
 import { IMAGES } from '@/constants/images';
 import { TEXTS } from '@/constants/text';
-import { Link } from '@/libs/I18nNavigation';
+import { Link, usePathname } from '@/libs/I18nNavigation';
 
 type DropdownItem = {
   name: string;
@@ -16,186 +15,324 @@ type DropdownItem = {
 type NavItem = {
   name: string;
   href: string;
-  hasDropdown?: boolean;
-  dropdownItems?: DropdownItem[];
+  hasDropdown: boolean;
+  dropdownItems?: readonly DropdownItem[];
+};
+
+const MenuIcon = ({ onClick }: { onClick: () => void }) => (
+  <div
+    role="button"
+    tabIndex={0}
+    onClick={onClick}
+    onKeyDown={(e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        onClick();
+      }
+    }}
+    aria-label="Menu"
+    className="flex cursor-pointer flex-col gap-1"
+  >
+    {[0, 1, 2].map(i => (
+      <div key={i} className="h-[2px] w-6 bg-black" />
+    ))}
+  </div>
+);
+
+const NavLinkItem = ({
+  item,
+  activeLink,
+  hoveredLink,
+  setActiveLink,
+  handleMouseEnter,
+  handleMouseLeave,
+  closeDropdown,
+}: {
+  item: NavItem;
+  activeLink: string;
+  hoveredLink: string | null;
+  setActiveLink: (link: string) => void;
+  handleMouseEnter: (name: string) => void;
+  handleMouseLeave: (name: string) => void;
+  closeDropdown: () => void;
+}) => {
+  const isActive = activeLink === item.name.toLowerCase();
+
+  return (
+    <li
+      className="group relative"
+      onMouseEnter={() => handleMouseEnter(item.name)}
+      onMouseLeave={() => handleMouseLeave(item.name)}
+    >
+      {item.hasDropdown
+        ? (
+            <div className="flex items-center">
+              <Link
+                href={item.href}
+                onClick={() => setActiveLink(item.name.toLowerCase())}
+                className={`sm:text-md flex cursor-pointer items-center gap-1 text-base font-semibold tracking-wide transition-colors duration-300 ${isActive ? 'text-primary' : 'text-black group-hover:text-[var(--color-primary)]'
+                }`}
+              >
+                {item.name}
+                <IoIosArrowDown
+                  className={`transition-transform duration-300 ${hoveredLink === item.name ? 'rotate-180' : ''}`}
+                />
+              </Link>
+            </div>
+          )
+        : (
+            <Link
+              href={item.href}
+              onClick={() => setActiveLink(item.name.toLowerCase())}
+              className={`sm:text-md font-semibold tracking-wide transition-colors duration-300 ${isActive ? 'text-primary' : 'text-black hover:text-[var(--color-primary)]'
+              }`}
+            >
+              {item.name}
+            </Link>
+          )}
+
+      {item.hasDropdown && hoveredLink === item.name && (
+        <div
+          className="animate-fadeIn absolute top-full left-1/2 z-50 mt-2 w-[90vw] max-w-[800px] -translate-x-1/2 transform border-t-4 border-[var(--color-primary)] bg-white text-black shadow-2xl"
+          onMouseEnter={() => handleMouseEnter(item.name)}
+          onMouseLeave={() => handleMouseLeave(item.name)}
+        >
+          <ul className="grid grid-cols-2 divide-x divide-gray-200 md:grid-cols-3 lg:grid-cols-4">
+            {item.dropdownItems?.map(sub => (
+              <li key={sub.name} className="group/item border-b border-gray-200 last:border-b-0 hover:bg-[var(--color-primary)]">
+                <Link
+                  href={sub.href}
+                  className="block cursor-pointer px-4 py-3 text-sm font-medium transition-all duration-200 group-hover/item:text-white"
+                  onClick={() => {
+                    setActiveLink(sub.name.toLowerCase());
+                    closeDropdown();
+                  }}
+                >
+                  {sub.name}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+    </li>
+  );
 };
 
 export default function Navbar() {
-  const [activeLink, setActiveLink] = useState<string>('home');
+  const [activeLink, setActiveLink] = useState('');
   const [hoveredLink, setHoveredLink] = useState<string | null>(null);
-  const [menuOpen, setMenuOpen] = useState<boolean>(false);
-  const closeTimer = useRef<NodeJS.Timeout | null>(null);
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [mobileDropdownOpen, setMobileDropdownOpen] = useState<string | null>(null);
+  const hoverTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const pathname = usePathname();
 
-  const navLinks: NavItem[] = TEXTS.NAVBAR.LINKS.map(link => ({
-    ...link,
-    hasDropdown: false,
-  }));
+  const navLinks: NavItem[] = TEXTS.NAVBAR.LINKS.map((link) => {
+    if (link.name === 'Services') {
+      return {
+        name: link.name,
+        href: link.href,
+        hasDropdown: true,
+        dropdownItems: TEXTS.NAVBAR.SERVICES_DROPDOWN,
+      };
+    }
+    return {
+      name: link.name,
+      href: link.href,
+      hasDropdown: false,
+    };
+  });
+
+  useEffect(() => {
+    if (!pathname) {
+      return;
+    }
+
+    const segments = pathname.split('/').filter(Boolean);
+    const basePath = segments.length === 0 ? '/' : `/${segments[0]}`;
+
+    const matchingItem = navLinks.find((link) => {
+      if (basePath === '/') {
+        return link.href === '/';
+      }
+
+      // Exact match for simple pages: /about, /contact, /gallery, etc.
+      if (link.href === basePath) {
+        return true;
+      }
+
+      // Make all nested services pages (/services/slug) keep "Services" active
+      if (basePath.startsWith('/services') && link.href === '/services') {
+        return true;
+      }
+
+      return false;
+    });
+
+    if (matchingItem) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
+      setActiveLink(matchingItem.name.toLowerCase());
+    } else {
+      setActiveLink('');
+    }
+  }, [pathname]);
 
   const handleMouseEnter = (name: string) => {
-    if (closeTimer.current) {
-      clearTimeout(closeTimer.current);
+    if (hoverTimeoutRef.current) {
+      clearTimeout(hoverTimeoutRef.current);
+      hoverTimeoutRef.current = null;
     }
     setHoveredLink(name);
   };
 
   const handleMouseLeave = (name: string) => {
-    closeTimer.current = setTimeout(() => {
+    hoverTimeoutRef.current = setTimeout(() => {
       setHoveredLink(prev => (prev === name ? null : prev));
-    }, 500);
+    }, 400);
+  };
+
+  const closeDropdown = () => {
+    if (hoverTimeoutRef.current) {
+      clearTimeout(hoverTimeoutRef.current);
+      hoverTimeoutRef.current = null;
+    }
+    setHoveredLink(null);
+  };
+
+  const toggleMenu = () => {
+    setMenuOpen(prev => !prev);
+    setMobileDropdownOpen(null);
+  };
+
+  const toggleMobileDropdown = (name: string) => {
+    setMobileDropdownOpen(prev => (prev === name ? null : name));
   };
 
   return (
-    <nav className="fixed top-0 left-0 z-50 w-full bg-black text-white shadow-md">
-      <div className="flex w-full flex-col items-center px-2 sm:px-4 md:px-6">
-        <div className="hidden h-16 w-full items-center justify-between sm:flex sm:h-20">
-          <Link href="/" className="flex items-center">
-            <Image
-              src={IMAGES.NAVBAR.LOGO || '/placeholder.svg'}
-              alt={TEXTS.NAVBAR.LOGO_ALT}
-              width={130}
-              height={50}
-              priority
-            />
-          </Link>
+    <nav className="fixed top-0 left-0 z-50 w-full bg-white text-black shadow-md">
+      <div className="flex w-full flex-col">
+        <div className="hidden items-center justify-center border-b border-gray-200 px-4 py-2.5 sm:flex sm:px-6 md:px-10">
+          <div className="flex items-center gap-3">
+            <Link href="/" className="flex items-center gap-3 transition-opacity hover:opacity-90">
+              <Image
+                src={IMAGES.NAVBAR.LOGO || '/placeholder.svg'}
+                alt={TEXTS.NAVBAR.LOGO_ALT}
+                width={60}
+                height={60}
+                priority
+                className="rounded-lg"
+              />
+              <h1 className="text-xl font-semibold tracking-wide text-gray-900 sm:text-2xl md:text-3xl">
+                The Terminators
+              </h1>
+            </Link>
+          </div>
+        </div>
 
-          <ul className="hidden items-center space-x-8 md:space-x-10 lg:flex">
-            {navLinks.map(link => (
-              <li
-                key={link.name}
-                className="group relative"
-                onMouseEnter={() => handleMouseEnter(link.name)}
-                onMouseLeave={() => handleMouseLeave(link.name)}
-              >
-                {link.hasDropdown
+        <div className="w-full bg-white px-4 py-3 sm:px-6 md:px-10">
+          <div className="hidden items-center justify-between sm:flex">
+            <ul className="mx-auto flex items-center space-x-6 md:space-x-8 lg:space-x-10">
+              {navLinks.map(item => (
+                <NavLinkItem
+                  key={item.name}
+                  item={item}
+                  activeLink={activeLink}
+                  hoveredLink={hoveredLink}
+                  setActiveLink={setActiveLink}
+                  handleMouseEnter={handleMouseEnter}
+                  handleMouseLeave={handleMouseLeave}
+                  closeDropdown={closeDropdown}
+                />
+              ))}
+            </ul>
+          </div>
+
+          <div className="flex items-center justify-between sm:hidden">
+            <Link href="/" className="flex items-center gap-3">
+              <Image
+                src={IMAGES.NAVBAR.LOGO || '/placeholder.svg'}
+                alt={TEXTS.NAVBAR.LOGO_ALT}
+                width={45}
+                height={45}
+                priority
+                className="rounded-lg"
+              />
+              <span className="text-lg font-semibold text-gray-900">
+                The Terminators
+              </span>
+            </Link>
+
+            <div className="flex items-center gap-4">
+              <MenuIcon onClick={toggleMenu} />
+            </div>
+          </div>
+        </div>
+
+        {menuOpen && (
+          <div className="animate-fadeIn w-full border-t border-gray-200 bg-white py-2 text-center sm:hidden">
+            {navLinks.map(item => (
+              <div key={item.name} className="border-b border-gray-100 last:border-b-0">
+                {item.hasDropdown
                   ? (
-                      <button
-                        type="button"
-                        className={`flex items-center gap-1 text-xs font-semibold tracking-wide  transition-colors duration-300 sm:text-sm ${activeLink === link.name.toLowerCase()
-                          ? 'text-primary'
-                          : 'hover:text-primary'
-                        }`}
-                      >
-                        {link.name}
-                        <IoIosArrowDown
-                          className={`transition-transform duration-300 ${hoveredLink === link.name ? 'rotate-180' : ''
-                          }`}
-                        />
-                      </button>
+                      <div className="py-2">
+                        <div
+                          className="focus:ring-primary-500 mb-2 flex cursor-pointer items-center justify-center gap-1 px-4 text-xs font-semibold text-black uppercase hover:text-(--color-primary) focus:ring-2 focus:ring-offset-2 focus:outline-none"
+                          onClick={() => toggleMobileDropdown(item.name)}
+                          onKeyDown={(e) => {
+                            if (e.key === 'Enter' || e.key === ' ') {
+                              e.preventDefault();
+                              toggleMobileDropdown(item.name);
+                            }
+                          }}
+                          role="button"
+                          tabIndex={0}
+                          aria-expanded={mobileDropdownOpen === item.name}
+                          aria-haspopup="true"
+                        >
+                          {item.name}
+                          <IoIosArrowDown
+                            className={`transition-transform duration-300 ${mobileDropdownOpen === item.name ? 'rotate-180' : ''
+                            }`}
+                          />
+                        </div>
+                        {mobileDropdownOpen === item.name && (
+                          <div className="animate-fadeIn max-h-[80vh] overflow-y-auto bg-gray-50 py-2">
+                            <div className="grid grid-cols-1 gap-1 px-2">
+                              {item.dropdownItems?.map(sub => (
+                                <div key={sub.name} className="rounded transition-colors hover:bg-gray-100">
+                                  <Link
+                                    href={sub.href}
+                                    className="block cursor-pointer px-3 py-2.5 text-xs font-normal text-gray-600 hover:text-[var(--color-primary)]"
+                                    onClick={() => {
+                                      setActiveLink(sub.name.toLowerCase());
+                                      setMenuOpen(false);
+                                      setMobileDropdownOpen(null);
+                                    }}
+                                  >
+                                    {sub.name}
+                                  </Link>
+                                </div>
+                              ))}
+                            </div>
+                          </div>
+                        )}
+                      </div>
                     )
                   : (
                       <Link
-                        href={link.href}
-                        onClick={() => setActiveLink(link.name.toLowerCase())}
-                        className={`  sm:text-md font-semibold tracking-wide transition-colors duration-300 ${activeLink === link.name.toLowerCase()
-                          ? 'text-primary'
-                          : 'hover:text-primary'
-                        }`}
+                        href={item.href}
+                        className="block px-4 py-2 text-xs font-semibold text-black uppercase transition-colors hover:text-[var(--color-primary)]"
+                        onClick={() => {
+                          setActiveLink(item.name.toLowerCase());
+                          setMenuOpen(false);
+                        }}
                       >
-                        {link.name}
+                        {item.name}
                       </Link>
                     )}
-
-                {link.hasDropdown && hoveredLink === link.name && (
-                  <ul
-                    className="animate-fadeIn absolute top-full left-0 mt-2 w-40 bg-black  text-white shadow-lg"
-                    onMouseEnter={() => handleMouseEnter(link.name)}
-                    onMouseLeave={() => handleMouseLeave(link.name)}
-                  >
-                    {link.dropdownItems?.map(item => (
-                      <li key={item.name}>
-                        <Link
-                          href={item.href}
-                          className={`block px-4 py-2 text-xs transition-colors duration-200 sm:text-sm ${activeLink === item.name.toLowerCase()
-                            ? 'bg-primary text-white'
-                            : 'hover:bg-primary'
-                          }`}
-                          onClick={() =>
-                            setActiveLink(item.name.toLowerCase())}
-                        >
-                          {item.name}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                )}
-              </li>
+              </div>
             ))}
-          </ul>
-
-          <div className="flex items-center gap-3 sm:gap-4">
-            <Link
-              href={TEXTS.NAVBAR.BUTTON_LINK}
-              className="hidden md:block"
-            >
-              <Button className="!bg-primary !px-4 !py-2 text-xs font-semibold tracking-widest !text-white transition-all duration-300 hover:opacity-90 sm:!px-5 sm:!py-2.5 sm:text-sm">
-                {TEXTS.NAVBAR.BUTTON_TEXT}
-              </Button>
-            </Link>
-
-            <div
-              role="button"
-              tabIndex={0}
-              aria-label={TEXTS.NAVBAR.MENU_ALT}
-              onClick={() => setMenuOpen(!menuOpen)}
-              onKeyDown={(e) => {
-                if (e.key === 'Enter' || e.key === ' ') {
-                  setMenuOpen(!menuOpen);
-                }
-              }}
-              className="flex cursor-pointer flex-col gap-1 sm:hidden"
-            >
-              <div className="h-[2px] w-6 bg-white" />
-              <div className="h-[2px] w-6 bg-white" />
-              <div className="h-[2px] w-6 bg-white" />
-            </div>
           </div>
-        </div>
-
-        {/* Mobile Navbar */}
-        <div className="flex w-full flex-col items-center justify-center py-3 sm:hidden">
-          <Image
-            src={IMAGES.NAVBAR.LOGO || '/placeholder.svg'}
-            alt={TEXTS.NAVBAR.LOGO_ALT}
-            width={100}
-            height={40}
-            priority
-          />
-
-          <div
-            role="button"
-            tabIndex={0}
-            aria-label={TEXTS.NAVBAR.MENU_ALT}
-            onClick={() => setMenuOpen(!menuOpen)}
-            onKeyDown={(e) => {
-              if (e.key === 'Enter' || e.key === ' ') {
-                setMenuOpen(!menuOpen);
-              }
-            }}
-            className="mt-3 flex cursor-pointer flex-col gap-1"
-          >
-            <div className="h-[2px] w-6 bg-white" />
-            <div className="h-[2px] w-6 bg-white" />
-            <div className="h-[2px] w-6 bg-white" />
-          </div>
-
-          {menuOpen && (
-            <div className="animate-fadeIn w-full border-t border-white/20 bg-black py-3 text-center sm:hidden">
-              {navLinks.map(link => (
-                <Link
-                  key={link.name}
-                  href={link.href}
-                  className="hover:text-primary block py-2 text-xs font-semibold tracking-wide uppercase transition-colors"
-                  onClick={() => {
-                    setActiveLink(link.name.toLowerCase());
-                    setMenuOpen(false);
-                  }}
-                >
-                  {link.name}
-                </Link>
-              ))}
-            </div>
-          )}
-        </div>
+        )}
       </div>
     </nav>
   );

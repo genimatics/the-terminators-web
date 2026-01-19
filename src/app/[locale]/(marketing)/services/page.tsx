@@ -1,9 +1,9 @@
 import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
-import ElectricalServices from '@/components/services/electrical-services';
+import HeroSection from '@/common/hero-section';
+// import ElectricalServices from '@/components/services/electrical-services';
 import OurServices from '@/components/services/our-services';
-import ServiceHero from '@/components/services/service-hero';
-import ServicesPromo from '@/components/services/services-promo';
+import { IMAGES } from '@/constants/images';
 
 type IServicesProps = {
   params: Promise<{ locale: string }>;
@@ -28,9 +28,13 @@ export default async function ServicesPage(props: IServicesProps) {
 
   return (
     <>
-      <ServiceHero />
-      <ElectricalServices />
-      <ServicesPromo />
+      <HeroSection
+        title="Our Services"
+        subtitle="Over the past 2 decades, the firm has excelled in following "
+        background={IMAGES.HERO.SLIDE1}
+      />
+      {/* <ElectricalServices /> */}
+      {/* <ServicesPromo /> */}
       <OurServices />
     </>
   );

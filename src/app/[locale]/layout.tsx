@@ -5,6 +5,7 @@ import { notFound } from 'next/navigation';
 import { PostHogProvider } from '@/components/analytics/PostHogProvider';
 import Footer from '@/components/sections/footer';
 import Navbar from '@/components/sections/navbar';
+import ScrollToTop from '@/components/ui/scroll-to-top';
 import { routing } from '@/libs/I18nRouting';
 import '@/styles/global.css';
 
@@ -45,6 +46,8 @@ export default async function RootLayout({
 
             {/* Children content (for nested pages) */}
             <main>{children}</main>
+
+            <ScrollToTop />
 
             <Footer />
 

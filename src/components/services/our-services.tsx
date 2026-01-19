@@ -2,60 +2,51 @@
 
 import type { JSX } from 'react';
 import Image from 'next/image';
-import { TEXTS } from '@/constants/text';
-
-type SectionTwoText = typeof TEXTS.SECTION_TWO;
-type ServicesBox = SectionTwoText['SERVICES_BOXES'][number];
+import Link from 'next/link';
+import { IMAGES } from '@/constants/images';
+import { getAllServices } from '@/types/services';
 
 export default function OurServices(): JSX.Element {
-  const {
-    SERVICES_BOXES: servicesBoxes,
-
-  } = TEXTS.SECTION_TWO;
+  const servicesToShow = getAllServices();
 
   return (
-    <section className="w-full bg-white px-4 py-16 text-black md:px-10">
-      <div className="mx-auto mb-12 max-w-4xl text-center">
-        <p className="text-sm font-semibold tracking-widest text-black uppercase">
-          ALL SERVICES
-        </p>
-        <h2 className="mt-3 text-3xl font-bold md:text-5xl">
-          Complete Services in a
-          {' '}
-          <br />
-          {' '}
-          No Time
-        </h2>
-        <p className="text-muted mt-4 text-base md:text-lg">
-          Explore our comprehensive range of exceptional services and unwavering
-          {' '}
-          <br />
-          {' '}
-          commitment to excellence
-        </p>
-      </div>
+    <section className="w-full bg-white px-4 py-16 text-black dark:bg-black dark:text-white">
+      <div className="mx-auto max-w-7xl">
+        <div className="space-y-6">
+          {servicesToShow.map(service => (
+            <Link
+              key={service.id}
+              href={`/services/${service.slug}`}
+              className="group block"
+            >
+              <div className="transition-all duration-300 hover:pl-4">
+                <div className="flex items-start gap-4">
+                  <div className="flex h-6 w-6 shrink-0 items-center justify-center">
+                    <Image
+                      src={IMAGES.FOOTER.SERVICE_ICON}
+                      alt="Service Icon"
+                      width={24}
+                      height={24}
+                      className="h-6 w-6 object-contain transition-transform duration-300 group-hover:scale-110"
+                    />
+                  </div>
 
-      <div className="mx-auto grid max-w-7xl gap-8 sm:grid-cols-2 lg:grid-cols-3">
-        {servicesBoxes.map((box: ServicesBox, i) => (
-          <div
-            key={i}
-            className="flex flex-col items-center rounded-2xl p-6 text-center transition-all duration-300 "
-          >
-            <div className="mb-4 h-16 w-16">
-              <Image
-                src={box.icon}
-                alt={box.title}
-                width={64}
-                height={64}
-                className="mx-auto h-full w-full object-contain"
-              />
-            </div>
-            <h3 className="mb-2 text-xl font-semibold md:text-2xl">
-              {box.title}
-            </h3>
-            <p className="text-sm text-gray-600 md:text-base">{box.desc}</p>
-          </div>
-        ))}
+                  <div className="flex-1">
+                    <h3 className="text-xl font-semibold transition-colors duration-300 group-hover:text-primary md:text-2xl ">
+                      {service.title}
+                    </h3>
+
+                    <div className="mt-2 ml-0">
+                      <div className="text-sm font-medium text-primary transition-all duration-300 group-hover:translate-x-2 ">
+                        Click for further details →
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </Link>
+          ))}
+        </div>
       </div>
     </section>
   );

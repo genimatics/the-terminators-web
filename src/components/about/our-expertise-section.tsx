@@ -1,71 +1,104 @@
 'use client';
-import Image from 'next/image';
-import ExpertiseSlider from '@/components/about/experties-slider';
+
+import { useRouter } from 'next/navigation';
 import Button from '@/components/ui/button';
-import { IMAGES } from '@/constants/images';
+import ScrollReveal from '@/components/ui/scroll-reveal';
+import { TEXTS } from '@/constants/text';
 
 export default function OurExpertise() {
+  const DATA = TEXTS.OUR_EXPERTISE;
+  const router = useRouter();
+
   return (
-    <section className="w-full bg-white py-12 sm:py-16 md:py-24">
-      <div className="mx-auto grid max-w-7xl items-center gap-8 px-4 sm:gap-10 sm:px-6 md:grid-cols-2 md:gap-14">
-        <div>
-          <p className="mb-4 text-xs tracking-widest text-gray-600 uppercase sm:text-sm md:text-lg">
-            Role of Electricians
-          </p>
-          <h2 className="mb-6 text-3xl leading-tight font-bold sm:text-4xl md:text-5xl">
-            Keeping Homes and
-            {' '}
-            <br />
-            {' '}
-            Businesses Safe
-          </h2>
-          <p className="mb-12 max-w-md text-base leading-relaxed text-gray-600 sm:text-lg">
-            We are a full-service electrical contractor dedicated to providing
-            quality electrical services to both residential and commercial
-            customers. Our team of experienced electricians are highly trained
-            and certified.
-          </p>
+    <section className="w-full bg-white px-4 py-6 sm:px-6 sm:py-10 md:px-8 md:py-16 lg:px-12 xl:px-16 2xl:px-24">
+      <div className="mx-auto max-w-4xl">
 
-          <div className="mb-12 grid grid-cols-1 gap-8 sm:grid-cols-2 sm:gap-10">
-            <div>
-              <Image
-                src={IMAGES.ABOUT.EXPERTICON1 || '/placeholder.svg'}
-                alt="icon"
-                width={80}
-                height={80}
-                className="mb-6 h-16 w-16 sm:h-20 sm:w-20"
-              />
-              <h4 className="mb-3 text-lg font-semibold sm:text-2xl">
-                Professional Installers
-              </h4>
-              <p className="text-base text-gray-600 sm:text-lg">
-                Highly trained and certified in all areas of electrical work.
-              </p>
-            </div>
+        <ScrollReveal>
+          <div className="mb-16 text-center md:mb-24">
+            <p className="mb-3 text-sm tracking-wide text-gray-500 uppercase">
+              {DATA.VISION.SMALL}
+            </p>
 
-            <div>
-              <Image
-                src={IMAGES.ABOUT.EXPERTICON2 || '/placeholder.svg'}
-                alt="icon"
-                width={80}
-                height={80}
-                className="mb-6 h-16 w-16 sm:h-20 sm:w-20"
-              />
-              <h4 className="mb-3 text-lg font-semibold sm:text-2xl">
-                Maintenance & Repairs
-              </h4>
-              <p className="text-base text-gray-600 sm:text-lg">
-                Provide quality electrical services to all customers.
+            <h2 className="mb-6 text-4xl font-bold text-black md:text-5xl">
+              {DATA.VISION.TITLE}
+            </h2>
+
+            <div className="mx-auto max-w-3xl">
+              <p className="text-sm leading-relaxed text-gray-600 md:text-base">
+                {DATA.VISION.DESC}
               </p>
             </div>
           </div>
+        </ScrollReveal>
 
-          <Button size="lg">Prices</Button>
-        </div>
+        <ScrollReveal delay={0.2}>
+          <div className="text-center md:mb-24">
 
-        <div className="relative h-[300px] w-full sm:h-[450px] md:h-[580px]">
-          <ExpertiseSlider />
-        </div>
+            <p className="mb-3 text-sm tracking-wide text-gray-500 uppercase">
+              {DATA.STRENGTHS.SMALL}
+            </p>
+
+            <h2 className="mb-8 text-4xl font-bold text-black md:text-5xl">
+              {DATA.STRENGTHS.TITLE}
+            </h2>
+
+            <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+              {DATA.STRENGTHS.CARDS.map((card, index) => (
+                <div
+                  key={index}
+                  className="rounded-2xl p-6 text-center transition-shadow duration-300"
+                >
+                  <div className="mb-2 inline-flex h-12 w-12 items-center justify-center rounded-full bg-blue-100 text-blue-600">
+                    {card.icon.includes('/')
+                      ? (
+                          <img
+                            src={card.icon}
+                            alt={card.title}
+                            className="h-14 w-14 scale-120 object-contain"
+                          />
+                        )
+                      : (
+                          <span className="text-xl font-bold">{card.icon}</span>
+                        )}
+                  </div>
+
+                  <h4 className="mb-2 text-xl font-semibold text-gray-800">
+                    {card.title}
+                  </h4>
+
+                  <p className="text-sm text-gray-600 md:text-base">
+                    {card.desc}
+                  </p>
+                </div>
+              ))}
+            </div>
+
+            <div className="mt-4 mb-12">
+              <Button onClick={() => router.push('/services')} disabled={false} size="md">{DATA.STRENGTHS.BUTTON}</Button>
+            </div>
+          </div>
+        </ScrollReveal>
+
+        <ScrollReveal delay={0.4}>
+          <div className="text-center">
+
+            <p className="mb-3 text-sm tracking-wide text-gray-500 uppercase">
+              {DATA.MISSION.SMALL}
+            </p>
+
+            <h2 className="mb-6 text-4xl font-bold text-black md:text-5xl">
+              {DATA.MISSION.TITLE}
+            </h2>
+
+            <div className="mx-auto max-w-3xl">
+              <p className="text-sm leading-relaxed text-gray-600 md:text-base">
+                {DATA.MISSION.DESC}
+              </p>
+            </div>
+
+          </div>
+        </ScrollReveal>
+
       </div>
     </section>
   );

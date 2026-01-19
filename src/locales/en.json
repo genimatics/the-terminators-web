@@ -8,17 +8,17 @@
     "sign_up_link": "Sign up"
   },
   "BaseTemplate": {
-    "description": "Starter code for your Nextjs Boilerplate with Tailwind CSS",
+    "description": "Starter code for your Next.js Boilerplate with Tailwind CSS.",
     "made_with": "Made with <author></author>."
   },
   "Index": {
-    "meta_title": "Next.js Boilerplate Presentation",
-    "meta_description": "Next js Boilerplate is the perfect starter code for your project. Build your React application with the Next.js framework.",
+    "meta_title": "The Terminators",
+    "meta_description": "Next.js Boilerplate is the perfect starter code for your project. Build your React application with the Next.js framework.",
     "sponsors_title": "Sponsors"
   },
   "Counter": {
     "meta_title": "Counter",
-    "meta_description": "An example of DB operation",
+    "meta_description": "An example showcasing basic database operations.",
     "security_powered_by": "Security, bot detection and rate limiting powered by"
   },
   "CounterForm": {
@@ -32,21 +32,21 @@
   },
   "About": {
     "meta_title": "About",
-    "meta_description": "About page description",
+    "meta_description": "Learn more about our passionate team dedicated to building amazing software.",
     "about_paragraph": "Welcome to our About page! We are a team of passionate individuals dedicated to creating amazing software.",
     "translation_powered_by": "Translation powered by"
   },
   "Portfolio": {
     "meta_title": "Portfolio",
-    "meta_description": "Welcome to my portfolio page!",
-    "presentation": "Welcome to my portfolio page! Here you will find a carefully curated collection of my work and accomplishments. Through this portfolio, I'm to showcase my expertise, creativity, and the value I can bring to your projects.",
+    "meta_description": "Explore a curated collection of work and accomplishments.",
+    "presentation": "Welcome to our portfolio page! Here you will find a carefully curated collection of my work and accomplishments. Through this portfolio, I aim to showcase my expertise, creativity, and the value I can bring to your projects.",
     "portfolio_name": "Portfolio {name}",
     "error_reporting_powered_by": "Error reporting powered by",
     "coverage_powered_by": "Code coverage powered by"
   },
   "PortfolioSlug": {
     "meta_title": "Portfolio {slug}",
-    "meta_description": "Portfolio {slug} description",
+    "meta_description": "Detailed portfolio for {slug}.",
     "header": "Portfolio {slug}",
     "content": "Created a set of promotional materials and branding elements for a corporate event. Crafted a visually unified theme, encompassing a logo, posters, banners, and digital assets. Integrated the client's brand identity while infusing it with a contemporary and innovative approach.",
     "code_review_powered_by": "Code review powered by"
@@ -65,7 +65,8 @@
     "alternative_message": "Need advanced features? Multi-tenancy & Teams, Roles & Permissions, Shadcn UI, End-to-End Typesafety with oRPC, Stripe Payment, Light / Dark mode. Try <url></url>."
   },
   "UserProfile": {
-    "meta_title": "User Profile"
+    "meta_title": "User Profile",
+    "meta_description": "Manage and update your account details."
   },
   "DashboardLayout": {
     "dashboard_link": "Dashboard",
@@ -74,10 +75,30 @@
   },
   "Contact": {
     "meta_title": "Contact Us",
-    "meta_description": "Get in touch with us for professional electrical services"
+    "meta_description": "Get in touch with us for professional electrical services."
   },
   "Services": {
     "meta_title": "Our Services",
-    "meta_description": "Professional electrical services for your home and business"
+    "meta_description": "Professional electrical services for your home and business."
+  },
+  "Registration": {
+    "meta_title": "Registration",
+    "meta_description": "Register now to access our professional electrical services."
+  },
+  "Clients": {
+    "meta_title": "Our Clients",
+    "meta_description": "Trusted by top clients for professional electrical services."
+  },
+  "Gallery": {
+    "meta_title": "Our Gallery",
+    "meta_description": "Explore our gallery showcasing professional electrical work."
+  },
+  "Events": {
+    "meta_title": "Our Events",
+    "meta_description": "Collection of Events & Activities."
+  },
+  "PrivacyPolicy": {
+    "meta_title": "Privacy Policy",
+    "meta_description": "Our Privacy Policy"
   }
 }

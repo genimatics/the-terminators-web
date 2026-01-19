@@ -16,6 +16,7 @@ export default function NotFoundPage() {
   return (
     <html lang={routing.defaultLocale}>
       <body>
+
         <section className="flex min-h-screen w-full flex-col items-center justify-center bg-black px-4 text-center text-white">
           <h1 className="text-[100px] leading-none font-extrabold md:text-[140px]">
             404
@@ -35,7 +36,7 @@ export default function NotFoundPage() {
             />
             <button
               type="button"
-              className="bg-primary flex items-center justify-center px-5 text-black "
+              className="flex items-center justify-center bg-primary px-5 text-black "
             >
               <Search size={20} />
             </button>
@@ -43,7 +44,10 @@ export default function NotFoundPage() {
 
           <div className="mt-8">
             <Link href={homeUrl}>
-              <Button className="bg-primary px-8 py-3 text-base font-semibold text-black ">
+              <Button
+                disabled={false}
+                className="bg-primary px-8 py-3 text-base font-semibold text-black "
+              >
                 Back to Home
               </Button>
             </Link>

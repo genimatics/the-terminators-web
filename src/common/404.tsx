@@ -25,7 +25,7 @@ export default function NotFound(): JSX.Element {
         />
         <button
           type="button"
-          className="bg-primary flex items-center justify-center px-5 text-black "
+          className="flex items-center justify-center bg-primary px-5 text-black "
         >
           <Search size={20} />
         </button>
@@ -33,6 +33,7 @@ export default function NotFound(): JSX.Element {
 
       <div className="mt-8">
         <Button
+          disabled={false}
           className="bg-primary px-8 py-3 text-base font-semibold text-black "
           onClick={() => (window.location.href = '/')}
         >

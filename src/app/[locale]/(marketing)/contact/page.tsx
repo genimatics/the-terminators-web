@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
+import HeroSection from '@/common/hero-section';
 import Contact from '@/components/contact/contact';
+import { IMAGES } from '@/constants/images';
 
 type IContactProps = {
   params: Promise<{ locale: string }>;
@@ -25,6 +27,11 @@ export default async function ContactPage(props: IContactProps) {
 
   return (
     <>
+      <HeroSection
+        title="Contact Us"
+        subtitle="Contact us for any inquiries"
+        background={IMAGES.HERO.SLIDE1}
+      />
       <Contact />
     </>
   );

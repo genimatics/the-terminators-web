@@ -1,146 +1,238 @@
 'use client';
 
 import type { JSX } from 'react';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 import Image from 'next/image';
-import { useState } from 'react';
+import Link from 'next/link';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import Button from '@/components/ui/button';
+import ScrollReveal from '@/components/ui/scroll-reveal';
+import { SLIDER_DATA } from '@/constants/slider';
 import { TEXTS } from '@/constants/text';
-
-type SectionTwoText = typeof TEXTS.SECTION_TWO;
-type Slide = SectionTwoText['SLIDES'][number];
-type ServiceBox = SectionTwoText['SERVICE_BOXES'][number];
+import { getFeaturedServices } from '@/types/services';
 
 export default function SectionTwo(): JSX.Element {
+  const slides = SLIDER_DATA;
+
   const {
-    SLIDES: slides,
-    SERVICE_BOXES: serviceBoxes,
     HEADINGS: headings,
     PARAGRAPHS: paragraphs,
     CTA_BANNER: ctaBanner,
   } = TEXTS.SECTION_TWO;
 
+  const serviceBoxes = getFeaturedServices(6);
+
+  const totalSlides = slides.length;
   const [current, setCurrent] = useState<number>(0);
 
-  const nextSlide = (): void =>
-    setCurrent(prev => (prev + 1) % slides.length);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrent(prev => (prev + 1) % totalSlides);
+    }, 4000);
+    return () => clearInterval(interval);
+  }, [totalSlides]);
 
-  const prevSlide = (): void =>
-    setCurrent(prev => (prev - 1 + slides.length) % slides.length);
+  const nextSlide = useCallback(() => {
+    setCurrent(prev => (prev + 1) % totalSlides);
+  }, [totalSlides]);
 
-  const currentSlide: Slide = slides[current] ?? slides[0];
+  const prevSlide = useCallback(() => {
+    setCurrent(prev => (prev - 1 + totalSlides) % totalSlides);
+  }, [totalSlides]);
+
+  const currentSlide = useMemo(
+    () =>
+      (slides[current] ?? slides[0]) as NonNullable<(typeof slides)[number]>,
+    [current, slides],
+  );
+
+  const startX = useRef<number>(0);
+  const endX = useRef<number>(0);
+
+  const handleTouchStart = (e: React.TouchEvent) => {
+    const t = e.touches?.[0];
+    if (t) {
+      startX.current = t.clientX;
+    }
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    const t = e.touches?.[0];
+    if (t) {
+      endX.current = t.clientX;
+    }
+  };
+
+  const handleTouchEnd = () => {
+    const diff = startX.current - endX.current;
+    if (Math.abs(diff) > 50) {
+      diff > 0 ? nextSlide() : prevSlide();
+    }
+  };
+
+  const titleParts = useMemo(() => {
+    const parts = headings.TITLE.split(' ');
+    return { first: parts[0], rest: parts.slice(1).join(' ') };
+  }, [headings.TITLE]);
 
   return (
-    <section className="w-full bg-white px-4 py-10 text-black sm:px-6 md:px-10">
-      <div className="relative mx-auto mb-10 max-w-7xl">
-        <a
-          href={currentSlide.link}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="block"
-        >
-          <Image
-            src={currentSlide.img}
-            alt={`Slide ${current + 1}`}
-            width={1600}
-            height={800}
-            className="h-[300px] w-full  object-cover sm:h-[400px] md:h-[500px] lg:h-[650px]"
-          />
-        </a>
+    <section className="w-full bg-white px-4 text-black sm:px-6 md:px-10 lg:px-12 xl:px-16 2xl:px-24">
 
-        <div className="absolute bottom-4 left-1/2 max-w-[90%] -translate-x-1/2 px-4 py-2 text-center text-white sm:max-w-2xl sm:px-6">
-          <h2 className="mb-2 text-2xl font-bold sm:text-3xl md:text-4xl lg:text-5xl">
-            {headings.MAIN}
-          </h2>
-          <p className="text-sm text-gray-200 sm:text-base md:text-lg">
-            {headings.SUB}
-          </p>
-        </div>
+      <ScrollReveal>
+        <div className="relative mb-10 w-full">
 
-        <button
-          type="button"
-          onClick={prevSlide}
-          className="absolute top-1/2 left-2 -translate-y-1/2 rounded-full bg-black/30 p-2 text-white hover:bg-black/50 sm:left-4 sm:p-3"
-          aria-label="Previous Slide"
-        >
-          ❮
-        </button>
-        <button
-          type="button"
-          onClick={nextSlide}
-          className="absolute top-1/2 right-2 -translate-y-1/2 rounded-full bg-black/30 p-2 text-white hover:bg-black/50 sm:right-4 sm:p-3"
-          aria-label="Next Slide"
-        >
-          ❯
-        </button>
-      </div>
-
-      <div className="mx-auto mb-12 grid max-w-7xl grid-cols-1 gap-6 md:grid-cols-2">
-        <div className="text-center md:text-left">
-          <h3 className="mb-2 text-2xl font-bold sm:text-3xl md:text-4xl lg:text-5xl">
-            {headings.TITLE.split(' ')[0]}
-            {' '}
-            <span className="block">{headings.TITLE.split(' ').slice(1).join(' ')}</span>
-          </h3>
-          <h4 className="md:text-md mt-4 text-base font-medium text-gray-600 sm:text-lg">
-            {headings.SUBTITLE}
-          </h4>
-        </div>
-
-        <div className="space-y-3 text-sm text-gray-700 sm:text-base md:text-lg">
-          {paragraphs.map((paragraph, index) => (
-            <p key={index}>{paragraph}</p>
-          ))}
-        </div>
-      </div>
-
-      <div className="mx-auto grid max-w-7xl gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {serviceBoxes.map((box: ServiceBox, i) => (
           <div
-            key={i}
-            className="flex flex-col items-start rounded-2xl p-4 transition-all duration-300 hover:bg-[#f8f8f8] sm:p-6"
+            onTouchStart={handleTouchStart}
+            onTouchMove={handleTouchMove}
+            onTouchEnd={handleTouchEnd}
+            className="w-full transition-all duration-700 ease-in-out"
           >
-            <div className="mb-3 h-12 w-12 sm:h-16 sm:w-16">
+            <div className="relative">
               <Image
-                src={box.icon}
-                alt={box.title}
-                width={64}
-                height={64}
-                className="h-full w-full object-contain"
+                src={currentSlide.img}
+                alt={`Slide ${current + 1}`}
+                width={1600}
+                height={800}
+                className="
+                  h-[300px] w-full border border-black object-cover blur-[2px]
+                  transition-all duration-700 ease-in-out
+                  sm:h-[400px] md:h-[500px] lg:h-[650px]
+                "
               />
+
+              <div className="absolute inset-0 bg-black/30"></div>
             </div>
-            <h3 className="mb-1 text-lg font-semibold sm:text-xl md:text-2xl">
-              {box.title}
-            </h3>
-            <p className="text-xs text-gray-600 sm:text-sm md:text-base">{box.desc}</p>
           </div>
+
+          <div
+            className="
+              absolute top-1/2 left-1/2 w-[90%]
+              -translate-x-1/2 -translate-y-1/2 px-10 py-2 text-center text-white
+              sm:top-auto sm:bottom-4 sm:left-1/2 sm:w-[90%] sm:max-w-2xl
+              sm:-translate-x-1/2 sm:-translate-y-0 sm:px-6
+            "
+          >
+            <h2 className="mb-2 text-3xl font-bold sm:text-4xl md:text-5xl">
+              {currentSlide.title}
+            </h2>
+
+            <p className="text-sm text-gray-200 md:text-base">
+              {currentSlide.sub}
+            </p>
+          </div>
+
+          <button
+            type="button"
+            onClick={prevSlide}
+            className="absolute top-1/2 left-2 -translate-y-1/2 rounded-full bg-black/30 p-2 text-white hover:bg-black/50 sm:left-4 sm:p-3"
+            aria-label="Previous Slide"
+          >
+            <ChevronLeft className="h-6 w-6" />
+          </button>
+
+          <button
+            type="button"
+            onClick={nextSlide}
+            className="absolute top-1/2 right-2 -translate-y-1/2 rounded-full bg-black/30 p-2 text-white hover:bg-black/50 sm:right-4 sm:p-3"
+            aria-label="Next Slide"
+          >
+            <ChevronRight className="h-6 w-6" />
+          </button>
+        </div>
+      </ScrollReveal>
+
+      <div className="mb-12 grid w-full grid-cols-1 gap-6 md:grid-cols-2">
+        <ScrollReveal>
+          <div className="text-center md:text-left">
+            <h3 className="mb-2 text-4xl font-bold text-black md:text-5xl">
+              {titleParts.first}
+              <span className="block">{titleParts.rest}</span>
+            </h3>
+            <h4 className="mt-3 text-sm font-medium text-gray-600 md:text-base">
+              {headings.SUBTITLE}
+            </h4>
+          </div>
+        </ScrollReveal>
+
+        <ScrollReveal delay={0.1}>
+          <div className="space-y-3 text-sm text-gray-700 md:text-base">
+            {paragraphs.map((paragraph, i) => (
+              <p key={i}>{paragraph}</p>
+            ))}
+          </div>
+        </ScrollReveal>
+      </div>
+
+      <div className="mb-10 grid w-full gap-2 sm:grid-cols-2 lg:grid-cols-3">
+        {serviceBoxes.map((box, i) => (
+          <ScrollReveal key={box.id} delay={i * 0.1}>
+            <Link href={`/services/${box.slug}`}>
+              <div className="flex flex-col items-center rounded-2xl p-4 text-center transition-all duration-300 sm:items-start sm:p-6 sm:text-left">
+                <div className="mx-auto mb-3 h-12 w-12 sm:mx-0 sm:h-16 sm:w-16">
+                  <Image
+                    src={box.icon}
+                    alt={box.title}
+                    width={64}
+                    height={64}
+                    className="h-full w-full object-contain"
+                  />
+                </div>
+
+                <h3 className="mb-2 text-lg font-semibold text-black hover:text-primary sm:text-xl md:text-2xl">
+                  {box.title}
+                </h3>
+
+                <p className="line-clamp-3 text-sm whitespace-pre-line text-gray-600 md:text-base">
+                  {box.shortDesc}
+                </p>
+              </div>
+            </Link>
+          </ScrollReveal>
         ))}
       </div>
 
-      <div className="mx-auto mt-10 flex h-auto flex-col overflow-hidden border-2 border-black md:h-[170px] md:flex-row">
+      <ScrollReveal>
+        <div className="mb-10 text-center">
+          <Link href="/services">
+            <Button disabled={false} className="hover:bg-primary-dark bg-primary px-8 py-3 text-lg font-semibold text-white">
+              View All Services
+            </Button>
+          </Link>
+        </div>
+      </ScrollReveal>
+
+      <div className="flex w-full flex-col overflow-hidden border-2 border-black md:h-[170px] md:flex-row">
         <div className="relative w-full border-b-2 border-black md:w-[25%] md:border-r-4 md:border-b-0">
           <Image
             src={ctaBanner.IMAGE}
-            alt="Electrician Banner"
+            alt="CTA Banner"
             width={400}
             height={300}
             className="h-48 w-full object-cover sm:h-56 md:h-full"
           />
         </div>
 
-        <div className="flex w-full flex-col justify-center bg-[#0a0a0a] px-6 py-6 text-white md:w-[75%]">
-          <h3 className="mb-2 text-2xl font-bold sm:text-3xl md:text-4xl">
-            {ctaBanner.TITLE}
-          </h3>
-          <div className="flex flex-col items-start gap-4 sm:flex-row sm:items-center">
-            <p className="flex-1 text-base text-gray-300 sm:text-lg md:text-xl">
-              {ctaBanner.DESC}
-            </p>
-            <Button className="px-6 py-2 text-base sm:px-8 sm:py-3 sm:text-lg">
-              {ctaBanner.BUTTON_TEXT}
-            </Button>
+        <div className="flex w-full flex-col bg-[#0a0a0a] text-white md:w-[75%] md:flex-row">
+
+          <div className="flex w-full flex-col justify-center px-6 py-4 md:w-[70%]">
+            <h3 className="mb-2 text-3xl font-bold md:text-4xl">{ctaBanner.TITLE}</h3>
+            <p className="text-sm text-gray-300 md:text-base">{ctaBanner.DESC}</p>
           </div>
+
+          <div className="flex w-full items-center justify-center px-4 pb-4 md:w-[30%] md:pb-0">
+            <Link href="/services">
+              <Button
+                disabled={false}
+                className="hover:bg-primary-dark bg-primary px-8 py-3 text-lg font-semibold text-white"
+              >
+                {ctaBanner.BUTTON_TEXT}
+              </Button>
+            </Link>
+          </div>
+
         </div>
       </div>
+
     </section>
   );
 }
