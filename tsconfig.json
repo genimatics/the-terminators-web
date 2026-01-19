@@ -5,52 +5,60 @@
     // Language & Environment
     // Defines JavaScript version and runtime environment
     // ======================================================================
-    "target": "ES2017",
-    "module": "esnext",
+    "alwaysStrict": true,
+    "esModuleInterop": true,
+    "isolatedModules": true,
+    "jsx": "react-jsx",
     "lib": [
       "dom",
       "dom.iterable",
       "esnext"
     ],
+    "module": "esnext",
     "moduleResolution": "bundler",
-    "isolatedModules": true,
-    // ======================================================================
-    // Type Safety - Foundation
-    // Core type checking settings for a robust codebase
-    // ======================================================================
-    "strict": true,
-    "alwaysStrict": true,
-    "strictNullChecks": true,
-    "noImplicitAny": true,
-    "noImplicitThis": true,
+    "target": "ES2017",
+
     // ======================================================================
     // Type Safety - Advanced
     // Additional checks for higher code quality
     // ======================================================================
-    "noUncheckedIndexedAccess": true,
+    "allowUnreachableCode": false,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitOverride": true,
     "noImplicitReturns": true,
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "noUncheckedIndexedAccess": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true,
-    "allowUnreachableCode": false,
+    "strict": true,
+    "strictNullChecks": true,
     "useUnknownInCatchVariables": true,
-    "noImplicitOverride": true,
+
     // ======================================================================
     // Interoperability
     // Settings for working with different file types and modules
     // ======================================================================
     "allowJs": true,
-    "checkJs": true,
-    "esModuleInterop": true,
+
+    // ❌ Important Fix — GSAP VelocityTracker errors ko block karega
+    "checkJs": false,
+
     "resolveJsonModule": true,
+
     // ======================================================================
     // Build & Performance
     // Settings that affect compilation output and build performance
     // ======================================================================
-    "skipLibCheck": true,
-    "removeComments": true,
-    "preserveConstEnums": true,
     "forceConsistentCasingInFileNames": true,
+    "incremental": true,
+    "noEmit": true,
+    "preserveConstEnums": true,
+    "removeComments": true,
+
+    // Already perfect → GSAP node_modules ignore ho jayega
+    "skipLibCheck": true,
+
     // ======================================================================
     // Project Structure
     // Configure import paths and module resolution
@@ -64,20 +72,17 @@
         "./public/*"
       ]
     },
+
     // ======================================================================
     // Next.js Project Configuration
     // Controls settings specific to Next.js framework
     // ======================================================================
-    "jsx": "react-jsx", // Uses the React automatic runtime
-    "incremental": true, // Enable faster incremental builds
-    "noEmit": true, // Skip emitting files (Next.js handles this)
     "plugins": [
       {
         "name": "next"
       }
-    ] // Enable Next.js TypeScript plugin
+    ]
   },
-  // Files to include/exclude from the project
   "exclude": [
     "node_modules",
     "**/*.spec.ts",

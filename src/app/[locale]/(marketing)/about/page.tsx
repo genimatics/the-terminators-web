@@ -1,6 +1,11 @@
 import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
-import Image from 'next/image';
+// import AboutFormSection from '@/components/about/about-contact-form';
+import AboutTeam from '@/components/about/about-team';
+
+import AboutUs from '@/components/about/about-us';
+import CorporateInformation from '@/components/about/CorporateInformation';
+import OurExpertise from '@/components/about/our-expertise-section';
 
 type IAboutProps = {
   params: Promise<{ locale: string }>;
@@ -22,34 +27,23 @@ export async function generateMetadata(props: IAboutProps): Promise<Metadata> {
 export default async function About(props: IAboutProps) {
   const { locale } = await props.params;
   setRequestLocale(locale);
-  const t = await getTranslations({
-    locale,
-    namespace: 'About',
-  });
 
   return (
     <>
-      <p>{t('about_paragraph')}</p>
+      {/* <HeroSection
+        title="About"
+        subtitle="Passion Behind Our Work"
+        background={IMAGES.HERO.SLIDE1}
+      /> */}
+      <AboutUs />
+      <CorporateInformation />
 
-      <div className="mt-2 text-center text-sm">
-        {`${t('translation_powered_by')} `}
-        <a
-          className="text-blue-700 hover:border-b-2 hover:border-blue-700"
-          href="https://l.crowdin.com/next-js"
-        >
-          Crowdin
-        </a>
-      </div>
+      <OurExpertise />
+      <AboutTeam />
 
-      <a href="https://l.crowdin.com/next-js">
-        <Image
-          className="mx-auto mt-2"
-          src="/assets/images/crowdin-dark.png"
-          alt="Crowdin Translation Management System"
-          width={128}
-          height={26}
-        />
-      </a>
+      {/* <AboutContactInfoSection />
+      <AboutFormSection /> */}
+
     </>
   );
 };
