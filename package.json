@@ -7,7 +7,7 @@
   "scripts": {
     "dev:spotlight": "npx @spotlightjs/spotlight",
     "dev": "next dev",
-    "build": "next build --webpack",
+    "build": "next build",
     "build-local": "run-p db-server:memory build:next --race",
     "start": "next start",
     "build-stats": "cross-env ANALYZE=true npm run build",
@@ -27,7 +27,6 @@
     "@clerk/nextjs": "^6.35.0",
     "@hookform/resolvers": "^5.2.2",
     "@logtape/logtape": "^1.2.0",
-    "@sentry/nextjs": "^10.22.0",
     "@t3-oss/env-nextjs": "^0.13.8",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",

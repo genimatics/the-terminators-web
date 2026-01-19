@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
-import { notFound } from 'next/navigation';
 import { IMAGES } from '@/constants/images';
 import { getAllServices, getServiceBySlug } from '@/types/services';
 
@@ -38,8 +37,12 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
   const { slug } = await params;
   const service = getServiceBySlug(slug);
 
-  if (!service) {
-    notFound();
+  if (service === undefined) {
+    return (
+      <div className="flex min-h-screen items-center justify-center bg-gray-50">
+        <h1 className="text-3xl font-bold text-gray-900">Service Not Found</h1>
+      </div>
+    );
   }
 
   return (

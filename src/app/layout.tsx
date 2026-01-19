@@ -1,12 +1,9 @@
 import type { Metadata } from 'next';
-import { hasLocale, NextIntlClientProvider } from 'next-intl';
-import { setRequestLocale } from 'next-intl/server';
-import { notFound } from 'next/navigation';
+import { NextIntlClientProvider } from 'next-intl';
 import { PostHogProvider } from '@/components/analytics/PostHogProvider';
 import Footer from '@/components/sections/footer';
 import Navbar from '@/components/sections/navbar';
 import ScrollToTop from '@/components/ui/scroll-to-top';
-import { routing } from '@/libs/I18nRouting';
 import '@/styles/global.css';
 
 export const metadata: Metadata = {
@@ -18,41 +15,22 @@ export const metadata: Metadata = {
   ],
 };
 
-export function generateStaticParams() {
-  return routing.locales.map(locale => ({ locale }));
-}
-
-export default async function RootLayout({
+export default function RootLayout({
   children,
-  params,
 }: {
   children: React.ReactNode;
-  params: Promise<{ locale: string }>;
 }) {
-  const { locale } = await params;
-
-  if (!hasLocale(routing.locales, locale)) {
-    notFound();
-  }
-
-  setRequestLocale(locale);
+  const locale = 'en'; // or detect from headers/cookies
 
   return (
     <html lang={locale}>
       <body>
-        <NextIntlClientProvider>
+        <NextIntlClientProvider locale={locale}>
           <PostHogProvider>
             <Navbar />
-
-            {/* Children content (for nested pages) */}
             <main>{children}</main>
-
             <ScrollToTop />
-
             <Footer />
-
-            {/* Demo Badge for analytics/testing */}
-            {/* <DemoBadge /> */}
           </PostHogProvider>
         </NextIntlClientProvider>
       </body>
