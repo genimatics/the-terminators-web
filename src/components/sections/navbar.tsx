@@ -1,11 +1,11 @@
 'use client';
 
 import Image from 'next/image';
+import Link from 'next/link';
 import { useRef, useState } from 'react';
 import { IoIosArrowDown } from 'react-icons/io';
 import { IMAGES } from '@/constants/images';
 import { TEXTS } from '@/constants/text';
-import Link from 'next/link';
 
 type DropdownItem = {
   name: string;
@@ -140,7 +140,6 @@ export default function Navbar() {
       hasDropdown: false,
     };
   });
-
 
   const handleMouseEnter = (name: string) => {
     if (hoverTimeoutRef.current) {

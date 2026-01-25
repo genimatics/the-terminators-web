@@ -3,7 +3,6 @@ import Contact from '@/components/contact/contact';
 import { IMAGES } from '@/constants/images';
 
 export default async function ContactPage() {
-
   return (
     <>
       <HeroSection

@@ -9,7 +9,7 @@ const meta = {
   },
   decorators: [
     Story => (
-        <Story />
+      <Story />
     ),
   ],
 } satisfies Meta<typeof BaseTemplate>;

@@ -2,9 +2,6 @@ import HeroSection from '@/common/hero-section';
 import OurGallery from '@/components/gallery/our-gallery';
 import { IMAGES } from '@/constants/images';
 
-
-
-
 export default async function About() {
   return (
     <>

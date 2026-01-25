@@ -19,16 +19,15 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-
   return (
-    <html >
+    <html>
       <body>
-          <PostHogProvider>
-            <Navbar />
-            <main>{children}</main>
-            <ScrollToTop />
-            <Footer />
-          </PostHogProvider>
+        <PostHogProvider>
+          <Navbar />
+          <main>{children}</main>
+          <ScrollToTop />
+          <Footer />
+        </PostHogProvider>
       </body>
     </html>
   );

@@ -3,7 +3,6 @@ import OurPortfolio from '@/components/portfolio/our-portfolio';
 import { IMAGES } from '@/constants/images';
 
 export default async function About() {
-
   return (
     <>
       <HeroSection
