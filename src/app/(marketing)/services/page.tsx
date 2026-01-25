@@ -1,41 +1,28 @@
 import type { Metadata } from 'next';
-import { getTranslations, setRequestLocale } from 'next-intl/server';
 import HeroSection from '@/common/hero-section';
-// import ElectricalServices from '@/components/services/electrical-services';
 import OurServices from '@/components/services/our-services';
 import { IMAGES } from '@/constants/images';
 
-type IServicesProps = {
-  params: Promise<{ locale: string }>;
-};
 
-export async function generateMetadata(props: IServicesProps): Promise<Metadata> {
-  const { locale } = await props.params;
-  const t = await getTranslations({
-    locale,
-    namespace: 'Services',
-  });
+
+export function generateMetadata(): Metadata {
 
   return {
-    title: t('meta_title') || 'Our Services',
-    description: t('meta_description') || 'Professional electrical services',
+    title: 'Our Services',
+    description:  'Professional electrical services',
   };
 }
 
-export default async function ServicesPage(props: IServicesProps) {
-  const { locale } = await props.params;
-  setRequestLocale(locale);
+export default function ServicesPage() {
 
   return (
     <>
       <HeroSection
-        title="Our Services"
-        subtitle="Over the past 2 decades, the firm has excelled in following "
+        title={ 'Our Services'}
+        subtitle={'Over the past 2 decades, the firm has excelled in following'}
         background={IMAGES.HERO.SLIDE1}
       />
-      {/* <ElectricalServices /> */}
-      {/* <ServicesPromo /> */}
       <OurServices />
     </>
   );
-};
+}

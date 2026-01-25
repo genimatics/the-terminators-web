@@ -1,11 +1,11 @@
 'use client';
 
 import Image from 'next/image';
-import { useEffect, useRef, useState } from 'react';
+import { useRef, useState } from 'react';
 import { IoIosArrowDown } from 'react-icons/io';
 import { IMAGES } from '@/constants/images';
 import { TEXTS } from '@/constants/text';
-import { Link, usePathname } from '@/libs/I18nNavigation';
+import Link from 'next/link';
 
 type DropdownItem = {
   name: string;
@@ -33,7 +33,7 @@ const MenuIcon = ({ onClick }: { onClick: () => void }) => (
     className="flex cursor-pointer flex-col gap-1"
   >
     {[0, 1, 2].map(i => (
-      <div key={i} className="h-[2px] w-6 bg-black" />
+      <div key={i} className="h-0.5 w-6 bg-black" />
     ))}
   </div>
 );
@@ -124,7 +124,6 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [mobileDropdownOpen, setMobileDropdownOpen] = useState<string | null>(null);
   const hoverTimeoutRef = useRef<NodeJS.Timeout | null>(null);
-  const pathname = usePathname();
 
   const navLinks: NavItem[] = TEXTS.NAVBAR.LINKS.map((link) => {
     if (link.name === 'Services') {
@@ -142,39 +141,6 @@ export default function Navbar() {
     };
   });
 
-  useEffect(() => {
-    if (!pathname) {
-      return;
-    }
-
-    const segments = pathname.split('/').filter(Boolean);
-    const basePath = segments.length === 0 ? '/' : `/${segments[0]}`;
-
-    const matchingItem = navLinks.find((link) => {
-      if (basePath === '/') {
-        return link.href === '/';
-      }
-
-      // Exact match for simple pages: /about, /contact, /gallery, etc.
-      if (link.href === basePath) {
-        return true;
-      }
-
-      // Make all nested services pages (/services/slug) keep "Services" active
-      if (basePath.startsWith('/services') && link.href === '/services') {
-        return true;
-      }
-
-      return false;
-    });
-
-    if (matchingItem) {
-      // eslint-disable-next-line react-hooks/set-state-in-effect
-      setActiveLink(matchingItem.name.toLowerCase());
-    } else {
-      setActiveLink('');
-    }
-  }, [pathname]);
 
   const handleMouseEnter = (name: string) => {
     if (hoverTimeoutRef.current) {

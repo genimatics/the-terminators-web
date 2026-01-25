@@ -1,25 +1,24 @@
 'use client';
 
-import { usePathname, useSearchParams } from 'next/navigation';
+import { useSearchParams } from 'next/navigation';
 import { usePostHog } from 'posthog-js/react';
 import { Suspense, useEffect } from 'react';
 
 const PostHogPageView = () => {
-  const pathname = usePathname();
   const searchParams = useSearchParams();
   const posthog = usePostHog();
 
   // Track pageviews
   useEffect(() => {
-    if (pathname && posthog) {
-      let url = window.origin + pathname;
+    if (posthog) {
+      let url = window.origin;
       if (searchParams.toString()) {
         url = `${url}?${searchParams.toString()}`;
       }
 
       posthog.capture('$pageview', { $current_url: url });
     }
-  }, [pathname, searchParams, posthog]);
+  }, [searchParams, posthog]);
 
   return null;
 };

@@ -1,49 +1,19 @@
-import type { Metadata } from 'next';
-import { getTranslations, setRequestLocale } from 'next-intl/server';
-// import AboutFormSection from '@/components/about/about-contact-form';
 import AboutTeam from '@/components/about/about-team';
-
 import AboutUs from '@/components/about/about-us';
 import CorporateInformation from '@/components/about/CorporateInformation';
 import OurExpertise from '@/components/about/our-expertise-section';
 
-type IAboutProps = {
-  params: Promise<{ locale: string }>;
-};
 
-export async function generateMetadata(props: IAboutProps): Promise<Metadata> {
-  const { locale } = await props.params;
-  const t = await getTranslations({
-    locale,
-    namespace: 'About',
-  });
 
-  return {
-    title: t('meta_title'),
-    description: t('meta_description'),
-  };
-}
+export default async function About() {
 
-export default async function About(props: IAboutProps) {
-  const { locale } = await props.params;
-  setRequestLocale(locale);
 
   return (
     <>
-      {/* <HeroSection
-        title="About"
-        subtitle="Passion Behind Our Work"
-        background={IMAGES.HERO.SLIDE1}
-      /> */}
       <AboutUs />
       <CorporateInformation />
-
       <OurExpertise />
       <AboutTeam />
-
-      {/* <AboutContactInfoSection />
-      <AboutFormSection /> */}
-
     </>
   );
 };

@@ -1,5 +1,4 @@
 import type { Metadata } from 'next';
-import { NextIntlClientProvider } from 'next-intl';
 import { PostHogProvider } from '@/components/analytics/PostHogProvider';
 import Footer from '@/components/sections/footer';
 import Navbar from '@/components/sections/navbar';
@@ -20,19 +19,16 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const locale = 'en'; // or detect from headers/cookies
 
   return (
-    <html lang={locale}>
+    <html >
       <body>
-        <NextIntlClientProvider locale={locale}>
           <PostHogProvider>
             <Navbar />
             <main>{children}</main>
             <ScrollToTop />
             <Footer />
           </PostHogProvider>
-        </NextIntlClientProvider>
       </body>
     </html>
   );
