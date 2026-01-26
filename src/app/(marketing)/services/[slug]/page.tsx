@@ -35,8 +35,10 @@ export function generateStaticParams() {
 }
 
 // Page component
-export default function ServiceDetailPage({ params }: ServicePageProps) {
-  const { slug } = params;
+export default async function ServiceDetailPage({ params }: ServicePageProps) {
+  const { slug } = await params;
+  console.log({params});
+  
   const service = getServiceBySlug(slug);
 
   if (!service) {
