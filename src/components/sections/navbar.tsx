@@ -2,11 +2,11 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { useRef, useState } from 'react';
 import { IoIosArrowDown } from 'react-icons/io';
 import { IMAGES } from '@/constants/images';
 import { TEXTS } from '@/constants/text';
-import { usePathname } from 'next/navigation';
 
 type DropdownItem = {
   name: string;
@@ -55,8 +55,6 @@ const NavLinkItem = ({
   const pathname = usePathname();
   const isActive = pathname.split('/')[1] === item.name.toLowerCase();
 
-
-
   return (
     <li
       className="group relative"
@@ -65,28 +63,28 @@ const NavLinkItem = ({
     >
       {item.hasDropdown
         ? (
-          <div className="flex items-center">
+            <div className="flex items-center">
+              <Link
+                href={item.href}
+                className={`sm:text-md flex cursor-pointer items-center gap-1 text-base font-semibold tracking-wide transition-colors duration-300 ${isActive ? 'text-primary' : 'text-black group-hover:text-[var(--color-primary)]'
+                }`}
+              >
+                {item.name}
+                <IoIosArrowDown
+                  className={`transition-transform duration-300 ${hoveredLink === item.name ? 'rotate-180' : ''}`}
+                />
+              </Link>
+            </div>
+          )
+        : (
             <Link
               href={item.href}
-              className={`sm:text-md flex cursor-pointer items-center gap-1 text-base font-semibold tracking-wide transition-colors duration-300 ${isActive ? 'text-primary' : 'text-black group-hover:text-[var(--color-primary)]'
-                }`}
+              className={`sm:text-md font-semibold tracking-wide transition-colors duration-300 ${isActive ? 'text-primary' : 'text-black hover:text-[var(--color-primary)]'
+              }`}
             >
               {item.name}
-              <IoIosArrowDown
-                className={`transition-transform duration-300 ${hoveredLink === item.name ? 'rotate-180' : ''}`}
-              />
             </Link>
-          </div>
-        )
-        : (
-          <Link
-            href={item.href}
-            className={`sm:text-md font-semibold tracking-wide transition-colors duration-300 ${isActive ? 'text-primary' : 'text-black hover:text-[var(--color-primary)]'
-              }`}
-          >
-            {item.name}
-          </Link>
-        )}
+          )}
 
       {item.hasDropdown && hoveredLink === item.name && (
         <div
@@ -95,15 +93,14 @@ const NavLinkItem = ({
           onMouseLeave={() => handleMouseLeave(item.name)}
         >
           <ul className="grid grid-cols-2 divide-x divide-gray-200 md:grid-cols-3 lg:grid-cols-4">
-            {item.dropdownItems?.map(sub => {
-
+            {item.dropdownItems?.map((sub) => {
               console.log({ sub });
 
               return (
-                <li key={sub.name} className={`group/item border-b border-gray-200 last:border-b-0 hover:bg-(--color-primary) ${pathname === `${sub.href}/` ? "bg-(--color-primary)" : ""}`}>
+                <li key={sub.name} className={`group/item border-b border-gray-200 last:border-b-0 hover:bg-(--color-primary) ${pathname === `${sub.href}/` ? 'bg-(--color-primary)' : ''}`}>
                   <Link
                     href={sub.href}
-                    className={`block cursor-pointer px-4 py-3 text-sm font-medium transition-all duration-200 group-hover/item:text-white ${pathname === `${sub.href}/` ? "text-white" : ""}`}
+                    className={`block cursor-pointer px-4 py-3 text-sm font-medium transition-all duration-200 group-hover/item:text-white ${pathname === `${sub.href}/` ? 'text-white' : ''}`}
                     onClick={() => {
                       closeDropdown();
                     }}
@@ -111,7 +108,7 @@ const NavLinkItem = ({
                     {sub.name}
                   </Link>
                 </li>
-              )
+              );
             })}
           </ul>
         </div>
@@ -238,67 +235,67 @@ export default function Navbar() {
                 <div key={item.name} className="border-b border-gray-100 last:border-b-0">
                   {item.hasDropdown
                     ? (
-                      <div className="py-2">
-                        <div
-                          className="focus:ring-primary-500 mb-2 flex cursor-pointer items-center justify-center gap-1 px-4 text-xs font-semibold text-black uppercase hover:text-(--color-primary) focus:ring-2 focus:ring-offset-2 focus:outline-none"
-                          onClick={() => toggleMobileDropdown(item.name)}
-                          onKeyDown={(e) => {
-                            if (e.key === 'Enter' || e.key === ' ') {
-                              e.preventDefault();
-                              toggleMobileDropdown(item.name);
-                            }
+                        <div className="py-2">
+                          <div
+                            className="focus:ring-primary-500 mb-2 flex cursor-pointer items-center justify-center gap-1 px-4 text-xs font-semibold text-black uppercase hover:text-(--color-primary) focus:ring-2 focus:ring-offset-2 focus:outline-none"
+                            onClick={() => toggleMobileDropdown(item.name)}
+                            onKeyDown={(e) => {
+                              if (e.key === 'Enter' || e.key === ' ') {
+                                e.preventDefault();
+                                toggleMobileDropdown(item.name);
+                              }
+                            }}
+                            role="button"
+                            tabIndex={0}
+                            aria-expanded={mobileDropdownOpen === item.name}
+                            aria-haspopup="true"
+                          >
+                            {item.name}
+                            <IoIosArrowDown
+                              className={`transition-transform duration-300 ${mobileDropdownOpen === item.name ? 'rotate-180' : ''
+                              }`}
+                            />
+                          </div>
+                          {mobileDropdownOpen === item.name && (
+                            <div className="animate-fadeIn max-h-[80vh] overflow-y-auto bg-gray-50 py-2">
+                              <div className="grid grid-cols-1 gap-1 px-2">
+                                {item.dropdownItems?.map(sub => (
+                                  <div key={sub.name} className="rounded transition-colors hover:bg-gray-100">
+                                    <Link
+                                      href={sub.href}
+                                      className="block cursor-pointer px-3 py-2.5 text-xs font-normal text-gray-600 hover:text-[var(--color-primary)]"
+                                      onClick={() => {
+                                        setMenuOpen(false);
+                                        setMobileDropdownOpen(null);
+                                      }}
+                                    >
+                                      {sub.name}
+                                    </Link>
+                                  </div>
+                                ))}
+                              </div>
+                            </div>
+                          )}
+                        </div>
+                      )
+                    : (
+                        <Link
+                          href={item.href}
+                          className="block px-4 py-2 text-xs font-semibold text-black uppercase transition-colors hover:text-[var(--color-primary)]"
+                          onClick={() => {
+                            setMenuOpen(false);
                           }}
-                          role="button"
-                          tabIndex={0}
-                          aria-expanded={mobileDropdownOpen === item.name}
-                          aria-haspopup="true"
                         >
                           {item.name}
-                          <IoIosArrowDown
-                            className={`transition-transform duration-300 ${mobileDropdownOpen === item.name ? 'rotate-180' : ''
-                              }`}
-                          />
-                        </div>
-                        {mobileDropdownOpen === item.name && (
-                          <div className="animate-fadeIn max-h-[80vh] overflow-y-auto bg-gray-50 py-2">
-                            <div className="grid grid-cols-1 gap-1 px-2">
-                              {item.dropdownItems?.map(sub => (
-                                <div key={sub.name} className="rounded transition-colors hover:bg-gray-100">
-                                  <Link
-                                    href={sub.href}
-                                    className="block cursor-pointer px-3 py-2.5 text-xs font-normal text-gray-600 hover:text-[var(--color-primary)]"
-                                    onClick={() => {
-                                      setMenuOpen(false);
-                                      setMobileDropdownOpen(null);
-                                    }}
-                                  >
-                                    {sub.name}
-                                  </Link>
-                                </div>
-                              ))}
-                            </div>
-                          </div>
-                        )}
-                      </div>
-                    )
-                    : (
-                      <Link
-                        href={item.href}
-                        className="block px-4 py-2 text-xs font-semibold text-black uppercase transition-colors hover:text-[var(--color-primary)]"
-                        onClick={() => {
-                          setMenuOpen(false);
-                        }}
-                      >
-                        {item.name}
-                      </Link>
-                    )}
+                        </Link>
+                      )}
                 </div>
               ))}
             </div>
           )}
         </div>
       </nav>
-      <div className='w-full h-20 hidden md:flex'>
+      <div className="hidden h-20 w-full md:flex">
 
       </div>
     </div>

@@ -1,4 +1,3 @@
-import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import { IMAGES } from '@/constants/images';
@@ -10,8 +9,6 @@ type ServicePageProps = {
     slug: string;
   };
 };
-
-
 
 // Pre-render all service pages
 export function generateStaticParams() {
