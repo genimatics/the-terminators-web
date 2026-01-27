@@ -14,6 +14,7 @@ export const metadata: Metadata = {
   ],
 };
 
+
 export default function RootLayout({
   children,
 }: {
@@ -21,6 +22,42 @@ export default function RootLayout({
 }) {
   return (
     <html>
+      <head>
+        <meta charSet="UTF-8" />
+
+        <title>The Terminators | Electrical, LT/HT Panels & Power Solutions in Pakistan</title>
+
+        <meta
+          name="description"
+          content="The Terminators provides reliable electrical services, LT & HT panels, cable laying, termination, and industrial power solutions across Pakistan."
+        />
+
+        <meta
+          name="keywords"
+          content="The Terminators, electrical services Pakistan, LT panels, HT panels, cable laying, cable termination, power solutions, industrial electrical services"
+        />
+
+        <meta name="author" content="The Terminators" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <meta property="og:title" content="The Terminators – Electrical & Power Solutions" />
+        <meta
+          property="og:description"
+          content="Experts in LT/HT panels, cable laying & termination, and industrial electrical solutions across Pakistan."
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://theterminators.biz.pk" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="The Terminators – Electrical Solutions" />
+        <meta
+          name="twitter:description"
+          content="Professional electrical and power solutions for industrial and commercial projects."
+        />
+        <meta name="twitter:image" content="https://theterminators.biz.pk/og-image.png" />
+
+        <link rel="icon" href="/favicon.ico" />
+      </head>
       <body>
         <PostHogProvider>
           <Navbar />

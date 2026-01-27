@@ -11,20 +11,7 @@ type ServicePageProps = {
   };
 };
 
-// Metadata
-export function generateMetadata({ params }: ServicePageProps): Metadata {
-  const { slug } = params;
-  const service = getServiceBySlug(slug);
 
-  if (!service) {
-    return { title: 'Service Not Found' };
-  }
-
-  return {
-    title: `${service.title} | The Terminators`,
-    description: service.details.description,
-  };
-}
 
 // Pre-render all service pages
 export function generateStaticParams() {
