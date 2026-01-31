@@ -53,7 +53,7 @@ const NavLinkItem = ({
   closeDropdown: () => void;
 }) => {
   const pathname = usePathname();
-  const isActive = pathname.split('/')[1] === item.name.toLowerCase();
+  const isActive = pathname.split('/')[1] === item.name.toLowerCase() || pathname.split('/')[1] === item.href.split('/')[1];
 
   return (
     <li
@@ -94,8 +94,6 @@ const NavLinkItem = ({
         >
           <ul className="grid grid-cols-2 divide-x divide-gray-200 md:grid-cols-3 lg:grid-cols-4">
             {item.dropdownItems?.map((sub) => {
-              console.log({ sub });
-
               return (
                 <li key={sub.name} className={`group/item border-b border-gray-200 last:border-b-0 hover:bg-(--color-primary) ${pathname === `${sub.href}/` ? 'bg-(--color-primary)' : ''}`}>
                   <Link
@@ -180,12 +178,12 @@ export default function Navbar() {
                 <Image
                   src={IMAGES.NAVBAR.LOGO || '/placeholder.svg'}
                   alt={TEXTS.NAVBAR.LOGO_ALT}
-                  width={60}
-                  height={60}
+                  width={80}
+                  height={80}
                   priority
                   className="rounded-lg"
                 />
-                <h1 className="text-xl font-semibold tracking-wide text-gray-900 sm:text-2xl md:text-3xl">
+                <h1 className="text-xl font-semibold tracking-wide text-gray-900 sm:text-2xl md:text-4xl">
                   The Terminators
                 </h1>
               </Link>
